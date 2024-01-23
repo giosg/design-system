@@ -1,0 +1,26 @@
+{
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"build-packages": "turbo run build --filter='./packages/*'",
+		"serve-storybook": "turbo run serve-storybook",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint",
+		"clean": "turbo run clean && rm -rf node_modules",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"changeset": "changeset",
+		"version-packages": "changeset version",
+		"release": "turbo run build --filter=docs^... && dotenv -- bash scripts/setRegistry.sh && changeset publish"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.25.2",
+		"dotenv-cli": "^7.3.0",
+		"prettier": "^3.0.3",
+		"turbo": "^1.11.3",
+		"typescript": ">=5.0.0"
+	},
+	"packageManager": "pnpm@8.14.2",
+	"volta": {
+		"node": "20.10.0"
+	}
+}
