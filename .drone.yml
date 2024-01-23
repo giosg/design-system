@@ -1,0 +1,82 @@
+kind: pipeline
+name: prod-deploy
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
+
+steps:
+  - name: build-image
+    image: plugins/kaniko
+    settings:
+      dockerfile: Dockerfile
+      repo: giosg/design-system
+      tags:
+        - ${DRONE_COMMIT}
+        - master
+      username:
+        from_secret: docker-username
+      password:
+        from_secret: docker-password
+
+  - name: deploy
+    image: giosg/drone-helm:3
+    settings:
+      chart: charts/design-system
+      namespace: design-system
+      release_name: design-system
+      values_file: charts/values.prod.yaml
+      api_server:
+        from_secret: k8s-prod-server
+      kubernetes_token:
+        from_secret: k8s-prod-token # Namespace-specific
+      set_value_template:
+        - image.tag={{ DRONE_COMMIT }}
+    depends_on:
+      - build-image
+
+---
+kind: pipeline
+name: pull-request
+
+trigger:
+  branch:
+    - master
+  event:
+    - pull_request
+
+steps:
+  - name: build
+    image: plugins/kaniko
+    settings:
+      dockerfile: Dockerfile
+      repo: giosg/design-system
+      tags:
+        - ${DRONE_COMMIT}-pull-request
+      username:
+        from_secret: docker-username
+      password:
+        from_secret: docker-password
+
+  - name: deploy-pull-request
+    image: giosg/drone-helm:3
+    settings:
+      chart: charts/design-system
+      namespace: design-system
+      release_name: design-system-${DRONE_PULL_REQUEST}
+      values_file: charts/values.pr.yaml
+      set_value_template:
+        - image.tag={{ DRONE_COMMIT }}-pr
+        - ingress.domain=design-system-pr-${DRONE_PULL_REQUEST}.giosg.com
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-repo=giosg/design-system
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-state=closed
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-number={{ DRONE_PULL_REQUEST }}
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-helm-release=design-system-pr-${DRONE_PULL_REQUEST}
+      api_server:
+        from_secret: k8s-sb-server
+      kubernetes_token:
+        from_secret: k8s-sb-token
+    depends_on:
+      - build
