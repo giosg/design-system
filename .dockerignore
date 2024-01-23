@@ -1,0 +1,9 @@
+**/node_modules
+**/test-results
+**/.turbo
+**/storybook-static
+**.git
+**.gitignore
+**.dockerignore
+**.env*
+Dockerfile
