@@ -21,9 +21,9 @@ spec:
         {{- toYaml . | nindent 8 }}
         {{- end }}
     spec:
-      {{- with .Values.imagePullSecrets }}
+      {{- if .Values.image.imagePullSecrets }}
       imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
+{{ toYaml .Values.image.imagePullSecrets | indent 8 }}
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
