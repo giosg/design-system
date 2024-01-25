@@ -67,7 +67,7 @@ steps:
       chart: charts/design-system
       namespace: integrations
       release_name: design-system-pr-${DRONE_PULL_REQUEST}
-      values_file: charts/values.pr.yaml
+      values_file: charts/values.sandbox.yaml
       set_value_template:
         - image.tag={{ DRONE_COMMIT }}-pull-request
         - ingress.hosts={design-system-pr-${DRONE_PULL_REQUEST}.staging.giosg.com}
