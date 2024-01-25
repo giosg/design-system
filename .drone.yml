@@ -25,7 +25,7 @@ steps:
     image: giosg/drone-helm:3
     settings:
       chart: charts/design-system
-      namespace: design-system
+      namespace: integrations
       release_name: design-system
       values_file: charts/values.prod.yaml
       api_server:
@@ -55,6 +55,7 @@ steps:
       repo: giosg/design-system
       tags:
         - ${DRONE_COMMIT}-pull-request
+        - pull-request
       username:
         from_secret: docker-username
       password:
@@ -64,12 +65,12 @@ steps:
     image: giosg/drone-helm:3
     settings:
       chart: charts/design-system
-      namespace: design-system
-      release_name: design-system-${DRONE_PULL_REQUEST}
+      namespace: integrations
+      release_name: design-system-pr-${DRONE_PULL_REQUEST}
       values_file: charts/values.pr.yaml
       set_value_template:
-        - image.tag={{ DRONE_COMMIT }}-pr
-        - ingress.domain=design-system-pr-${DRONE_PULL_REQUEST}.giosg.com
+        - image.tag={{ DRONE_COMMIT }}-pull-request
+        - ingress.hosts={design-system-pr-${DRONE_PULL_REQUEST}.staging.giosg.com}
         - deploymentAnnotations.giosg\\.com/delete-on-pull-request-repo=giosg/design-system
         - deploymentAnnotations.giosg\\.com/delete-on-pull-request-state=closed
         - deploymentAnnotations.giosg\\.com/delete-on-pull-request-number={{ DRONE_PULL_REQUEST }}
