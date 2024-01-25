@@ -8,7 +8,7 @@
 		"build": "storybook build",
 		"serve-storybook": "serve storybook-static",
 		"clean": "rm -rf .turbo && rm -rf node_modules",
-		"lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
+		"lint": "eslint ./stories/*.stories.tsx --max-warnings 0; stylelint '**/*.css' --max-warnings 0"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
