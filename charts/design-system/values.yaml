@@ -1,0 +1,17 @@
+image:
+  tag: latest
+  imagePullSecrets: []
+  repository: giosg/design-system
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+ingress:
+  enabled: false
+  hosts: []
+  annotations: {}
+
+service: 
+  port: 80
+
+resources: {}
