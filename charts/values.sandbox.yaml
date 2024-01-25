@@ -1,0 +1,18 @@
+image:
+  imagePullSecrets:
+  - name: giosg.hub.docker.com
+
+ingress:
+  hosts:
+    - design-system.staging.giosg.com
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: external
+  
+resources:
+  requests:
+    cpu: 50m
+    memory: 50Mi
+  limits:
+    cpu: 300m
+    memory: 512Mi
