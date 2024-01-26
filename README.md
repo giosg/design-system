@@ -34,4 +34,3 @@ There are multiple reasons to support this approach. I'll provide you with the m
  - **No runtime overhead**. Compared to other solutions like CSS-in-JS, plain CSS incurs zero runtime overhead and avoids DOM manipulations, resulting in faster operations than CSS-in-JS. Less JS - faster operation. You can check one of the articles about this [here](https://pustelto.com/blog/css-vs-css-in-js-perf/) 
  - **No framework dependency**. Crucial for ease of maintenance and adoption, you don't have to specify peer dependencies in your project, match versions, or undergo migration to new versions. You also don't have to discard your current solution, as CSS is just CSS.
  - **Long-term caching**. CSS is very easy to get long-term cached by the browser.
- - **Native technology**. No proxy function call to append style tag to your html. CSS is native to a browser.
