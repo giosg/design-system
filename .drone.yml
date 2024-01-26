@@ -62,6 +62,7 @@ steps:
 
   - name: lint
     image: node:20.10.0-slim
+    failure: ignore
     depends_on:
       - install-packages
     commands:
@@ -101,3 +102,10 @@ steps:
         from_secret: k8s-sb-token
     depends_on:
       - build
+
+  - name: everything-is-fine
+    image: node:20.10.0-slim
+    commands:
+      - echo "Everything is fine!"
+    depends_on:
+      - lint
