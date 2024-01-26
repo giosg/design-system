@@ -52,14 +52,10 @@ environment:
   PATH: "$PNPM_HOME:$PATH"
 
 steps:
-  - name: corepack
-    image: node:20.10.0-slim
-    commands:
-      - corepack enable
-
   - name: install-packages
     image: node:20.10.0-slim
     commands:
+      - corepack enable
       - pnpm i
     environment:
       NPM_CONFIG_REGISTRY: http://npm-local-cache-verdaccio.infra.svc.cluster.local:4873
@@ -69,6 +65,7 @@ steps:
     depends_on:
       - install-packages
     commands:
+      - corepack enable
       - pnpm run lint
 
   - name: build
