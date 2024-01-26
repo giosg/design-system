@@ -1,0 +1,127 @@
+kind: pipeline
+name: prod-deploy
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
+
+environment:
+  PNPM_HOME: "/pnpm"
+  PATH: "$PNPM_HOME:$PATH"
+
+steps:
+  - name: install-packages
+    image: node:20.10.0-slim
+    commands:
+      - corepack enable
+      - pnpm i
+    environment:
+      NPM_CONFIG_REGISTRY: http://npm-local-cache-verdaccio.infra.svc.cluster.local:4873
+
+  - name: lint
+    image: node:20.10.0-slim
+    depends_on:
+      - install-packages
+    commands:
+      - corepack enable
+      - pnpm run lint
+
+  - name: build-image
+    image: plugins/kaniko
+    settings:
+      dockerfile: Dockerfile
+      repo: giosg/design-system
+      tags:
+        - ${DRONE_COMMIT}
+        - master
+      username:
+        from_secret: docker-username
+      password:
+        from_secret: docker-password
+
+  - name: deploy
+    image: giosg/drone-helm:3
+    settings:
+      chart: charts/design-system
+      namespace: integrations
+      release_name: design-system
+      values_file: charts/values.prod.yaml
+      api_server:
+        from_secret: k8s-prod-server
+      kubernetes_token:
+        from_secret: k8s-prod-token # Namespace-specific
+      set_value_template:
+        - image.tag={{ DRONE_COMMIT }}
+    depends_on:
+      - build-image
+
+---
+kind: pipeline
+name: pull-request
+
+trigger:
+  branch:
+    - master
+  event:
+    - pull_request
+
+environment:
+  PNPM_HOME: "/pnpm"
+  PATH: "$PNPM_HOME:$PATH"
+
+steps:
+  - name: install-packages
+    image: node:20.10.0-slim
+    commands:
+      - corepack enable
+      - pnpm i
+    environment:
+      NPM_CONFIG_REGISTRY: http://npm-local-cache-verdaccio.infra.svc.cluster.local:4873
+
+  - name: lint
+    image: node:20.10.0-slim
+    depends_on:
+      - install-packages
+    commands:
+      - corepack enable
+      - pnpm run lint
+
+  - name: build
+    image: plugins/kaniko
+    settings:
+      dockerfile: Dockerfile
+      repo: giosg/design-system
+      tags:
+        - ${DRONE_COMMIT}-pull-request
+        - pull-request
+      username:
+        from_secret: docker-username
+      password:
+        from_secret: docker-password
+
+  - name: deploy-pull-request
+    image: giosg/drone-helm:3
+    when:
+      status:
+        - failure
+        - success
+    settings:
+      chart: charts/design-system
+      namespace: integrations
+      release_name: design-system-pr-${DRONE_PULL_REQUEST}
+      values_file: charts/values.sandbox.yaml
+      set_value_template:
+        - image.tag={{ DRONE_COMMIT }}-pull-request
+        - ingress.hosts={design-system-pr-${DRONE_PULL_REQUEST}.staging.giosg.com}
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-repo=giosg/design-system
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-state=closed
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-number={{ DRONE_PULL_REQUEST }}
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-helm-release=design-system-pr-${DRONE_PULL_REQUEST}
+      api_server:
+        from_secret: k8s-sb-server
+      kubernetes_token:
+        from_secret: k8s-sb-token
+    depends_on:
+      - build

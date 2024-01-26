@@ -14,9 +14,5 @@ type Story = StoryObj;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-	render: (props) => (
-		<div {...props} onClick={(): void => {}}>
-			Hello
-		</div>
-	),
+	render: () => <div>Hello</div>,
 };
