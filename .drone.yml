@@ -60,15 +60,6 @@ steps:
     environment:
       NPM_CONFIG_REGISTRY: http://npm-local-cache-verdaccio.infra.svc.cluster.local:4873
 
-  - name: lint
-    image: node:20.10.0-slim
-    failure: ignore
-    depends_on:
-      - install-packages
-    commands:
-      - corepack enable
-      - pnpm run lint
-
   - name: build
     image: plugins/kaniko
     settings:
@@ -103,9 +94,10 @@ steps:
     depends_on:
       - build
 
-  - name: everything-is-fine
+  - name: lint
     image: node:20.10.0-slim
-    commands:
-      - echo "Everything is fine!"
     depends_on:
-      - lint
+      - install-packages
+    commands:
+      - corepack enable
+      - pnpm run lint
