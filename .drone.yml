@@ -47,10 +47,15 @@ trigger:
   event:
     - pull_request
 
+environment:
+  PNPM_HOME: "/pnpm"
+  PATH: "$PNPM_HOME:$PATH"
+
 steps:
   - name: install-packages
     image: node:20.10.0-slim
     commands:
+      - corepack enable
       - pnpm i
     environment:
       NPM_CONFIG_REGISTRY: http://npm-local-cache-verdaccio.infra.svc.cluster.local:4873
