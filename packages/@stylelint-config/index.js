@@ -1,8 +1,9 @@
 /** @type {import('stylelint').Config} */
 module.exports = {
 	extends: ["stylelint-config-standard"],
-	plugins: ["stylelint-prettier"],
+	plugins: ["./plugins/design-system-plugin.js", "stylelint-prettier"],
 	rules: {
+		"design-system/gds-prefix": true,
 		"selector-class-pattern": null,
 		"declaration-block-no-redundant-longhand-properties": null,
 		"declaration-property-value-no-unknown": true,
