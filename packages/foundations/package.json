@@ -1,0 +1,27 @@
+{
+	"name": "@giosg/design-system-foundations",
+	"private": true,
+	"version": "0.0.0",
+	"style": "./dist/index.css",
+	"sideEffects": [
+		"*.css"
+	],
+	"license": "MIT",
+	"files": [
+		"dist/**"
+	],
+	"scripts": {
+		"build": "parcel build index.css",
+		"dev": "parcel watch index.css --port $(../../scripts/getPort.sh)",
+		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+		"lint": "stylelint \"**/*.css\" --max-warnings=0"
+	},
+	"devDependencies": {
+		"@repo/stylelint-config": "workspace:*",
+		"parcel": "2.11.0",
+		"stylelint": "^16.2.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

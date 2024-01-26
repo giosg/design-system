@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+:root,
+[data-theme="light"] {
+	/* Color Palette */
+	--gds-color-gray-50: hsl(0deg 0% 98% / 100%);
+	--gds-color-gray-100: hsl(240deg 7% 95% / 100%);
+}
