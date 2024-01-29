@@ -4,6 +4,12 @@ metadata:
   name: {{ include "design-system.fullname" . }}
   labels:
     {{- include "design-system.labels" . | nindent 4 }}
+{{- if .Values.deploymentAnnotations }}
+  annotations:
+    {{- range $key, $value := .Values.deploymentAnnotations }}
+      {{ $key }}: {{ $value | quote }}
+    {{- end }}
+{{- end }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -11,12 +17,10 @@ spec:
       {{- include "design-system.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-    {{- if .Values.deploymentAnnotations }}
+      {{- with .Values.podAnnotations }}
       annotations:
-        {{- range $key, $value := .Values.deploymentAnnotations }}
-          {{ $key }}: {{ $value | quote }}
-        {{- end }}
-    {{- end }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       labels:
         {{- include "design-system.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
