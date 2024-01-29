@@ -11,10 +11,12 @@ spec:
       {{- include "design-system.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
+    {{- if .Values.deploymentAnnotations }}
       annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        {{- range $key, $value := .Values.deploymentAnnotations }}
+          {{ $key }}: {{ $value | quote }}
+        {{- end }}
+    {{- end }}
       labels:
         {{- include "design-system.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
