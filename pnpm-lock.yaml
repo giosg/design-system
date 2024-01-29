@@ -112,12 +112,6 @@ importers:
         specifier: 0.6.15
         version: 0.6.15(eslint@8.56.0)(typescript@5.3.3)
 
-  packages/@postcss-figma-import-plugin:
-    dependencies:
-      postcss:
-        specifier: ^8.0.0
-        version: 8.4.33
-
   packages/@stylelint-config:
     dependencies:
       stylelint:
@@ -135,9 +129,6 @@ importers:
 
   packages/foundations:
     devDependencies:
-      '@repo/postcss-figma-import-plugin':
-        specifier: workspace:*
-        version: link:../@postcss-figma-import-plugin
       '@repo/stylelint-config':
         specifier: workspace:*
         version: link:../@stylelint-config

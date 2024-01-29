@@ -13,13 +13,12 @@
 	"scripts": {
 		"build": "parcel build index.css",
 		"dev": "parcel watch index.css --port $(../../scripts/getPort.sh)",
-		"transformCss": "postcss reference.css -o output.css",
+		"transformCss": "postcss ./postCssImport/reference.css -o ./postCssImport/output.css --config ./postCssImport",
 		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
 		"lint": "stylelint \"**/*.css\" --max-warnings=0"
 	},
 	"devDependencies": {
 		"@repo/stylelint-config": "workspace:*",
-		"@repo/postcss-figma-import-plugin": "workspace:*",
 		"parcel": "2.11.0",
 		"postcss": "^8.4.33",
 		"postcss-cli": "^11.0.0",
