@@ -62,7 +62,7 @@ module.exports = (opts = {}) => {
 
 			if (lightThemeDeclarations.length > 0) {
 				let lightThemeRule = new Rule({
-					selector: "[data-theme='light']",
+					selector: ":root,[data-theme='light']",
 					nodes: lightThemeDeclarations,
 				});
 				root.append(postcss.comment({ text: "Light theme Semantics" }));
