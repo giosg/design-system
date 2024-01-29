@@ -1,6 +1,9 @@
+var postcss = require("postcss");
+
 module.exports = (opts = {}) => {
 	let darkThemeDeclarations = [];
 	let lightThemeDeclarations = [];
+	let commonDeclarations = [];
 
 	return {
 		postcssPlugin: "import-semantics",
@@ -27,11 +30,42 @@ module.exports = (opts = {}) => {
 			},
 		},
 		OnceExit(root, { Rule }) {
+			commonDeclarations.sort((a, b) => a.prop.localeCompare(b.prop));
+			lightThemeDeclarations.sort((a, b) => a.prop.localeCompare(b.prop));
+			darkThemeDeclarations.sort((a, b) => a.prop.localeCompare(b.prop));
+
+			// Compare declarations in light and dark arrays
+			darkThemeDeclarations = darkThemeDeclarations.filter((darkDecl) => {
+				const matchingLightDecl = lightThemeDeclarations.find(
+					(lightDecl) => lightDecl.prop === darkDecl.prop && lightDecl.value === darkDecl.value,
+				);
+
+				if (matchingLightDecl) {
+					// If a matching declaration is found, move it to the common declarations array
+					commonDeclarations.push(matchingLightDecl);
+					// Remove the matching declaration from the light theme array
+					lightThemeDeclarations = lightThemeDeclarations.filter((lightDecl) => lightDecl !== matchingLightDecl);
+					// Return false to remove the declaration from the dark theme array
+					return false;
+				}
+
+				// If no matching declaration is found, keep the declaration in the dark theme array
+				return true;
+			});
+
+			// Add the common declarations to the :root rule
+			const rootRule = new Rule({ selector: ":root" });
+			commonDeclarations.forEach((decl) => {
+				rootRule.append({ prop: decl.prop, value: decl.value });
+			});
+			root.prepend(rootRule);
+
 			if (lightThemeDeclarations.length > 0) {
 				let lightThemeRule = new Rule({
 					selector: "[data-theme='light']",
 					nodes: lightThemeDeclarations,
 				});
+				root.append(postcss.comment({ text: "Light theme Semantics" }));
 				root.append(lightThemeRule);
 			}
 			if (darkThemeDeclarations.length > 0) {
@@ -39,8 +73,20 @@ module.exports = (opts = {}) => {
 					selector: "[data-theme='dark']",
 					nodes: darkThemeDeclarations,
 				});
+				root.append(postcss.comment({ text: "Dark theme Semantics" }));
 				root.append(darkThemeRule);
 			}
+			console.log(
+				"Lines of declarations",
+				"Light:",
+				lightThemeDeclarations.length,
+				"Dark:",
+				darkThemeDeclarations.length,
+				"Common:",
+				commonDeclarations.length,
+				"Total:",
+				lightThemeDeclarations.length + darkThemeDeclarations.length + commonDeclarations.length,
+			);
 		},
 	};
 };
