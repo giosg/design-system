@@ -1,10 +1,13 @@
-module.exports = (opts = {}) => {
+module.exports = () => {
 	return {
 		postcssPlugin: "prefix-vars",
 		Declaration(decl) {
+			console.log(decl.prop);
 			if (decl.prop.startsWith("--") && !decl.prop.startsWith("--gds-")) {
-				debugger;
 				decl.prop = `--gds-${decl.prop.slice(2).toLowerCase()}`;
+				decl.value = decl.value.replace(/var\((--[^)]+)\)/g, (match, varName) => {
+					return `var(--gds-${varName.slice(2).toLowerCase()})`;
+				});
 			}
 		},
 	};

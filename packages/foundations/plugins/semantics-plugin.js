@@ -1,12 +1,13 @@
 module.exports = (opts = {}) => {
 	let darkThemeDeclarations = [];
 	let lightThemeDeclarations = [];
+
 	return {
 		postcssPlugin: "import-semantics",
 		Declaration(decl, { Rule }) {
-			if (decl.prop.includes("-Dark")) {
+			if (decl.prop.toLowerCase().includes("-dark")) {
 				darkThemeDeclarations.push({
-					prop: decl.prop.replace("-Dark", ""),
+					prop: decl.prop.replace("-dark", ""),
 					value: decl.value,
 				});
 				decl.remove();
@@ -26,19 +27,19 @@ module.exports = (opts = {}) => {
 			},
 		},
 		OnceExit(root, { Rule }) {
-			if (darkThemeDeclarations.length > 0) {
-				let darkThemeRule = new Rule({
-					selector: "[data-theme='dark']",
-					nodes: darkThemeDeclarations,
-				});
-				root.append(darkThemeRule);
-			}
 			if (lightThemeDeclarations.length > 0) {
 				let lightThemeRule = new Rule({
 					selector: "[data-theme='light']",
 					nodes: lightThemeDeclarations,
 				});
 				root.append(lightThemeRule);
+			}
+			if (darkThemeDeclarations.length > 0) {
+				let darkThemeRule = new Rule({
+					selector: "[data-theme='dark']",
+					nodes: darkThemeDeclarations,
+				});
+				root.append(darkThemeRule);
 			}
 		},
 	};
