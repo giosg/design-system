@@ -1,3 +1,5 @@
+var postcss = require("postcss");
+
 module.exports = (opts = {}) => {
 	return {
 		postcssPlugin: "import-reference",
@@ -12,7 +14,15 @@ module.exports = (opts = {}) => {
 			// Sort the declarations by their properties
 			rootRule.nodes.sort((a, b) => a.prop.localeCompare(b.prop));
 
-			root.prepend(rootRule);
+			root.append(rootRule);
+
+			root.walkRules((rule) => {
+				if (rule.selector === ":root" && rule.nodes.length === 0) {
+					rule.remove();
+				}
+			});
+
+			console.log("Reference declarations", rootRule.nodes.length);
 		},
 	};
 };

@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const postcss = require("postcss");
-const figmaImport = require("../plugins/figma-import-plugin.js");
-const semanticsPlugin = require("../plugins/semantics-plugin.js");
+const normalizer = require("../plugins/normalize-plugin.js");
+const systemPlugin = require("../plugins/system-plugin.js");
 const referencePlugin = require("../plugins/reference-plugin.js");
 const mergeDeclPlugin = require("../plugins/merge-decl-plugin.js");
 
@@ -22,16 +22,17 @@ async function mergeDeclarations(file1, file2, outputFile) {
 
 	const combined = css1 + "\n" + css2;
 	const result = await postcss([mergeDeclPlugin()]).process(combined, {
-		from: outputFile,
+		from: combined,
 	});
-	fs.writeFileSync(path.join(__dirname, "final.css"), result.css);
+
+	fs.writeFileSync(path.join(__dirname, "..", outputFile), result.css);
 }
 
 // Execute the tasks
 async function execute() {
-	await processCss("reference.css", "reference-output.css", [figmaImport(), referencePlugin()]);
-	await processCss("semantic.css", "semantic-output.css", [figmaImport(), semanticsPlugin()]);
-	mergeDeclarations("reference-output.css", "semantic-output.css", "merged.css");
+	await processCss("reference.css", "reference-output.css", [normalizer(), referencePlugin()]);
+	await processCss("system.css", "system-output.css", [normalizer(), systemPlugin()]);
+	mergeDeclarations("reference-output.css", "system-output.css", "index.css");
 }
 
 execute().catch(console.error);

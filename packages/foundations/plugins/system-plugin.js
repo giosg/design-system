@@ -6,7 +6,7 @@ module.exports = (opts = {}) => {
 	let commonDeclarations = [];
 
 	return {
-		postcssPlugin: "import-semantics",
+		postcssPlugin: "import-system",
 		Declaration(decl, { Rule }) {
 			if (decl.prop.toLowerCase().includes("-dark")) {
 				darkThemeDeclarations.push({
@@ -54,12 +54,12 @@ module.exports = (opts = {}) => {
 			});
 
 			// Add the common declarations to the light theme under :root rule because they are default
-			lightThemeDeclarations.push(...commonDeclarations);
+			const defaultThemeDeclarations = [...lightThemeDeclarations, ...commonDeclarations];
 
-			if (lightThemeDeclarations.length > 0) {
+			if (defaultThemeDeclarations.length > 0) {
 				let lightThemeRule = new Rule({
 					selector: ":root,[data-theme='light']",
-					nodes: lightThemeDeclarations,
+					nodes: defaultThemeDeclarations,
 				});
 				root.append(postcss.comment({ text: "Light theme Semantics" }));
 				root.append(lightThemeRule);
@@ -73,7 +73,7 @@ module.exports = (opts = {}) => {
 				root.append(darkThemeRule);
 			}
 			console.log(
-				"Lines of declarations",
+				"Semantics declarations",
 				"Light:",
 				lightThemeDeclarations.length,
 				"Dark:",
