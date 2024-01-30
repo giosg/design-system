@@ -4,7 +4,6 @@
 	/* Fonts */
 	--gds-font-ui-stack: Nunito Sans, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue,
 		helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-
 	--gds-sys-font-default-title-xxl-900: 900 1.875rem/2.25rem var(--gds-font-ui-stack);
 	--gds-sys-font-default-title-xxl-700: 700 1.875rem/2.25rem var(--gds-font-ui-stack);
 	--gds-sys-font-default-title-xl-900: 900 1.625rem/2rem var(--gds-font-ui-stack);

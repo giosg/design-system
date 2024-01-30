@@ -53,15 +53,20 @@ module.exports = (opts = {}) => {
 				return true;
 			});
 
-			// Add the common declarations to the light theme under :root rule because they are default
-			const defaultThemeDeclarations = [...lightThemeDeclarations, ...commonDeclarations];
+			if (commonDeclarations.length > 0) {
+				let rootRule = new Rule({
+					selector: ":root",
+					nodes: commonDeclarations,
+				});
+				root.append(rootRule);
+			}
 
-			if (defaultThemeDeclarations.length > 0) {
+			if (lightThemeDeclarations.length > 0) {
 				let lightThemeRule = new Rule({
 					selector: ":root,[data-theme='light']",
-					nodes: defaultThemeDeclarations,
+					nodes: lightThemeDeclarations,
 				});
-				root.append(postcss.comment({ text: "Light theme Semantics" }));
+				root.append(postcss.comment({ text: "Light theme" }));
 				root.append(lightThemeRule);
 			}
 			if (darkThemeDeclarations.length > 0) {
@@ -69,7 +74,7 @@ module.exports = (opts = {}) => {
 					selector: "[data-theme='dark']",
 					nodes: darkThemeDeclarations,
 				});
-				root.append(postcss.comment({ text: "Dark theme Semantics" }));
+				root.append(postcss.comment({ text: "Dark theme" }));
 				root.append(darkThemeRule);
 			}
 			console.log(

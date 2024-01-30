@@ -13,7 +13,7 @@
 	"scripts": {
 		"build": "parcel build index.css",
 		"dev": "parcel watch index.css --port $(../../scripts/getPort.sh)",
-		"css": "node ./postCssImport/main.js && stylelint \"**/*.css\" --fix",
+		"css": "node ./postCssImport/main.js && prettier --write \"index.css\" && stylelint \"**/*.css\" --fix",
 		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
 		"lint": "stylelint \"**/*.css\" --max-warnings=0"
 	},

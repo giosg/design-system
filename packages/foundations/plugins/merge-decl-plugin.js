@@ -2,6 +2,7 @@ const postcss = require("postcss");
 
 module.exports = (opts = {}) => {
 	const rootDeclarations = {};
+	const sysDeclarations = {};
 	const importRules = [];
 
 	return {
@@ -15,7 +16,11 @@ module.exports = (opts = {}) => {
 		Rule(rule) {
 			if (rule.selector === ":root") {
 				rule.walkDecls((decl) => {
-					rootDeclarations[decl.prop] = decl.value;
+					if (decl.prop.includes("-sys-")) {
+						sysDeclarations[decl.prop] = decl.value;
+					} else {
+						rootDeclarations[decl.prop] = decl.value;
+					}
 					decl.remove();
 				});
 
@@ -25,8 +30,18 @@ module.exports = (opts = {}) => {
 		OnceExit(root) {
 			const newRule = postcss.rule({ selector: ":root" });
 
-			for (const prop in rootDeclarations) {
+			// Get the properties in alphabetical order
+			const rootProps = Object.keys(rootDeclarations).sort();
+			const sysProps = Object.keys(sysDeclarations).sort();
+
+			// Append the root declarations
+			for (const prop of rootProps) {
 				newRule.append({ prop: prop, value: rootDeclarations[prop] });
+			}
+
+			// Append the sys declarations
+			for (const prop of sysProps) {
+				newRule.append({ prop: prop, value: sysDeclarations[prop] });
 			}
 
 			root.prepend(newRule);

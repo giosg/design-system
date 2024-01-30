@@ -1,6 +1,30 @@
 :root {
 }
-/* Light theme Semantics */
+:root {
+    --gds-sys-radius-none: var(--gds-ref-space-space-0);
+    --gds-sys-radius-radius-0-5: var(--gds-ref-space-space-0-5);
+    --gds-sys-radius-radius-1: var(--gds-ref-space-space-1);
+    --gds-sys-radius-radius-2: var(--gds-ref-space-space-2);
+    --gds-sys-radius-radius-3: var(--gds-ref-space-space-3);
+    --gds-sys-radius-radius-4: var(--gds-ref-space-space-4);
+    --gds-sys-radius-radius-5: var(--gds-ref-space-space-5);
+    --gds-sys-radius-radius-6: var(--gds-ref-space-space-6);
+    --gds-sys-radius-radius-7: var(--gds-ref-space-space-7);
+    --gds-sys-radius-radius-8: var(--gds-ref-space-space-8);
+    --gds-sys-radius-radius-9: var(--gds-ref-space-space-9);
+    --gds-sys-space-none: var(--gds-ref-space-space-0);
+    --gds-sys-space-space-0-5: var(--gds-ref-space-space-0-5);
+    --gds-sys-space-space-1: var(--gds-ref-space-space-1);
+    --gds-sys-space-space-2: var(--gds-ref-space-space-2);
+    --gds-sys-space-space-3: var(--gds-ref-space-space-3);
+    --gds-sys-space-space-4: var(--gds-ref-space-space-4);
+    --gds-sys-space-space-5: var(--gds-ref-space-space-5);
+    --gds-sys-space-space-6: var(--gds-ref-space-space-6);
+    --gds-sys-space-space-7: var(--gds-ref-space-space-7);
+    --gds-sys-space-space-8: var(--gds-ref-space-space-8);
+    --gds-sys-space-space-9: var(--gds-ref-space-space-9)
+}
+/* Light theme */
 :root,[data-theme='light'] {
     --gds-sys-color-background-neutral-default: var(--gds-ref-color-solid-basics-white);
     --gds-sys-color-background-neutral-inverted: var(--gds-ref-color-solid-basics-black);
@@ -97,31 +121,9 @@
     --gds-sys-color-status-warning-mildest: var(--gds-ref-color-solid-yellow-10);
     --gds-sys-color-status-warning-strong: var(--gds-ref-color-solid-yellow-500);
     --gds-sys-color-status-warning-stronger: var(--gds-ref-color-solid-yellow-600);
-    --gds-sys-color-status-warning-strongest: var(--gds-ref-color-solid-yellow-700);
-    --gds-sys-radius-none: var(--gds-ref-space-space-0);
-    --gds-sys-radius-radius-0-5: var(--gds-ref-space-space-0-5);
-    --gds-sys-radius-radius-1: var(--gds-ref-space-space-1);
-    --gds-sys-radius-radius-2: var(--gds-ref-space-space-2);
-    --gds-sys-radius-radius-3: var(--gds-ref-space-space-3);
-    --gds-sys-radius-radius-4: var(--gds-ref-space-space-4);
-    --gds-sys-radius-radius-5: var(--gds-ref-space-space-5);
-    --gds-sys-radius-radius-6: var(--gds-ref-space-space-6);
-    --gds-sys-radius-radius-7: var(--gds-ref-space-space-7);
-    --gds-sys-radius-radius-8: var(--gds-ref-space-space-8);
-    --gds-sys-radius-radius-9: var(--gds-ref-space-space-9);
-    --gds-sys-space-none: var(--gds-ref-space-space-0);
-    --gds-sys-space-space-0-5: var(--gds-ref-space-space-0-5);
-    --gds-sys-space-space-1: var(--gds-ref-space-space-1);
-    --gds-sys-space-space-2: var(--gds-ref-space-space-2);
-    --gds-sys-space-space-3: var(--gds-ref-space-space-3);
-    --gds-sys-space-space-4: var(--gds-ref-space-space-4);
-    --gds-sys-space-space-5: var(--gds-ref-space-space-5);
-    --gds-sys-space-space-6: var(--gds-ref-space-space-6);
-    --gds-sys-space-space-7: var(--gds-ref-space-space-7);
-    --gds-sys-space-space-8: var(--gds-ref-space-space-8);
-    --gds-sys-space-space-9: var(--gds-ref-space-space-9)
+    --gds-sys-color-status-warning-strongest: var(--gds-ref-color-solid-yellow-700)
 }
-/* Dark theme Semantics */
+/* Dark theme */
 [data-theme='dark'] {
     --gds-sys-color-background-neutral-default: var(--gds-ref-color-solid-grey-900);
     --gds-sys-color-background-neutral-inverted: var(--gds-ref-color-solid-basics-white);
