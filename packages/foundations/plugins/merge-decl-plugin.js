@@ -1,6 +1,6 @@
 const postcss = require("postcss");
 
-module.exports = postcss.plugin("merge-decl-plugin", (opts = {}) => {
+module.exports = (opts = {}) => {
 	const rootDeclarations = {};
 
 	return {
@@ -25,6 +25,6 @@ module.exports = postcss.plugin("merge-decl-plugin", (opts = {}) => {
 			root.prepend(newRule);
 		},
 	};
-});
+};
 
 module.exports.postcss = true;

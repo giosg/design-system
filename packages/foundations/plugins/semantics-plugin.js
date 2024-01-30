@@ -53,12 +53,8 @@ module.exports = (opts = {}) => {
 				return true;
 			});
 
-			// Add the common declarations to the :root rule
-			const rootRule = new Rule({ selector: ":root" });
-			commonDeclarations.forEach((decl) => {
-				rootRule.append({ prop: decl.prop, value: decl.value });
-			});
-			root.prepend(rootRule);
+			// Add the common declarations to the light theme under :root rule because they are default
+			lightThemeDeclarations.push(...commonDeclarations);
 
 			if (lightThemeDeclarations.length > 0) {
 				let lightThemeRule = new Rule({

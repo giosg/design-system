@@ -13,9 +13,7 @@
 	"scripts": {
 		"build": "parcel build index.css",
 		"dev": "parcel watch index.css --port $(../../scripts/getPort.sh)",
-		"transformCss": "postcss ./postCssImport/reference.css -o ./postCssImport/output.css --config ./postCssImport",
-		"pipeCss": "node ./postCssImport/main.js",
-		"semantic": "postcss ./postCssImport/semantic.css -o ./postCssImport/semantic-output.css --config ./postCssImport",
+		"css": "node ./postCssImport/main.js",
 		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
 		"lint": "stylelint \"**/*.css\" --max-warnings=0"
 	},

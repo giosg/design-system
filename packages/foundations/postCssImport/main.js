@@ -4,6 +4,7 @@ const postcss = require("postcss");
 const figmaImport = require("../plugins/figma-import-plugin.js");
 const semanticsPlugin = require("../plugins/semantics-plugin.js");
 const referencePlugin = require("../plugins/reference-plugin.js");
+const mergeDeclPlugin = require("../plugins/merge-decl-plugin.js");
 
 // Process a CSS file
 async function processCss(inputFile, outputFile, plugins = []) {
@@ -15,10 +16,15 @@ async function processCss(inputFile, outputFile, plugins = []) {
 }
 
 // Merge CSS declarations
-function mergeDeclarations(file1, file2, outputFile) {
+async function mergeDeclarations(file1, file2, outputFile) {
 	const css1 = fs.readFileSync(path.join(__dirname, file1), "utf-8");
 	const css2 = fs.readFileSync(path.join(__dirname, file2), "utf-8");
-	fs.writeFileSync(path.join(__dirname, outputFile), css1 + "\n" + css2);
+
+	const combined = css1 + "\n" + css2;
+	const result = await postcss([mergeDeclPlugin()]).process(combined, {
+		from: outputFile,
+	});
+	fs.writeFileSync(path.join(__dirname, "final.css"), result.css);
 }
 
 // Execute the tasks
