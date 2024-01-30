@@ -211,6 +211,26 @@
 	--gds-sys-radius-radius-7: var(--gds-ref-space-space-7);
 	--gds-sys-radius-radius-8: var(--gds-ref-space-space-8);
 	--gds-sys-radius-radius-9: var(--gds-ref-space-space-9);
+	--gds-sys-shadow-down-l: 0 2px 5px 0 rgba(0 0 0 / 5%), 0 9px 9px 0 rgba(0 0 0 / 4%),
+		0 21px 13px 0 rgba(0 0 0 / 3%), 0 37px 15px 0 rgba(0 0 0 / 1%), 0 58px 16px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-down-m: 0 1px 3px 0 rgba(0 0 0 / 5%), 0 5px 5px 0 rgba(0 0 0 / 4%),
+		0 10px 6px 0 rgba(0 0 0 / 3%), 0 19px 7px 0 rgba(0 0 0 / 1%), 0 29px 8px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-down-s: 0 0 1px 0 rgba(0 0 0 / 5%), 0 2px 2px 0 rgba(0 0 0 / 4%), 0 4px 3px 0 rgba(0 0 0 / 3%),
+		0 7px 3px 0 rgba(0 0 0 / 1%), 0 12px 3px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-down-xl: 0 2px 5px 0 rgba(0 0 0 / 8%), 0 9px 9px 0 rgba(0 0 0 / 7%),
+		0 21px 13px 0 rgba(0 0 0 / 4%), 0 37px 15px 0 rgba(0 0 0 / 1%), 0 58px 16px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-down-xs: 0 0 1px 0 rgba(0 0 0 / 5%), 0 1px 1px 0 rgba(0 0 0 / 4%), 0 2px 1px 0 rgba(0 0 0 / 3%),
+		0 4px 1px 0 rgba(0 0 0 / 1%), 0 6px 2px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-up-l: 0 -2px 5px 0 rgba(0 0 0 / 5%), 0 -9px 9px 0 rgba(0 0 0 / 4%),
+		0 -21px 13px 0 rgba(0 0 0 / 3%), 0 -37px 15px 0 rgba(0 0 0 / 1%), 0 -58px 16px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-up-m: 0 -1px 3px 0 rgba(0 0 0 / 5%), 0 -5px 5px 0 rgba(0 0 0 / 4%),
+		0 -10px 6px 0 rgba(0 0 0 / 3%), 0 -19px 7px 0 rgba(0 0 0 / 1%), 0 -29px 8px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-up-s: 0 0 1px 0 rgba(0 0 0 / 5%), 0 -2px 2px 0 rgba(0 0 0 / 4%), 0 -4px 3px 0 rgba(0 0 0 / 3%),
+		0 -7px 3px 0 rgba(0 0 0 / 1%), 0 -12px 3px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-up-xl: 0 -2px 5px 0 rgba(0 0 0 / 8%), 0 -9px 9px 0 rgba(0 0 0 / 7%),
+		0 -21px 13px 0 rgba(0 0 0 / 4%), 0 -37px 15px 0 rgba(0 0 0 / 1%), 0 -58px 16px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-up-xs: 0 0 1px 0 rgba(0 0 0 / 5%), 0 -1px 1px 0 rgba(0 0 0 / 4%), 0 -2px 1px 0 rgba(0 0 0 / 3%),
+		0 -4px 1px 0 rgba(0 0 0 / 1%), 0 -6px 2px 0 rgba(0 0 0 / 0%);
 	--gds-sys-space-none: var(--gds-ref-space-space-0);
 	--gds-sys-space-space-0-5: var(--gds-ref-space-space-0-5);
 	--gds-sys-space-space-1: var(--gds-ref-space-space-1);
