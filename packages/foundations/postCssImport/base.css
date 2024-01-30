@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400|600|700|900&display=swap");
+
+:root {
+	/* Fonts */
+	--gds-font-ui-stack: Nunito Sans, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue,
+		helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+
+	--gds-sys-font-default-title-xxl-900: 900 1.875rem/2.25rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-title-xxl-700: 700 1.875rem/2.25rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-title-xl-900: 900 1.625rem/2rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-title-xl-700: 700 1.625rem/2rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-title-l-900: 900 1.375rem/1.625rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-title-l-700: 700 1.375rem/1.625rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-title-m-900: 900 1.125rem/1.375rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-title-m-700: 700 1.125rem/1.375rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-title-s-900: 900 1rem/1.25rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-title-s-700: 700 1rem/1.25rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-body-xl-400: 400 1.125rem/1.375rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-body-xl-700: 700 1.125rem/1.375rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-body-l-400: 400 1rem/1.25rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-body-l-700: 700 1rem/1.25rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-body-m-400: 400 0.875rem/1.125rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-body-m-700: 700 0.875rem/1.125rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-body-s-400: 400 0.75rem/1rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-body-s-700: 700 0.75rem/1rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-body-xs-400: 400 0.625rem/0.875rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-body-xs-700: 700 0.625rem/0.875rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-label-l-600: 600 1rem/1.75rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-label-m-600: 600 0.875rem/1.5rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-label-s-600: 600 0.75rem/1.125rem var(--gds-font-ui-stack);
+	--gds-sys-font-default-label-xs-600: 600 0.625rem/1rem var(--gds-font-ui-stack);
+}

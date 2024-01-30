@@ -1,54 +1,82 @@
-:root {
-    --gds-ref-color-alpha-black-10: rgba(0 0 0 / 0.1);
-    --gds-ref-color-alpha-black-20: rgba(0 0 0 / 0.2);
-    --gds-ref-color-alpha-black-40: rgba(0 0 0 / 0.4);
-    --gds-ref-color-alpha-black-60: rgba(0 0 0 / 0.6);
-    --gds-ref-color-alpha-black-80: rgba(0 0 0 / 0.8);
-    --gds-ref-color-alpha-blue-10: rgba(36 78 219 / 0.1);
-    --gds-ref-color-alpha-blue-20: rgba(36 78 219 / 0.2);
-    --gds-ref-color-alpha-blue-40: rgba(36 78 219 / 0.4);
-    --gds-ref-color-alpha-blue-60: rgba(36 78 219 / 0.6);
-    --gds-ref-color-alpha-blue-80: rgba(36 78 219 / 0.8);
-    --gds-ref-color-alpha-green-10: rgba(3 158 43 / 0.1);
-    --gds-ref-color-alpha-green-20: rgba(3 158 43 / 0.2);
-    --gds-ref-color-alpha-green-40: rgba(3 158 43 / 0.4);
-    --gds-ref-color-alpha-green-60: rgba(3 158 43 / 0.6);
-    --gds-ref-color-alpha-green-80: rgba(3 158 43 / 0.8);
-    --gds-ref-color-alpha-mint-10: rgba(32 187 133 / 0.1);
-    --gds-ref-color-alpha-mint-20: rgba(32 187 133 / 0.2);
-    --gds-ref-color-alpha-mint-40: rgba(32 187 133 / 0.4);
-    --gds-ref-color-alpha-mint-60: rgba(32 187 133 / 0.6);
-    --gds-ref-color-alpha-mint-80: rgba(32 187 133 / 0.8);
-    --gds-ref-color-alpha-orange-10: rgba(255 154 76 / 0.1);
-    --gds-ref-color-alpha-orange-20: rgba(255 154 76 / 0.2);
-    --gds-ref-color-alpha-orange-40: rgba(255 154 76 / 0.4);
-    --gds-ref-color-alpha-orange-60: rgba(255 154 76 / 0.6);
-    --gds-ref-color-alpha-orange-80: rgba(255 154 76 / 0.8);
-    --gds-ref-color-alpha-pink-10: rgba(252 126 210 / 0.1);
-    --gds-ref-color-alpha-pink-20: rgba(252 126 210 / 0.2);
-    --gds-ref-color-alpha-pink-40: rgba(252 126 210 / 0.4);
-    --gds-ref-color-alpha-pink-60: rgba(252 126 210 / 0.6);
-    --gds-ref-color-alpha-pink-80: rgba(252 126 210 / 0.8);
-    --gds-ref-color-alpha-purple-10: rgba(115 87 255 / 0.1);
-    --gds-ref-color-alpha-purple-20: rgba(115 87 255 / 0.2);
-    --gds-ref-color-alpha-purple-40: rgba(115 87 255 / 0.4);
-    --gds-ref-color-alpha-purple-60: rgba(115 87 255 / 0.6);
-    --gds-ref-color-alpha-purple-80: rgba(115 87 255 / 0.8);
-    --gds-ref-color-alpha-red-10: rgba(243 42 29 / 0.1);
-    --gds-ref-color-alpha-red-20: rgba(243 42 29 / 0.2);
-    --gds-ref-color-alpha-red-40: rgba(243 42 29 / 0.4);
-    --gds-ref-color-alpha-red-60: rgba(243 42 29 / 0.6);
-    --gds-ref-color-alpha-red-80: rgba(243 42 29 / 0.8);
-    --gds-ref-color-alpha-white-10: rgba(255 255 255 / 0.1);
-    --gds-ref-color-alpha-white-20: rgba(255 255 255 / 0.2);
-    --gds-ref-color-alpha-white-40: rgba(255 255 255 / 0.4);
-    --gds-ref-color-alpha-white-60: rgba(255 255 255 / 0.6);
-    --gds-ref-color-alpha-white-80: rgba(255 255 255 / 0.8);
-    --gds-ref-color-alpha-yellow-10: rgba(249 221 82 / 0.1);
-    --gds-ref-color-alpha-yellow-20: rgba(249 221 82 / 0.2);
-    --gds-ref-color-alpha-yellow-40: rgba(249 221 82 / 0.4);
-    --gds-ref-color-alpha-yellow-60: rgba(249 221 82 / 0.6);
-    --gds-ref-color-alpha-yellow-80: rgba(249 221 82 / 0.8);
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400|600|700|900&display=swap");
+
+:root{
+    --gds-font-ui-stack: nunito sans, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue,
+		helvetica, cantarell, ubuntu, roboto, noto, arial, sans-serif;
+    --gds-sys-font-default-title-xxl-900: 900 1.875rem/2.25rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-title-xxl-700: 700 1.875rem/2.25rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-title-xl-900: 900 1.625rem/2rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-title-xl-700: 700 1.625rem/2rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-title-l-900: 900 1.375rem/1.625rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-title-l-700: 700 1.375rem/1.625rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-title-m-900: 900 1.125rem/1.375rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-title-m-700: 700 1.125rem/1.375rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-title-s-900: 900 1rem/1.25rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-title-s-700: 700 1rem/1.25rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-body-xl-400: 400 1.125rem/1.375rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-body-xl-700: 700 1.125rem/1.375rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-body-l-400: 400 1rem/1.25rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-body-l-700: 700 1rem/1.25rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-body-m-400: 400 0.875rem/1.125rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-body-m-700: 700 0.875rem/1.125rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-body-s-400: 400 0.75rem/1rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-body-s-700: 700 0.75rem/1rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-body-xs-400: 400 0.625rem/0.875rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-body-xs-700: 700 0.625rem/0.875rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-label-l-600: 600 1rem/1.75rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-label-m-600: 600 0.875rem/1.5rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-label-s-600: 600 0.75rem/1.125rem var(--gds-font-ui-stack);
+    --gds-sys-font-default-label-xs-600: 600 0.625rem/1rem var(--gds-font-ui-stack);
+    --gds-ref-color-alpha-black-10: rgba(0 0 0 / 10%);
+    --gds-ref-color-alpha-black-20: rgba(0 0 0 / 20%);
+    --gds-ref-color-alpha-black-40: rgba(0 0 0 / 40%);
+    --gds-ref-color-alpha-black-60: rgba(0 0 0 / 60%);
+    --gds-ref-color-alpha-black-80: rgba(0 0 0 / 80%);
+    --gds-ref-color-alpha-blue-10: rgba(36 78 219 / 10%);
+    --gds-ref-color-alpha-blue-20: rgba(36 78 219 / 20%);
+    --gds-ref-color-alpha-blue-40: rgba(36 78 219 / 40%);
+    --gds-ref-color-alpha-blue-60: rgba(36 78 219 / 60%);
+    --gds-ref-color-alpha-blue-80: rgba(36 78 219 / 80%);
+    --gds-ref-color-alpha-green-10: rgba(3 158 43 / 10%);
+    --gds-ref-color-alpha-green-20: rgba(3 158 43 / 20%);
+    --gds-ref-color-alpha-green-40: rgba(3 158 43 / 40%);
+    --gds-ref-color-alpha-green-60: rgba(3 158 43 / 60%);
+    --gds-ref-color-alpha-green-80: rgba(3 158 43 / 80%);
+    --gds-ref-color-alpha-mint-10: rgba(32 187 133 / 10%);
+    --gds-ref-color-alpha-mint-20: rgba(32 187 133 / 20%);
+    --gds-ref-color-alpha-mint-40: rgba(32 187 133 / 40%);
+    --gds-ref-color-alpha-mint-60: rgba(32 187 133 / 60%);
+    --gds-ref-color-alpha-mint-80: rgba(32 187 133 / 80%);
+    --gds-ref-color-alpha-orange-10: rgba(255 154 76 / 10%);
+    --gds-ref-color-alpha-orange-20: rgba(255 154 76 / 20%);
+    --gds-ref-color-alpha-orange-40: rgba(255 154 76 / 40%);
+    --gds-ref-color-alpha-orange-60: rgba(255 154 76 / 60%);
+    --gds-ref-color-alpha-orange-80: rgba(255 154 76 / 80%);
+    --gds-ref-color-alpha-pink-10: rgba(252 126 210 / 10%);
+    --gds-ref-color-alpha-pink-20: rgba(252 126 210 / 20%);
+    --gds-ref-color-alpha-pink-40: rgba(252 126 210 / 40%);
+    --gds-ref-color-alpha-pink-60: rgba(252 126 210 / 60%);
+    --gds-ref-color-alpha-pink-80: rgba(252 126 210 / 80%);
+    --gds-ref-color-alpha-purple-10: rgba(115 87 255 / 10%);
+    --gds-ref-color-alpha-purple-20: rgba(115 87 255 / 20%);
+    --gds-ref-color-alpha-purple-40: rgba(115 87 255 / 40%);
+    --gds-ref-color-alpha-purple-60: rgba(115 87 255 / 60%);
+    --gds-ref-color-alpha-purple-80: rgba(115 87 255 / 80%);
+    --gds-ref-color-alpha-red-10: rgba(243 42 29 / 10%);
+    --gds-ref-color-alpha-red-20: rgba(243 42 29 / 20%);
+    --gds-ref-color-alpha-red-40: rgba(243 42 29 / 40%);
+    --gds-ref-color-alpha-red-60: rgba(243 42 29 / 60%);
+    --gds-ref-color-alpha-red-80: rgba(243 42 29 / 80%);
+    --gds-ref-color-alpha-white-10: rgba(255 255 255 / 10%);
+    --gds-ref-color-alpha-white-20: rgba(255 255 255 / 20%);
+    --gds-ref-color-alpha-white-40: rgba(255 255 255 / 40%);
+    --gds-ref-color-alpha-white-60: rgba(255 255 255 / 60%);
+    --gds-ref-color-alpha-white-80: rgba(255 255 255 / 80%);
+    --gds-ref-color-alpha-yellow-10: rgba(249 221 82 / 10%);
+    --gds-ref-color-alpha-yellow-20: rgba(249 221 82 / 20%);
+    --gds-ref-color-alpha-yellow-40: rgba(249 221 82 / 40%);
+    --gds-ref-color-alpha-yellow-60: rgba(249 221 82 / 60%);
+    --gds-ref-color-alpha-yellow-80: rgba(249 221 82 / 80%);
     --gds-ref-color-solid-basics-black: rgb(23 22 34);
     --gds-ref-color-solid-basics-white: rgb(255 255 255);
     --gds-ref-color-solid-blue-10: rgb(242 244 253);
@@ -173,6 +201,7 @@
     --gds-ref-space-space-9: 64px;
     --gds-ref-space-space-9-rem: 4rem
 }
+
 /* Light theme Semantics */
 :root,[data-theme='light'] {
     --gds-sys-color-background-neutral-default: var(--gds-ref-color-solid-basics-white);
@@ -294,6 +323,7 @@
     --gds-sys-space-space-8: var(--gds-ref-space-space-8);
     --gds-sys-space-space-9: var(--gds-ref-space-space-9)
 }
+
 /* Dark theme Semantics */
 [data-theme='dark'] {
     --gds-sys-color-background-neutral-default: var(--gds-ref-color-solid-grey-900);

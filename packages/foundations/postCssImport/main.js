@@ -16,11 +16,13 @@ async function processCss(inputFile, outputFile, plugins = []) {
 }
 
 // Merge CSS declarations
-async function mergeDeclarations(file1, file2, outputFile) {
+async function mergeDeclarations(filesToMerge, outputFile) {
+	const [file1, file2, file3] = filesToMerge;
 	const css1 = fs.readFileSync(path.join(__dirname, file1), "utf-8");
 	const css2 = fs.readFileSync(path.join(__dirname, file2), "utf-8");
+	const css3 = fs.readFileSync(path.join(__dirname, file3), "utf-8");
 
-	const combined = css1 + "\n" + css2;
+	const combined = css1 + "\n" + css2 + "\n" + css3;
 	const result = await postcss([mergeDeclPlugin()]).process(combined, {
 		from: combined,
 	});
@@ -32,7 +34,7 @@ async function mergeDeclarations(file1, file2, outputFile) {
 async function execute() {
 	await processCss("reference.css", "reference-output.css", [normalizer(), referencePlugin()]);
 	await processCss("system.css", "system-output.css", [normalizer(), systemPlugin()]);
-	mergeDeclarations("reference-output.css", "system-output.css", "index.css");
+	mergeDeclarations(["base.css", "reference-output.css", "system-output.css"], "index.css");
 }
 
 execute().catch(console.error);
