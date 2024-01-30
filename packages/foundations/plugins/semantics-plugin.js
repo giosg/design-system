@@ -14,9 +14,9 @@ module.exports = (opts = {}) => {
 					value: decl.value,
 				});
 				decl.remove();
-			} else {
+			} else if (decl.prop.toLowerCase().includes("-light")) {
 				lightThemeDeclarations.push({
-					prop: decl.prop,
+					prop: decl.prop.replace("-light", ""),
 					value: decl.value,
 				});
 				decl.remove();
