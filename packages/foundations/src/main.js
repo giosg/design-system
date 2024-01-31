@@ -31,8 +31,9 @@ async function execute() {
 	const refResult = await processCss("reference.css", [normalizer(), referencePlugin()]);
 	const sysResult = await processCss("system.css", [normalizer(), systemPlugin()]);
 	const baseCss = await processCss("base.css", [normalizer()]);
+	const reset = await processCss("reset.css", []);
 
-	mergeDeclarations([baseCss, refResult, sysResult], "index.css");
+	mergeDeclarations([baseCss, reset, refResult, sysResult], "index.css");
 }
 
 execute().catch(console.error);

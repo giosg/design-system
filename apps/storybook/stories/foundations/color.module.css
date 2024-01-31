@@ -1,5 +1,6 @@
 .canvas {
 	display: flex;
+	max-width: 1200px;
 	padding: 30px;
 	gap: 30px;
 	min-height: 500px;

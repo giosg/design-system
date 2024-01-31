@@ -2,8 +2,8 @@
 
 :root {
 	/* Fonts */
-	--gds-font-ui-stack: Nunito Sans, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue,
-		helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+	--gds-font-ui-stack: nunito sans, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue,
+		helvetica, cantarell, ubuntu, roboto, noto, arial, sans-serif;
 	--gds-sys-font-default-title-xxl-900: 900 1.875rem/2.25rem var(--gds-font-ui-stack);
 	--gds-sys-font-default-title-xxl-700: 700 1.875rem/2.25rem var(--gds-font-ui-stack);
 	--gds-sys-font-default-title-xl-900: 900 1.625rem/2rem var(--gds-font-ui-stack);
@@ -30,24 +30,24 @@
 	--gds-sys-font-default-label-xs-600: 600 0.625rem/1rem var(--gds-font-ui-stack);
 
 	/* Shadows */
-	--gds-sys-shadow-down-xl: 0 2px 5px 0 rgba(0 0 0 / 0.08), 0 9px 9px 0 rgba(0 0 0 / 0.07),
-		0 21px 13px 0 rgba(0 0 0 / 0.04), 0 37px 15px 0 rgba(0 0 0 / 0.01), 0 58px 16px 0 rgba(0 0 0 / 0);
-	--gds-sys-shadow-down-l: 0 2px 5px 0 rgba(0 0 0 / 0.05), 0 9px 9px 0 rgba(0 0 0 / 0.04),
-		0 21px 13px 0 rgba(0 0 0 / 0.03), 0 37px 15px 0 rgba(0 0 0 / 0.01), 0 58px 16px 0 rgba(0 0 0 / 0);
-	--gds-sys-shadow-down-m: 0 1px 3px 0 rgba(0 0 0 / 0.05), 0 5px 5px 0 rgba(0 0 0 / 0.04),
-		0 10px 6px 0 rgba(0 0 0 / 0.03), 0 19px 7px 0 rgba(0 0 0 / 0.01), 0 29px 8px 0 rgba(0 0 0 / 0);
-	--gds-sys-shadow-down-s: 0 0 1px 0 rgba(0 0 0 / 0.05), 0 2px 2px 0 rgba(0 0 0 / 0.04), 0 4px 3px 0 rgba(0 0 0 / 0.03),
-		0 7px 3px 0 rgba(0 0 0 / 0.01), 0 12px 3px 0 rgba(0 0 0 / 0);
-	--gds-sys-shadow-down-xs: 0 0 1px 0 rgba(0 0 0 / 0.05), 0 1px 1px 0 rgba(0 0 0 / 0.04), 0 2px 1px 0 rgba(0 0 0 / 0.03),
-		0 4px 1px 0 rgba(0 0 0 / 0.01), 0 6px 2px 0 rgba(0 0 0 / 0);
-	--gds-sys-shadow-up-xl: 0 -2px 5px 0 rgba(0 0 0 / 0.08), 0 -9px 9px 0 rgba(0 0 0 / 0.07),
-		0 -21px 13px 0 rgba(0 0 0 / 0.04), 0 -37px 15px 0 rgba(0 0 0 / 0.01), 0 -58px 16px 0 rgba(0 0 0 / 0);
-	--gds-sys-shadow-up-l: 0 -2px 5px 0 rgba(0 0 0 / 0.05), 0 -9px 9px 0 rgba(0 0 0 / 0.04),
-		0 -21px 13px 0 rgba(0 0 0 / 0.03), 0 -37px 15px 0 rgba(0 0 0 / 0.01), 0 -58px 16px 0 rgba(0 0 0 / 0);
-	--gds-sys-shadow-up-m: 0 -1px 3px 0 rgba(0 0 0 / 0.05), 0 -5px 5px 0 rgba(0 0 0 / 0.04),
-		0 -10px 6px 0 rgba(0 0 0 / 0.03), 0 -19px 7px 0 rgba(0 0 0 / 0.01), 0 -29px 8px 0 rgba(0 0 0 / 0);
-	--gds-sys-shadow-up-s: 0 0 1px 0 rgba(0 0 0 / 0.05), 0 -2px 2px 0 rgba(0 0 0 / 0.04), 0 -4px 3px 0 rgba(0 0 0 / 0.03),
-		0 -7px 3px 0 rgba(0 0 0 / 0.01), 0 -12px 3px 0 rgba(0 0 0 / 0);
-	--gds-sys-shadow-up-xs: 0 0 1px 0 rgba(0 0 0 / 0.05), 0 -1px 1px 0 rgba(0 0 0 / 0.04), 0 -2px 1px 0 rgba(0 0 0 / 0.03),
-		0 -4px 1px 0 rgba(0 0 0 / 0.01), 0 -6px 2px 0 rgba(0 0 0 / 0);
+	--gds-sys-shadow-down-xl: 0 2px 5px 0 rgba(0 0 0 / 8%), 0 9px 9px 0 rgba(0 0 0 / 7%), 0 21px 13px 0 rgba(0 0 0 / 4%),
+		0 37px 15px 0 rgba(0 0 0 / 1%), 0 58px 16px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-down-l: 0 2px 5px 0 rgba(0 0 0 / 5%), 0 9px 9px 0 rgba(0 0 0 / 4%), 0 21px 13px 0 rgba(0 0 0 / 3%),
+		0 37px 15px 0 rgba(0 0 0 / 1%), 0 58px 16px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-down-m: 0 1px 3px 0 rgba(0 0 0 / 5%), 0 5px 5px 0 rgba(0 0 0 / 4%), 0 10px 6px 0 rgba(0 0 0 / 3%),
+		0 19px 7px 0 rgba(0 0 0 / 1%), 0 29px 8px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-down-s: 0 0 1px 0 rgba(0 0 0 / 5%), 0 2px 2px 0 rgba(0 0 0 / 4%), 0 4px 3px 0 rgba(0 0 0 / 3%),
+		0 7px 3px 0 rgba(0 0 0 / 1%), 0 12px 3px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-down-xs: 0 0 1px 0 rgba(0 0 0 / 5%), 0 1px 1px 0 rgba(0 0 0 / 4%), 0 2px 1px 0 rgba(0 0 0 / 3%),
+		0 4px 1px 0 rgba(0 0 0 / 1%), 0 6px 2px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-up-xl: 0 -2px 5px 0 rgba(0 0 0 / 8%), 0 -9px 9px 0 rgba(0 0 0 / 7%), 0 -21px 13px 0 rgba(0 0 0 / 4%),
+		0 -37px 15px 0 rgba(0 0 0 / 1%), 0 -58px 16px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-up-l: 0 -2px 5px 0 rgba(0 0 0 / 5%), 0 -9px 9px 0 rgba(0 0 0 / 4%), 0 -21px 13px 0 rgba(0 0 0 / 3%),
+		0 -37px 15px 0 rgba(0 0 0 / 1%), 0 -58px 16px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-up-m: 0 -1px 3px 0 rgba(0 0 0 / 5%), 0 -5px 5px 0 rgba(0 0 0 / 4%), 0 -10px 6px 0 rgba(0 0 0 / 3%),
+		0 -19px 7px 0 rgba(0 0 0 / 1%), 0 -29px 8px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-up-s: 0 0 1px 0 rgba(0 0 0 / 5%), 0 -2px 2px 0 rgba(0 0 0 / 4%), 0 -4px 3px 0 rgba(0 0 0 / 3%),
+		0 -7px 3px 0 rgba(0 0 0 / 1%), 0 -12px 3px 0 rgba(0 0 0 / 0%);
+	--gds-sys-shadow-up-xs: 0 0 1px 0 rgba(0 0 0 / 5%), 0 -1px 1px 0 rgba(0 0 0 / 4%), 0 -2px 1px 0 rgba(0 0 0 / 3%),
+		0 -4px 1px 0 rgba(0 0 0 / 1%), 0 -6px 2px 0 rgba(0 0 0 / 0%);
 }

@@ -43,6 +43,7 @@ function ColorCell(props: ColorCellProps): JSX.Element {
 
 export const Palette: Story = {
 	parameters: {
+		options: { showPanel: false },
 		controls: { hideNoControlsWarning: true },
 	},
 	// decorators: [
@@ -71,7 +72,7 @@ export const Palette: Story = {
 					{SolidColorMap.map(({ gradation, name, prefix }) => {
 						return (
 							<div className={styles.rowContainer} key={name}>
-								<h3>{name}</h3>
+								<h6>{name}</h6>
 								<div className={styles.row} key={name}>
 									{gradation.map((value) => {
 										return <ColorCell key={value} value={value} variablePrefix={prefix} />;

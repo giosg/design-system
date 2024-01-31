@@ -2,24 +2,23 @@
 	"name": "@giosg/design-system-foundations",
 	"private": true,
 	"version": "0.0.0",
-	"style": "./dist/index.css",
+	"style": "index.css",
 	"sideEffects": [
 		"*.css"
 	],
 	"license": "MIT",
 	"files": [
-		"dist/**"
+		"index.css"
 	],
 	"scripts": {
-		"build": "parcel build index.css",
-		"dev": "parcel watch index.css --port $(../../scripts/getPort.sh)",
-		"css": "node ./postCssImport/main.js && prettier --write \"index.css\" && stylelint \"**/*.css\" --fix",
+		"build": "pnpm run css",
+		"dev": "pnpm run css",
+		"css": "node ./src/main.js && prettier --write \"index.css\" && stylelint \"**/*.css\" --fix",
 		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
 		"lint": "stylelint \"**/*.css\" --max-warnings=0"
 	},
 	"devDependencies": {
 		"@repo/stylelint-config": "workspace:*",
-		"parcel": "2.11.0",
 		"postcss": "^8.4.33",
 		"postcss-cli": "^11.0.0",
 		"postcss-js": "^4.0.1",
