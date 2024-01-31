@@ -1,16 +1,19 @@
+.body {
+	background-color: var(--gds-sys-color-background-neutral-mild);
+}
+
 .canvas {
 	display: flex;
-	max-width: 1200px;
+	flex-direction: column;
+	width: 1200px;
 	padding: 30px;
 	gap: 30px;
-	min-height: 500px;
-	min-width: 500px;
 	background-color: var(--gds-sys-color-background-neutral-default);
 	box-shadow: var(--gds-sys-shadow-up-xl), var(--gds-sys-shadow-down-xl);
 	border-radius: var(--gds-sys-radius-radius-5);
 }
 
-.rowContainer {
+.row {
 	flex: 1 0;
 	display: flex;
 	flex-direction: column;
@@ -22,36 +25,17 @@
 	}
 }
 
-.row {
+.cellContainer {
 	flex: 1 0;
 	display: flex;
 	min-height: 100px;
 	height: 100px;
 }
 
-.alphaRow {
+.alphaCellContainer {
 	flex: 1 0;
 	display: flex;
 	min-height: 100px;
 	height: 100px;
 	background: url("./checker.svg");
-}
-
-.colorCell {
-	flex: 1 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	div {
-		color: white;
-		mix-blend-mode: difference;
-	}
-}
-
-.container {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
 }
