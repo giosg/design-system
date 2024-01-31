@@ -49,7 +49,7 @@ export const Palette: Story = {
 		});
 
 		return (
-			<div className={styles.paletteContainer}>
+			<div className={styles.paletteContainer} data-testid="palette">
 				<div className={styles.row}>
 					<div className={styles.cellContainer}>
 						<ColorCell label="White" variablePrefix="--gds-ref-color-solid-basics-white" />
@@ -103,10 +103,10 @@ export const Themes: Story = {
 	render: () => {
 		return (
 			<div className={styles.themes}>
-				<ThemeCanvas>
+				<ThemeCanvas data-testid="light-theme">
 					<h1 className={styles.themeHeader}>Light Theme</h1>
 				</ThemeCanvas>
-				<ThemeCanvas data-theme="dark">
+				<ThemeCanvas data-testid="dark-theme" data-theme="dark">
 					<h1 className={styles.themeHeader}>Dark Theme</h1>
 				</ThemeCanvas>
 			</div>

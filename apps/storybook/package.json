@@ -8,7 +8,8 @@
 		"build": "storybook build",
 		"serve-storybook": "serve storybook-static",
 		"clean": "rm -rf .turbo && rm -rf node_modules",
-		"lint": "eslint stories/**/*.tsx --max-warnings=0 && stylelint \"stories/**/*.css\" --max-warnings=0 --allow-empty-input"
+		"lint": "eslint stories/**/*.tsx --max-warnings=0 && stylelint \"stories/**/*.css\" --max-warnings=0 --allow-empty-input",
+		"test": "playwright test"
 	},
 	"dependencies": {
 		"@giosg/design-system-foundations": "workspace:*",
