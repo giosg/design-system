@@ -5,6 +5,11 @@ import styles from "./colors.module.css";
 
 const meta: Meta = {
 	title: "Foundations/Colors",
+	parameters: {
+		options: { showPanel: false },
+		controls: { hideNoControlsWarning: true },
+		layout: "centered",
+	},
 };
 
 export default meta;
@@ -29,17 +34,6 @@ const getAlphaColorPaletteProp = (name: string) => {
 };
 
 export const Palette: Story = {
-	parameters: {
-		options: { showPanel: false },
-		controls: { hideNoControlsWarning: true },
-		layout: "centered",
-	},
-	decorators: [
-		(Story) => {
-			document.body.classList.add(styles.body);
-			return <Story />;
-		},
-	],
 	render: () => {
 		const SolidColorMap = SolidColorPalette.map((colorName) => {
 			return { ...getSolidColorPaletteProp(colorName), name: colorName };
@@ -89,17 +83,6 @@ const ShortOptionList = ["strong", "medium", "mild"] as const;
 const FullOptionList = ["strongest", "stronger", "strong", "medium", "mild", "milder", "mildest"] as const;
 
 export const Themes: Story = {
-	parameters: {
-		options: { showPanel: false },
-		controls: { hideNoControlsWarning: true },
-		layout: "centered",
-	},
-	decorators: [
-		(Story) => {
-			document.body.classList.remove(styles.body);
-			return <Story />;
-		},
-	],
 	render: () => {
 		return (
 			<div className={styles.themes}>
