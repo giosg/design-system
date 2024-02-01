@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400|600|700|900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,900;1,6..12,700&display=swap");
 
 :root {
 	--gds-font-ui-stack: nunito sans, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue,
@@ -273,8 +273,6 @@ dl,
 dd {
 	margin: 0;
 	padding: 0;
-
-	/* margin-block-end: 0; */
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */

@@ -3,7 +3,7 @@ import { VariableTooltip } from "../../../components/variableTooltip";
 import styles from "./box-shadows.module.css";
 
 const meta: Meta = {
-	title: "Foundations/Box-Shadows",
+	title: "Foundations/Box Shadows",
 };
 
 export default meta;

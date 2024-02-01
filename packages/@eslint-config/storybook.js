@@ -42,5 +42,6 @@ module.exports = {
 		"import/no-default-export": "off",
 		"@typescript-eslint/explicit-function-return-type": "off",
 		"unicorn/filename-case": "off",
+		"react/no-array-index-key": "off",
 	},
 };
