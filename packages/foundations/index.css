@@ -201,16 +201,16 @@
 	--gds-sys-font-default-title-xxl-700: 700 1.875rem/2.25rem var(--gds-font-ui-stack);
 	--gds-sys-font-default-title-xxl-900: 900 1.875rem/2.25rem var(--gds-font-ui-stack);
 	--gds-sys-radius-none: var(--gds-ref-space-space-0);
-	--gds-sys-radius-radius-0-5: var(--gds-ref-space-space-0-5);
-	--gds-sys-radius-radius-1: var(--gds-ref-space-space-1);
-	--gds-sys-radius-radius-2: var(--gds-ref-space-space-2);
-	--gds-sys-radius-radius-3: var(--gds-ref-space-space-3);
-	--gds-sys-radius-radius-4: var(--gds-ref-space-space-4);
-	--gds-sys-radius-radius-5: var(--gds-ref-space-space-5);
-	--gds-sys-radius-radius-6: var(--gds-ref-space-space-6);
-	--gds-sys-radius-radius-7: var(--gds-ref-space-space-7);
-	--gds-sys-radius-radius-8: var(--gds-ref-space-space-8);
-	--gds-sys-radius-radius-9: var(--gds-ref-space-space-9);
+	--gds-sys-radius-radius-2xl: var(--gds-ref-space-space-7);
+	--gds-sys-radius-radius-2xs: var(--gds-ref-space-space-1);
+	--gds-sys-radius-radius-3xl: var(--gds-ref-space-space-8);
+	--gds-sys-radius-radius-3xs: var(--gds-ref-space-space-0-5);
+	--gds-sys-radius-radius-4xl: var(--gds-ref-space-space-9);
+	--gds-sys-radius-radius-l: var(--gds-ref-space-space-5);
+	--gds-sys-radius-radius-m: var(--gds-ref-space-space-4);
+	--gds-sys-radius-radius-s: var(--gds-ref-space-space-3);
+	--gds-sys-radius-radius-xl: var(--gds-ref-space-space-6);
+	--gds-sys-radius-radius-xs: var(--gds-ref-space-space-2);
 	--gds-sys-shadow-down-l: 0 2px 5px 0 rgba(0 0 0 / 5%), 0 9px 9px 0 rgba(0 0 0 / 4%), 0 21px 13px 0 rgba(0 0 0 / 3%),
 		0 37px 15px 0 rgba(0 0 0 / 1%), 0 58px 16px 0 rgba(0 0 0 / 0%);
 	--gds-sys-shadow-down-m: 0 1px 3px 0 rgba(0 0 0 / 5%), 0 5px 5px 0 rgba(0 0 0 / 4%), 0 10px 6px 0 rgba(0 0 0 / 3%),
@@ -232,16 +232,16 @@
 	--gds-sys-shadow-up-xs: 0 0 1px 0 rgba(0 0 0 / 5%), 0 -1px 1px 0 rgba(0 0 0 / 4%), 0 -2px 1px 0 rgba(0 0 0 / 3%),
 		0 -4px 1px 0 rgba(0 0 0 / 1%), 0 -6px 2px 0 rgba(0 0 0 / 0%);
 	--gds-sys-space-none: var(--gds-ref-space-space-0);
-	--gds-sys-space-space-0-5: var(--gds-ref-space-space-0-5);
-	--gds-sys-space-space-1: var(--gds-ref-space-space-1);
-	--gds-sys-space-space-2: var(--gds-ref-space-space-2);
-	--gds-sys-space-space-3: var(--gds-ref-space-space-3);
-	--gds-sys-space-space-4: var(--gds-ref-space-space-4);
-	--gds-sys-space-space-5: var(--gds-ref-space-space-5);
-	--gds-sys-space-space-6: var(--gds-ref-space-space-6);
-	--gds-sys-space-space-7: var(--gds-ref-space-space-7);
-	--gds-sys-space-space-8: var(--gds-ref-space-space-8);
-	--gds-sys-space-space-9: var(--gds-ref-space-space-9);
+	--gds-sys-space-space-2xl: var(--gds-ref-space-space-7);
+	--gds-sys-space-space-2xs: var(--gds-ref-space-space-1);
+	--gds-sys-space-space-3xl: var(--gds-ref-space-space-8);
+	--gds-sys-space-space-3xs: var(--gds-ref-space-space-0-5);
+	--gds-sys-space-space-4xl: var(--gds-ref-space-space-9);
+	--gds-sys-space-space-l: var(--gds-ref-space-space-5);
+	--gds-sys-space-space-m: var(--gds-ref-space-space-4);
+	--gds-sys-space-space-s: var(--gds-ref-space-space-3);
+	--gds-sys-space-space-xl: var(--gds-ref-space-space-6);
+	--gds-sys-space-space-xs: var(--gds-ref-space-space-2);
 }
 
 /* Box sizing rules */
