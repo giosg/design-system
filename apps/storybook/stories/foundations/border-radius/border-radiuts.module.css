@@ -5,7 +5,7 @@
 	align-items: center;
 	height: 700px;
 	background-color: var(--gds-sys-color-background-neutral-milder);
-	border-radius: var(--gds-sys-radius-radius-l);
+	border-radius: var(--gds-sys-radius-l);
 	padding: 100px;
 }
 
@@ -27,7 +27,7 @@
 
 .item {
 	background-color: var(--gds-sys-color-background-neutral-default);
-	border-radius: var(--gds-sys-radius-radius-m);
+	border-radius: var(--gds-sys-radius-m);
 	width: 150px;
 	height: 120px;
 }

@@ -7,7 +7,7 @@
 	background-color: var(--gds-sys-color-background-neutral-default);
 	color: var(--gds-sys-color-content-neutral-default);
 	box-shadow: var(--gds-sys-shadow-up-xl), var(--gds-sys-shadow-down-xl);
-	border-radius: var(--gds-sys-radius-radius-l);
+	border-radius: var(--gds-sys-radius-l);
 }
 
 .row {
@@ -51,7 +51,7 @@
 	padding: 50px;
 	background-color: var(--gds-sys-color-content-neutral-mild);
 	box-shadow: var(--gds-sys-shadow-up-xl), var(--gds-sys-shadow-down-xl);
-	border-radius: var(--gds-sys-radius-radius-l);
+	border-radius: var(--gds-sys-radius-l);
 	gap: 40px;
 }
 

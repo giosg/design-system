@@ -20,18 +20,7 @@ export const Variants: Story = {
 		return (
 			<div className={styles.container}>
 				<div className={styles.row}>
-					{[
-						"none",
-						"radius-3xs",
-						"radius-2xs",
-						"radius-xs",
-						"radius-s",
-						"radius-m",
-						"radius-l",
-						"radius-xl",
-						"radius-2xl",
-						"radius-3xl",
-					].map((value) => {
+					{["none", "3xs", "2xs", "xs", "s", "m", "l", "xl", "2xl", "3xl"].map((value) => {
 						return (
 							<div className={styles.itemContainer} key={value}>
 								<VariableTooltip variableName={`--gds-sys-radius-${value}`}>
