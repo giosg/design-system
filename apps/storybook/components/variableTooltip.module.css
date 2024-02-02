@@ -1,5 +1,5 @@
 .tooltip {
-	border-radius: var(--gds-ref-space-space-1);
+	border-radius: var(--gds-sys-radius-xs);
 	padding: 10px;
 	background-color: var(--gds-ref-color-solid-grey-900);
 	color: var(--gds-ref-color-solid-basics-white);
@@ -8,7 +8,7 @@
 	gap: 10px;
 	text-align: center;
 
-	span {
-		opacity: 0.6;
+	svg {
+		fill: var(--gds-ref-color-solid-grey-900);
 	}
 }
