@@ -11,6 +11,9 @@ importers:
       '@changesets/cli':
         specifier: ^2.25.2
         version: 2.27.1
+      '@types/node':
+        specifier: ^20.11.5
+        version: 20.11.5
       dotenv-cli:
         specifier: ^7.3.0
         version: 7.3.0
