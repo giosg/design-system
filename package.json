@@ -6,6 +6,7 @@
 		"serve-storybook": "turbo run serve-storybook",
 		"dev": "turbo run dev",
 		"lint": "turbo run lint",
+		"test": "turbo run test",
 		"clean": "turbo run clean && rm -rf node_modules",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"changeset": "changeset",

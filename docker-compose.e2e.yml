@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  app:
+    volumes:
+      - .:/app
+    build:
+      context: .
+      dockerfile: Dockerfile.e2e
+    ports:
+      - "6006:6006" # Map the port where Storybook runs
+      - "9323:9323" # Map the port where Reported runs
+    command: bash -c "pnpm run serve-storybook & pnpm run test"
