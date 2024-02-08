@@ -97,8 +97,6 @@ steps:
         from_secret: docker-username
       password:
         from_secret: docker-password
-    commands:
-      - pnpm run serve-storybook & pnpm run test
 
   - name: build
     image: plugins/kaniko

@@ -10,3 +10,6 @@ WORKDIR /app
 # install
 RUN pnpm install --frozen-lockfile
 RUN pnpm build
+
+# Run tests
+CMD ["bash", "-c", "pnpm run serve-storybook & pnpm run test"]
