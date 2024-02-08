@@ -90,16 +90,9 @@ steps:
 
   - name: e2e
     image: plugins/kaniko
-    when:
-      status:
-        - failure
-        - success
     settings:
       dockerfile: Dockerfile.e2e
       repo: giosg/design-system
-      tags:
-        - ${DRONE_COMMIT}-pull-request
-        - pull-request
       username:
         from_secret: docker-username
       password:
