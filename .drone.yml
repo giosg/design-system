@@ -89,14 +89,13 @@ steps:
       - pnpm run lint
 
   - name: e2e
-    image: plugins/kaniko
-    settings:
-      dockerfile: Dockerfile.e2e
-      repo: giosg/design-system
-      username:
-        from_secret: docker-username
-      password:
-        from_secret: docker-password
+    image: mcr.microsoft.com/playwright:v1.41.1-jammy
+    depends_on:
+      - install-packages
+    commands:
+      - pnpm build
+      - pnpm run serve-storybook
+      - pnpm run test
 
   - name: build
     image: plugins/kaniko
