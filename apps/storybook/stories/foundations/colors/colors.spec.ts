@@ -1,10 +1,4 @@
-import { test, expect, defineConfig } from "@playwright/test";
-
-export default defineConfig({
-	expect: {
-		toHaveScreenshot: { threshold: 0.001 },
-	},
-});
+import { test, expect } from "@playwright/test";
 
 test("Palette", async ({ page }) => {
 	await page.goto("http://localhost:6006/iframe.html?args=&id=foundations-colors--palette&viewMode=story");

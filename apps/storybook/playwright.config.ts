@@ -34,6 +34,11 @@ export default defineConfig({
 		trace: "on-first-retry",
 	},
 
+	expect: {
+		// Strictest config possible for pixelmatch
+		toHaveScreenshot: { threshold: 0, maxDiffPixelRatio: 0, maxDiffPixels: 0 },
+	},
+
 	/* Configure projects for major browsers */
 	projects: [
 		{
