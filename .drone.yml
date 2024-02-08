@@ -90,14 +90,12 @@ steps:
 
   - name: e2e
     image: mcr.microsoft.com/playwright:v1.41.1-jammy
-
     depends_on:
       - install-packages
     commands:
       - corepack enable
       - pnpm build
-      - pnpm run serve-storybook
-      - pnpm run test
+      - pnpm run serve-storybook & pnpm run test
 
   - name: build
     image: plugins/kaniko
