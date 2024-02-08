@@ -18,7 +18,7 @@ export const Variants: Story = {
 	},
 	render: () => {
 		return (
-			<div className={styles.container} onClick={() => null}>
+			<div className={styles.container}>
 				<div className={styles.row}>
 					{["none", "3xs", "2xs", "xs", "s", "m", "l", "xl", "2xl", "3xl"].map((value) => {
 						return (
