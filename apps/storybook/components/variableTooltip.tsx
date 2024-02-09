@@ -1,4 +1,6 @@
 import * as Tooltip from "@radix-ui/react-tooltip";
+import { useEffect, useRef, useState } from "react";
+import { Toast } from "./toast";
 import styles from "./variableTooltip.module.css";
 
 interface VariableTooltipProps {
@@ -8,17 +10,33 @@ interface VariableTooltipProps {
 
 export function VariableTooltip(props: VariableTooltipProps): JSX.Element {
 	const { variableName, children } = props;
+	const [tooltipOpen, setTooltipOpen] = useState(false);
+	const timerRef = useRef(0);
 
-	const onClick = () => {
+	useEffect(() => {
+		return () => {
+			clearTimeout(timerRef.current);
+		};
+	}, []);
+
+	const onTooltipClick = () => {
 		navigator.clipboard.writeText(`var(${variableName})`).catch(() => null);
+		setTooltipOpen(true);
+		clearTimeout(timerRef.current);
+		timerRef.current = window.setTimeout(() => {
+			setTooltipOpen(false);
+		}, 1000);
 	};
 
 	return (
 		<Tooltip.Provider>
+			<Toast description="Value copied to the clipboard" open={tooltipOpen} setOpen={setTooltipOpen} />
 			<Tooltip.Root delayDuration={0}>
-				<Tooltip.Trigger asChild>{children}</Tooltip.Trigger>
+				<Tooltip.Trigger asChild onClick={onTooltipClick}>
+					{children}
+				</Tooltip.Trigger>
 				<Tooltip.Portal>
-					<Tooltip.Content className={styles.tooltip} onClick={onClick} sideOffset={5}>
+					<Tooltip.Content className={styles.tooltip} sideOffset={5}>
 						<p>{`var(${variableName})`}</p>
 						<span>Click on me to copy!</span>
 						<Tooltip.Arrow className="TooltipArrow" />
