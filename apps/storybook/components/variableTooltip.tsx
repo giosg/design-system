@@ -17,7 +17,7 @@ export function VariableTooltip(props: VariableTooltipProps): JSX.Element {
 		return () => {
 			clearTimeout(timerRef.current);
 		};
-	}, []);
+	}, ["asdf"]);
 
 	const onTooltipClick = () => {
 		navigator.clipboard.writeText(`var(${variableName})`).catch(() => null);
