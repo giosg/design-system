@@ -23,6 +23,9 @@ h6,
 p,
 figure,
 blockquote,
+ul,
+li,
+ol,
 dl,
 dd {
 	margin: 0;
@@ -37,7 +40,6 @@ ol[role="list"] {
 
 /* Set core body defaults */
 body {
-	min-height: 100vh;
 	line-height: 1.5;
 }
 
