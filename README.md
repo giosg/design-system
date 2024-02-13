@@ -36,7 +36,7 @@ There are multiple reasons to support this approach. I'll provide you with the m
  - **No runtime overhead**. Compared to other solutions like CSS-in-JS, plain CSS incurs zero runtime overhead and avoids DOM manipulations, resulting in faster operations than CSS-in-JS. Less JS - faster operation. You can check one of the articles about this [here](https://pustelto.com/blog/css-vs-css-in-js-perf/) 
  - **Long-term caching**. CSS is very easy to get long-term cached by the browser.
 
-## Testing
+## 📐 Testing
 
 For testing solutions, ![](./assets/playwright.svg) [Playwright](https://playwright.dev/) is used. As a rule of thumb, we should test only what we have control over and trust all the third-party providers that they test their own code. Therefore, the testing part of the project will mostly involve screenshot testing.
 
@@ -44,4 +44,4 @@ Playwright is very flexible in that sense, as it is able to perform various oper
 
 Playwright uses [pixelmatch](https://github.com/mapbox/pixelmatch) library under the hood for performing screenshot comparison.
 
-The main benefit of using Playwright is its ability to consistently test across three main browser engines (Chromium, Firefox, WebKit) in Docker environments.
+The main benefit of using Playwright is its ability to consistently test across three main browser engines (Chromium, Firefox, WebKit) in Docker environments. 
