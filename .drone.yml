@@ -121,10 +121,6 @@ steps:
 
   - name: deploy-pull-request
     image: giosg/drone-helm:3
-    when:
-      status:
-        - failure
-        - success
     settings:
       chart: charts/design-system
       namespace: integrations
