@@ -23,6 +23,7 @@
 		"postcss-cli": "^11.0.0",
 		"postcss-js": "^4.0.1",
 		"style-dictionary": "^3.9.2",
+		"@tokens-studio/sd-transforms": "^0.14.2",
 		"stylelint": "^16.2.0"
 	},
 	"publishConfig": {
