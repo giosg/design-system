@@ -1,6 +1,40 @@
 import StyleDictionaryPackage from "style-dictionary";
 import { registerTransforms } from "@tokens-studio/sd-transforms";
 
+// StyleDictionaryPackage.registerParser({
+// 	pattern: /\.json$/,
+// 	parse: ({ contents, filePath }) => {
+// 		const obj = JSON.parse(contents);
+// 		// Add additional metadata to tokens
+// 		// obj.filePath = filePath;
+
+// 		return obj;
+// 	},
+// });
+
+StyleDictionaryPackage.registerTransform({
+	name: "name/cti/kebab-include-category",
+	type: "name",
+	transformer: (prop, option) => {
+		// console.log(prop);
+		// Get the category
+		const category = prop.path[0];
+		// Get the name without the category
+		const name = prop.path.slice(1).join("-");
+		// Include the category in the name
+		return `${category}-${name}`;
+	},
+});
+
+// StyleDictionaryPackage.registerTransform({
+// 	name: "attribute/cti",
+// 	type: "attribute",
+// 	transformer: (prop) => {
+// 		// console.log(prop);
+// 		return prop.path.join("/");
+// 	},
+// });
+
 // sd-transforms, 2nd parameter for options can be added
 // See docs: https://github.com/tokens-studio/sd-transforms
 registerTransforms(StyleDictionaryPackage, {
@@ -14,7 +48,7 @@ registerTransforms(StyleDictionaryPackage, {
 });
 
 // const themes = ["System", "Whisbi_Dark", "Theme_Samsung", "Theme_Telia", "Theme_Mercedes"];
-const themes = ["System"];
+const themes = ["light", "dark"];
 
 // CUSTOM TRANSFORMS
 
@@ -73,6 +107,7 @@ StyleDictionaryPackage.registerTransform({
 StyleDictionaryPackage.registerTransformGroup({
 	name: "tokens-css",
 	transforms: [
+		"name/cti/kebab-include-category",
 		"attribute/cti",
 		"name/cti/kebab",
 		"color/hsl-4",
@@ -83,17 +118,17 @@ StyleDictionaryPackage.registerTransformGroup({
 });
 
 // HAVE THE STYLE DICTIONARY CONFIG DYNAMICALLY GENERATED
-
-function getStyleDictionaryConfig(brand) {
+function getStyleDictionaryConfig(theme) {
 	return {
-		source: [`tokens/global/**/*.json`, `tokens/themes/${brand}.json`],
+		source: [`tokens/tokens-${theme}.json`],
 		platforms: {
 			css: {
 				transformGroup: "tokens-css",
 				buildPath: `build/css/`,
+				prefix: "--gds",
 				files: [
 					{
-						destination: `${brand}.css`,
+						destination: `${theme}.css`,
 						format: "css/variables",
 						options: {
 							outputReferences: true,
@@ -107,28 +142,12 @@ function getStyleDictionaryConfig(brand) {
 
 console.log("Build started...");
 
-// PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
-
-themes.map(function (brand) {
+// PROCESS THE DESIGN TOKENS FOR EACH THEME
+themes.map(function (theme) {
 	console.log("\n==============================================");
-	console.log(`\nProcessing: [${brand}]`);
+	console.log(`\nProcessing: [${theme}]`);
 
-	const StyleDictionary = StyleDictionaryPackage.extend({
-		source: ["token.json"],
-		platforms: {
-			css: {
-				transformGroup: "tokens-css",
-				prefix: "-",
-				buildPath: "build/css/",
-				files: [
-					{
-						destination: "variables.css",
-						format: "css/variables",
-					},
-				],
-			},
-		},
-	});
+	const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(theme));
 
 	StyleDictionary.buildAllPlatforms();
 
@@ -137,49 +156,3 @@ themes.map(function (brand) {
 
 console.log("\n==============================================");
 console.log("\nBuild completed!");
-
-//Output multiple files
-// StyleDictionary.extend({
-//   source: ["tokens/**/*.json"],
-//   platforms: {
-//     refCSS: {
-//       transformGroup: "css",
-//       buildPath: "build/css/",
-//       transforms: ["attribute/cti", "name/cti/kebab", "color/hsl-4", "size/pxToRem"],
-//       files: [{
-//         destination: "ref-tokens.scss",
-//         format: "css/variables",
-//         filter: (token) => token.filePath.indexOf(`ref`) > -1,
-//         options: {
-//           outputReferences: true
-//         }
-//       }]
-//     },
-//     sysCSS: {
-//       transformGroup: "css",
-//       buildPath: "build/css/",
-//       transforms: ["attribute/cti", "name/cti/kebab", "color/hsl-4", "size/pxToRem"],
-//       files: [{
-//         destination: "sys-tokens.scss",
-//         format: "css/variables",
-//         filter: (token) => token.filePath.indexOf(`sys`) > -1,
-//         options: {
-//           outputReferences: true
-//         }
-//       }]
-//     },
-//     compCSS: {
-//       transformGroup: "css",
-//       buildPath: "build/css/",
-//       transforms: ["attribute/cti", "name/cti/kebab", "color/hsl-4", "size/pxToRem"],
-//       files: [{
-//         destination: "comp-tokens.scss",
-//         format: "css/variables",
-//         filter: (token) => token.filePath.indexOf(`comp`) > -1,
-//         options: {
-//           outputReferences: true
-//         }
-//       }]
-//     },
-//   }
-// }).buildAllPlatforms()
