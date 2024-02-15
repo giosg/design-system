@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 15 Feb 2024 13:50:17 GMT
+ * Generated on Thu, 15 Feb 2024 14:22:49 GMT
  */
 
 :root, [data-theme="light"] {
@@ -17,10 +17,10 @@
   --gds-sys-font-size-14: 0.875rem;
   --gds-sys-font-size-12: 0.75rem;
   --gds-sys-font-size-10: 0.625rem;
-  --gds-sys-font-weights-semi-bold: SemiBold;
-  --gds-sys-font-weights-regular: Regular;
-  --gds-sys-font-weights-bold: Bold;
-  --gds-sys-font-weights-black: Black;
+  --gds-sys-font-weights-semi-bold: semibold;
+  --gds-sys-font-weights-regular: regular;
+  --gds-sys-font-weights-bold: bold;
+  --gds-sys-font-weights-black: black;
   --gds-sys-line-heights-36: 2.25rem;
   --gds-sys-line-heights-32: 2rem;
   --gds-sys-line-heights-28: 1.75rem;
@@ -31,7 +31,7 @@
   --gds-sys-line-heights-18: 1.125rem;
   --gds-sys-line-heights-16: 1rem;
   --gds-sys-line-heights-14: 0.875rem;
-  --gds-sys-font-families-nunito-sans: Nunito Sans;
+  --gds-sys-font-families-nunito-sans: nunito sans;
   --gds-ref-space-1-75: 1.75rem;
   --gds-ref-space-1-25: 1.25rem;
   --gds-ref-space-3-5: 3.5rem;
@@ -369,54 +369,6 @@
   --gds-sys-space-2-xs: var(--gds-ref-space-0-25);
   --gds-sys-space-3-xs: var(--gds-ref-space-0-125);
   --gds-sys-space-none: var(--gds-ref-space-0);
-  --gds-comp-button-font-label-xs: var(--gds-sys-font-default-label-xs-600);
-  --gds-comp-button-font-label-s: var(--gds-sys-font-default-label-s-600);
-  --gds-comp-button-font-label-m: var(--gds-sys-font-default-label-m-600);
-  --gds-comp-button-spacing-radius-square: var(--gds-sys-radius-2-xs);
-  --gds-comp-button-spacing-radius-round: var(--gds-sys-radius-xl);
-  --gds-comp-button-spacing-padding-l: var(--gds-sys-space-s);
-  --gds-comp-button-spacing-padding-s: var(--gds-sys-space-none);
-  --gds-comp-button-spacing-padding-m: var(--gds-sys-space-xs);
-  --gds-comp-button-spacing-gap-l: var(--gds-sys-space-s);
-  --gds-comp-button-spacing-gap-s: var(--gds-sys-space-xs);
-  --gds-comp-button-spacing-gap-m: var(--gds-sys-space-xs);
-  --gds-comp-button-color-clean-fill-pressed: var(--gds-sys-color-bg-primary-milder);
-  --gds-comp-button-color-clean-fill-hover: var(--gds-sys-color-bg-primary-mildest);
-  --gds-comp-button-color-clean-icon-disabled: var(--gds-sys-color-fg-neutral-mild);
-  --gds-comp-button-color-clean-icon-pressed: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-clean-icon-hover: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-clean-icon-default: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-clean-label-disabled: var(--gds-sys-color-fg-neutral-mild);
-  --gds-comp-button-color-clean-label-pressed: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-clean-label-hover: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-clean-label-default: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-outline-border-disabled: var(--gds-sys-color-border-neutral-mild);
-  --gds-comp-button-color-outline-border-pressed: var(--gds-sys-color-border-state-pressed);
-  --gds-comp-button-color-outline-border-hover: var(--gds-sys-color-border-state-hovered);
-  --gds-comp-button-color-outline-border-default: var(--gds-sys-color-border-neutral-mild);
-  --gds-comp-button-color-outline-fill-disabled: var(--gds-sys-color-bg-neutral-mild);
-  --gds-comp-button-color-outline-fill-pressed: var(--gds-sys-color-bg-primary-milder);
-  --gds-comp-button-color-outline-fill-hover: var(--gds-sys-color-bg-primary-mildest);
-  --gds-comp-button-color-outline-icon-disabled: var(--gds-sys-color-fg-neutral-mild);
-  --gds-comp-button-color-outline-icon-pressed: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-outline-icon-hover: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-outline-icon-default: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-outline-label-disabled: var(--gds-sys-color-fg-neutral-mild);
-  --gds-comp-button-color-outline-label-pressed: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-outline-label-hover: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-outline-label-default: var(--gds-sys-color-fg-primary-strong);
-  --gds-comp-button-color-solid-icon-disabled: var(--gds-sys-color-fg-neutral-mild);
-  --gds-comp-button-color-solid-icon-pressed: var(--gds-sys-color-fg-neutral-inverted);
-  --gds-comp-button-color-solid-icon-hover: var(--gds-sys-color-fg-neutral-inverted);
-  --gds-comp-button-color-solid-icon-default: var(--gds-sys-color-fg-neutral-inverted);
-  --gds-comp-button-color-solid-label-disabled: var(--gds-sys-color-fg-neutral-mild);
-  --gds-comp-button-color-solid-label-pressed: var(--gds-sys-color-fg-neutral-inverted);
-  --gds-comp-button-color-solid-label-hover: var(--gds-sys-color-fg-neutral-inverted);
-  --gds-comp-button-color-solid-label-default: var(--gds-sys-color-fg-neutral-inverted);
-  --gds-comp-button-color-solid-fill-disabled: var(--gds-sys-color-bg-neutral-milder);
-  --gds-comp-button-color-solid-fill-pressed: var(--gds-sys-color-bg-primary-strongest);
-  --gds-comp-button-color-solid-fill-hover: var(--gds-sys-color-bg-primary-stronger);
-  --gds-comp-button-color-solid-fill-default: var(--gds-sys-color-bg-primary-strong);
   --gds-sys-color-border-status-info: var(--gds-sys-color-status-info-strong);
   --gds-sys-color-border-status-warning: var(--gds-sys-color-status-warning-stronger);
   --gds-sys-color-border-status-negative: var(--gds-sys-color-status-negative-strong);

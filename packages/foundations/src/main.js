@@ -5,13 +5,21 @@ const normalizer = require("../plugins/normalize-plugin.js");
 const systemPlugin = require("../plugins/system-plugin.js");
 const referencePlugin = require("../plugins/reference-plugin.js");
 const mergeDeclPlugin = require("../plugins/merge-decl-plugin.js");
+const tokensPlugin = require("../plugins/tokens-plugin.js");
 
 // Process a CSS file
-async function processCss(inputFile, plugins = []) {
-	const css = fs.readFileSync(path.join(__dirname, inputFile), "utf-8");
-	const result = await postcss(plugins).process(css, {
-		from: inputFile,
+// i need to join paths
+async function processCss(filePaths = [], plugins = []) {
+	let combinedCss = "";
+
+	filePaths.forEach((filePath) => {
+		const absolutePath = path.resolve(__dirname, filePath);
+		const css = fs.readFileSync(absolutePath, "utf8");
+		combinedCss += css;
 	});
+
+	// const css = fs.readFileSync(path.join(__dirname, inputFile), "utf-8");
+	const result = await postcss(plugins).process(combinedCss, { from: undefined });
 
 	return result;
 }
@@ -28,12 +36,17 @@ async function mergeDeclarations(filesToMerge, outputFile) {
 
 // Execute the tasks
 async function execute() {
-	const refResult = await processCss("reference.css", [normalizer(), referencePlugin()]);
-	const sysResult = await processCss("system.css", [normalizer(), systemPlugin()]);
-	const baseCss = await processCss("base.css", [normalizer()]);
-	const reset = await processCss("reset.css", []);
+	const tokenResult = await processCss(["../build/css/dark.css", "../build/css/light.css"], [tokensPlugin()]);
 
-	mergeDeclarations([baseCss, reset, refResult, sysResult], "index.css");
+	// console.log(tokenResult.css);
+	fs.writeFileSync(path.join(__dirname, "kek.css"), tokenResult.css);
+
+	// const refResult = await processCss("reference.css", [normalizer(), referencePlugin()]);
+	// const sysResult = await processCss("system.css", [normalizer(), systemPlugin()]);
+	// const baseCss = await processCss("base.css", [normalizer()]);
+	// const reset = await processCss("reset.css", []);
+
+	// mergeDeclarations([baseCss, reset, refResult, sysResult], "index.css");
 }
 
 execute().catch(console.error);
