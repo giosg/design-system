@@ -119,6 +119,11 @@ StyleDictionaryPackage.registerTransformGroup({
 
 // HAVE THE STYLE DICTIONARY CONFIG DYNAMICALLY GENERATED
 function getStyleDictionaryConfig(theme) {
+	let selector = `:root, [data-theme="light"]`;
+	if (theme === "dark") {
+		selector = `[data-theme="dark"]`;
+	}
+
 	return {
 		source: [`tokens/tokens-${theme}.json`],
 		platforms: {
@@ -132,6 +137,7 @@ function getStyleDictionaryConfig(theme) {
 						format: "css/variables",
 						options: {
 							outputReferences: true,
+							selector,
 						},
 					},
 				],
