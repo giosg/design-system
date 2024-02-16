@@ -108,6 +108,7 @@ function getStyleDictionaryConfig(theme) {
 						destination: `${theme}.css`,
 						format: "css/variables",
 						options: {
+							showFileHeader: false,
 							outputReferences: true,
 							selector,
 						},
