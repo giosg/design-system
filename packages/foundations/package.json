@@ -13,7 +13,7 @@
 	"scripts": {
 		"build": "pnpm run css",
 		"dev": "pnpm run css",
-		"css": "node ./src/main.cjs && prettier --write \"index.css\" && stylelint \"**/*.css\" --fix",
+		"css": "bash ./src/prepare.sh && prettier --write \"index.css\" && stylelint \"**/*.css\" --fix",
 		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
 		"lint": "stylelint \"**/*.css\" --max-warnings=0"
 	},
