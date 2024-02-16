@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 15 Feb 2024 14:22:49 GMT
+ * Generated on Fri, 16 Feb 2024 08:35:08 GMT
  */
 
 :root, [data-theme="light"] {
@@ -17,10 +17,10 @@
   --gds-sys-font-size-14: 0.875rem;
   --gds-sys-font-size-12: 0.75rem;
   --gds-sys-font-size-10: 0.625rem;
-  --gds-sys-font-weights-semi-bold: semibold;
-  --gds-sys-font-weights-regular: regular;
-  --gds-sys-font-weights-bold: bold;
-  --gds-sys-font-weights-black: black;
+  --gds-sys-font-weights-semi-bold: SemiBold;
+  --gds-sys-font-weights-regular: Regular;
+  --gds-sys-font-weights-bold: Bold;
+  --gds-sys-font-weights-black: Black;
   --gds-sys-line-heights-36: 2.25rem;
   --gds-sys-line-heights-32: 2rem;
   --gds-sys-line-heights-28: 1.75rem;
@@ -31,7 +31,7 @@
   --gds-sys-line-heights-18: 1.125rem;
   --gds-sys-line-heights-16: 1rem;
   --gds-sys-line-heights-14: 0.875rem;
-  --gds-sys-font-families-nunito-sans: nunito sans;
+  --gds-sys-font-families-nunito-sans: Nunito Sans;
   --gds-ref-space-1-75: 1.75rem;
   --gds-ref-space-1-25: 1.25rem;
   --gds-ref-space-3-5: 3.5rem;

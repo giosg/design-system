@@ -1,9 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const postcss = require("postcss");
-const normalizer = require("../plugins/normalize-plugin.js");
-const systemPlugin = require("../plugins/system-plugin.js");
-const referencePlugin = require("../plugins/reference-plugin.js");
+const fontFamilyPlugin = require("../plugins/font-family-plugin.js");
 const mergeDeclPlugin = require("../plugins/merge-decl-plugin.js");
 const tokensPlugin = require("../plugins/tokens-plugin.js");
 
@@ -38,8 +36,10 @@ async function mergeDeclarations(filesToMerge, outputFile) {
 async function execute() {
 	const tokenResult = await processCss(["../build/css/dark.css", "../build/css/light.css"], [tokensPlugin()]);
 
+	const result = await postcss([fontFamilyPlugin()]).process(tokenResult, { from: undefined });
+
 	// console.log(tokenResult.css);
-	fs.writeFileSync(path.join(__dirname, "kek.css"), tokenResult.css);
+	fs.writeFileSync(path.join(__dirname, "kek.css"), result.css);
 
 	// const refResult = await processCss("reference.css", [normalizer(), referencePlugin()]);
 	// const sysResult = await processCss("system.css", [normalizer(), systemPlugin()]);

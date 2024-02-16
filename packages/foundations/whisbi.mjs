@@ -1,40 +1,6 @@
 import StyleDictionaryPackage from "style-dictionary";
 import { registerTransforms } from "@tokens-studio/sd-transforms";
 
-// StyleDictionaryPackage.registerParser({
-// 	pattern: /\.json$/,
-// 	parse: ({ contents, filePath }) => {
-// 		const obj = JSON.parse(contents);
-// 		// Add additional metadata to tokens
-// 		// obj.filePath = filePath;
-
-// 		return obj;
-// 	},
-// });
-
-StyleDictionaryPackage.registerTransform({
-	name: "name/cti/kebab-include-category",
-	type: "name",
-	transformer: (prop, option) => {
-		// console.log(prop);
-		// Get the category
-		const category = prop.path[0];
-		// Get the name without the category
-		const name = prop.path.slice(1).join("-");
-		// Include the category in the name
-		return `${category}-${name}`;
-	},
-});
-
-// StyleDictionaryPackage.registerTransform({
-// 	name: "attribute/cti",
-// 	type: "attribute",
-// 	transformer: (prop) => {
-// 		// console.log(prop);
-// 		return prop.path.join("/");
-// 	},
-// });
-
 // sd-transforms, 2nd parameter for options can be added
 // See docs: https://github.com/tokens-studio/sd-transforms
 registerTransforms(StyleDictionaryPackage, {
@@ -47,11 +13,9 @@ registerTransforms(StyleDictionaryPackage, {
 	excludeParentKeys: true,
 });
 
-// const themes = ["System", "Whisbi_Dark", "Theme_Samsung", "Theme_Telia", "Theme_Mercedes"];
 const themes = ["light", "dark"];
 
 // CUSTOM TRANSFORMS
-
 const pixelToRem = ["borderRadius", "sizing", "spacing", "fontSizes", "lineHeights", "paragraphSpacing", "borderWidth"];
 
 StyleDictionaryPackage.registerTransform({
@@ -107,7 +71,6 @@ StyleDictionaryPackage.registerTransform({
 StyleDictionaryPackage.registerTransformGroup({
 	name: "tokens-css",
 	transforms: [
-		"name/cti/kebab-include-category",
 		"attribute/cti",
 		"name/cti/kebab",
 		"color/hsl-4",
