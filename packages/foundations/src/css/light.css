@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 16 Feb 2024 10:11:41 GMT
+ * Generated on Fri, 16 Feb 2024 11:15:29 GMT
  */
 
 :root, [data-theme="light"] {
@@ -299,34 +299,6 @@
   --gds-sys-color-bg-neutral-mild: var(--gds-ref-color-solid-grey-300);
   --gds-sys-color-bg-neutral-milder: var(--gds-ref-color-solid-grey-100);
   --gds-sys-color-bg-neutral-default: var(--gds-ref-color-solid-basics-white);
-  --gds-sys-gds-sys-radius-7-xl: var(--gds-ref-space-4);
-  --gds-sys-gds-sys-radius-6-xl: var(--gds-ref-space-3-5);
-  --gds-sys-gds-sys-radius-5-xl: var(--gds-ref-space-3);
-  --gds-sys-gds-sys-radius-4-xl: var(--gds-ref-space-2-5);
-  --gds-sys-gds-sys-radius-3-xl: var(--gds-ref-space-2);
-  --gds-sys-gds-sys-radius-2-xl: var(--gds-ref-space-1-75);
-  --gds-sys-gds-sys-radius-xl: var(--gds-ref-space-1-5);
-  --gds-sys-gds-sys-radius-l: var(--gds-ref-space-1-25);
-  --gds-sys-gds-sys-radius-m: var(--gds-ref-space-1);
-  --gds-sys-gds-sys-radius-s: var(--gds-ref-space-0-75);
-  --gds-sys-gds-sys-radius-xs: var(--gds-ref-space-0-5);
-  --gds-sys-gds-sys-radius-2-xs: var(--gds-ref-space-0-25);
-  --gds-sys-gds-sys-radius-3-xs: var(--gds-ref-space-0-125);
-  --gds-sys-gds-sys-radius-none: var(--gds-ref-space-0);
-  --gds-sys-gds-sys-space-7-xl: var(--gds-ref-space-4);
-  --gds-sys-gds-sys-space-6-xl: var(--gds-ref-space-3-5);
-  --gds-sys-gds-sys-space-5-xl: var(--gds-ref-space-3);
-  --gds-sys-gds-sys-space-4-xl: var(--gds-ref-space-2-5);
-  --gds-sys-gds-sys-space-3-xl: var(--gds-ref-space-2);
-  --gds-sys-gds-sys-space-2-xl: var(--gds-ref-space-1-75);
-  --gds-sys-gds-sys-space-xl: var(--gds-ref-space-1-5);
-  --gds-sys-gds-sys-space-l: var(--gds-ref-space-1-25);
-  --gds-sys-gds-sys-space-m: var(--gds-ref-space-1);
-  --gds-sys-gds-sys-space-s: var(--gds-ref-space-0-75);
-  --gds-sys-gds-sys-space-xs: var(--gds-ref-space-0-5);
-  --gds-sys-gds-sys-space-2-xs: var(--gds-ref-space-0-25);
-  --gds-sys-gds-sys-space-3-xs: var(--gds-ref-space-0-125);
-  --gds-sys-gds-sys-space-none: var(--gds-ref-space-0);
   --gds-sys-font-default-label-2-xs-600: var(--gds-sys-font-weights-semi-bold) var(--gds-sys-font-size-10)/var(--gds-sys-line-heights-14) var(--gds-sys-font-families-nunito-sans);
   --gds-sys-font-default-label-xs-600: var(--gds-sys-font-weights-semi-bold) var(--gds-sys-font-size-12)/var(--gds-sys-line-heights-16) var(--gds-sys-font-families-nunito-sans);
   --gds-sys-font-default-label-s-600: var(--gds-sys-font-weights-semi-bold) var(--gds-sys-font-size-14)/var(--gds-sys-line-heights-18) var(--gds-sys-font-families-nunito-sans);
