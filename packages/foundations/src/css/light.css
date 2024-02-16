@@ -1,9 +1,19 @@
 /**
  * Do not edit directly
- * Generated on Fri, 16 Feb 2024 10:07:35 GMT
+ * Generated on Fri, 16 Feb 2024 10:11:41 GMT
  */
 
 :root, [data-theme="light"] {
+  --gds-sys-shadow-up-xs: 0px -6px 2px 0px #00000000, 0px -4px 1px 0px #00000003, 0px -2px 1px 0px #00000008, 0px -1px 1px 0px #0000000a, 0px 0px 1px 0px #0000000d;
+  --gds-sys-shadow-up-s: 0px -12px 3px 0px #00000000, 0px -7px 3px 0px #00000003, 0px -4px 3px 0px #00000008, 0px -2px 2px 0px #0000000a, 0px 0px 1px 0px #0000000d;
+  --gds-sys-shadow-up-m: 0px -29px 8px 0px #00000000, 0px -19px 7px 0px #00000003, 0px -10px 6px 0px #00000008, 0px -5px 5px 0px #0000000a, 0px -1px 3px 0px #0000000d;
+  --gds-sys-shadow-up-l: 0px -58px 16px 0px #00000000, 0px -37px 15px 0px #00000003, 0px -21px 13px 0px #00000008, 0px -9px 9px 0px #0000000a, 0px -2px 5px 0px #0000000d;
+  --gds-sys-shadow-up-xl: 0px -58px 16px 0px #00000000, 0px -37px 15px 0px #00000003, 0px -21px 13px 0px #0000000a, 0px -9px 9px 0px #00000012, 0px -2px 5px 0px #00000014;
+  --gds-sys-shadow-down-xs: 0px 6px 2px 0px #00000000, 0px 4px 1px 0px #00000003, 0px 2px 1px 0px #00000008, 0px 1px 1px 0px #0000000a, 0px 0px 1px 0px #0000000d;
+  --gds-sys-shadow-down-s: 0px 12px 3px 0px #00000000, 0px 7px 3px 0px #00000003, 0px 4px 3px 0px #00000008, 0px 2px 2px 0px #0000000a, 0px 0px 1px 0px #0000000d;
+  --gds-sys-shadow-down-m: 0px 29px 8px 0px #00000000, 0px 19px 7px 0px #00000003, 0px 10px 6px 0px #00000008, 0px 5px 5px 0px #0000000a, 0px 1px 3px 0px #0000000d;
+  --gds-sys-shadow-down-l: 0px 58px 16px 0px #00000000, 0px 37px 15px 0px #00000003, 0px 21px 13px 0px #00000008, 0px 9px 9px 0px #0000000a, 0px 2px 5px 0px #0000000d;
+  --gds-sys-shadow-down-xl: 0px 58px 16px 0px #00000000, 0px 37px 15px 0px #00000003, 0px 21px 13px 0px #0000000a, 0px 9px 9px 0px #00000012, 0px 2px 5px 0px #00000014;
   --gds-sys-paragraph-indent-0: 0px;
   --gds-sys-text-decoration-none: none;
   --gds-sys-text-case-none: none;
