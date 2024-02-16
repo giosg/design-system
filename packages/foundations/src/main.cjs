@@ -6,12 +6,11 @@ const mergeDeclPlugin = require("../plugins/merge-decl-plugin.js");
 const tokensPlugin = require("../plugins/tokens-plugin.js");
 
 // Process a CSS file
-// i need to join paths
 async function processCss(filePaths = [], plugins = []) {
 	let combinedCss = "";
 
 	filePaths.forEach((filePath) => {
-		const absolutePath = path.resolve(__dirname, filePath);
+		const absolutePath = path.resolve(__dirname, "./css/", filePath);
 		const css = fs.readFileSync(absolutePath, "utf8");
 		combinedCss += css;
 	});
@@ -34,19 +33,12 @@ async function mergeDeclarations(filesToMerge, outputFile) {
 
 // Execute the tasks
 async function execute() {
-	const tokenResult = await processCss(["../build/css/dark.css", "../build/css/light.css"], [tokensPlugin()]);
-
+	const tokenResult = await processCss(["dark.css", "light.css"], [tokensPlugin()]);
 	const result = await postcss([fontFamilyPlugin()]).process(tokenResult, { from: undefined });
+	const base = await processCss(["base.css"], []);
+	const reset = await processCss(["reset.css"], []);
 
-	// console.log(tokenResult.css);
-	fs.writeFileSync(path.join(__dirname, "kek.css"), result.css);
-
-	// const refResult = await processCss("reference.css", [normalizer(), referencePlugin()]);
-	// const sysResult = await processCss("system.css", [normalizer(), systemPlugin()]);
-	// const baseCss = await processCss("base.css", [normalizer()]);
-	// const reset = await processCss("reset.css", []);
-
-	// mergeDeclarations([baseCss, reset, refResult, sysResult], "index.css");
+	mergeDeclarations([base, reset, result], "index.css");
 }
 
 execute().catch(console.error);

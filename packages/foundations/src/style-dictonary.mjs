@@ -1,6 +1,12 @@
 import StyleDictionaryPackage from "style-dictionary";
 import { registerTransforms } from "@tokens-studio/sd-transforms";
 
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // sd-transforms, 2nd parameter for options can be added
 // See docs: https://github.com/tokens-studio/sd-transforms
 registerTransforms(StyleDictionaryPackage, {
@@ -87,12 +93,15 @@ function getStyleDictionaryConfig(theme) {
 		selector = `[data-theme="dark"]`;
 	}
 
+	const currentPath = path.resolve(__dirname);
+	const tokenPath = path.resolve(__dirname, "./tokens/", `tokens-${theme}.json`);
+
 	return {
-		source: [`tokens/tokens-${theme}.json`],
+		source: [tokenPath],
 		platforms: {
 			css: {
 				transformGroup: "tokens-css",
-				buildPath: `build/css/`,
+				buildPath: `${currentPath}/css/`,
 				prefix: "--gds",
 				files: [
 					{

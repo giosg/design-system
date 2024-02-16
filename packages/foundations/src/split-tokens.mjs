@@ -1,7 +1,12 @@
 import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load the data from the JSON file
-let data = JSON.parse(fs.readFileSync("tokens.json", "utf8"));
+let data = JSON.parse(fs.readFileSync(path.resolve(__dirname, "tokens.json"), "utf8"));
 
 const components = Object.keys(data).filter((key) => key.startsWith("Component/"));
 const keys = Object.keys(data).filter((key) => key.startsWith("Themes/"));
@@ -19,9 +24,6 @@ for (let key of keys) {
 		delete newData[key];
 	});
 
-	console.log(newData);
-
-	// Clear the file
-	fs.writeFileSync(`tokens/tokens-${themePrefix}.json`, "");
-	fs.writeFileSync(`tokens/tokens-${themePrefix}.json`, JSON.stringify(newData, null, 4));
+	fs.writeFileSync(path.resolve(__dirname, `tokens/tokens-${themePrefix}.json`), "");
+	fs.writeFileSync(path.resolve(__dirname, `tokens/tokens-${themePrefix}.json`), JSON.stringify(newData, null, 4));
 }
