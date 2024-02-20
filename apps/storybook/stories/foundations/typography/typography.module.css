@@ -20,10 +20,10 @@
 	justify-content: center;
 	flex-direction: column;
 	gap: 0;
-	width: 60px;
+	width: 110px;
 
 	b {
-		font-weight: 900;
+		font-weight: 700;
 	}
 }
 

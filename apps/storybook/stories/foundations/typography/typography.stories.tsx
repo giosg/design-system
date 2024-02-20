@@ -26,61 +26,61 @@ const text = (
 // ------------------------------Headings--------------------------------
 const titleLines = [
 	{
-		variable: "--gds-sys-font-default-title-xxl-900",
+		variable: "--gds-sys-font-default-title-3-xl-black",
 		elm: "h1",
 		name: "H1/900",
 		size: "30/36",
 	},
 	{
-		variable: "--gds-sys-font-default-title-xxl-700",
+		variable: "--gds-sys-font-default-title-3-xl-bold",
 		elm: "h1",
 		name: "H1/700",
 		size: "30/36",
 	},
 	{
-		variable: "--gds-sys-font-default-title-xl-900",
+		variable: "--gds-sys-font-default-title-2-xl-black",
 		elm: "h2",
 		name: "H2/900",
 		size: "26/32",
 	},
 	{
-		variable: "--gds-sys-font-default-title-xl-700",
+		variable: "--gds-sys-font-default-title-2-xl-bold",
 		elm: "h2",
 		name: "H2/700",
 		size: "26/32",
 	},
 	{
-		variable: "--gds-sys-font-default-title-l-900",
+		variable: "--gds-sys-font-default-title-xl-black",
 		elm: "h3",
 		name: "H3/900",
 		size: "22/26",
 	},
 	{
-		variable: "--gds-sys-font-default-title-l-700",
+		variable: "--gds-sys-font-default-title-xl-bold",
 		elm: "h3",
 		name: "H3/700",
 		size: "22/26",
 	},
 	{
-		variable: "--gds-sys-font-default-title-m-900",
+		variable: "--gds-sys-font-default-title-l-black",
 		elm: "h4",
 		name: "H4/900",
 		size: "18/22",
 	},
 	{
-		variable: "--gds-sys-font-default-title-m-700",
+		variable: "--gds-sys-font-default-title-l-bold",
 		elm: "h4",
 		name: "H4/700",
 		size: "18/22",
 	},
 	{
-		variable: "--gds-sys-font-default-title-s-900",
+		variable: "--gds-sys-font-default-title-m-black",
 		elm: "h5",
 		name: "H5/900",
 		size: "16/20",
 	},
 	{
-		variable: "--gds-sys-font-default-title-s-700",
+		variable: "--gds-sys-font-default-title-m-bold",
 		elm: "h5",
 		name: "H5/700",
 		size: "16/20",
@@ -110,53 +110,53 @@ export const Headings: Story = {
 // ------------------------------Body--------------------------------
 const bodyLines = [
 	{
-		variable: "--gds-sys-font-default-body-xl-700",
-		name: "XLarge",
+		variable: "--gds-sys-font-default-body-l-bold",
+		name: "L-bold",
 		size: "18/22",
 	},
 	{
-		variable: "--gds-sys-font-default-body-xl-400",
-		name: "XLarge",
+		variable: "--gds-sys-font-default-body-l-regular",
+		name: "L-regular",
 		size: "18/22",
 	},
 	{
-		variable: "--gds-sys-font-default-body-l-700",
-		name: "Large",
+		variable: "--gds-sys-font-default-body-m-bold",
+		name: "M-bold",
 		size: "16/20",
 	},
 	{
-		variable: "--gds-sys-font-default-body-l-400",
-		name: "Large",
+		variable: "--gds-sys-font-default-body-m-regular",
+		name: "M-regular",
 		size: "16/20",
 	},
 	{
-		variable: "--gds-sys-font-default-body-m-700",
-		name: "Medium",
+		variable: "--gds-sys-font-default-body-s-bold",
+		name: "S-bold",
 		size: "14/18",
 	},
 	{
-		variable: "--gds-sys-font-default-body-m-400",
-		name: "Medium",
+		variable: "--gds-sys-font-default-body-s-regular",
+		name: "S-regular",
 		size: "14/18",
 	},
 	{
-		variable: "--gds-sys-font-default-body-s-700",
-		name: "Small",
+		variable: "--gds-sys-font-default-body-xs-bold",
+		name: "XS-bold",
 		size: "12/16",
 	},
 	{
-		variable: "--gds-sys-font-default-body-s-400",
-		name: "Small",
+		variable: "--gds-sys-font-default-body-xs-regular",
+		name: "XS-regular",
 		size: "12/16",
 	},
 	{
-		variable: "--gds-sys-font-default-body-xs-700",
-		name: "XSmall",
+		variable: "--gds-sys-font-default-body-2-xs-bold",
+		name: "2XS-bold",
 		size: "10/14",
 	},
 	{
-		variable: "--gds-sys-font-default-body-xs-400",
-		name: "XSmall",
+		variable: "--gds-sys-font-default-body-2-xs-regular",
+		name: "2XS-regular",
 		size: "10/14",
 	},
 ];
@@ -184,24 +184,24 @@ export const Body: Story = {
 //-----------------------------Label--------------------------------
 const labelLines = [
 	{
-		variable: "--gds-sys-font-default-label-l-600",
-		name: "Large",
-		size: "16/28",
+		variable: "--gds-sys-font-default-label-m-semibold",
+		name: "M-semibold",
+		size: "16/24",
 	},
 	{
-		variable: "--gds-sys-font-default-label-m-600",
-		name: "Medium",
-		size: "14/24",
+		variable: "--gds-sys-font-default-label-s-semibold",
+		name: "S-semibold",
+		size: "14/18",
 	},
 	{
-		variable: "--gds-sys-font-default-label-s-600",
-		name: "Small",
-		size: "12/18",
+		variable: "--gds-sys-font-default-label-xs-semibold",
+		name: "XS-semibold",
+		size: "12/16",
 	},
 	{
-		variable: "--gds-sys-font-default-label-xs-600",
-		name: "XSmall",
-		size: "10/16",
+		variable: "--gds-sys-font-default-label-2-xs-semibold",
+		name: "2XS-semibold",
+		size: "10/14",
 	},
 ];
 
