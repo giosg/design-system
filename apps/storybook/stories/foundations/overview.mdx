@@ -1,8 +1,59 @@
-import { Meta } from '@storybook/blocks';
+import { Meta,Source} from '@storybook/blocks';
+import * as CompStories from './colors/colors.stories';
+
 
 <Meta title="Foundations/Overview"  parameters={{ options: { order: ['Foundations/Overview', '*'] } }}/>
 
-# Definition
+# Foundations
 
-This is a doc template for the Foundations
+The Foundations package contains the core styles and settings for the design system in the form of a single css file. It includes the following:
+- [Border radius tokens](/?path=/story/foundations-border-radius--variants)
+- [Box shadow tokens](/?path=/story/foundations-box-shadows--variants)
+- [Spacing tokens](/?path=/story/foundations-spacing--variants)
+- [Typography tokens](/?path=/story/foundations-typography--body)
+- [Color palette tokens](/?path=/story/foundations-colors--palette)
+- [Theme tokens](/?path=/story/foundations-colors--themes)
+- CSS Resets
 
+In the stories you can hover to see the token and copy it to your clipboard.
+
+## Installation
+<Source code={`npm i @giosg/design-system-foundations`} language='bash' dark/>
+
+## Usage
+Place this import **at the root** of your project so your tokens and base css would be available for all components.
+<Source code={`import "@giosg/design-system-foundations/index.css";`}  dark/>
+
+For example
+<Source code={`
+import type React from "react";
+import ReactHelmet from "react-helmet";
+
+import "@giosg/design-system-foundations/index.css";
+
+import { Global } from "@emotion/react";
+
+import { globalStyles } from "~styles/globalStyles";
+
+import { PagesRouting } from "./PagesRouting";
+import { MainProvider } from "./providers/MainProvider";
+
+export const App: React.FC = () => {
+  return (
+    <>
+      <ReactHelmet>
+        <title>Workflow builder</title>
+      </ReactHelmet>
+      <MainProvider>
+        <Global styles={[globalStyles]} />
+        <PagesRouting />
+      </MainProvider>
+    </>
+  );
+};
+`}  dark/>
+
+## CSS Resets
+You are also getting a css resets with the foundations css file, be aware that it may require you to check that all of your visuals are still looking good after adding the package. Make any adjustments to your components if needed.
+
+{/* <Canvas of={CompStories.Themes} dark/> */}
