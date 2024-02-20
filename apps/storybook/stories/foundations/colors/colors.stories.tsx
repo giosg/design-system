@@ -103,10 +103,10 @@ function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
 		<div className={styles.themeContainer} {...restProps}>
 			{children}
 			<div className={styles.section}>
-				<h1 className={styles.headerXXL}>Content</h1>
+				<h1 className={styles.headerXXL}>Foreground</h1>
 				<div className={styles.row}>
 					<h3 className={styles.headerM}>Neutral</h3>
-					{generateCellContainer("--gds-sys-color-content-neutral-", [
+					{generateCellContainer("--gds-sys-color-fg-neutral-", [
 						"default",
 						"strong",
 						"medium",
@@ -119,21 +119,22 @@ function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
 				<div className={styles.horizontalRow}>
 					<div className={styles.row}>
 						<h3 className={styles.headerM}>Primary</h3>
-						{generateCellContainer("--gds-sys-color-content-color-primary-", ShortOptionList)}
+
+						{generateCellContainer("--gds-sys-color-fg-primary-", ShortOptionList)}
 					</div>
 					<div className={styles.row}>
 						<h3 className={styles.headerM}>Tertiary</h3>
-						{generateCellContainer("--gds-sys-color-content-color-tertiary-", ShortOptionList)}
+						{generateCellContainer("--gds-sys-color-fg-tertiary-", ShortOptionList)}
 					</div>
 				</div>
 				<div className={styles.horizontalRow}>
 					<div className={styles.row}>
 						<h3 className={styles.headerM}>Secondary</h3>
-						{generateCellContainer("--gds-sys-color-content-color-secondary-", ShortOptionList)}
+						{generateCellContainer("--gds-sys-color-fg-secondary-", ShortOptionList)}
 					</div>
 					<div className={styles.row}>
 						<h3 className={styles.headerM}>Quaternary</h3>
-						{generateCellContainer("--gds-sys-color-content-color-quaternary-", ShortOptionList)}
+						{generateCellContainer("--gds-sys-color-fg-quaternary-", ShortOptionList)}
 					</div>
 				</div>
 			</div>
@@ -141,7 +142,7 @@ function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
 				<h1 className={styles.headerXXL}>Background</h1>
 				<div className={styles.row}>
 					<h3 className={styles.headerM}>Neutral</h3>
-					{generateCellContainer("--gds-sys-color-background-neutral-", [
+					{generateCellContainer("--gds-sys-color-bg-neutral-", [
 						"default",
 						"mildest",
 						"milder",
@@ -153,22 +154,22 @@ function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
 				</div>
 				<div className={styles.row}>
 					<h3 className={styles.headerM}>Primary</h3>
-					{generateCellContainer("--gds-sys-color-background-primary-", FullOptionList)}
+					{generateCellContainer("--gds-sys-color-bg-primary-", FullOptionList)}
 				</div>
 				<div className={styles.row}>
 					<h3 className={styles.headerM}>Secondary</h3>
 
-					{generateCellContainer("--gds-sys-color-background-secondary-", FullOptionList)}
+					{generateCellContainer("--gds-sys-color-bg-secondary-", FullOptionList)}
 				</div>
 				<div className={styles.row}>
 					<h3 className={styles.headerM}>Tertiary</h3>
 
-					{generateCellContainer("--gds-sys-color-background-tertiary-", FullOptionList)}
+					{generateCellContainer("--gds-sys-color-bg-tertiary-", FullOptionList)}
 				</div>
 				<div className={styles.row}>
 					<h3 className={styles.headerM}>Quaternary</h3>
 
-					{generateCellContainer("--gds-sys-color-background-quaternary-", FullOptionList)}
+					{generateCellContainer("--gds-sys-color-bg-quaternary-", FullOptionList)}
 				</div>
 			</div>
 			<div className={styles.section}>

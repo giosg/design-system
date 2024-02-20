@@ -4,7 +4,7 @@
 	justify-content: space-around;
 	align-items: center;
 	height: 700px;
-	background-color: var(--gds-sys-color-background-neutral-milder);
+	background-color: var(--gds-sys-color-bg-neutral-milder);
 	border-radius: var(--gds-sys-radius-l);
 	padding: 100px;
 }
@@ -18,7 +18,7 @@
 .itemContainer {
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
+	gap: 10px;
 
 	h3 {
 		text-align: center;
@@ -26,8 +26,10 @@
 }
 
 .item {
-	background-color: var(--gds-sys-color-background-neutral-default);
-	border-radius: var(--gds-sys-radius-m);
+	background-color: var(--gds-sys-color-bg-neutral-default);
+	border-color: var(--gds-sys-color-fg-neutral-mild);
+	border-width: 1px;
+	border-style: solid;
 	width: 150px;
 	height: 120px;
 }

@@ -4,8 +4,8 @@
 	width: 1200px;
 	padding: 60px;
 	gap: 30px;
-	background-color: var(--gds-sys-color-background-neutral-default);
-	color: var(--gds-sys-color-content-neutral-default);
+	background-color: var(--gds-sys-color-bg-neutral-default);
+	color: var(--gds-sys-color-fg-neutral-default);
 	box-shadow: var(--gds-sys-shadow-up-xl), var(--gds-sys-shadow-down-xl);
 	border-radius: var(--gds-sys-radius-l);
 }
@@ -38,8 +38,8 @@
 }
 
 .themeHeader {
-	color: var(--gds-sys-color-content-neutral-default);
-	font: var(--gds-sys-font-default-title-xxl-900);
+	color: var(--gds-sys-color-fg-neutral-default);
+	font: var(--gds-sys-font-default-title-3-xl-black);
 	display: flex;
 	justify-content: end;
 }
@@ -49,20 +49,20 @@
 	flex-direction: column;
 	width: 1000px;
 	padding: 50px;
-	background-color: var(--gds-sys-color-content-neutral-mild);
+	background-color: var(--gds-sys-color-fg-neutral-mild);
 	box-shadow: var(--gds-sys-shadow-up-xl), var(--gds-sys-shadow-down-xl);
 	border-radius: var(--gds-sys-radius-l);
 	gap: 40px;
 }
 
 .headerXXL {
-	color: var(--gds-sys-color-content-neutral-default);
-	font: var(--gds-sys-font-default-title-xxl-900);
+	color: var(--gds-sys-color-fg-neutral-default);
+	font: var(--gds-sys-font-default-title-3-xl-black);
 }
 
 .headerM {
-	color: var(--gds-sys-color-content-neutral-default);
-	font: var(--gds-sys-font-default-title-m-700);
+	color: var(--gds-sys-color-fg-neutral-default);
+	font: var(--gds-sys-font-default-title-m-bold);
 }
 
 .horizontalRow {

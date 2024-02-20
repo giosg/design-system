@@ -4,7 +4,7 @@
 	justify-content: space-around;
 	width: 1200px;
 	height: 700px;
-	background-color: var(--gds-sys-color-background-neutral-milder);
+	background-color: var(--gds-sys-color-bg-neutral-milder);
 	border-radius: var(--gds-sys-radius-l);
 	padding: 100px;
 }
@@ -33,7 +33,7 @@
 }
 
 .item {
-	background-color: var(--gds-sys-color-background-neutral-default);
+	background-color: var(--gds-sys-color-bg-neutral-default);
 	border-radius: var(--gds-sys-radius-m);
 	width: 150px;
 	height: 120px;
