@@ -90,7 +90,7 @@ const titleLines = [
 export const Headings: Story = {
 	render: () => {
 		return (
-			<div className={styles.container}>
+			<div className={styles.container} data-testid="container">
 				{titleLines.map(({ variable, name, size, elm }, idx) => (
 					<div className={styles.row} key={idx}>
 						<div className={styles.desc}>
@@ -164,7 +164,7 @@ const bodyLines = [
 export const Body: Story = {
 	render: () => {
 		return (
-			<div className={styles.container}>
+			<div className={styles.container} data-testid="container">
 				{bodyLines.map(({ variable, name, size }, idx) => (
 					<div className={styles.row} key={idx}>
 						<div className={styles.desc}>
@@ -208,7 +208,7 @@ const labelLines = [
 export const Label: Story = {
 	render: () => {
 		return (
-			<div className={styles.container}>
+			<div className={styles.container} data-testid="container">
 				{labelLines.map(({ variable, name, size }, idx) => (
 					<div className={styles.row} key={idx}>
 						<div className={styles.desc}>
