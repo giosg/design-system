@@ -18,7 +18,7 @@ export const Variants: Story = {
 	},
 	render: () => {
 		return (
-			<div className={styles.container}>
+			<div className={styles.container} data-testid="box-shadows">
 				<div className={styles.rowContainer}>
 					<h3>Down</h3>
 					<div className={styles.row}>
