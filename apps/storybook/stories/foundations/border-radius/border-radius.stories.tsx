@@ -18,7 +18,7 @@ export const Variants: Story = {
 	},
 	render: () => {
 		return (
-			<div className={styles.container}>
+			<div className={styles.container} data-testid="border-radius">
 				<div className={styles.row}>
 					{["none", "3-xs", "2-xs", "xs", "s", "m", "l", "xl", "2-xl", "3-xl", "4-xl", "5-xl", "6-xl", "7-xl"].map(
 						(value) => {
