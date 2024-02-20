@@ -7,7 +7,7 @@
 	background-color: var(--gds-sys-color-bg-neutral-default);
 	color: var(--gds-sys-color-fg-neutral-default);
 	box-shadow: var(--gds-sys-shadow-up-xl), var(--gds-sys-shadow-down-xl);
-	border-radius: var(--gds-sys-radius-l);
+	border-radius: var(--gds-sys-radius-xl);
 }
 
 .row {
@@ -62,7 +62,7 @@
 
 .headerM {
 	color: var(--gds-sys-color-fg-neutral-default);
-	font: var(--gds-sys-font-default-title-m-bold);
+	font: var(--gds-sys-font-default-title-l-bold);
 }
 
 .horizontalRow {
