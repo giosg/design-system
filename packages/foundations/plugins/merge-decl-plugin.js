@@ -1,8 +1,8 @@
 const postcss = require("postcss");
 
 module.exports = (opts = {}) => {
-	const rootDeclarations = {};
-	const sysDeclarations = {};
+	const rootDeclarations = [];
+	const sysDeclarations = [];
 	const importRules = [];
 
 	return {
@@ -17,9 +17,9 @@ module.exports = (opts = {}) => {
 			if (rule.selector === ":root") {
 				rule.walkDecls((decl) => {
 					if (decl.prop.includes("-sys-")) {
-						sysDeclarations[decl.prop] = decl.value;
+						sysDeclarations.push(decl);
 					} else {
-						rootDeclarations[decl.prop] = decl.value;
+						rootDeclarations.push(decl);
 					}
 					decl.remove();
 				});
@@ -31,17 +31,19 @@ module.exports = (opts = {}) => {
 			const newRule = postcss.rule({ selector: ":root" });
 
 			// Get the properties in alphabetical order
-			const rootProps = Object.keys(rootDeclarations).sort();
-			const sysProps = Object.keys(sysDeclarations).sort();
+
+			const rootProps = rootDeclarations.sort(sort);
+
+			const sysProps = sysDeclarations.sort(sort);
 
 			// Append the root declarations
-			for (const prop of rootProps) {
-				newRule.append({ prop: prop, value: rootDeclarations[prop] });
+			for (const decl of rootProps) {
+				newRule.append(decl);
 			}
 
 			// Append the sys declarations
-			for (const prop of sysProps) {
-				newRule.append({ prop: prop, value: sysDeclarations[prop] });
+			for (const decl of sysProps) {
+				newRule.append(decl);
 			}
 
 			root.prepend(newRule);
@@ -53,5 +55,18 @@ module.exports = (opts = {}) => {
 		},
 	};
 };
+
+function sort(a, b) {
+	const aValueHasVar = a.value.includes("var(");
+	const bValueHasVar = b.value.includes("var(");
+
+	if (aValueHasVar && !bValueHasVar) {
+		return 1;
+	} else if (!aValueHasVar && bValueHasVar) {
+		return -1;
+	} else {
+		return 0;
+	}
+}
 
 module.exports.postcss = true;

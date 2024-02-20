@@ -87,6 +87,10 @@ StyleDictionaryPackage.registerTransformGroup({
 });
 
 // HAVE THE STYLE DICTIONARY CONFIG DYNAMICALLY GENERATED
+/**
+ * Returns the sum of a and b
+ * @returns {StyleDictionaryPackage.Config}
+ **/
 function getStyleDictionaryConfig(theme) {
 	let selector = `:root, [data-theme="light"]`;
 	if (theme === "dark") {
@@ -118,8 +122,6 @@ function getStyleDictionaryConfig(theme) {
 		},
 	};
 }
-
-console.log("Build started...");
 
 // PROCESS THE DESIGN TOKENS FOR EACH THEME
 themes.map(function (theme) {
