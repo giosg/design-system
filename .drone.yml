@@ -28,6 +28,15 @@ steps:
       - corepack enable
       - pnpm run lint
 
+  - name: e2e
+    image: mcr.microsoft.com/playwright:v1.41.1-jammy
+    depends_on:
+      - install-packages
+    commands:
+      - corepack enable
+      - pnpm build
+      - pnpm run serve-storybook & pnpm run test
+
   - name: build-image
     image: plugins/kaniko
     settings:
@@ -59,7 +68,7 @@ steps:
 
 ---
 kind: pipeline
-name: pull-request
+name: pull-request-check
 
 trigger:
   branch:
@@ -88,6 +97,26 @@ steps:
       - corepack enable
       - pnpm run lint
 
+  - name: e2e
+    image: mcr.microsoft.com/playwright:v1.41.1-jammy
+    depends_on:
+      - install-packages
+    commands:
+      - corepack enable
+      - pnpm build
+      - pnpm run serve-storybook & pnpm run test
+
+---
+kind: pipeline
+name: pull-request-deploy
+
+trigger:
+  branch:
+    - master
+  event:
+    - pull_request
+
+steps:
   - name: build
     image: plugins/kaniko
     settings:
@@ -103,10 +132,6 @@ steps:
 
   - name: deploy-pull-request
     image: giosg/drone-helm:3
-    when:
-      status:
-        - failure
-        - success
     settings:
       chart: charts/design-system
       namespace: integrations
@@ -123,5 +148,5 @@ steps:
         from_secret: k8s-sb-server
       kubernetes_token:
         from_secret: k8s-sb-token
-    depends_on:
-      - build
+      depends_on:
+        - build

@@ -7,6 +7,10 @@
 		},
 		"serve-storybook": {},
 		"lint": {},
+		"test": {
+			"cache": false,
+			"persistent": true
+		},
 		"dev": {
 			"cache": false,
 			"persistent": true

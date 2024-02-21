@@ -1,0 +1,14 @@
+.tooltip {
+	border-radius: var(--gds-sys-radius-xs);
+	padding: 10px;
+	background-color: var(--gds-ref-color-solid-grey-900);
+	color: var(--gds-ref-color-solid-basics-white);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	text-align: center;
+
+	svg {
+		fill: var(--gds-ref-color-solid-grey-900);
+	}
+}

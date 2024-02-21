@@ -21,6 +21,7 @@ App-specific components that contain business logic should not be included becau
 
 Omit one-offs that aren’t currently being reused. Even if you hope they become part of the design system one day, nimble teams avoid maintaining excess code when possible.
 
+
 ## 🛠️ Tech stack
 For the majority of components the tech stack is [radix-ui](https://www.radix-ui.com/) backed up by plain css.
 
@@ -31,6 +32,16 @@ Most of the Radix components boil down to pure React and have no dependencies.
 
 ### Why pure CSS ? 
 There are multiple reasons to support this approach. I'll provide you with the most of them
- - **No runtime overhead**. Compared to other solutions like CSS-in-JS, plain CSS incurs zero runtime overhead and avoids DOM manipulations, resulting in faster operations than CSS-in-JS. Less JS - faster operation. You can check one of the articles about this [here](https://pustelto.com/blog/css-vs-css-in-js-perf/) 
  - **No framework dependency**. Crucial for ease of maintenance and adoption, you don't have to specify peer dependencies in your project, match versions, or undergo migration to new versions. You also don't have to discard your current solution, as CSS is just CSS.
+ - **No runtime overhead**. Compared to other solutions like CSS-in-JS, plain CSS incurs zero runtime overhead and avoids DOM manipulations, resulting in faster operations than CSS-in-JS. Less JS - faster operation. You can check one of the articles about this [here](https://pustelto.com/blog/css-vs-css-in-js-perf/) 
  - **Long-term caching**. CSS is very easy to get long-term cached by the browser.
+
+## 📐 Testing
+
+For testing solutions, ![](./assets/playwright.svg) [Playwright](https://playwright.dev/) is used. As a rule of thumb, we should test only what we have control over and trust all the third-party providers that they test their own code. Therefore, the testing part of the project will mostly involve screenshot testing.
+
+Playwright is very flexible in that sense, as it is able to perform various operations, and screenshot testing is just a minor part of its functionality.
+
+Playwright uses [pixelmatch](https://github.com/mapbox/pixelmatch) library under the hood for performing screenshot comparison.
+
+The main benefit of using Playwright is its ability to consistently test across three main browser engines (Chromium, Firefox, WebKit) in Docker environments. 

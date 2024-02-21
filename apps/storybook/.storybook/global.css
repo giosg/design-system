@@ -1,0 +1,4 @@
+.sb-show-main {
+	font-family: var(--gds-font-ui-stack);
+	color: var(--gds-sys-color-content-neutral-default);
+}
