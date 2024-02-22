@@ -1,6 +1,5 @@
 {
   "name": "@giosg/design-system-foundations",
-  "private": true,
   "version": "0.0.0",
   "style": "index.css",
   "sideEffects": [

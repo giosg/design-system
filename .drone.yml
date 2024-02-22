@@ -110,6 +110,14 @@ steps:
       - pnpm build
       - pnpm run serve-storybook & pnpm run test
 
+  - name: release-packages
+    image: node:20.10.0-slim
+    depends_on:
+      - e2e
+    commands:
+      - corepack enable
+      - pnpm run release
+
 ---
 kind: pipeline
 name: pull-request-deploy
