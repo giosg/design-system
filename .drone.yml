@@ -17,6 +17,8 @@ steps:
     commands:
       - corepack enable
       - pnpm i
+      - pnpm build-packages
+      - pnpm i
     environment:
       NPM_CONFIG_REGISTRY: http://npm-local-cache-verdaccio.infra.svc.cluster.local:4873
 
@@ -85,6 +87,8 @@ steps:
     image: node:20.10.0-slim
     commands:
       - corepack enable
+      - pnpm i
+      - pnpm build-packages
       - pnpm i
     environment:
       NPM_CONFIG_REGISTRY: http://npm-local-cache-verdaccio.infra.svc.cluster.local:4873
