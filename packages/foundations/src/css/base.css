@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,900&display=swap");
 
 :root {
-	/* Fonts */
-	--gds-font-ui-stack: nunito sans, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue,
-		helvetica, cantarell, ubuntu, roboto, noto, arial, sans-serif;
+  /* Fonts */
+  --gds-font-ui-stack: nunito sans, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue,
+    helvetica, cantarell, ubuntu, roboto, noto, arial, sans-serif;
 }

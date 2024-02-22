@@ -1,8 +1,8 @@
 {
-	"eslint.workingDirectories": [
-		{
-			"mode": "auto"
-		}
-	],
-	"stylelint.packageManager": "pnpm"
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "stylelint.packageManager": "pnpm"
 }

@@ -12,18 +12,18 @@ const components = Object.keys(data).filter((key) => key.startsWith("Component/"
 const keys = Object.keys(data).filter((key) => key.startsWith("Themes/"));
 
 for (let key of keys) {
-	const newData = { ...data };
-	const themePrefix = key.split("/")[1].toLocaleLowerCase();
-	const keyForDeletion = keys.filter((k) => k !== key);
+  const newData = { ...data };
+  const themePrefix = key.split("/")[1].toLocaleLowerCase();
+  const keyForDeletion = keys.filter((k) => k !== key);
 
-	keyForDeletion.forEach((key) => {
-		delete newData[key];
-	});
+  keyForDeletion.forEach((key) => {
+    delete newData[key];
+  });
 
-	components.forEach((key) => {
-		delete newData[key];
-	});
+  components.forEach((key) => {
+    delete newData[key];
+  });
 
-	fs.writeFileSync(path.resolve(__dirname, `tokens/tokens-${themePrefix}.json`), "");
-	fs.writeFileSync(path.resolve(__dirname, `tokens/tokens-${themePrefix}.json`), JSON.stringify(newData, null, 4));
+  fs.writeFileSync(path.resolve(__dirname, `tokens/tokens-${themePrefix}.json`), "");
+  fs.writeFileSync(path.resolve(__dirname, `tokens/tokens-${themePrefix}.json`), JSON.stringify(newData, null, 4));
 }

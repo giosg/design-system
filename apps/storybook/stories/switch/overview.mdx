@@ -1,18 +1,20 @@
-import { Meta,Source, Canvas} from '@storybook/blocks';
-import * as CompStories from './switch.stories';
+import { Meta, Source, Canvas } from "@storybook/blocks";
+import * as CompStories from "./switch.stories";
 
-
-<Meta title="Switch/Overview"  parameters={{ options: { order: ['Switch/Overview', '*'] } }}/>
+<Meta title="Switch/Overview" parameters={{ options: { order: ["Switch/Overview", "*"] } }} />
 
 # Switch
+
 A control that allows the user to toggle between checked and not checked.
 
 You may find all of the api docs there [Documentation](https://www.radix-ui.com/primitives/docs/components/switch)
 
 ## Installation
-<Source code={`npm i @giosg/design-system-switch`} language='bash' dark/>
+
+<Source code={`npm i @giosg/design-system-switch`} language="bash" dark />
 
 ## Usage
+
 Basic example
 
 <Source code={`
@@ -28,4 +30,4 @@ export const Base = () => {
 };
 `}  dark/>
 
-<Canvas of={CompStories.Base} dark/>
+<Canvas of={CompStories.Base} dark />
