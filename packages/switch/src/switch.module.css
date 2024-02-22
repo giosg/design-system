@@ -1,0 +1,45 @@
+.switchRoot {
+	all: unset;
+	width: 32px;
+	height: 20px;
+	background-color: var(--gds-sys-color-bg-neutral-medium);
+	border-radius: 9999px;
+	transition: background-color 100ms;
+	position: relative;
+
+	&:hover {
+		background-color: var(--gds-sys-color-bg-neutral-strong);
+	}
+
+	&:focus {
+		outline: 2px solid var(--gds-sys-color-border-state-focused);
+		outline-offset: 2px;
+	}
+
+	&[data-disabled] {
+		background-color: var(--gds-sys-color-bg-neutral-mild);
+	}
+
+	&[data-state="checked"] {
+		background-color: var(--gds-sys-color-bg-primary-strong);
+
+		&:hover {
+			background-color: var(--gds-sys-color-bg-primary-strongest);
+		}
+	}
+}
+
+.switchThumb {
+	display: block;
+	width: 14px;
+	height: 14px;
+	background-color: var(--gds-sys-color-fg-neutral-inverted);
+	border-radius: 50%;
+	transition: transform 100ms;
+	transform: translateX(3px);
+	will-change: transform;
+
+	&[data-state="checked"] {
+		transform: translateX(15px);
+	}
+}
