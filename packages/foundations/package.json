@@ -10,6 +10,9 @@
   "files": [
     "index.css"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "pnpm run css",
     "dev": "pnpm run css",
@@ -25,8 +28,5 @@
     "style-dictionary": "^3.9.2",
     "@tokens-studio/sd-transforms": "^0.14.2",
     "stylelint": "^16.2.0"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
