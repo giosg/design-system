@@ -1,6 +1,7 @@
 {
   "name": "@giosg/design-system-foundations",
   "version": "0.0.1",
+  "description": "Basic style sheet for Giosg Design System. Contains only the most basic styles and variables.",
   "style": "index.css",
   "sideEffects": [
     "*.css"

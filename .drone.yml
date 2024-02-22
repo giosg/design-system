@@ -68,6 +68,18 @@ steps:
     depends_on:
       - build-image
 
+  - name: release-packages
+    image: node:20.10.0-slim
+    environment:
+      NPM_PUBLISH_TOKEN:
+        from_secret: NPM_PUBLISH_TOKEN
+    depends_on:
+      - deploy
+      - lint
+    commands:
+      - corepack enable
+      - pnpm run release
+
 ---
 kind: pipeline
 name: pull-request-check
@@ -109,17 +121,6 @@ steps:
       - corepack enable
       - pnpm build
       - pnpm run serve-storybook & pnpm run test
-
-  - name: release-packages
-    image: node:20.10.0-slim
-    environment:
-      NPM_PUBLISH_TOKEN:
-        from_secret: NPM_PUBLISH_TOKEN
-    depends_on:
-      - e2e
-    commands:
-      - corepack enable
-      - pnpm run release
 
 ---
 kind: pipeline
