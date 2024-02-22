@@ -1,3 +1,3 @@
 export function App(): JSX.Element {
-	return <main></main>;
+  return <main></main>;
 }

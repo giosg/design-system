@@ -1,22 +1,22 @@
 {
-	"$schema": "https://turbo.build/schema.json",
-	"pipeline": {
-		"build": {
-			"outputs": ["dist/**", "storybook-static/**"],
-			"dependsOn": ["^build"]
-		},
-		"serve-storybook": {},
-		"lint": {},
-		"test": {
-			"cache": false,
-			"persistent": true
-		},
-		"dev": {
-			"cache": false,
-			"persistent": true
-		},
-		"clean": {
-			"cache": false
-		}
-	}
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "outputs": ["dist/**", "storybook-static/**"],
+      "dependsOn": ["^build"]
+    },
+    "serve-storybook": {},
+    "lint": {},
+    "test": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "clean": {
+      "cache": false
+    }
+  }
 }

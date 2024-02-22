@@ -1,33 +1,33 @@
 .container {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	padding: 60px;
-	background-color: var(--gds-sys-color-bg-neutral-default);
-	color: var(--gds-sys-color-content-neutral-default);
-	gap: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 60px;
+  background-color: var(--gds-sys-color-bg-neutral-default);
+  color: var(--gds-sys-color-content-neutral-default);
+  gap: 35px;
 }
 
 .row {
-	display: flex;
-	width: 100%;
-	gap: 80px;
+  display: flex;
+  width: 100%;
+  gap: 80px;
 }
 
 .desc {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	gap: 0;
-	width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  width: 110px;
 
-	b {
-		font-weight: 700;
-	}
+  b {
+    font-weight: 700;
+  }
 }
 
 .contentContainer {
-	display: flex;
-	gap: 20px;
+  display: flex;
+  gap: 20px;
 }
