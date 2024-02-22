@@ -1,6 +1,6 @@
 {
   "name": "@giosg/design-system-foundations",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "style": "index.css",
   "sideEffects": [
     "*.css"
