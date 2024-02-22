@@ -81,8 +81,6 @@ trigger:
 environment:
   PNPM_HOME: "/pnpm"
   PATH: "$PNPM_HOME:$PATH"
-  NPM_PUBLISH_TOKEN:
-    from_secret: NPM_PUBLISH_TOKEN
 
 steps:
   - name: install-packages
@@ -114,6 +112,9 @@ steps:
 
   - name: release-packages
     image: node:20.10.0-slim
+    environment:
+      NPM_PUBLISH_TOKEN:
+        from_secret: NPM_PUBLISH_TOKEN
     depends_on:
       - e2e
     commands:
