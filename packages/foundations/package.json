@@ -1,32 +1,32 @@
 {
-	"name": "@giosg/design-system-foundations",
-	"private": true,
-	"version": "0.0.0",
-	"style": "index.css",
-	"sideEffects": [
-		"*.css"
-	],
-	"license": "MIT",
-	"files": [
-		"index.css"
-	],
-	"scripts": {
-		"build": "pnpm run css",
-		"dev": "pnpm run css",
-		"css": "bash ./src/prepare.sh && prettier --write \"index.css\" && stylelint \"**/*.css\" --fix",
-		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-		"lint": "stylelint \"**/*.css\" --max-warnings=0"
-	},
-	"devDependencies": {
-		"@repo/stylelint-config": "workspace:*",
-		"postcss": "^8.4.33",
-		"postcss-cli": "^11.0.0",
-		"postcss-js": "^4.0.1",
-		"style-dictionary": "^3.9.2",
-		"@tokens-studio/sd-transforms": "^0.14.2",
-		"stylelint": "^16.2.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@giosg/design-system-foundations",
+  "private": true,
+  "version": "0.0.0",
+  "style": "index.css",
+  "sideEffects": [
+    "*.css"
+  ],
+  "license": "MIT",
+  "files": [
+    "index.css"
+  ],
+  "scripts": {
+    "build": "pnpm run css",
+    "dev": "pnpm run css",
+    "css": "bash ./src/prepare.sh && prettier --write \"index.css\" && stylelint \"**/*.css\" --fix",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "lint": "stylelint \"**/*.css\" --max-warnings=0"
+  },
+  "devDependencies": {
+    "@repo/stylelint-config": "workspace:*",
+    "postcss": "^8.4.33",
+    "postcss-cli": "^11.0.0",
+    "postcss-js": "^4.0.1",
+    "style-dictionary": "^3.9.2",
+    "@tokens-studio/sd-transforms": "^0.14.2",
+    "stylelint": "^16.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
