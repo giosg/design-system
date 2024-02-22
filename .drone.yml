@@ -81,7 +81,7 @@ trigger:
 environment:
   PNPM_HOME: "/pnpm"
   PATH: "$PNPM_HOME:$PATH"
-  NPM_PUBLISH_TOKEN: ${NPM_PUBLISH_TOKEN}
+  NPM_PUBLISH_TOKEN: $NPM_PUBLISH_TOKEN
 
 steps:
   - name: install-packages
