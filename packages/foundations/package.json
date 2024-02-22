@@ -17,7 +17,7 @@
     "dev": "pnpm run css",
     "css": "bash ./src/prepare.sh && prettier --write \"index.css\" && stylelint \"**/*.css\" --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "lint": "stylelint \"**/*.css\" --max-warnings=0"
+    "lint": "stylelint \"**/*.css\" --fix --max-warnings=0"
   },
   "devDependencies": {
     "@repo/stylelint-config": "workspace:*",
