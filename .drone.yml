@@ -45,7 +45,7 @@ steps:
       dockerfile: Dockerfile
       repo: giosg/design-system
       tags:
-        - ${DRONE_COMMIT}
+        - ${DRONE_COMMIT}-${DRONE_BUILD_NUMBER}
         - master
       username:
         from_secret: docker-username
@@ -64,7 +64,7 @@ steps:
       kubernetes_token:
         from_secret: k8s-prod-token # Namespace-specific
       set_value_template:
-        - image.tag={{ DRONE_COMMIT }}
+        - image.tag={{ DRONE_COMMIT }}-{{ DRONE_BUILD_NUMBER }}
     depends_on:
       - build-image
 
@@ -127,7 +127,7 @@ steps:
       dockerfile: Dockerfile
       repo: giosg/design-system
       tags:
-        - ${DRONE_COMMIT}-pull-request
+        - ${DRONE_COMMIT}-${DRONE_BUILD_NUMBER}-pull-request
         - pull-request
       username:
         from_secret: docker-username
@@ -142,7 +142,7 @@ steps:
       release_name: design-system-pr-${DRONE_PULL_REQUEST}
       values_file: charts/values.sandbox.yaml
       set_value_template:
-        - image.tag={{ DRONE_COMMIT }}-pull-request
+        - image.tag={{ DRONE_COMMIT }}-{{ DRONE_BUILD_NUMBER }}-pull-request
         - ingress.hosts={design-system-pr-${DRONE_PULL_REQUEST}.staging.giosg.com}
         - deploymentAnnotations.giosg\\.com/delete-on-pull-request-repo=giosg/design-system
         - deploymentAnnotations.giosg\\.com/delete-on-pull-request-state=closed
