@@ -72,3 +72,30 @@ Playwright is very flexible in that sense, as it is able to perform various oper
 Playwright uses [pixelmatch](https://github.com/mapbox/pixelmatch) library under the hood for performing screenshot comparison.
 
 The main benefit of using Playwright is its ability to consistently test across three main browser engines (Chromium, Firefox, WebKit) in Docker environments.
+
+## 🔨 Local development
+Recommended way to start local development is by using [Volta.js](https://volta.sh/) for managing your nodejs and package manager versions. 
+- after `volta.js` installation we have to install `pnpm` package manager by 
+```
+volta install pnpm
+```
+- install all the dependencies
+```
+pnpm i
+```
+- since some of our packages dependant on the pre-built versions of another packages we need to make a full-package list by running
+```
+pnpm build-packages
+```
+Now when the installation is ready its time to quickly get familiar with the basics of [TurboRepo](https://turbo.build/repo/docs) and how the tasks run in `turbo.json`.
+
+You have a traditional set of command for the repo like `dev`, `build`, `test`, `lint`. They will run corresponding command in the packages and apps.
+
+## 🎁 Publishing
+Packages follow [semantic versioning](https://www.geeksforgeeks.org/introduction-semantic-versioning/).
+
+Publishing is done through the package named [changesets](https://github.com/changesets/changesets). Browse documentation to know the details.
+
+But in short if you want to publish a new version of the package you have to use ```pnpm changeset``` command to add your changeset in which you describe all of the changes you made. You can accommodate multiple changesets of multiple packages. When you are done with your changes run ```pnpm version-packages``` under which `changesets` automatically bumps all of the packages and dependencies to the proper versions.
+
+Next step - create a pull request with your changes. When pull request is merged and everything is fine (linting, tests and so on) new versions of packages are deployed ⚠️ **automatically** ⚠️ be aware and cautious of that.
