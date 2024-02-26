@@ -75,9 +75,13 @@ The main benefit of using Playwright is its ability to consistently test across 
 
 ## 🔨 Local development
 Recommended way to start local development is by using [Volta.js](https://volta.sh/) for managing your nodejs and package manager versions. 
-- after `volta.js` installation we have to install `pnpm` package manager by 
+- after `volta.js` installation we have to install `pnpm` package manager by  
 ```
 volta install pnpm
+```
+- install node version pinned in package.json
+```
+volta install node <version>
 ```
 - install all the dependencies
 ```
