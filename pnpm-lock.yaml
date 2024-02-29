@@ -38,6 +38,9 @@ importers:
       '@giosg/design-system-foundations':
         specifier: workspace:*
         version: link:../../packages/foundations
+      '@giosg/design-system-icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
       '@giosg/design-system-switch':
         specifier: workspace:*
         version: link:../../packages/switch
