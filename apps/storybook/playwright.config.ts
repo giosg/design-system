@@ -36,7 +36,13 @@ export default defineConfig({
 
   expect: {
     // Strictest config possible for pixelmatch
-    toHaveScreenshot: { threshold: 0, maxDiffPixelRatio: 0, maxDiffPixels: 0 },
+    toHaveScreenshot: {
+      threshold: 0,
+      maxDiffPixelRatio: 0,
+      maxDiffPixels: 0,
+      // @ts-expect-error This property is not officially released yet
+      _comparator: 'ssim-cie94',
+    },
   },
 
   /* Configure projects for major browsers */

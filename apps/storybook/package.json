@@ -11,7 +11,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules",
     "serve-storybook": "http-server storybook-static -p 6006",
     "update-screenshots": "playwright test --update-snapshots",
-    "test-docker": "docker-compose -f ../../docker-compose.e2e.yml up"
+    "test-docker": "docker-compose -f ../../docker-compose.e2e.yml up --build"
   },
   "dependencies": {
     "@giosg/design-system-foundations": "workspace:*",
