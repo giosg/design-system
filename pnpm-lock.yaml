@@ -132,9 +132,9 @@ importers:
 
   apps/tree-shaking-tester:
     dependencies:
-      '@giosg/design-system-switch':
+      '@giosg/design-system-icons':
         specifier: workspace:*
-        version: link:../../packages/switch
+        version: link:../../packages/icons
       react:
         specifier: '>=18'
         version: 18.2.0
