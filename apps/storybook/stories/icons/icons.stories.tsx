@@ -5,6 +5,9 @@ import styles from "./icons.module.css";
 const meta: Meta = {
   title: "Icons/List",
   argTypes: {
+    showNames: {
+      control: { type: "boolean", default: true },
+    },
     width: {
       control: { type: "number", min: 2, max: 50, step: 2 },
     },
@@ -15,7 +18,7 @@ const meta: Meta = {
       control: {
         description: "asdf",
         type: "color",
-        presetColors: ["red", "black"],
+        presetColors: ["red", "black", "#084461"],
       },
     },
   },
@@ -30,6 +33,7 @@ type Story = StoryObj<{
   color: string;
   width: number | undefined;
   height: number | undefined;
+  showNames: boolean;
 }>;
 
 type Keys = keyof typeof Icons;
@@ -38,11 +42,13 @@ const ComponentArray = IconKeys.map((key) => Icons[key]);
 
 export const List: Story = {
   args: {
-    color: "red",
+    showNames: true,
+    color: "black",
     width: undefined,
+    height: undefined,
   },
   render: (args) => {
-    const { color, height, width } = args;
+    const { color, height, width, showNames } = args;
 
     let props = {};
 
@@ -54,11 +60,11 @@ export const List: Story = {
     }
 
     return (
-      <div className={styles.container} style={{ color }}>
+      <div className={styles.container} data-testid="container" style={{ color }}>
         {ComponentArray.map((Icon, index) => (
           <div className={styles.iconWrapper} key={index}>
             <Icon {...props} />
-            <span>{IconKeys[index]}</span>
+            {showNames ? <span>{IconKeys[index]}</span> : null}
           </div>
         ))}
       </div>
