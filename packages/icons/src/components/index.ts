@@ -127,7 +127,6 @@ export { default as RadioButtonSelected } from "./radioButtonSelected";
 export { default as RadioButtonUnselected } from "./radioButtonUnselected";
 export { default as Reload } from "./reload";
 export { default as Remove } from "./remove";
-export { default as Room1 } from "./room1";
 export { default as Room } from "./room";
 export { default as Rule } from "./rule";
 export { default as Save } from "./save";
