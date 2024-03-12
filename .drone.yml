@@ -128,9 +128,8 @@ steps:
       NPM_PUBLISH_TOKEN:
         from_secret: NPM_PUBLISH_TOKEN
       GITHUB_TOKEN:
-        from_secret: github-pull-token
+        from_secret: GITHUB_TOKEN
     depends_on:
-      - deploy
       - lint
     commands:
       - corepack enable
