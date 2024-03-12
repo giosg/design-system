@@ -76,6 +76,7 @@ steps:
     depends_on:
       - deploy
       - lint
+      - e2e
     commands:
       - corepack enable
       - apt-get update && apt-get install -y git
