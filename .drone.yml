@@ -122,6 +122,20 @@ steps:
       - pnpm build
       - pnpm run serve-storybook & pnpm run test
 
+  - name: release-packages
+    image: node:20.10.0-slim
+    environment:
+      NPM_PUBLISH_TOKEN:
+        from_secret: NPM_PUBLISH_TOKEN
+      GITHUB_TOKEN:
+        from_secret: github-pull-token
+    depends_on:
+      - deploy
+      - lint
+    commands:
+      - corepack enable
+      - pnpm run release
+
 ---
 kind: pipeline
 name: pull-request-deploy
