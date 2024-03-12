@@ -133,6 +133,7 @@ steps:
       - lint
     commands:
       - corepack enable
+      - apt-get update && apt-get install -y git
       - pnpm run release
 
 ---
