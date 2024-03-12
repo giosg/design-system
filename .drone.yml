@@ -78,6 +78,7 @@ steps:
       - lint
     commands:
       - corepack enable
+      - apt-get update && apt-get install -y git
       - pnpm run release
 
 ---
@@ -121,18 +122,6 @@ steps:
       - corepack enable
       - pnpm build
       - pnpm run serve-storybook & pnpm run test
-
-  - name: release-packages
-    image: node:20.10.0-slim
-    environment:
-      NPM_PUBLISH_TOKEN:
-        from_secret: NPM_PUBLISH_TOKEN
-    depends_on:
-      - lint
-    commands:
-      - corepack enable
-      - apt-get update && apt-get install -y git
-      - pnpm run release
 
 ---
 kind: pipeline
