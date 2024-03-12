@@ -127,8 +127,6 @@ steps:
     environment:
       NPM_PUBLISH_TOKEN:
         from_secret: NPM_PUBLISH_TOKEN
-      GITHUB_TOKEN:
-        from_secret: GITHUB_TOKEN
     depends_on:
       - lint
     commands:
