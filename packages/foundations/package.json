@@ -1,7 +1,7 @@
 {
   "name": "@giosg/design-system-foundations",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.4",
+  "description": "Basic style sheet for Giosg Design System. Contains only the most basic styles and variables.",
   "style": "index.css",
   "sideEffects": [
     "*.css"
@@ -18,7 +18,7 @@
     "dev": "pnpm run css",
     "css": "bash ./src/prepare.sh && prettier --write \"index.css\" && stylelint \"**/*.css\" --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "lint": "stylelint \"**/*.css\" --max-warnings=0"
+    "lint": "stylelint \"**/*.css\" --fix --max-warnings=0"
   },
   "devDependencies": {
     "@repo/stylelint-config": "workspace:*",

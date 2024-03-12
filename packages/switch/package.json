@@ -20,7 +20,7 @@
   "scripts": {
     "build": "tsc --noEmit && parcel build --no-cache",
     "dev": "parcel watch --port $(../../scripts/getPort.sh)",
-    "lint": "stylelint '**/*.{css,scss}' --max-warnings 0",
+    "lint": "eslint . --max-warnings 0 && stylelint '**/*.{css,scss}' --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "peerDependencies": {
