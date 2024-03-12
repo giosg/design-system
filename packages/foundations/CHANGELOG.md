@@ -1,5 +1,11 @@
 # @giosg/design-system-foundations
 
+## 0.0.2
+
+### Patch Changes
+
+- publishing-test
+
 ## 0.0.1
 
 ### Patch Changes
