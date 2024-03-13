@@ -2,6 +2,13 @@ module.exports = {
   multipass: true,
   plugins: [
     {
+      name: "dataColorPlugin",
+      params: {
+        active: true,
+      },
+      fn: require("./svgr/data-color-plugin.js"),
+    },
+    {
       name: "preset-default",
       params: {
         overrides: {
