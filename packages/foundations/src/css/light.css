@@ -1,25 +1,14 @@
-:root,
-[data-theme="light"] {
-  --gds-sys-shadow-up-xs: 0px -6px 2px 0px #00000000, 0px -4px 1px 0px #00000003, 0px -2px 1px 0px #00000008,
-    0px -1px 1px 0px #0000000a, 0px 0px 1px 0px #0000000d;
-  --gds-sys-shadow-up-s: 0px -12px 3px 0px #00000000, 0px -7px 3px 0px #00000003, 0px -4px 3px 0px #00000008,
-    0px -2px 2px 0px #0000000a, 0px 0px 1px 0px #0000000d;
-  --gds-sys-shadow-up-m: 0px -29px 8px 0px #00000000, 0px -19px 7px 0px #00000003, 0px -10px 6px 0px #00000008,
-    0px -5px 5px 0px #0000000a, 0px -1px 3px 0px #0000000d;
-  --gds-sys-shadow-up-l: 0px -58px 16px 0px #00000000, 0px -37px 15px 0px #00000003, 0px -21px 13px 0px #00000008,
-    0px -9px 9px 0px #0000000a, 0px -2px 5px 0px #0000000d;
-  --gds-sys-shadow-up-xl: 0px -58px 16px 0px #00000000, 0px -37px 15px 0px #00000003, 0px -21px 13px 0px #0000000a,
-    0px -9px 9px 0px #00000012, 0px -2px 5px 0px #00000014;
-  --gds-sys-shadow-down-xs: 0px 6px 2px 0px #00000000, 0px 4px 1px 0px #00000003, 0px 2px 1px 0px #00000008,
-    0px 1px 1px 0px #0000000a, 0px 0px 1px 0px #0000000d;
-  --gds-sys-shadow-down-s: 0px 12px 3px 0px #00000000, 0px 7px 3px 0px #00000003, 0px 4px 3px 0px #00000008,
-    0px 2px 2px 0px #0000000a, 0px 0px 1px 0px #0000000d;
-  --gds-sys-shadow-down-m: 0px 29px 8px 0px #00000000, 0px 19px 7px 0px #00000003, 0px 10px 6px 0px #00000008,
-    0px 5px 5px 0px #0000000a, 0px 1px 3px 0px #0000000d;
-  --gds-sys-shadow-down-l: 0px 58px 16px 0px #00000000, 0px 37px 15px 0px #00000003, 0px 21px 13px 0px #00000008,
-    0px 9px 9px 0px #0000000a, 0px 2px 5px 0px #0000000d;
-  --gds-sys-shadow-down-xl: 0px 58px 16px 0px #00000000, 0px 37px 15px 0px #00000003, 0px 21px 13px 0px #0000000a,
-    0px 9px 9px 0px #00000012, 0px 2px 5px 0px #00000014;
+:root, [data-theme="light"] {
+  --gds-sys-shadow-up-xs: 0px -6px 2px 0px #00000000, 0px -4px 1px 0px #00000003, 0px -2px 1px 0px #00000008, 0px -1px 1px 0px #0000000a, 0px 0px 1px 0px #0000000d;
+  --gds-sys-shadow-up-s: 0px -12px 3px 0px #00000000, 0px -7px 3px 0px #00000003, 0px -4px 3px 0px #00000008, 0px -2px 2px 0px #0000000a, 0px 0px 1px 0px #0000000d;
+  --gds-sys-shadow-up-m: 0px -29px 8px 0px #00000000, 0px -19px 7px 0px #00000003, 0px -10px 6px 0px #00000008, 0px -5px 5px 0px #0000000a, 0px -1px 3px 0px #0000000d;
+  --gds-sys-shadow-up-l: 0px -58px 16px 0px #00000000, 0px -37px 15px 0px #00000003, 0px -21px 13px 0px #00000008, 0px -9px 9px 0px #0000000a, 0px -2px 5px 0px #0000000d;
+  --gds-sys-shadow-up-xl: 0px -58px 16px 0px #00000000, 0px -37px 15px 0px #00000003, 0px -21px 13px 0px #0000000a, 0px -9px 9px 0px #00000012, 0px -2px 5px 0px #00000014;
+  --gds-sys-shadow-down-xs: 0px 6px 2px 0px #00000000, 0px 4px 1px 0px #00000003, 0px 2px 1px 0px #00000008, 0px 1px 1px 0px #0000000a, 0px 0px 1px 0px #0000000d;
+  --gds-sys-shadow-down-s: 0px 12px 3px 0px #00000000, 0px 7px 3px 0px #00000003, 0px 4px 3px 0px #00000008, 0px 2px 2px 0px #0000000a, 0px 0px 1px 0px #0000000d;
+  --gds-sys-shadow-down-m: 0px 29px 8px 0px #00000000, 0px 19px 7px 0px #00000003, 0px 10px 6px 0px #00000008, 0px 5px 5px 0px #0000000a, 0px 1px 3px 0px #0000000d;
+  --gds-sys-shadow-down-l: 0px 58px 16px 0px #00000000, 0px 37px 15px 0px #00000003, 0px 21px 13px 0px #00000008, 0px 9px 9px 0px #0000000a, 0px 2px 5px 0px #0000000d;
+  --gds-sys-shadow-down-xl: 0px 58px 16px 0px #00000000, 0px 37px 15px 0px #00000003, 0px 21px 13px 0px #0000000a, 0px 9px 9px 0px #00000012, 0px 2px 5px 0px #00000014;
   --gds-sys-paragraph-indent-0: 0px;
   --gds-sys-text-decoration-none: none;
   --gds-sys-text-case-none: none;
@@ -305,54 +294,30 @@
   --gds-sys-color-bg-neutral-mild: var(--gds-ref-color-solid-grey-300);
   --gds-sys-color-bg-neutral-milder: var(--gds-ref-color-solid-grey-100);
   --gds-sys-color-bg-neutral-default: var(--gds-ref-color-solid-basics-white);
-  --gds-sys-font-default-label-2-xs-semibold: var(--gds-sys-font-weights-semi-bold) var(--gds-sys-font-size-10) /
-    var(--gds-sys-line-heights-14) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-label-xs-semibold: var(--gds-sys-font-weights-semi-bold) var(--gds-sys-font-size-12) /
-    var(--gds-sys-line-heights-16) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-label-s-semibold: var(--gds-sys-font-weights-semi-bold) var(--gds-sys-font-size-14) /
-    var(--gds-sys-line-heights-18) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-label-m-semibold: var(--gds-sys-font-weights-semi-bold) var(--gds-sys-font-size-16) /
-    var(--gds-sys-line-heights-20) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-body-2-xs-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-10) /
-    var(--gds-sys-line-heights-14) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-body-2-xs-regular: var(--gds-sys-font-weights-regular) var(--gds-sys-font-size-10) /
-    var(--gds-sys-line-heights-14) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-body-xs-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-12) /
-    var(--gds-sys-line-heights-16) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-body-xs-regular: var(--gds-sys-font-weights-regular) var(--gds-sys-font-size-12) /
-    var(--gds-sys-line-heights-16) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-body-s-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-14) /
-    var(--gds-sys-line-heights-18) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-body-s-regular: var(--gds-sys-font-weights-regular) var(--gds-sys-font-size-14) /
-    var(--gds-sys-line-heights-18) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-body-m-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-16) /
-    var(--gds-sys-line-heights-20) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-body-m-regular: var(--gds-sys-font-weights-regular) var(--gds-sys-font-size-16) /
-    var(--gds-sys-line-heights-20) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-body-l-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-18) /
-    var(--gds-sys-line-heights-22) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-body-l-regular: var(--gds-sys-font-weights-regular) var(--gds-sys-font-size-18) /
-    var(--gds-sys-line-heights-22) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-title-m-black: var(--gds-sys-font-weights-black) var(--gds-sys-font-size-16) /
-    var(--gds-sys-line-heights-20) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-title-m-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-16) /
-    var(--gds-sys-line-heights-20) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-title-l-black: var(--gds-sys-font-weights-black) var(--gds-sys-font-size-18) /
-    var(--gds-sys-line-heights-22) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-title-l-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-18) /
-    var(--gds-sys-line-heights-22) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-title-xl-black: var(--gds-sys-font-weights-black) var(--gds-sys-font-size-22) /
-    var(--gds-sys-line-heights-26) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-title-xl-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-22) /
-    var(--gds-sys-line-heights-26) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-title-2-xl-black: var(--gds-sys-font-weights-black) var(--gds-sys-font-size-26) /
-    var(--gds-sys-line-heights-32) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-title-2-xl-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-26) /
-    var(--gds-sys-line-heights-32) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-title-3-xl-black: var(--gds-sys-font-weights-black) var(--gds-sys-font-size-30) /
-    var(--gds-sys-line-heights-36) var(--gds-sys-font-families-nunito-sans);
-  --gds-sys-font-default-title-3-xl-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-30) /
-    var(--gds-sys-line-heights-36) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-label-2-xs-semibold: var(--gds-sys-font-weights-semi-bold) var(--gds-sys-font-size-10)/var(--gds-sys-line-heights-14) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-label-xs-semibold: var(--gds-sys-font-weights-semi-bold) var(--gds-sys-font-size-12)/var(--gds-sys-line-heights-16) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-label-s-semibold: var(--gds-sys-font-weights-semi-bold) var(--gds-sys-font-size-14)/var(--gds-sys-line-heights-18) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-label-m-semibold: var(--gds-sys-font-weights-semi-bold) var(--gds-sys-font-size-16)/var(--gds-sys-line-heights-20) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-body-2-xs-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-10)/var(--gds-sys-line-heights-14) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-body-2-xs-regular: var(--gds-sys-font-weights-regular) var(--gds-sys-font-size-10)/var(--gds-sys-line-heights-14) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-body-xs-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-12)/var(--gds-sys-line-heights-16) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-body-xs-regular: var(--gds-sys-font-weights-regular) var(--gds-sys-font-size-12)/var(--gds-sys-line-heights-16) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-body-s-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-14)/var(--gds-sys-line-heights-18) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-body-s-regular: var(--gds-sys-font-weights-regular) var(--gds-sys-font-size-14)/var(--gds-sys-line-heights-18) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-body-m-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-16)/var(--gds-sys-line-heights-20) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-body-m-regular: var(--gds-sys-font-weights-regular) var(--gds-sys-font-size-16)/var(--gds-sys-line-heights-20) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-body-l-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-18)/var(--gds-sys-line-heights-22) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-body-l-regular: var(--gds-sys-font-weights-regular) var(--gds-sys-font-size-18)/var(--gds-sys-line-heights-22) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-title-m-black: var(--gds-sys-font-weights-black) var(--gds-sys-font-size-16)/var(--gds-sys-line-heights-20) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-title-m-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-16)/var(--gds-sys-line-heights-20) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-title-l-black: var(--gds-sys-font-weights-black) var(--gds-sys-font-size-18)/var(--gds-sys-line-heights-22) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-title-l-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-18)/var(--gds-sys-line-heights-22) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-title-xl-black: var(--gds-sys-font-weights-black) var(--gds-sys-font-size-22)/var(--gds-sys-line-heights-26) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-title-xl-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-22)/var(--gds-sys-line-heights-26) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-title-2-xl-black: var(--gds-sys-font-weights-black) var(--gds-sys-font-size-26)/var(--gds-sys-line-heights-32) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-title-2-xl-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-26)/var(--gds-sys-line-heights-32) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-title-3-xl-black: var(--gds-sys-font-weights-black) var(--gds-sys-font-size-30)/var(--gds-sys-line-heights-36) var(--gds-sys-font-families-nunito-sans);
+  --gds-sys-font-default-title-3-xl-bold: var(--gds-sys-font-weights-bold) var(--gds-sys-font-size-30)/var(--gds-sys-line-heights-36) var(--gds-sys-font-families-nunito-sans);
   --gds-sys-radius-7-xl: var(--gds-ref-space-4);
   --gds-sys-radius-6-xl: var(--gds-ref-space-3-5);
   --gds-sys-radius-5-xl: var(--gds-ref-space-3);
