@@ -1,5 +1,5 @@
 /* svg color variables */
-svg {
+:root {
   --gds-svg-main: var(--gds-sys-color-fg-neutral-default);
   --gds-svg-alt: var(--gds-sys-color-fg-neutral-inverted);
   --gds-svg-accent: var(--gds-sys-color-fg-primary-strong);

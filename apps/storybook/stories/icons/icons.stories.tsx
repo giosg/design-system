@@ -14,11 +14,22 @@ const meta: Meta = {
     height: {
       control: { type: "number", min: 2, max: 50, step: 2 },
     },
-    color: {
+    mainColor: {
       control: {
-        description: "asdf",
         type: "color",
         presetColors: ["red", "black", "#084461"],
+      },
+    },
+    altColor: {
+      control: {
+        type: "color",
+        presetColors: ["red", "black", "yellow"],
+      },
+    },
+    accentColor: {
+      control: {
+        type: "color",
+        presetColors: ["purple", "pink", "yellow"],
       },
     },
   },
@@ -30,7 +41,9 @@ const meta: Meta = {
 export default meta;
 
 type Story = StoryObj<{
-  color: string;
+  mainColor: string;
+  altColor: string;
+  accentColor: string;
   width: number | undefined;
   height: number | undefined;
   showNames: boolean;
@@ -43,12 +56,14 @@ const ComponentArray = IconKeys.map((key) => Icons[key]);
 export const List: Story = {
   args: {
     showNames: true,
-    color: "black",
+    mainColor: undefined,
+    altColor: undefined,
+    accentColor: undefined,
     width: undefined,
     height: undefined,
   },
   render: (args) => {
-    const { color, height, width, showNames } = args;
+    const { mainColor, accentColor, altColor, height, width, showNames } = args;
 
     let props = {};
 
@@ -59,8 +74,14 @@ export const List: Story = {
       props = { ...props, height };
     }
 
+    const inline = {
+      "--gds-svg-main": mainColor,
+      "--gds-svg-alt": altColor,
+      "--gds-svg-accent": accentColor,
+    } as React.CSSProperties;
+
     return (
-      <div className={styles.container} data-testid="container" style={{ color }}>
+      <div className={styles.container} data-testid="container" style={inline}>
         {ComponentArray.map((Icon, index) => (
           <div className={styles.iconWrapper} key={index}>
             <Icon {...props} />

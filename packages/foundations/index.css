@@ -168,6 +168,9 @@
   --gds-ref-space-3: 3rem;
   --gds-ref-space-3-5: 3.5rem;
   --gds-ref-space-4: 4rem;
+  --gds-svg-main: var(--gds-sys-color-fg-neutral-default);
+  --gds-svg-alt: var(--gds-sys-color-fg-neutral-inverted);
+  --gds-svg-accent: var(--gds-sys-color-fg-primary-strong);
   --gds-sys-font-size-10: 0.625rem;
   --gds-sys-font-size-12: 0.75rem;
   --gds-sys-font-size-14: 0.875rem;
@@ -394,11 +397,6 @@ textarea:not([rows]) {
 }
 
 /* svg color variables */
-svg {
-  --gds-svg-main: var(--gds-sys-color-fg-neutral-default);
-  --gds-svg-alt: var(--gds-sys-color-fg-neutral-inverted);
-  --gds-svg-accent: var(--gds-sys-color-fg-primary-strong);
-}
 
 svg *[data-color="main"][fill] {
   fill: var(--gds-svg-main);
