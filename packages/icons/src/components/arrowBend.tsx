@@ -8,6 +8,7 @@ function SvgArrowBend({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>):
       <path
         fill="currentColor"
         d="m19.547 17.297-4.5 4.5a1.135 1.135 0 0 1-1.594 0l-4.5-4.5a1.127 1.127 0 0 1 1.594-1.594l2.578 2.578V12A7.885 7.885 0 0 0 5.25 4.125a1.125 1.125 0 0 1 0-2.25A10.134 10.134 0 0 1 15.375 12v6.281l2.578-2.578a1.127 1.127 0 0 1 1.594 1.594"
+        data-color="main"
       />
     </svg>
   );

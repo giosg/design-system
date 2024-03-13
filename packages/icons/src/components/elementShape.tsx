@@ -8,6 +8,7 @@ function SvgElementShape({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement
       <path
         fill="currentColor"
         d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 16H5V5h14zm-1-3a2 2 0 0 1-2 2H8a2 2 0 1 1 0-4h8a2 2 0 0 1 2 2m-1-7H7V7h10zm-5 3H7v-2h5z"
+        data-color="main"
       />
     </svg>
   );

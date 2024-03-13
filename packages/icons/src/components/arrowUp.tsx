@@ -8,6 +8,7 @@ function SvgArrowUp({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): J
       <path
         fill="currentColor"
         d="m16.585 8.349-3.826-4.463a1 1 0 0 0-1.518 0L7.415 8.349A1 1 0 0 0 8.174 10H11v9a1 1 0 0 0 2 0v-9h2.826a1 1 0 0 0 .759-1.651"
+        data-color="main"
       />
     </svg>
   );

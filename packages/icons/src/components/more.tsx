@@ -8,6 +8,7 @@ function SvgMore({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.
       <path
         fill="currentColor"
         d="M13 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-5-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m8 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"
+        data-color="main"
       />
     </svg>
   );

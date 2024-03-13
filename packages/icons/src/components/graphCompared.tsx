@@ -8,6 +8,7 @@ function SvgGraphCompared({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElemen
       <path
         fill="currentColor"
         d="M16 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0m-4 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4m-6 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+        data-color="main"
       />
     </svg>
   );

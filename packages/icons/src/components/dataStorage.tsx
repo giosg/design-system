@@ -8,6 +8,7 @@ function SvgDataStorage({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>
       <path
         fill="currentColor"
         d="M20 4H4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1m-1 14H5v-5h14zm0-7H5V6h14zM6 8.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0m4 7a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0m-4 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0"
+        data-color="main"
       />
     </svg>
   );

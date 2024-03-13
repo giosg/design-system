@@ -8,6 +8,7 @@ function SvgCopy({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.
       <path
         fill="currentColor"
         d="M20 5v6h-2V6H6v12h5v2H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1m-3 7h-2v3h-3v2h3v3h2v-3h3v-2h-3z"
+        data-color="main"
       />
     </svg>
   );

@@ -1,4 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="compare">
+<g id="main">
 <path d="M11.001 11L6 15L11.001 19V16H17V14H11.001V11Z" fill="#2A293A"/>
 <path d="M12.999 13L18 9L12.999 5V8H7V10H12.999V13Z" fill="#2A293A"/>
+</g>
+</g>
 </svg>

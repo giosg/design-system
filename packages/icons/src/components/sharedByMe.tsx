@@ -8,6 +8,7 @@ function SvgSharedByMe({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>)
       <path
         fill="currentColor"
         d="M13 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0m0-7 2 2-2 2 2 2 2-2 2 2V5zm2 8-2 2 2 2-2 2h6v-6l-2 2z"
+        data-color="main"
       />
     </svg>
   );

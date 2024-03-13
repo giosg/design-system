@@ -8,6 +8,7 @@ function SvgArrowLeft({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>):
       <path
         fill="currentColor"
         d="m8.349 7.415-4.463 3.826a1 1 0 0 0 0 1.518l4.463 3.826A1 1 0 0 0 10 15.826V13h9a1 1 0 0 0 0-2h-9V8.174a1 1 0 0 0-1.651-.759"
+        data-color="main"
       />
     </svg>
   );

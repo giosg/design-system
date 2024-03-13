@@ -10,6 +10,7 @@ function SvgCheckboxPartial({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElem
         fillRule="evenodd"
         d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-3 10H8a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2"
         clipRule="evenodd"
+        data-color="main"
       />
     </svg>
   );

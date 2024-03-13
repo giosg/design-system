@@ -8,6 +8,7 @@ function SvgInteractionDesigner({ ...props }: SvgComponentProps, ref: Ref<SVGSVG
       <path
         fill="currentColor"
         d="M10 9a4 4 0 1 1-8 0 4 4 0 0 1 8 0m11.806 7.853L16.74 8.077a1.431 1.431 0 0 0-2.479 0l-5.067 8.776A1.43 1.43 0 0 0 10.433 19h10.133a1.43 1.43 0 0 0 1.24-2.147"
+        data-color="main"
       />
     </svg>
   );

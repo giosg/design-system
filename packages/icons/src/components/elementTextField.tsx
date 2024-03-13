@@ -8,6 +8,7 @@ function SvgElementTextField({ ...props }: SvgComponentProps, ref: Ref<SVGSVGEle
       <path
         fill="currentColor"
         d="M2 3v18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1m18 17H4V4h16zM17 9H7a1 1 0 0 1 0-2h10a1 1 0 1 1 0 2m0 4H7a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2m-3 4H7a1 1 0 0 1 0-2h7a1 1 0 0 1 0 2"
+        data-color="main"
       />
     </svg>
   );

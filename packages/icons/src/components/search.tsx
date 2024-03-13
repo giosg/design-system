@@ -8,6 +8,7 @@ function SvgSearch({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JS
       <path
         fill="currentColor"
         d="M19.293 18.293 15.71 14.71a6.026 6.026 0 1 0-1.591 1.409l3.588 3.588a1 1 0 0 0 .707.293h.172a1 1 0 0 0 .707-1.707M11 15a4 4 0 1 1 0-8 4 4 0 0 1 0 8"
+        data-color="main"
       />
     </svg>
   );

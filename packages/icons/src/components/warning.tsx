@@ -8,6 +8,7 @@ function SvgWarning({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): J
       <path
         fill="currentColor"
         d="m20.227 14.986-6.5-11.055a2 2 0 0 0-3.448 0l-6.5 11.055A2 2 0 0 0 5.5 18h13a2 2 0 0 0 1.727-3.014M13 16h-2v-2h2zm0-5a1 1 0 1 1-2 0V7h2z"
+        data-color="main"
       />
     </svg>
   );

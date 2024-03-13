@@ -8,6 +8,7 @@ function SvgBarChart({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): 
       <path
         fill="currentColor"
         d="M14 4v14a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1m-7 7H5a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1m12-4h-2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1"
+        data-color="main"
       />
     </svg>
   );

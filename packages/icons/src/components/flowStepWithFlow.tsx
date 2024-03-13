@@ -8,6 +8,7 @@ function SvgFlowStepWithFlow({ ...props }: SvgComponentProps, ref: Ref<SVGSVGEle
       <path
         fill="currentColor"
         d="M19 10a2 2 0 1 1 0 4 2 2 0 0 1 0-4m0-1c.341.003.68.065 1 .184V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.184a2.8 2.8 0 0 1-2 0V18H6V6h12v3.184A3 3 0 0 1 19 9m-4 1V8H9v8h2v-3h4v-2h-4v-1z"
+        data-color="main"
       />
     </svg>
   );

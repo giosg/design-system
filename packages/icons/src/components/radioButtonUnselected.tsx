@@ -10,6 +10,7 @@ function SvgRadioButtonUnselected({ ...props }: SvgComponentProps, ref: Ref<SVGS
         fillRule="evenodd"
         d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18m0-2a7 7 0 1 0 0-14 7 7 0 0 0 0 14"
         clipRule="evenodd"
+        data-color="main"
       />
     </svg>
   );

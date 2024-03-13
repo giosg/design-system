@@ -8,6 +8,7 @@ function SvgMute({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.
       <path
         fill="currentColor"
         d="m14 14 2-2-2-2 1-1 2 2 2-2 1 1-2 2 2 2-1 1-2-2-2 2zm-3-8.921a1 1 0 0 1 1.005 1v11.84a1 1 0 0 1-1.625.779l-2.832-2.26A2 2 0 0 0 6.3 16H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2.3a2 2 0 0 0 1.249-.438L10.375 5.3A.98.98 0 0 1 11 5.079"
+        data-color="main"
       />
     </svg>
   );

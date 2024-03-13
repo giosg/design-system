@@ -8,6 +8,7 @@ function SvgArrowDown({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>):
       <path
         fill="currentColor"
         d="m7.589 15.651 3.826 4.463a1 1 0 0 0 1.518 0l3.826-4.463A1 1 0 0 0 16 14h-2.824V5a1 1 0 0 0-2 0v9H8.348a1 1 0 0 0-.759 1.651"
+        data-color="main"
       />
     </svg>
   );

@@ -8,6 +8,7 @@ function SvgDuplicate({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>):
       <path
         fill="currentColor"
         d="M19 8H9a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1m-1 10h-8v-8h8zM16 6H6v10H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1z"
+        data-color="main"
       />
     </svg>
   );

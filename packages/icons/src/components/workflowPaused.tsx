@@ -8,6 +8,7 @@ function SvgWorkflowPaused({ ...props }: SvgComponentProps, ref: Ref<SVGSVGEleme
       <path
         fill="currentColor"
         d="M11 15H9V9h2zm4 0h-2V9h2zM12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18m0 16a7 7 0 1 1 0-14 7 7 0 0 1 0 14"
+        data-color="main"
       />
     </svg>
   );

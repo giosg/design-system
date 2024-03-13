@@ -8,6 +8,7 @@ function SvgCheckmark({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>):
       <path
         fill="currentColor"
         d="M8.939 17.061 5 13.121A1.5 1.5 0 0 1 7.121 11L10 13.879 16.879 7A1.5 1.5 0 0 1 19 9.121l-7.939 7.94a1.5 1.5 0 0 1-2.122 0"
+        data-color="main"
       />
     </svg>
   );

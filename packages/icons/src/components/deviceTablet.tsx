@@ -8,6 +8,7 @@ function SvgDeviceTablet({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement
       <path
         fill="currentColor"
         d="M4 4v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2m14 16H6V4h12zm-6-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+        data-color="main"
       />
     </svg>
   );

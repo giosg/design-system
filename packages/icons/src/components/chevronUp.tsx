@@ -8,6 +8,7 @@ function SvgChevronUp({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>):
       <path
         fill="currentColor"
         d="M12.707 8.707a1 1 0 0 0-1.414 0L10.5 9.5l-3.793 3.793A1 1 0 0 0 7.414 15h.172a1 1 0 0 0 .707-.293L12 11l3.707 3.707a1 1 0 0 0 .707.293h.172a1 1 0 0 0 .707-1.707L13.5 9.5z"
+        data-color="main"
       />
     </svg>
   );

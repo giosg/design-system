@@ -8,6 +8,7 @@ function SvgMinimizeToRight({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElem
       <path
         fill="currentColor"
         d="M11 18v2H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v6h-2V6H6v12zm9-5-2.793 2.793-3.5-3.5-1.414 1.414 3.5 3.5L13 20h7z"
+        data-color="main"
       />
     </svg>
   );

@@ -8,6 +8,7 @@ function SvgContextMenu({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>
       <path
         fill="currentColor"
         d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+        data-color="main"
       />
     </svg>
   );

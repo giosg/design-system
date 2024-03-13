@@ -10,6 +10,7 @@ function SvgIncorrect({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>):
         fillRule="evenodd"
         d="m16 14-2-2 2-2a1.41 1.41 0 0 0 0-2 1.41 1.41 0 0 0-2 0l-2 2-2-2a1.41 1.41 0 0 0-2 0 1.41 1.41 0 0 0 0 2l2 2-2 2a1.41 1.41 0 0 0 0 2 1.41 1.41 0 0 0 2 0l2-2 2 2a1.41 1.41 0 0 0 2 0 1.41 1.41 0 0 0 0-2M12 4a8 8 0 1 1 0 16 8 8 0 0 1 0-16"
         clipRule="evenodd"
+        data-color="main"
       />
     </svg>
   );

@@ -8,6 +8,7 @@ function SvgCallVideo({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>):
       <path
         fill="currentColor"
         d="m22 17-4-2V9l4-2zM15 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1"
+        data-color="main"
       />
     </svg>
   );

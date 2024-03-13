@@ -8,6 +8,7 @@ function SvgOpen({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.
       <path
         fill="currentColor"
         d="M18 13h2v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6v2H6v12h12zm-5-9 2.793 2.793-3.5 3.5 1.414 1.414 3.5-3.5L20 11V4z"
+        data-color="main"
       />
     </svg>
   );

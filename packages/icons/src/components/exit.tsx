@@ -8,6 +8,7 @@ function SvgExit({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.
       <path
         fill="currentColor"
         d="M18 16v-3h-7v-2h7V8l5 4zm-4 1H6V7h8v2h2V6a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3h-2z"
+        data-color="main"
       />
     </svg>
   );

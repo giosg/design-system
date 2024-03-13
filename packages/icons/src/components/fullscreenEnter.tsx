@@ -8,6 +8,7 @@ function SvgFullscreenEnter({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElem
       <path
         fill="currentColor"
         d="M18 18h-4v2h5a1 1 0 0 0 1-1v-5h-2zM6 6h4V4H5a1 1 0 0 0-1 1v5h2zm0 12v-4H4v5a1 1 0 0 0 1 1h5v-2zM18 6v4h2V5a1 1 0 0 0-1-1h-5v2z"
+        data-color="main"
       />
     </svg>
   );

@@ -8,6 +8,7 @@ function SvgCollection({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>)
       <path
         fill="currentColor"
         d="M8.5 6a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M13 8.5a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0m-7 7a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0m7 0a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0"
+        data-color="main"
       />
     </svg>
   );

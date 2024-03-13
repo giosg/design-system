@@ -8,6 +8,7 @@ function SvgElementButton({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElemen
       <path
         fill="currentColor"
         d="M16 5H8a6 6 0 0 0-6 6v2a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6v-2a6 6 0 0 0-6-6m0 10H8a4 4 0 1 1 0-8h8a4 4 0 1 1 0 8"
+        data-color="main"
       />
     </svg>
   );

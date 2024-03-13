@@ -5,7 +5,7 @@ import type { SvgComponentProps } from "../types";
 function SvgFilter({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.Element {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}>
-      <path fill="currentColor" d="M20 9H4V7h16zm-3 2H7v2h10zm-3 4h-4v2h4z" />
+      <path fill="currentColor" d="M20 9H4V7h16zm-3 2H7v2h10zm-3 4h-4v2h4z" data-color="main" />
     </svg>
   );
 }

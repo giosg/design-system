@@ -8,6 +8,7 @@ function SvgBringForward({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement
       <path
         fill="currentColor"
         d="M19 9h-3V6a1 1 0 0 0-1-1h-4v2h3v2h-4a1 1 0 0 0-1 1v4H5v1a1 1 0 0 0 1 1h3v3a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1m-8 9v-7h7v7zM5 8H2l4-5 4 5H7v4H5z"
+        data-color="main"
       />
     </svg>
   );

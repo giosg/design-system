@@ -8,6 +8,7 @@ function SvgElementDropdown({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElem
       <path
         fill="currentColor"
         d="M2 3v18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1m18 17H4V4h16zM8 9h8a1 1 0 0 1 .8 1.6l-4 5.333a1 1 0 0 1-1.6 0l-4-5.333A1 1 0 0 1 8 9"
+        data-color="main"
       />
     </svg>
   );
