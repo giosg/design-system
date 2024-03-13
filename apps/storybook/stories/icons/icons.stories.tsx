@@ -81,7 +81,7 @@ export const List: Story = {
     } as React.CSSProperties;
 
     return (
-      <div className={styles.container} data-testid="container" style={inline}>
+      <div className={styles.container} data-testid="container" data-theme="dark" style={inline}>
         {ComponentArray.map((Icon, index) => (
           <div className={styles.iconWrapper} key={index}>
             <Icon {...props} />

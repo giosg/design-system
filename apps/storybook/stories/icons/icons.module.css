@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 10px 10px;
+  background-color: var(--gds-sys-color-bg-neutral-default);
 }
 
 .iconWrapper {
