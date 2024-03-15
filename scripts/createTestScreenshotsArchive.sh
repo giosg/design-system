@@ -5,14 +5,12 @@ if [[ $1 == "--help" ]] || [[ $1 == "-h" ]]; then
   exit 0;
 fi
 
-
-# Check if the directory ./apps/storybook/__screenshots__ exists
-if [ ! -d "./apps/storybook/__screenshots__" ]; then
+if [ ! -d "./apps/storybook/test-results" ]; then
   echo "Directory with current screenshots not found in the file tree."
   exit 1
 else
-  # Create a tar archive of PNG files in the screenshots directory
-  tar -czvf ./apps/storybook/__screenshots__/current_screenshots.tar.gz ./apps/storybook/__screenshots__/ || exit 1
-  echo "Done ./apps/storybook/__screenshots__/current_screenshots.tar.gz with all current screenshots generated"
+  mkdir ./apps/storybook/tmp
+  tar -czvf ./apps/storybook/tmp/current_screenshots.tar.gz ./apps/storybook/test-results || exit 1
+  echo "Done ./apps/storybook/tmp/current_screenshots.tar.gz with all current screenshots generated"
 fi
 

@@ -133,7 +133,7 @@ steps:
       from_secret: aws_access_key_id
       secret_key:
         from_secret: aws_secret_access_key
-      source: ./apps/storybook/__screenshots__/current_screenshots.tar.gz
+      source: ./apps/storybook/tmp/current_screenshots.tar.gz
       target: /drone/${DRONE_COMMIT}
       acl: public-read
       region: eu-central-1
