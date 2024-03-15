@@ -123,6 +123,34 @@ steps:
       - corepack enable
       - pnpm build
       - pnpm run serve-storybook & pnpm run test
+      - ./scripts/createTestScreenshotsArchive.sh
+
+  - name: upload_screenshots_to_aws
+    image: plugins/s3
+    settings:
+      bucket: design-system-dev-screenshots
+      access_key:
+      from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
+      source: ./apps/storybook/__screenshots__/current_screenshots.tar.gz
+      target: /drone/${DRONE_COMMIT}
+      acl: public-read
+      region: eu-central-1
+    depends_on:
+      - e2e
+
+  - name: send_current_screenshots_archive_link_to_github
+    image: giosg/drone-github-pr:stable
+    settings:
+      github_token:
+        from_secret: github_token_for_message
+      action: comment
+      repo_owner: giosg
+      repo_name: design-system
+      message: "You can download updated screenshots [here](https:/design-system-dev-screenshots.s3.amazonaws.com/drone/${DRONE_COMMIT}/current_screenshots.tar.gz)"
+    depends_on:
+      - upload_screenshots_to_aws
 
 ---
 kind: pipeline
