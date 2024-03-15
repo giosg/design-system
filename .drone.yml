@@ -130,10 +130,10 @@ steps:
     settings:
       bucket: design-system-dev-screenshots
       access_key:
-      from_secret: aws_access_key_id
+        from_secret: aws_access_key_id
       secret_key:
         from_secret: aws_secret_access_key
-      source: ./apps/storybook/tmp/current_screenshots.tar.gz
+      source: ./apps/storybook/tmp/screenshots.tar.gz
       target: /drone/${DRONE_COMMIT}
       acl: public-read
       region: eu-central-1
@@ -148,7 +148,7 @@ steps:
       action: comment
       repo_owner: giosg
       repo_name: design-system
-      message: "You can download updated screenshots [here](https:/design-system-dev-screenshots.s3.amazonaws.com/drone/${DRONE_COMMIT}/current_screenshots.tar.gz)"
+      message: "You can download updated screenshots [here](https:/design-system-dev-screenshots.s3.amazonaws.com/drone/${DRONE_COMMIT}/apps/storybook/tmp/current_screenshots.tar.gz)"
     depends_on:
       - upload_screenshots_to_aws
 
