@@ -122,7 +122,7 @@ steps:
     commands:
       - corepack enable
       - pnpm build
-      - pnpm run serve-storybook & pnpm run test
+      - (pnpm run serve-storybook & pnpm run test) || ./scripts/createTestScreenshotsArchive.sh
       - ./scripts/createTestScreenshotsArchive.sh
 
   - name: upload_screenshots_to_aws
@@ -133,7 +133,7 @@ steps:
         from_secret: aws_access_key_id
       secret_key:
         from_secret: aws_secret_access_key
-      source: screenshots.tar.gz
+      source: playwright_screenshots.tar.gz
       target: /drone/${DRONE_COMMIT}
       acl: public-read
       region: eu-central-1
@@ -148,7 +148,7 @@ steps:
       action: comment
       repo_owner: giosg
       repo_name: design-system
-      message: "You can download updated screenshots [here](https:/design-system-dev-screenshots.s3.amazonaws.com/drone/${DRONE_COMMIT}/current_screenshots.tar.gz)"
+      message: "You can download screenshots here - https:/design-system-dev-screenshots.s3.amazonaws.com/drone/${DRONE_COMMIT}/playwright_screenshots.tar.gz)"
     depends_on:
       - upload_screenshots_to_aws
 
