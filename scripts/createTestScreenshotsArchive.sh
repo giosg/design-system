@@ -6,7 +6,7 @@ if [[ $1 == "--help" ]] || [[ $1 == "-h" ]]; then
 fi
 
 if [ ! -d "./apps/storybook/__screenshots__" ]; then
-  echo "Directory with tests screenshot results not found in the file tree."
+  echo "Directory with playwright screenshots not found in the file tree"
   exit 1
 else
   tar -czvf playwright_screenshots.tar.gz -C ./apps/storybook/ __screenshots__ || exit 1
