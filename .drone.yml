@@ -122,8 +122,16 @@ steps:
     commands:
       - corepack enable
       - pnpm build
-      - (pnpm run serve-storybook & pnpm run test) || ./scripts/createTestScreenshotsArchive.sh
+      - pnpm run serve-storybook & pnpm run test
+
+  - name: create_screenshots_archive
+    image: ubuntu:latest
+    depends_on:
+      - e2e
+    commands:
       - ./scripts/createTestScreenshotsArchive.sh
+    when:
+      status: [success, failure]
 
   - name: upload_screenshots_to_aws
     image: plugins/s3
@@ -138,7 +146,7 @@ steps:
       acl: public-read
       region: eu-central-1
     depends_on:
-      - e2e
+      - create_screenshots_archive
 
   - name: send_current_screenshots_archive_link_to_github
     image: giosg/drone-github-pr:stable
@@ -148,7 +156,7 @@ steps:
       action: comment
       repo_owner: giosg
       repo_name: design-system
-      message: "You can download screenshots here - https:/design-system-dev-screenshots.s3.amazonaws.com/drone/${DRONE_COMMIT}/playwright_screenshots.tar.gz)"
+      message: "You can download screenshots [here](https:/design-system-dev-screenshots.s3.amazonaws.com/drone/${DRONE_COMMIT}/playwright_screenshots.tar.gz)."
     depends_on:
       - upload_screenshots_to_aws
 
