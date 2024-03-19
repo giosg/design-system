@@ -73,6 +73,8 @@ Playwright uses [pixelmatch](https://github.com/mapbox/pixelmatch) library under
 
 The main benefit of using Playwright is its ability to consistently test across three main browser engines (Chromium, Firefox, WebKit) in Docker environments.
 
+After every CI run, Playwright screenshots are sent to the PR comments. This feature comes in handy when you've added a new test and need a screenshot reference. It's particularly important for ARM-based Mac users, as there is a minor pixel difference between screenshots taken by these systems and Linux (even when running in Docker). Therefore, we consider screenshots captured by CI as the source of truth.
+
 ## 🔨 Local development
 Recommended way to start local development is by using [Volta.js](https://volta.sh/) for managing your nodejs and package manager versions. 
 - after `volta.js` installation we have to install `pnpm` package manager by  
