@@ -158,7 +158,7 @@ steps:
       action: comment
       repo_owner: giosg
       repo_name: design-system
-      message: "You can download screenshots [here](https:/design-system-dev-screenshots.s3.amazonaws.com/drone/${DRONE_COMMIT}/playwright_screenshots.tar.gz)."
+      message: "You can download playwright screenshots [here](https://design-system-dev-screenshots.s3.amazonaws.com/drone/${DRONE_COMMIT}/playwright_screenshots.tar.gz)."
     depends_on:
       - upload_screenshots_to_aws
     when:
