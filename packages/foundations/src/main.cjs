@@ -37,8 +37,9 @@ async function execute() {
   const result = await postcss([fontFamilyPlugin()]).process(tokenResult, { from: undefined });
   const base = await processCss(["base.css"], []);
   const reset = await processCss(["reset.css"], []);
+  const svg = await processCss(["svg.css"], []);
 
-  mergeDeclarations([base, reset, result], "index.css");
+  mergeDeclarations([base, reset, svg, result], "index.css");
 }
 
 execute().catch(console.error);

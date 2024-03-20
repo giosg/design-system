@@ -9,21 +9,21 @@
     "module": {
       "optimize": true,
       "includeNodeModules": [
-        "@giosg/design-system-switch"
+        "@giosg/design-system-icons"
       ]
     },
     "main": {
       "optimize": true,
       "includeNodeModules": [
-        "@giosg/design-system-switch"
+        "@giosg/design-system-icons"
       ]
     }
   },
   "scripts": {
-    "tree-shake": "parcel build --no-source-maps"
+    "shake": "parcel build --no-source-maps"
   },
   "dependencies": {
-    "@giosg/design-system-switch": "workspace:*",
+    "@giosg/design-system-icons": "workspace:*",
     "react": ">=18"
   },
   "devDependencies": {

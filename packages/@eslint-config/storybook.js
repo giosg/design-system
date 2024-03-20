@@ -43,5 +43,6 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "unicorn/filename-case": "off",
     "react/no-array-index-key": "off",
+    "import/namespace": [2, { allowComputed: true }],
   },
 };

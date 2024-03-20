@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px 10px;
+  background-color: var(--gds-sys-color-bg-neutral-default);
+}
+
+.iconWrapper {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+  span {
+    font-size: 0.7rem;
+  }
+}

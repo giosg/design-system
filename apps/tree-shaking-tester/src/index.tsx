@@ -1,3 +1,9 @@
+import * as Icons from "@giosg/design-system-icons";
+
 export function App(): JSX.Element {
-  return <main></main>;
+  return (
+    <main>
+      <Icons.ArrowArrowDown />
+    </main>
+  );
 }
