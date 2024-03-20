@@ -124,6 +124,46 @@ steps:
       - pnpm build
       - pnpm run serve-storybook & pnpm run test
 
+  - name: create_screenshots_archive
+    image: ubuntu:latest
+    depends_on:
+      - e2e
+    commands:
+      - ./scripts/createTestScreenshotsArchive.sh
+    when:
+      status: [success, failure]
+
+  - name: upload_screenshots_to_aws
+    image: plugins/s3
+    settings:
+      bucket: design-system-dev-screenshots
+      access_key:
+        from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
+      source: playwright_screenshots.tar.gz
+      target: /drone/${DRONE_COMMIT}
+      acl: public-read
+      region: eu-central-1
+    depends_on:
+      - create_screenshots_archive
+    when:
+      status: [success, failure]
+
+  - name: send_screenshots_to_github
+    image: giosg/drone-github-pr:stable
+    settings:
+      github_token:
+        from_secret: github_token_for_message
+      action: comment
+      repo_owner: giosg
+      repo_name: design-system
+      message: 'You can download playwright screenshots [here](https://design-system-dev-screenshots.s3.amazonaws.com/drone/${DRONE_COMMIT}/playwright_screenshots.tar.gz). If the "test-results" folder is empty, Playwright did not find any differences.'
+    depends_on:
+      - upload_screenshots_to_aws
+    when:
+      status: [success, failure]
+
 ---
 kind: pipeline
 name: pull-request-deploy
