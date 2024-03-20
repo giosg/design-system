@@ -73,7 +73,11 @@ Playwright uses [pixelmatch](https://github.com/mapbox/pixelmatch) library under
 
 The main benefit of using Playwright is its ability to consistently test across three main browser engines (Chromium, Firefox, WebKit) in Docker environments.
 
-After every CI run, Playwright screenshots are sent to the PR comments. This feature comes in handy when you've added a new test and need a screenshot reference. It's particularly important for ARM-based Mac users, as there is a minor pixel difference between screenshots taken by these systems and Linux (even when running in Docker). Therefore, we consider screenshots captured by CI as the source of truth.
+After every CI run, Playwright screenshots and test results are sent to the PR comments. This feature comes in handy when you've added a new test and need a screenshot reference or want to update a screenshot reference for the failed test. It's particularly useful for ARM-based Mac users, as there is a minor pixel difference between screenshots taken by these systems and Linux (even when running in Docker). Therefore, we consider screenshots captured by CI as the main reference.
+
+By default, Playwright does not update failed screenshots. To get a new reference, you have two options: you can remove failed screenshots and rerun the CI, this way playwright will create a new screenshot, or you can find the "actual" screenshot of the failed test from the "test-results" folder and then replace your current screenshot with it.
+
+Once you've ensured there are no unintended changes, commit the new screenshot, push the changes to Github, and CI should not detect any differences.
 
 ## 🔨 Local development
 Recommended way to start local development is by using [Volta.js](https://volta.sh/) for managing your nodejs and package manager versions. 
