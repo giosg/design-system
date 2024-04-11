@@ -1,4 +1,5 @@
 /* svg color variables */
+:root,
 [data-theme="light"],
 [data-theme="dark"] {
   --gds-svg-main: var(--gds-sys-color-fg-neutral-default);

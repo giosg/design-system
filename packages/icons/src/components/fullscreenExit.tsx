@@ -2,16 +2,16 @@ import type { Ref} from "react";
 import { forwardRef } from "react";
 import type { SvgComponentProps } from "../types";
 
-function SvgElementShape({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.Element {
+function SvgFullscreenExit({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.Element {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}>
       <path
         fill="currentColor"
-        d="M8.08 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3.08a6.3 6.3 0 0 0-2 0V6H6v8h2.08a6.3 6.3 0 0 0 0 2M21 15a6 6 0 1 1-12 0 6 6 0 0 1 12 0m-2 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0"
+        d="M16 20h-2v-5a1 1 0 0 1 1-1h5v2h-4zM8 8H4v2h5a1 1 0 0 0 1-1V4H8zm0 8v4h2v-5a1 1 0 0 0-1-1H4v2zm8-8V4h-2v5a1 1 0 0 0 1 1h5V8z"
         data-color="main"
       />
     </svg>
   );
 }
-const ForwardRef = forwardRef(SvgElementShape);
+const ForwardRef = forwardRef(SvgFullscreenExit);
 export default ForwardRef;

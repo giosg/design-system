@@ -7,7 +7,7 @@ function SvgPlay({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.
     <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}>
       <path
         fill="currentColor"
-        d="M7 5.723a1 1 0 0 1 1.5-.868l10.985 6.277a1 1 0 0 1 0 1.736L8.5 19.145a1 1 0 0 1-1.5-.868z"
+        d="M7 5.723a1 1 0 0 1 1.5-.868l10.985 6.277a1 1 0 0 1 0 1.736L8.5 19.145a1.001 1.001 0 0 1-1.5-.868z"
         data-color="main"
       />
     </svg>

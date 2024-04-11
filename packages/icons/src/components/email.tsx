@@ -2,16 +2,16 @@ import type { Ref} from "react";
 import { forwardRef } from "react";
 import type { SvgComponentProps } from "../types";
 
-function SvgElementShape({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.Element {
+function SvgEmail({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.Element {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}>
       <path
         fill="currentColor"
-        d="M8.08 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3.08a6.3 6.3 0 0 0-2 0V6H6v8h2.08a6.3 6.3 0 0 0 0 2M21 15a6 6 0 1 1-12 0 6 6 0 0 1 12 0m-2 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0"
+        d="M20 5H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1m-1 2v1.382l-7 3.5-7-3.5V7zM5 17v-6.382l6.105 3.052a2.01 2.01 0 0 0 1.79 0L19 10.618V17z"
         data-color="main"
       />
     </svg>
   );
 }
-const ForwardRef = forwardRef(SvgElementShape);
+const ForwardRef = forwardRef(SvgEmail);
 export default ForwardRef;

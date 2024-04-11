@@ -6,6 +6,7 @@
 }
 
 .iconWrapper {
+  color: var(--gds-sys-color-fg-neutral-default);
   display: flex;
   gap: 4px;
   align-items: center;

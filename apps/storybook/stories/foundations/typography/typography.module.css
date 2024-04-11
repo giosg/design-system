@@ -4,7 +4,7 @@
   justify-content: space-around;
   padding: 60px;
   background-color: var(--gds-sys-color-bg-neutral-default);
-  color: var(--gds-sys-color-content-neutral-default);
+  color: var(--gds-sys-color-fg-neutral-default);
   gap: 35px;
 }
 
