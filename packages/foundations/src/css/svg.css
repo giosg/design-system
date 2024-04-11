@@ -1,0 +1,32 @@
+/* svg color variables */
+:root,
+[data-theme="light"],
+[data-theme="dark"] {
+  --gds-svg-main: var(--gds-sys-color-fg-neutral-default);
+  --gds-svg-alt: var(--gds-sys-color-fg-neutral-inverted);
+  --gds-svg-accent: var(--gds-sys-color-fg-primary-strong);
+}
+
+[data-color="main"][fill] {
+  fill: var(--gds-svg-main);
+}
+
+[data-color="alt"][fill] {
+  fill: var(--gds-svg-alt);
+}
+
+[data-color="accent"][fill] {
+  fill: var(--gds-svg-accent);
+}
+
+[data-color="main"][stroke] {
+  stroke: var(--gds-svg-main);
+}
+
+[data-color="alt"][stroke] {
+  stroke: var(--gds-svg-alt);
+}
+
+[data-color="accent"][stroke] {
+  stroke: var(--gds-svg-accent);
+}

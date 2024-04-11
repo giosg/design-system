@@ -1,0 +1,43 @@
+import { Meta, Source, Canvas, Subtitle } from "@storybook/blocks";
+import * as CompStories from "./icons.stories";
+
+<Meta title="Icons/Overview" parameters={{ options: { order: ["Icons/Overview", "*"] } }} />
+
+# Icons
+
+SVG-based icons for use in the design system.
+
+There are some exceptions to this, but the majority of the icons are 24x24px. Icons inherit parent `color` by `currentColor` prop. 
+
+## Installation
+
+<Source code={`npm i @giosg/design-system-icons`} language="bash" dark />
+
+## Usage
+
+Import icons you want to use and use it as a component.
+
+<Subtitle>Batch import</Subtitle>
+<Source code={`
+import * as Icons from "@giosg/design-system-icons";
+
+export const App = () => {
+    return (
+      <Icons.ArrowRight />
+    );
+  },
+};
+`}  dark/>
+
+<Subtitle>Individual import</Subtitle>
+<Source code={`
+import {AiChatbot} from "@giosg/design-system-icons";
+
+export const App = () => {
+    return (
+      <AiChatbot />
+    );
+  },
+};
+`}  dark/>
+
