@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "source": "./src/index.tsx",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/module.mjs",
   "targets": {
     "module": {

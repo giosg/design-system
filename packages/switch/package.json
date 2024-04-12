@@ -4,7 +4,7 @@
   "description": "accessible switch react component",
   "version": "0.0.0",
   "source": "./src/index.tsx",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": [

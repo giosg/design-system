@@ -4,7 +4,7 @@
   "description": "svg based react icon components",
   "version": "0.0.0",
   "source": "./src/components/index.ts",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
