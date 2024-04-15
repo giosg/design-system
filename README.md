@@ -108,4 +108,4 @@ Publishing is done through the package named [changesets](https://github.com/cha
 
 But in short if you want to publish a new version of the package you have to use ```pnpm changeset``` command to add your changeset in which you describe all of the changes you made. You can accommodate multiple changesets of multiple packages. When you are done with your changes run ```pnpm version-packages``` under which `changesets` automatically bumps all of the packages and dependencies to the proper versions.
 
-Next step - create a pull request with your changes. When pull request is merged and everything is fine (linting, tests and so on) new versions of packages are deployed ⚠️ **automatically** ⚠️ be aware and cautious of that.
+Next step - create a pull request with your changes. Check that pull-request reviewer is assigned. This should be done automatically because project has code-owners. When pull request is merged and everything is fine (linting, tests and so on) new versions of packages are deployed ⚠️ **automatically** ⚠️ be aware and cautious of that.

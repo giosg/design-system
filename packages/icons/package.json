@@ -1,10 +1,10 @@
 {
   "name": "@giosg/design-system-icons",
-  "private": true,
+  "private": false,
   "description": "svg based react icon components",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "source": "./src/components/index.ts",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
