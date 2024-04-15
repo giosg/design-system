@@ -12,7 +12,8 @@ Before you start the best thing you could do is to read the icon's package [over
 3. The icon should follow some rules designers have documented. For example, it should have `main`, `alt` or `accent` data-id attributes on corresponding parts of an svg and the `height` should be 24px and `viewport` property is present. In practice, you should go to `./src/svg/` to compare with the existing set.
 4. Put the provided svg into `./src/svg/`.
 5. Run `pnpm svg` - that will trigger the pipeline to produce a component.
-6. Commit your changes if you are fine with them.
-7. Read the general rules how to create changesets in [publishing settings](/README.md#Publishing) 
+6. Update tests/screenshots if needed.
+7. Commit your changes if you are fine with them.
+8. Read the general rules how to create changesets in [publishing settings](/README.md#Publishing) 
 
 

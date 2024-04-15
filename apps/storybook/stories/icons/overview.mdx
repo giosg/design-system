@@ -14,7 +14,7 @@ Icons may contain up to three different color markers:
  - `alt` - for some parts that should be differenly colored than the main.
  - `accent` - for parts needs to be highlithed.
 
-In the component it's just data-attribute associated with the correcponding part of the icon.
+In the component it's just data-attribute associated with the corresponding part of the icon.
 
 <Subtitle>Example of color data attributes</Subtitle>
 <Source code={`
@@ -67,10 +67,10 @@ export const App = () => {
 
 
 <Subtitle>Usage without foundation package</Subtitle>
-Icons are completely consumable without foundation package. I want to highlight some of th key points and simplifications that are made for that.
+Icons are completely consumable without the foundation package. I want to highlight some of the key points and simplifications that are made for that.
 
-Bu default main and accent parts of the svgs are `fill=currentColor` so in most cases you don't need to do anything.
-In case when you need to changes that color use any css solutions you are currently using and target that parts of svg just like that.
+By default main and accent parts of the svgs are `fill=currentColor` so in most cases you don't need to do anything.
+In case when you need to change a color use any css solution that you are currently using and target those parts of svg just like that.
 <Source code={`
 .icon-css {
   [data-color="accent"] {
