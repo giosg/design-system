@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 let data = JSON.parse(fs.readFileSync(path.resolve(__dirname, "tokens.json"), "utf8"));
 
 const components = Object.keys(data).filter((key) => key.startsWith("Component/"));
-const keys = Object.keys(data).filter((key) => key.startsWith("Themes/"));
+const keys = Object.keys(data).filter((key) => key.startsWith("Theme/"));
 
 for (let key of keys) {
   const newData = { ...data };
