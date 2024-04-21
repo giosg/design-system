@@ -1,13 +1,14 @@
 .paletteContainer {
-  display: flex;
-  flex-direction: column;
-  width: 1200px;
-  padding: 60px;
-  gap: 30px;
-  background-color: var(--gds-sys-color-bg-neutral-default);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: 64px;
+  gap: 64px;
+  background-color: var(--gds-sys-color-layer-canvas);
   color: var(--gds-sys-color-fg-neutral-default);
   box-shadow: var(--gds-sys-shadow-up-xl), var(--gds-sys-shadow-down-xl);
-  border-radius: var(--gds-sys-radius-xl);
+  border-radius: var(--gds-sys-radius-m);
+  justify-items: center;
 }
 
 .row {
@@ -17,19 +18,26 @@
   gap: 10px;
 }
 
-.cellContainer {
-  flex: 1 0;
+.colorWrapper {
   display: flex;
-  min-height: 80px;
-  height: 80px;
+  flex-direction: column;
+  grid-column: span 1;
+  grid-row: span 2;
+
+  &:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  &:nth-child(3) {
+    grid-area: 2 / 2 / 3 / 3;
+  }
 }
 
-.alphaCellContainer {
-  flex: 1 0;
+.cellContainer {
   display: flex;
-  min-height: 100px;
-  height: 100px;
-  background: url("./checker.svg");
+  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .themes {

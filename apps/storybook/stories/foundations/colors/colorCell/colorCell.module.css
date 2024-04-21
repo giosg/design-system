@@ -3,9 +3,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
+  gap: 10px;
+  padding: 10px;
+  border-radius: var(--gds-sys-radius-m);
+  cursor: pointer;
 
   div {
-    color: white;
-    mix-blend-mode: difference;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  span {
+    color: var(--gds-sys-color-text-default);
+    cursor: auto;
   }
 }
