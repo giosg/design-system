@@ -9,7 +9,7 @@
   margin-bottom: 16px;
 }
 
-.gridLayout {
+.container {
   display: flex;
   padding: 64px;
   background-color: var(--gds-sys-color-layer-canvas);
@@ -17,7 +17,7 @@
   border-radius: var(--gds-sys-radius-m);
   gap: 64px;
 
-  .gridColumn {
+  .column {
     display: flex;
     flex-direction: column;
     gap: 64px;
@@ -28,14 +28,4 @@
       gap: 16px;
     }
   }
-}
-
-.headerXXL {
-  color: var(--gds-ref-color-solid-basics-black);
-  font: var(--gds-sys-font-default-title-3-xl-black);
-}
-
-.headerM {
-  color: var(--gds-ref-color-solid-basics-black);
-  font: var(--gds-sys-font-default-title-l-bold);
 }

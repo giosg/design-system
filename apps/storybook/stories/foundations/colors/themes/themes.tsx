@@ -24,9 +24,9 @@ function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
   return (
     <div {...restProps}>
       {children}
-      <div className={styles.gridLayout}>
+      <div className={styles.container}>
         {TOKENS.map(({ token, groups }, index) => (
-          <div className={styles.gridColumn} key={`${token}-${index}`}>
+          <div className={styles.column} key={`${token}-${index}`}>
             {groups.map(({ label, modificators }) => (
               <div className={styles.group} key={label}>
                 <h3>{label}</h3>
