@@ -12,6 +12,6 @@ const meta: Meta = {
 export default meta;
 
 /* Stories */
-export { Emphasis } from "./emphasis";
-export { Palette } from "./palette";
-export { Themes } from "./themes";
+export { Emphasis } from "./emphasis/emphasis";
+export { Palette } from "./palette/palette";
+export { Themes } from "./themes/themes";

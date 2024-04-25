@@ -1,0 +1,41 @@
+.themes {
+  display: flex;
+  gap: 100px;
+}
+
+.themeHeader {
+  color: var(--gds-ref-color-solid-basics-black);
+  font: var(--gds-sys-font-default-title-3-xl-black);
+  margin-bottom: 16px;
+}
+
+.gridLayout {
+  display: flex;
+  padding: 64px;
+  background-color: var(--gds-sys-color-layer-canvas);
+  color: var(--gds-sys-color-text-default);
+  border-radius: var(--gds-sys-radius-m);
+  gap: 64px;
+
+  .gridColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    .group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}
+
+.headerXXL {
+  color: var(--gds-ref-color-solid-basics-black);
+  font: var(--gds-sys-font-default-title-3-xl-black);
+}
+
+.headerM {
+  color: var(--gds-ref-color-solid-basics-black);
+  font: var(--gds-sys-font-default-title-l-bold);
+}

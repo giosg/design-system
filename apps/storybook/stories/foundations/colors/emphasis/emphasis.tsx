@@ -1,5 +1,6 @@
 import type { StoryObj as Story } from "@storybook/react";
-import styles from "./emphasis/emphasis.module.css";
+import { VariableTooltip } from "../../../../components/variableTooltip";
+import styles from "./emphasis.module.css";
 
 const LIGHT_TOKENS = [
   { value: "--gds-ref-color-solid-basics-white", label: "Day White" },
@@ -16,7 +17,7 @@ const DARK_TOKENS = [
   { value: "--gds-ref-color-solid-grey-700", label: "Stronger 700" },
   { value: "--gds-ref-color-solid-grey-800", label: "Srongest 800" },
   { value: "--gds-ref-color-solid-grey-900", label: "Extreme 900" },
-  { value: "--gds-ref-color-solid-basics-black)", label: "Night Black" },
+  { value: "--gds-ref-color-solid-basics-black", label: "Night Black" },
 ];
 
 export const Emphasis: Story = {
@@ -25,24 +26,24 @@ export const Emphasis: Story = {
       <div className={styles.container}>
         {LIGHT_TOKENS.map(({ value, label }) => {
           return (
-            <div
-              className={`${styles.cell} ${styles.lightToken}`}
-              key={value}
-              style={{ backgroundColor: `var(${value}` }}
-            >
-              {label}
-            </div>
+            <VariableTooltip key={value} variableName={value}>
+              <div className={`${styles.cell} ${styles.lightToken}`} style={{ backgroundColor: `var(${value}` }}>
+                {label}
+              </div>
+            </VariableTooltip>
           );
         })}
         {DARK_TOKENS.map(({ value, label }) => {
           return (
-            <div
-              className={`${styles.cell} ${styles.darkToken}`}
-              key={value}
-              style={{ backgroundColor: `var(${value}` }}
-            >
-              {label}
-            </div>
+            <VariableTooltip key={value} variableName={value}>
+              <div
+                className={`${styles.cell} ${styles.darkToken}`}
+                key={value}
+                style={{ backgroundColor: `var(${value}` }}
+              >
+                {label}
+              </div>
+            </VariableTooltip>
           );
         })}
       </div>

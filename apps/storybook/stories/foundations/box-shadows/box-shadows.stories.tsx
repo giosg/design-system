@@ -16,7 +16,7 @@ const TOKENS = [
   { value: "m", label: "Medium" },
   { value: "l", label: "Large" },
   { value: "xl", label: "XLarge" },
-] as const;
+];
 
 export const Variants: Story = {
   parameters: {

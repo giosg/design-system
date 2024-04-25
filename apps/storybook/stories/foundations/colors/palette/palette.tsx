@@ -1,16 +1,13 @@
 import type { StoryObj as Story } from "@storybook/react";
-import { ColorCell } from "./colorCell/colorCell";
-import styles from "./colors.module.css";
+import { ColorCell } from "../colorCell/colorCell";
+import styles from "./palette.module.css";
 
-const SOLID_COLOR_GRADATION = [10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900] as const;
-const ALPHA_COLOR_GRADATION = [10, 20, 40, 60, 80] as const;
-
-type SolidColorGradation = (typeof SOLID_COLOR_GRADATION)[number];
-type AlphaColorGradation = (typeof ALPHA_COLOR_GRADATION)[number];
+const SOLID_COLOR_GRADATION = [10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+const ALPHA_COLOR_GRADATION = [10, 20, 40, 60, 80];
 
 interface Color {
   name: string;
-  gradation: Readonly<SolidColorGradation[] | AlphaColorGradation[]> | null;
+  gradation: number[] | null;
   token: string;
   type: "solid" | "alpha";
   label?: string;
@@ -37,19 +34,32 @@ const Colors: Color[] = [
   { name: "Blue", gradation: SOLID_COLOR_GRADATION, token: "blue", type: "solid" },
   { name: "Blue/Alpha", gradation: ALPHA_COLOR_GRADATION, token: "blue", type: "alpha" },
   { name: "Transparent", gradation: null, token: "transparent", type: "alpha", label: "Alpha" },
-] as const;
+];
+
+function getColorPaletteProp(color: Color) {
+  const { name, label, gradation, token, type } = color;
+  const prefix = `--gds-ref-color-${type}-${token}${gradation ? "-" : ""}`;
+  const tokenName = `ref.color.${type}.${token}`;
+
+  return {
+    name: label || name,
+    prefix,
+    tokenName,
+    gradation,
+  };
+}
 
 export const Palette: Story = {
   render: () => {
     const ColorMap = Colors.map((color) => getColorPaletteProp(color));
 
     return (
-      <div className={styles.paletteContainer} data-testid="palette">
+      <div className={styles.gridLayout} data-testid="palette">
         {ColorMap.map(({ name, prefix, tokenName, gradation }) => {
           return (
-            <div className={styles.colorGridColumn} key={name}>
+            <div className={styles.gridColumn} key={name}>
               <h3>{name}</h3>
-              <div className={styles.cellContainer} key={name}>
+              <div className={styles.colorColumn} key={name}>
                 {gradation ? (
                   gradation.map((value) => {
                     return (
@@ -67,16 +77,3 @@ export const Palette: Story = {
     );
   },
 };
-
-function getColorPaletteProp(color: Color) {
-  const { name, label, gradation, token, type } = color;
-  const prefix = `--gds-ref-color-${type}-${token}${gradation ? "-" : ""}`;
-  const tokenName = `ref.color.${type}.${token}`;
-
-  return {
-    name: label || name,
-    prefix,
-    tokenName,
-    gradation,
-  };
-}
