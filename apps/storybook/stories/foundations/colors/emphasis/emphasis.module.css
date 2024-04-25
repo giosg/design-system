@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--gds-sys-radius-m);
+  overflow: hidden;
+
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 85px;
+  }
+
+  .lightToken {
+    color: var(--gds-sys-color-text-default);
+  }
+
+  .darkToken {
+    color: var(--gds-sys-color-text-inverted);
+  }
+}
