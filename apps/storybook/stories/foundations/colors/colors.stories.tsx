@@ -50,7 +50,7 @@ const Colors: Color[] = [
   { name: "Yellow/Alpha", gradation: ALPHA_COLOR_GRADATION, token: "yellow", type: "alpha" },
   { name: "Blue", gradation: SOLID_COLOR_GRADATION, token: "blue", type: "solid" },
   { name: "Blue/Alpha", gradation: ALPHA_COLOR_GRADATION, token: "blue", type: "alpha" },
-  { name: "Transparent", gradation: null, token: "transparent", label: "Alpha", type: "alpha" },
+  { name: "Transparent", gradation: null, token: "transparent", type: "alpha", label: "Alpha" },
 ] as const;
 
 const getColorPaletteProp = (color: Color) => {
@@ -68,15 +68,13 @@ const getColorPaletteProp = (color: Color) => {
 
 export const Palette: Story = {
   render: () => {
-    const ColorMap = Colors.map((color) => {
-      return { ...getColorPaletteProp(color) };
-    });
+    const ColorMap = Colors.map((color) => getColorPaletteProp(color));
 
     return (
       <div className={styles.paletteContainer} data-testid="palette">
         {ColorMap.map(({ name, prefix, tokenName, gradation }) => {
           return (
-            <div className={styles.colorWrapper} key={name}>
+            <div className={styles.colorGridColumn} key={name}>
               <h3>{name}</h3>
               <div className={styles.cellContainer} key={name}>
                 {gradation ? (
@@ -97,8 +95,19 @@ export const Palette: Story = {
   },
 };
 
+export const Emphasis: Story = {
+  render: () => {
+    return <div>TODO: Emphasis</div>;
+  },
+};
+
 const ShortOptionList = ["strong", "medium", "mild"] as const;
 const FullOptionList = ["strongest", "stronger", "strong", "medium", "mild", "milder", "mildest"] as const;
+
+interface ThemeToken {
+  token: string;
+}
+const ThemeTokens = ["text", "icon", "border", "layer", "layer/primary", "layer/alpha", "chart/berry", "chart/orange"];
 
 export const Themes: Story = {
   render: () => {
@@ -137,7 +146,6 @@ function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
         <div className={styles.horizontalRow}>
           <div className={styles.row}>
             <h3 className={styles.headerM}>Primary</h3>
-
             {generateCellContainer("--gds-sys-color-fg-primary-", ShortOptionList)}
           </div>
           <div className={styles.row}>
@@ -237,9 +245,8 @@ function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
 }
 
 const generateCellContainer = (prefix: string, pallette: readonly (string | number)[], alpha?: boolean) => {
-  const containerStyles = alpha ? styles.alphaCellContainer : styles.cellContainer;
   return (
-    <div className={containerStyles}>
+    <div className={styles.cellContainer}>
       {pallette.map((value) => {
         return <ColorCell key={value} value={value} variablePrefix={prefix} />;
       })}

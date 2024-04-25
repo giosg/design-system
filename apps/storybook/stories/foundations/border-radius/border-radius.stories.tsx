@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { VariableTooltip } from "../../../components/variableTooltip";
-import styles from "./border-radiuts.module.css";
+import styles from "./border-radius.module.css";
 
 const meta: Meta = {
   title: "Foundations/Border Radius",
@@ -27,7 +27,7 @@ export const Variants: Story = {
                   <VariableTooltip variableName={`--gds-sys-radius-${value}`}>
                     <div className={styles.item} style={{ borderRadius: `var(--gds-sys-radius-${value})` }} />
                   </VariableTooltip>
-                  <h3>{value}</h3>
+                  <h3>{value.replace("-", "").toUpperCase()}</h3>
                 </div>
               );
             },

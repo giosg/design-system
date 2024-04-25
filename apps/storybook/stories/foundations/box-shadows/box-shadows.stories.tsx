@@ -10,6 +10,14 @@ export default meta;
 
 type Story = StoryObj;
 
+const TOKENS = [
+  { value: "xs", label: "XSmall" },
+  { value: "s", label: "Small" },
+  { value: "m", label: "Medium" },
+  { value: "l", label: "Large" },
+  { value: "xl", label: "XLarge" },
+] as const;
+
 export const Variants: Story = {
   parameters: {
     options: { showPanel: false },
@@ -22,13 +30,13 @@ export const Variants: Story = {
         <div className={styles.rowContainer}>
           <h3>Down</h3>
           <div className={styles.row}>
-            {["xs", "s", "m", "l", "xl"].map((value) => {
+            {TOKENS.map(({ value, label }) => {
               return (
                 <div className={styles.itemContainer} key={value}>
                   <VariableTooltip variableName={`--gds-sys-shadow-down-${value}`}>
                     <div className={styles.item} style={{ boxShadow: `var(--gds-sys-shadow-down-${value})` }} />
                   </VariableTooltip>
-                  <h3>{value}</h3>
+                  <h3>{label}</h3>
                 </div>
               );
             })}
@@ -37,13 +45,13 @@ export const Variants: Story = {
         <div className={styles.rowContainer}>
           <h3>Up</h3>
           <div className={styles.row}>
-            {["xs", "s", "m", "l", "xl"].map((value) => {
+            {TOKENS.map(({ value, label }) => {
               return (
                 <div className={styles.itemContainer} key={value}>
                   <VariableTooltip variableName={`--gds-sys-shadow-down-${value}`}>
                     <div className={styles.item} style={{ boxShadow: `var(--gds-sys-shadow-up-${value})` }} />
                   </VariableTooltip>
-                  <h3>{value}</h3>
+                  <h3>{label}</h3>
                 </div>
               );
             })}
