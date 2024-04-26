@@ -1,9 +1,11 @@
+interface TokenGroup {
+  label: string;
+  modificators: string[];
+}
+
 interface Token {
   token: string;
-  groups: {
-    label: string;
-    modificators: string[];
-  }[];
+  groups: TokenGroup[];
 }
 
 export const TOKENS: Token[] = [

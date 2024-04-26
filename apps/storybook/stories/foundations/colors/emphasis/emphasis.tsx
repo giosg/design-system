@@ -23,7 +23,7 @@ const DARK_TOKENS = [
 export const Emphasis: Story = {
   render: () => {
     return (
-      <div className={styles.container}>
+      <div className={styles.container} data-testid="emphasis">
         {LIGHT_TOKENS.map(({ variable, label }) => {
           return (
             <VariableTooltip key={variable} variableName={variable}>
