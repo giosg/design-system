@@ -30,14 +30,20 @@ function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
             {groups.map(({ label, modificators }) => (
               <div className={styles.group} key={label}>
                 <h3>{label}</h3>
-                {modificators.map((modificator) => (
-                  <ColorCell
-                    key={modificator}
-                    label={`sys.color.${token}.${modificator}`}
-                    value={modificator.replaceAll(".", "-")}
-                    variablePrefix={`--gds-sys-color-${token}-`}
-                  />
-                ))}
+                {modificators.map((modificator) => {
+                  const variableFromModificator = modificator
+                    .replaceAll(".", "-")
+                    .replaceAll(/[A-Z]/g, (match) => `-${match.toLowerCase()}`);
+
+                  return (
+                    <ColorCell
+                      key={modificator}
+                      label={`sys.color.${token}.${modificator}`}
+                      value={variableFromModificator}
+                      variablePrefix={`--gds-sys-color-${token}-`}
+                    />
+                  );
+                })}
               </div>
             ))}
           </div>
