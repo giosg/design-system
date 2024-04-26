@@ -5,7 +5,7 @@
   padding: 60px;
   background-color: var(--gds-sys-color-layer-canvas);
   border-radius: var(--gds-sys-radius-m);
-  color: var(--gds-ref-color-solid-basics-black);
+  color: var(--gds-sys-color-text-default);
   gap: 35px;
 }
 

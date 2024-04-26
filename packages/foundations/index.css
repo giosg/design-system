@@ -444,9 +444,9 @@ textarea:not([rows]) {
 :root,
 [data-theme="light"],
 [data-theme="dark"] {
-  --gds-svg-main: var(--gds-ref-color-solid-basics-black);
-  --gds-svg-alt: var(--gds-ref-color-solid-basics-white);
-  --gds-svg-accent: var(--gds-ref-color-solid-purple-500);
+  --gds-svg-main: var(--gds-sys-color-icon-default);
+  --gds-svg-alt: var(--gds-sys-color-icon-inverted);
+  --gds-svg-accent: var(--gds-sys-color-icon-primary);
 }
 
 [data-color="main"][fill] {

@@ -85,7 +85,7 @@ export const Headings: Story = {
           <div className={styles.row} key={idx}>
             {name}
             <VariableTooltip variableName={variable}>
-              {createElement(elm, { style: { font: `var(${variable})`, marginRight: "auto" } }, text)}
+              {createElement(elm, { style: { font: `var(${variable})` } }, text)}
             </VariableTooltip>
           </div>
         ))}

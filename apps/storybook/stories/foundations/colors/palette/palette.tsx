@@ -39,12 +39,12 @@ const Colors: Color[] = [
 function getColorPaletteProp(color: Color) {
   const { name, label, gradation, token, type } = color;
   const prefix = `--gds-ref-color-${type}-${token}${gradation ? "-" : ""}`;
-  const tokenName = `ref.color.${type}.${token}`;
+  const tokenWithPrefix = `ref.color.${type}.${token}`;
 
   return {
     name: label || name,
     prefix,
-    tokenName,
+    tokenWithPrefix,
     gradation,
   };
 }
@@ -55,7 +55,7 @@ export const Palette: Story = {
 
     return (
       <div className={styles.gridLayout} data-testid="palette">
-        {ColorMap.map(({ name, prefix, tokenName, gradation }) => {
+        {ColorMap.map(({ name, prefix, tokenWithPrefix, gradation }) => {
           return (
             <div className={styles.gridColumn} key={name}>
               <h3>{name}</h3>
@@ -63,11 +63,16 @@ export const Palette: Story = {
                 {gradation ? (
                   gradation.map((value) => {
                     return (
-                      <ColorCell key={value} label={`${tokenName}.${value}`} value={value} variablePrefix={prefix} />
+                      <ColorCell
+                        key={value}
+                        label={`${tokenWithPrefix}.${value}`}
+                        value={value}
+                        variablePrefix={prefix}
+                      />
                     );
                   })
                 ) : (
-                  <ColorCell key={tokenName} label={tokenName} variablePrefix={prefix} />
+                  <ColorCell key={tokenWithPrefix} label={tokenWithPrefix} variablePrefix={prefix} />
                 )}
               </div>
             </div>

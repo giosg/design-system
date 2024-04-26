@@ -27,5 +27,5 @@
 }
 
 .item {
-  background-color: var(--gds-ref-color-solid-basics-white);
+  background-color: var(--gds-sys-color-layer-default);
 }

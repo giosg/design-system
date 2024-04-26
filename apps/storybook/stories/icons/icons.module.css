@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 10px 10px;
-  background-color: var(--gds-ref-color-solid-basics-white);
+  background-color: var(--gds-sys-color-layer-default);
 }
 
 .iconWrapper {
-  color: var(--gds-ref-color-solid-basics-black);
+  color: var(--gds-sys-color-icon-default);
   display: flex;
   gap: 4px;
   align-items: center;

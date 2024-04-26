@@ -1,4 +1,4 @@
 .sb-show-main {
   font-family: var(--gds-font-ui-stack);
-  color: var(--gds-ref-color-solid-basics-black);
+  color: var(--gds-sys-color-text-default);
 }
