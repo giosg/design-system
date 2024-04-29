@@ -13,3 +13,15 @@ Before you start the best thing you could do is to read the foundations package 
 5. Update tests/screenshots if needed
 6. Commit your changes if you are fine with them
 7. Read the general rules on how to create changesets in [publishing settings](/README.md#Publishing)
+
+### ⁉️ Resolving-Referencing -ref- tokens.
+
+In the design-system we have two level's of nesting in `tokens.json` `ref` and `sys`. Reference level tokens are just building blocks to compose system level tokens. **They should not be used by users directly**.
+
+In automation scripts we resolve the end value of sys tokens and remove ref tokens from the final output.
+
+- Resolving and filtering ref tokens. ( Currently enabled )
+![filtering refs](./assets/filter-refs.png)
+
+- Keeping and referencing ref tokens.
+  
