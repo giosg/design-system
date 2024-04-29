@@ -24,4 +24,4 @@ In automation scripts we resolve the end value of sys tokens and remove ref toke
 ![filtering refs](./assets/filter-refs.png)
 
 - Keeping and referencing ref tokens.
-  
+  ![keeping refs](./assets/keep-refs.png)
