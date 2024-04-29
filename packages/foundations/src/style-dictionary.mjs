@@ -111,7 +111,7 @@ function getStyleDictionaryConfig(theme) {
           {
             destination: `${theme}.css`,
             format: "css/variables",
-            filter: (token) => console.log(token.name),
+            filter: (token) => !token.name.includes("-ref-"),
             options: {
               showFileHeader: false,
               outputReferences: false,
