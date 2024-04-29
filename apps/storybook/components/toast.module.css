@@ -16,8 +16,8 @@
 }
 
 .root {
-  background-color: var(--gds-ref-color-solid-grey-900);
-  color: var(--gds-ref-color-solid-basics-white);
+  background-color: var(--gds-sys-color-layer-primary-extreme);
+  color: var(--gds-sys-color-text-on-dark);
   border-radius: 6px;
   box-shadow:
     hsl(206deg 22% 7% / 35%) 0 10px 38px -10px,
