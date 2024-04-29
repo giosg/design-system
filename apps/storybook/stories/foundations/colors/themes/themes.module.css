@@ -4,8 +4,8 @@
 }
 
 .themeHeader {
-  color: var(--gds-ref-color-solid-basics-black);
-  font: var(--gds-sys-font-default-title-3-xl-black);
+  font: var(--gds-sys-font-default-title-3-xl-bold);
+  color: var(--gds-sys-color-text-on-light);
   margin-bottom: 16px;
 }
 
