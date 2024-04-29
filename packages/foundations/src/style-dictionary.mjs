@@ -22,13 +22,30 @@ registerTransforms(StyleDictionaryPackage, {
 const themes = ["light", "dark"];
 
 // CUSTOM TRANSFORMS
-const pixelToRem = ["borderRadius", "sizing", "spacing", "fontSizes", "lineHeights", "paragraphSpacing", "borderWidth"];
+const PIXEL_TO_REM = [
+  "borderRadius",
+  "sizing",
+  "spacing",
+  "fontSizes",
+  "lineHeights",
+  "paragraphSpacing",
+  "borderWidth",
+];
+const WEIGHT_TO_NUMBER = {
+  black: 900,
+  bold: 700,
+  semibold: 600,
+  medium: 500,
+  regular: 400,
+  light: 300,
+};
+const FONT_STACK_VAR = "--gds-font-ui-stack";
 
 StyleDictionaryPackage.registerTransform({
   name: "size/pxToRem",
   type: "value",
   matcher: (token) => {
-    return pixelToRem.includes(token.type);
+    return PIXEL_TO_REM.includes(token.type);
   },
   transformer: (token) => {
     return `${token.value / 16}rem`;
@@ -70,7 +87,13 @@ StyleDictionaryPackage.registerTransform({
   matcher: (token) => token.type === "typography" && typeof token.value === "object" && token.value !== null,
   transformer: (token) => {
     const { value } = token;
-    return `${value.fontWeight} ${value.fontSize}/${value.lineHeight} ${value.fontFamily}`;
+    const tokenWeight = value.fontWeight.toLowerCase();
+
+    if (!(tokenWeight in WEIGHT_TO_NUMBER)) {
+      throw new Error(`Invalid font weight: ${value.fontWeight}`);
+    }
+
+    return `${WEIGHT_TO_NUMBER[tokenWeight]} ${value.fontSize}/${value.lineHeight} var(${FONT_STACK_VAR})`;
   },
 });
 
