@@ -122,6 +122,11 @@
   --gds-sys-font-default-title-xl-bold: 700 1.375rem/1.625rem var(--gds-font-ui-stack);
 }
 
+body {
+  font-family: var(--gds-font-ui-stack);
+  line-height: 1.5;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -163,9 +168,6 @@ ol[role="list"] {
 }
 
 /* Set core body defaults */
-body {
-  line-height: 1.5;
-}
 
 /* Set shorter line heights on headings and interactive elements */
 h1,
