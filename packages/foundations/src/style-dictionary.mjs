@@ -163,6 +163,7 @@ function filterTokens(token) {
     "sys-text-case-none",
     "sys-text-decoration-none",
     "sys-font-weights-",
+    "-sys-font-families-",
   ];
 
   if (RESOLVED_TOKENS.some((resolvedToken) => token.name.includes(resolvedToken))) {

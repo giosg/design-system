@@ -120,7 +120,6 @@
   --gds-sys-font-default-title-m-bold: 700 1rem/1.25rem var(--gds-font-ui-stack);
   --gds-sys-font-default-title-xl-black: 900 1.375rem/1.625rem var(--gds-font-ui-stack);
   --gds-sys-font-default-title-xl-bold: 700 1.375rem/1.625rem var(--gds-font-ui-stack);
-  --gds-sys-font-families-nunito-sans: var(--gds-font-ui-stack);
 }
 
 /* Box sizing rules */
