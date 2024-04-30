@@ -259,6 +259,8 @@ textarea:not([rows]) {
 /* Light theme */
 :root,
 [data-theme="light"] {
+  color-scheme: light;
+
   --gds-sys-color-border-active: #7357ff;
   --gds-sys-color-border-default: #c2c1c9;
   --gds-sys-color-border-dim: #e4e4e7;
@@ -374,6 +376,8 @@ textarea:not([rows]) {
 
 /* Dark theme */
 [data-theme="dark"] {
+  color-scheme: dark;
+
   --gds-sys-color-border-active: #aa99fe;
   --gds-sys-color-border-default: #737281;
   --gds-sys-color-border-dim: #595868;
