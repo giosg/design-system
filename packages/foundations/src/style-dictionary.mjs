@@ -31,6 +31,7 @@ const PIXEL_TO_REM = [
   "paragraphSpacing",
   "borderWidth",
 ];
+
 const WEIGHT_TO_NUMBER = {
   black: 900,
   bold: 700,
@@ -134,7 +135,7 @@ function getStyleDictionaryConfig(theme) {
           {
             destination: `${theme}.css`,
             format: "css/variables",
-            filter: (token) => !token.name.includes("-ref-"),
+            filter: filterTokens,
             options: {
               showFileHeader: false,
               outputReferences: false,
@@ -145,6 +146,30 @@ function getStyleDictionaryConfig(theme) {
       },
     },
   };
+}
+
+/**
+ *
+ * @param {import("style-dictionary").TransformedToken} token
+ * @returns boolean
+ */
+function filterTokens(token) {
+  // List of token that were already used to as intermediate to compile the final design tokens. (aka Figma-plugin garbage tokens)
+  const RESOLVED_TOKENS = [
+    "sys-font-size-",
+    "sys-line-heights-",
+    "letter-spacing-",
+    "-paragraph-",
+    "sys-text-case-none",
+    "sys-text-decoration-none",
+    "sys-font-weights-",
+  ];
+
+  if (RESOLVED_TOKENS.some((resolvedToken) => token.name.includes(resolvedToken))) {
+    return false;
+  }
+
+  return !token.name.includes("-ref-");
 }
 
 // PROCESS THE DESIGN TOKENS FOR EACH THEME
