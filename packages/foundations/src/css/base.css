@@ -5,3 +5,7 @@
   --gds-font-ui-stack: nunito sans, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue,
     helvetica, cantarell, ubuntu, roboto, noto, arial, sans-serif;
 }
+
+body {
+  font-family: var(--gds-font-ui-stack);
+}
