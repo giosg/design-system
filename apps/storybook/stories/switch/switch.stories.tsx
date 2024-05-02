@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import {Switch,_Root, _Thumb} from "@giosg/design-system-switch";
+import { Switch, _Root, _Thumb } from "@giosg/design-system-switch";
 
 const meta: Meta = {
   title: "Switch/Base",
@@ -17,9 +17,7 @@ export const Base: Story = {
   },
   render: (args) => {
     const { disabled } = args;
-    return (
-      <Switch disabled={disabled} />
-    );
+    return <Switch disabled={disabled} />;
   },
 };
 
@@ -27,7 +25,7 @@ export const Disabled: Story = {
   render: () => {
     return (
       <_Root>
-        <_Thumb/>
+        <_Thumb />
       </_Root>
     );
   },
