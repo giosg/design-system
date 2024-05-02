@@ -2,30 +2,26 @@
   all: unset;
   width: 32px;
   height: 20px;
-  background-color: var(--gds-sys-color-bg-neutral-medium);
+  background-color: var(--gds-sys-color-icon-dim);
   border-radius: 9999px;
   transition: background-color 100ms;
   position: relative;
 
   &:hover {
-    background-color: var(--gds-sys-color-bg-neutral-strong);
+    background-color: var(--gds-sys-color-icon-default);
   }
 
   &:focus {
-    outline: 2px solid var(--gds-sys-color-border-state-focused);
+    outline: 2px solid var(--gds-sys-color-border-focused);
     outline-offset: 2px;
   }
 
   &[data-disabled] {
-    background-color: var(--gds-sys-color-bg-neutral-mild);
+    background-color: var(--gds-sys-color-icon-disabled);
   }
 
   &[data-state="checked"] {
-    background-color: var(--gds-sys-color-bg-primary-strong);
-
-    &:hover {
-      background-color: var(--gds-sys-color-bg-primary-strongest);
-    }
+    background-color: var(--gds-sys-color-icon-hover);
   }
 }
 
@@ -33,7 +29,7 @@
   display: block;
   width: 14px;
   height: 14px;
-  background-color: var(--gds-sys-color-fg-neutral-inverted);
+  background-color: var(--gds-sys-color-icon-inverted);
   border-radius: 50%;
   transition: transform 100ms;
   transform: translateX(3px);

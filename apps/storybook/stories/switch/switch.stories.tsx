@@ -7,12 +7,18 @@ const meta: Meta = {
 
 export default meta;
 
-type Story = StoryObj;
+type Story = StoryObj<{
+  disabled: boolean;
+}>;
 
 export const Base: Story = {
-  render: () => {
+  args: {
+    disabled: false,
+  },
+  render: (args) => {
+    const { disabled } = args;
     return (
-      <Switch.Root>
+      <Switch.Root disabled={disabled}>
         <Switch.Thumb />
       </Switch.Root>
     );

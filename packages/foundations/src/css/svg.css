@@ -2,9 +2,9 @@
 :root,
 [data-theme="light"],
 [data-theme="dark"] {
-  --gds-svg-main: var(--gds-sys-color-fg-neutral-default);
-  --gds-svg-alt: var(--gds-sys-color-fg-neutral-inverted);
-  --gds-svg-accent: var(--gds-sys-color-fg-primary-strong);
+  --gds-svg-main: var(--gds-sys-color-icon-default);
+  --gds-svg-alt: var(--gds-sys-color-icon-inverted);
+  --gds-svg-accent: var(--gds-sys-color-icon-primary);
 }
 
 [data-color="main"][fill] {

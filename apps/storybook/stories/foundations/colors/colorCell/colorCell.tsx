@@ -12,8 +12,9 @@ export function ColorCell(props: ColorCellProps): JSX.Element {
 
   return (
     <VariableTooltip variableName={variablePrefix + value}>
-      <div className={styles.colorCell} style={{ backgroundColor: `var(${variablePrefix}${value})` }}>
-        <div>{label || value}</div>
+      <div className={styles.colorCell}>
+        <div style={{ background: `var(${variablePrefix}${value})` }} />
+        <span>{label || value}</span>
       </div>
     </VariableTooltip>
   );

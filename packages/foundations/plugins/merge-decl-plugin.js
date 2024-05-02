@@ -31,7 +31,6 @@ module.exports = (opts = {}) => {
       const newRule = postcss.rule({ selector: ":root" });
 
       // Get the properties in alphabetical order
-
       const rootProps = rootDeclarations.sort(sort);
 
       const sysProps = sysDeclarations.sort(sort);
@@ -51,6 +50,19 @@ module.exports = (opts = {}) => {
       // Prepend all @import rules at the top
       importRules.reverse().forEach((rule) => {
         root.prepend(rule);
+      });
+
+      // merging duplicated selectors
+      const seenSelectors = {};
+      root.walkRules((rule) => {
+        if (seenSelectors[rule.selector]) {
+          rule.nodes.forEach((node) => {
+            seenSelectors[rule.selector].append(node);
+          });
+          rule.remove();
+        } else {
+          seenSelectors[rule.selector] = rule;
+        }
       });
     },
   };

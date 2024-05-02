@@ -28,62 +28,52 @@ const titleLines = [
   {
     variable: "--gds-sys-font-default-title-3-xl-black",
     elm: "h1",
-    name: "H1/900",
-    size: "30/36",
+    name: "sys.font.default.title.3XL.black",
   },
   {
     variable: "--gds-sys-font-default-title-3-xl-bold",
     elm: "h1",
-    name: "H1/700",
-    size: "30/36",
+    name: "sys.font.default.title.3XL.bold",
   },
   {
     variable: "--gds-sys-font-default-title-2-xl-black",
     elm: "h2",
-    name: "H2/900",
-    size: "26/32",
+    name: "sys.font.default.title.2XL.black",
   },
   {
     variable: "--gds-sys-font-default-title-2-xl-bold",
     elm: "h2",
-    name: "H2/700",
-    size: "26/32",
+    name: "sys.font.default.title.2XL.bold",
   },
   {
     variable: "--gds-sys-font-default-title-xl-black",
     elm: "h3",
-    name: "H3/900",
-    size: "22/26",
+    name: "sys.font.default.title.XL.black",
   },
   {
     variable: "--gds-sys-font-default-title-xl-bold",
     elm: "h3",
-    name: "H3/700",
-    size: "22/26",
+    name: "sys.font.default.title.XL.bold",
   },
   {
     variable: "--gds-sys-font-default-title-l-black",
     elm: "h4",
-    name: "H4/900",
-    size: "18/22",
+    name: "sys.font.default.title.L.black",
   },
   {
     variable: "--gds-sys-font-default-title-l-bold",
     elm: "h4",
-    name: "H4/700",
-    size: "18/22",
+    name: "sys.font.default.title.L.bold",
   },
   {
     variable: "--gds-sys-font-default-title-m-black",
     elm: "h5",
-    name: "H5/900",
-    size: "16/20",
+    name: "sys.font.default.title.M.black",
   },
   {
     variable: "--gds-sys-font-default-title-m-bold",
     elm: "h5",
-    name: "H5/700",
-    size: "16/20",
+    name: "sys.font.default.title.M.bold",
   },
 ];
 
@@ -91,12 +81,9 @@ export const Headings: Story = {
   render: () => {
     return (
       <div className={styles.container} data-testid="container">
-        {titleLines.map(({ variable, name, size, elm }, idx) => (
+        {titleLines.map(({ variable, name, elm }, idx) => (
           <div className={styles.row} key={idx}>
-            <div className={styles.desc}>
-              <b>{name}</b>
-              <span>{size}</span>
-            </div>
+            {name}
             <VariableTooltip variableName={variable}>
               {createElement(elm, { style: { font: `var(${variable})` } }, text)}
             </VariableTooltip>
@@ -111,53 +98,43 @@ export const Headings: Story = {
 const bodyLines = [
   {
     variable: "--gds-sys-font-default-body-l-bold",
-    name: "L-bold",
-    size: "18/22",
+    name: "sys.font.default.body.L.bold",
   },
   {
     variable: "--gds-sys-font-default-body-l-regular",
-    name: "L-regular",
-    size: "18/22",
+    name: "sys.font.default.body.L.regular",
   },
   {
     variable: "--gds-sys-font-default-body-m-bold",
-    name: "M-bold",
-    size: "16/20",
+    name: "sys.font.default.body.M.bold",
   },
   {
     variable: "--gds-sys-font-default-body-m-regular",
-    name: "M-regular",
-    size: "16/20",
+    name: "sys.font.default.body.M.regular",
   },
   {
     variable: "--gds-sys-font-default-body-s-bold",
-    name: "S-bold",
-    size: "14/18",
+    name: "sys.font.default.body.S.bold",
   },
   {
     variable: "--gds-sys-font-default-body-s-regular",
-    name: "S-regular",
-    size: "14/18",
+    name: "sys.font.default.body.S.regular",
   },
   {
     variable: "--gds-sys-font-default-body-xs-bold",
-    name: "XS-bold",
-    size: "12/16",
+    name: "sys.font.default.body.XS.bold",
   },
   {
     variable: "--gds-sys-font-default-body-xs-regular",
-    name: "XS-regular",
-    size: "12/16",
+    name: "sys.font.default.body.XS.regular",
   },
   {
     variable: "--gds-sys-font-default-body-2-xs-bold",
-    name: "2XS-bold",
-    size: "10/14",
+    name: "sys.font.default.body.2XS.bold",
   },
   {
     variable: "--gds-sys-font-default-body-2-xs-regular",
-    name: "2XS-regular",
-    size: "10/14",
+    name: "sys.font.default.body.2XS.regular",
   },
 ];
 
@@ -165,12 +142,9 @@ export const Body: Story = {
   render: () => {
     return (
       <div className={styles.container} data-testid="container">
-        {bodyLines.map(({ variable, name, size }, idx) => (
+        {bodyLines.map(({ variable, name }, idx) => (
           <div className={styles.row} key={idx}>
-            <div className={styles.desc}>
-              <b>{name}</b>
-              <span>{size}</span>
-            </div>
+            {name}
             <VariableTooltip variableName={variable}>
               {createElement("p", { style: { font: `var(${variable})` } }, text)}
             </VariableTooltip>
@@ -185,23 +159,19 @@ export const Body: Story = {
 const labelLines = [
   {
     variable: "--gds-sys-font-default-label-m-semibold",
-    name: "M-semibold",
-    size: "16/24",
+    name: "sys.font.default.label.M.semibold",
   },
   {
     variable: "--gds-sys-font-default-label-s-semibold",
-    name: "S-semibold",
-    size: "14/18",
+    name: "sys.font.default.label.S.semibold",
   },
   {
     variable: "--gds-sys-font-default-label-xs-semibold",
-    name: "XS-semibold",
-    size: "12/16",
+    name: "sys.font.default.label.XS.semibold",
   },
   {
     variable: "--gds-sys-font-default-label-2-xs-semibold",
-    name: "2XS-semibold",
-    size: "10/14",
+    name: "sys.font.default.label.2XS.semibold",
   },
 ];
 
@@ -209,12 +179,9 @@ export const Label: Story = {
   render: () => {
     return (
       <div className={styles.container} data-testid="container">
-        {labelLines.map(({ variable, name, size }, idx) => (
+        {labelLines.map(({ variable, name }, idx) => (
           <div className={styles.row} key={idx}>
-            <div className={styles.desc}>
-              <b>{name}</b>
-              <span>{size}</span>
-            </div>
+            {name}
             <VariableTooltip variableName={variable}>
               {createElement("label", { style: { font: `var(${variable})` } }, text)}
             </VariableTooltip>

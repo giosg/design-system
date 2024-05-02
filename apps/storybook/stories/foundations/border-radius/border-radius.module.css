@@ -4,8 +4,8 @@
   justify-content: space-around;
   align-items: center;
   height: 700px;
-  background-color: var(--gds-sys-color-bg-neutral-milder);
-  border-radius: var(--gds-sys-radius-l);
+  background-color: var(--gds-sys-color-layer-canvas);
+  border-radius: var(--gds-sys-radius-m);
   padding: 100px;
 }
 
@@ -26,10 +26,7 @@
 }
 
 .item {
-  background-color: var(--gds-sys-color-bg-neutral-default);
-  border-color: var(--gds-sys-color-fg-neutral-mild);
-  border-width: 1px;
-  border-style: solid;
+  background-color: var(--gds-sys-color-layer-default);
   width: 150px;
-  height: 120px;
+  height: 150px;
 }

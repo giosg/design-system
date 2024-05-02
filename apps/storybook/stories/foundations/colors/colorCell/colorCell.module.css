@@ -2,10 +2,20 @@
   flex: 1 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  background-color: var(--gds-sys-color-layer-default);
+  gap: 10px;
+  padding: 10px;
+  border-radius: var(--gds-sys-radius-m);
+  width: fit-content;
 
   div {
-    color: white;
-    mix-blend-mode: difference;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  span {
+    white-space: nowrap;
+    color: var(--gds-sys-color-text-default);
   }
 }

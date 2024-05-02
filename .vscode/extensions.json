@@ -3,6 +3,7 @@
     "stylelint.vscode-stylelint",
     "esbenp.prettier-vscode",
     "yoavbls.pretty-ts-errors",
-    "unifiedjs.vscode-mdx"
+    "unifiedjs.vscode-mdx",
+    "vunguyentuan.vscode-css-variables"
   ]
 }

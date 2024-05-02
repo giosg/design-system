@@ -30,6 +30,9 @@ module.exports = (opts = {}) => {
       lightThemeDeclarations.sort((a, b) => a.prop.localeCompare(b.prop));
       darkThemeDeclarations.sort((a, b) => a.prop.localeCompare(b.prop));
 
+      lightThemeDeclarations.unshift(postcss.decl({ prop: "color-scheme", value: "light" }));
+      darkThemeDeclarations.unshift(postcss.decl({ prop: "color-scheme", value: "dark" }));
+
       // Compare declarations in light and dark arrays
       darkThemeDeclarations = darkThemeDeclarations.filter((darkDecl) => {
         const matchingLightDecl = lightThemeDeclarations.find(
@@ -62,7 +65,7 @@ module.exports = (opts = {}) => {
 
       if (lightThemeDeclarations.length > 0) {
         let lightThemeRule = new Rule({
-          selector: ":root,[data-theme='light']",
+          selector: ':root,[data-theme="light"]',
           nodes: lightThemeDeclarations,
         });
         root.append(postcss.comment({ text: "Light theme" }));
@@ -70,7 +73,7 @@ module.exports = (opts = {}) => {
       }
       if (darkThemeDeclarations.length > 0) {
         let darkThemeRule = new Rule({
-          selector: "[data-theme='dark']",
+          selector: '[data-theme="dark"]',
           nodes: darkThemeDeclarations,
         });
         root.append(postcss.comment({ text: "Dark theme" }));

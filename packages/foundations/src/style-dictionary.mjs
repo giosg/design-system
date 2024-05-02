@@ -22,13 +22,31 @@ registerTransforms(StyleDictionaryPackage, {
 const themes = ["light", "dark"];
 
 // CUSTOM TRANSFORMS
-const pixelToRem = ["borderRadius", "sizing", "spacing", "fontSizes", "lineHeights", "paragraphSpacing", "borderWidth"];
+const PIXEL_TO_REM = [
+  "borderRadius",
+  "sizing",
+  "spacing",
+  "fontSizes",
+  "lineHeights",
+  "paragraphSpacing",
+  "borderWidth",
+];
+
+const WEIGHT_TO_NUMBER = {
+  black: 900,
+  bold: 700,
+  semibold: 600,
+  medium: 500,
+  regular: 400,
+  light: 300,
+};
+const FONT_STACK_VAR = "--gds-font-ui-stack";
 
 StyleDictionaryPackage.registerTransform({
   name: "size/pxToRem",
   type: "value",
   matcher: (token) => {
-    return pixelToRem.includes(token.type);
+    return PIXEL_TO_REM.includes(token.type);
   },
   transformer: (token) => {
     return `${token.value / 16}rem`;
@@ -70,7 +88,13 @@ StyleDictionaryPackage.registerTransform({
   matcher: (token) => token.type === "typography" && typeof token.value === "object" && token.value !== null,
   transformer: (token) => {
     const { value } = token;
-    return `${value.fontWeight} ${value.fontSize}/${value.lineHeight} ${value.fontFamily}`;
+    const tokenWeight = value.fontWeight.toLowerCase();
+
+    if (!(tokenWeight in WEIGHT_TO_NUMBER)) {
+      throw new Error(`Invalid font weight: ${value.fontWeight}`);
+    }
+
+    return `${WEIGHT_TO_NUMBER[tokenWeight]} ${value.fontSize}/${value.lineHeight} var(${FONT_STACK_VAR})`;
   },
 });
 
@@ -111,9 +135,10 @@ function getStyleDictionaryConfig(theme) {
           {
             destination: `${theme}.css`,
             format: "css/variables",
+            filter: filterTokens,
             options: {
               showFileHeader: false,
-              outputReferences: true,
+              outputReferences: false,
               selector,
             },
           },
@@ -121,6 +146,31 @@ function getStyleDictionaryConfig(theme) {
       },
     },
   };
+}
+
+/**
+ *
+ * @param {import("style-dictionary").TransformedToken} token
+ * @returns boolean
+ */
+function filterTokens(token) {
+  // List of token that were already used to as intermediate to compile the final design tokens. (aka Figma-plugin garbage tokens)
+  const RESOLVED_TOKENS = [
+    "sys-font-size-",
+    "sys-line-heights-",
+    "letter-spacing-",
+    "-paragraph-",
+    "sys-text-case-none",
+    "sys-text-decoration-none",
+    "sys-font-weights-",
+    "-sys-font-families-",
+  ];
+
+  if (RESOLVED_TOKENS.some((resolvedToken) => token.name.includes(resolvedToken))) {
+    return false;
+  }
+
+  return !token.name.includes("-ref-");
 }
 
 // PROCESS THE DESIGN TOKENS FOR EACH THEME

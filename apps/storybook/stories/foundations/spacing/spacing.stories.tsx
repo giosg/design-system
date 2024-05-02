@@ -30,7 +30,7 @@ export const Variants: Story = {
                       style={{ width: `var(--gds-sys-space-${value})`, height: `var(--gds-sys-space-${value})` }}
                     />
                   </VariableTooltip>
-                  <h3>{value}</h3>
+                  <h3>{value.replace("-", "").toUpperCase()}</h3>
                 </div>
               );
             },
