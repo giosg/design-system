@@ -1,0 +1,95 @@
+.text {
+  color: var(--gds-sys-color-text-default);
+
+  &[data-color="default"] {
+    color: var(--gds-sys-color-text-default);
+  }
+
+  &[data-color="dim"] {
+    color: var(--gds-sys-color-text-dim);
+  }
+
+  &[data-color="inverted"] {
+    color: var(--gds-sys-color-text-inverted);
+  }
+
+  &[data-color="on-light"] {
+    color: var(--gds-sys-color-text-on-light);
+  }
+
+  &[data-color="on-dark"] {
+    color: var(--gds-sys-color-text-on-dark);
+  }
+
+  &[data-color="link"] {
+    color: var(--gds-sys-color-text-link);
+  }
+
+  &[data-color="disabled"] {
+    color: var(--gds-sys-color-text-disabled);
+  }
+
+  &[data-color="hover"] {
+    color: var(--gds-sys-color-text-hover);
+  }
+
+  &[data-color="pressed"] {
+    color: var(--gds-sys-color-text-pressed);
+  }
+
+  &[data-color="active"] {
+    color: var(--gds-sys-color-text-active);
+  }
+
+  &[data-color="primary"] {
+    color: var(--gds-sys-color-text-primary);
+  }
+
+  &[data-color="secondary"] {
+    color: var(--gds-sys-color-text-secondary);
+  }
+
+  &[data-color="tetriary"] {
+    color: var(--gds-sys-color-text-tertiary);
+  }
+
+  &[data-color="quaternary"] {
+    color: var(--gds-sys-color-text-quaternary);
+  }
+
+  &[data-color="positive"] {
+    color: var(--gds-sys-color-text-positive);
+  }
+
+  &[data-color="negative"] {
+    color: var(--gds-sys-color-text-negative);
+  }
+
+  &[data-color="info"] {
+    color: var(--gds-sys-color-text-info);
+  }
+
+  &[data-color="warning"] {
+    color: var(--gds-sys-color-text-warning);
+  }
+}
+
+.label {
+  font: var(--gds-sys-font-default-label-m-semibold);
+
+  &[data-size="m"] {
+    font: var(--gds-sys-font-default-label-m-semibold);
+  }
+
+  &[data-size="s"] {
+    font: var(--gds-sys-font-default-label-s-semibold);
+  }
+
+  &[data-size="xs"] {
+    font: var(--gds-sys-font-default-label-xs-semibold);
+  }
+
+  &[data-size="2xs"] {
+    font: var(--gds-sys-font-default-label-2-xs-semibold);
+  }
+}

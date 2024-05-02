@@ -1,0 +1,51 @@
+{
+  "name": "@giosg/design-system-typography",
+  "private": true,
+  "description": "set of typography components for Giosg Design System",
+  "version": "0.0.0",
+  "source": "./src/index.tsx",
+  "main": "./dist/index.js",
+  "module": "./dist/module.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "*.css"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc --noEmit && parcel build --no-cache",
+    "dev": "parcel watch --port $(../../scripts/getPort.sh)",
+    "lint": "eslint . --max-warnings 0 && stylelint '**/*.{css,scss}' --max-warnings 0",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "@types/react": "^18",
+    "@types/react-dom": "^18"
+  },
+  "dependencies": {
+    "classnames": "^2"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/stylelint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "^8.54.0",
+    "parcel": "2.12.0",
+    "stylelint": "^16.2.0",
+    "typescript": "^5"
+  }
+}

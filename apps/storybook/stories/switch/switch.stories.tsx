@@ -20,13 +20,3 @@ export const Base: Story = {
     return <Switch disabled={disabled} />;
   },
 };
-
-export const Disabled: Story = {
-  render: () => {
-    return (
-      <_Root>
-        <_Thumb />
-      </_Root>
-    );
-  },
-};
