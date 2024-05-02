@@ -44,5 +44,8 @@ module.exports = {
     "unicorn/filename-case": "off",
     "react/no-array-index-key": "off",
     "import/namespace": [2, { allowComputed: true }],
+    "react/jsx-pascal-case" : {
+      allowLeadingUnderscore: true
+    }
   },
 };

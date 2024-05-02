@@ -1,4 +1,4 @@
-import { Meta, Source, Canvas } from "@storybook/blocks";
+import { Meta, Source, Canvas, Subtitle } from "@storybook/blocks";
 import * as CompStories from "./switch.stories";
 
 <Meta title="Switch/Overview" parameters={{ options: { order: ["Switch/Overview", "*"] } }} />
@@ -15,16 +15,25 @@ You may find all of the api docs there [Documentation](https://www.radix-ui.com/
 
 ## Usage
 
-Basic example
-
+<Subtitle>Basic example</Subtitle>
 <Source code={`
-import * as Switch from "@giosg/design-system-switch";
+import {Switch} from "@giosg/design-system-switch";
 
 export const Base = () => {
+    return <Switch />;
+  },
+};
+`}  dark/>
+
+<Subtitle>Manually-assembled example</Subtitle>
+<Source code={`
+import {_Root, _Thumb} from "@giosg/design-system-switch";
+
+export const ManuallyAssembled = () => {
     return (
-      <Switch.Root>
-        <Switch.Thumb />
-      </Switch.Root>
+      <_Root>
+        <_Thumb/>
+      </_Root>
     );
   },
 };
