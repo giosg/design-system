@@ -15,7 +15,7 @@ test("icons-colors-width-size-modified", async ({ page }) => {
 });
 
 test("icons-dark-theme", async ({ page }) => {
-  await page.goto("iframe.html?args=showNames:!false;width:36;height:36;theme:dark&id=icons-list--list&viewMode=story");
+  await page.goto("iframe.html?globals=theme:dark&args=showNames:!false&id=icons-list--list&viewMode=story");
   const container = page.getByTestId("container");
   await expect(container).toHaveScreenshot("picture.png");
 });

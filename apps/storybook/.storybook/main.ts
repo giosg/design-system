@@ -10,7 +10,12 @@ const config: StorybookConfig = {
   stories: ["../stories/**/*.stories.tsx", "../stories/**/*.mdx"],
   addons: [
     getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("@storybook/addon-essentials"),
+    {
+      name: getAbsolutePath("@storybook/addon-essentials"),
+      options: {
+        backgrounds: false, // 👈 disable the backgrounds addon
+      },
+    },
     {
       name: "@storybook/addon-docs",
       options: {
@@ -20,6 +25,9 @@ const config: StorybookConfig = {
           },
         },
       },
+    },
+    {
+      name: getAbsolutePath("@storybook/addon-storysource"),
     },
   ],
   framework: {

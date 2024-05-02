@@ -1,14 +1,14 @@
 .tooltip {
   border-radius: var(--gds-sys-radius-xs);
   padding: 10px;
-  background-color: var(--gds-sys-color-layer-primary-extreme);
-  color: var(--gds-sys-color-text-on-dark);
+  background-color: var(--gds-sys-color-layer-inverted);
+  color: var(--gds-sys-color-text-inverted);
   display: flex;
   flex-direction: column;
   gap: 10px;
   text-align: center;
 
   svg {
-    fill: var(--gds-sys-color-layer-primary-extreme);
+    fill: var(--gds-sys-color-layer-inverted);
   }
 }
