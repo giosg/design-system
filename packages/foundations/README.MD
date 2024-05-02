@@ -16,7 +16,7 @@ Before you start the best thing you could do is to read the foundations package 
 
 ### ⁉️ Resolving-Referencing -ref- tokens.
 
-In the design-system we have two level's of nesting in `tokens.json` `ref` and `sys`. Reference level tokens are just building blocks to compose system level tokens. **They should not be used by users directly**.
+In the design-system we have two levels of nesting in `tokens.json` `ref` and `sys`. Reference level tokens are just building blocks to compose system level tokens. **They should not be used by users directly**.
 
 In automation scripts we resolve the end value of sys tokens and remove ref tokens from the final output.
 
