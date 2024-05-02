@@ -21,6 +21,10 @@
   }
 
   &[data-state="checked"] {
+    background-color: var(--gds-sys-color-icon-active);
+  }
+
+  &[data-state="checked"]:hover {
     background-color: var(--gds-sys-color-icon-hover);
   }
 }
