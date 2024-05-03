@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TextColors, Text } from "@giosg/design-system-typography";
-import { HTMLAttributes } from "react";
+import { Text } from "@giosg/design-system-typography";
 import s from "./typography.module.css";
+import { Row, SupportedColors } from "./utils";
 
 const meta: Meta = {
   title: "Typography/Text",
@@ -14,13 +14,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Row = (props: HTMLAttributes<HTMLDivElement>) => {
-  return <div className={s.row} {...props} />;
-};
-
-type Story = StoryObj<{
-  disabled: boolean;
-}>;
+type Story = StoryObj;
 
 const sampleText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aperiam natus, enim, cupiditate quibusdam modi, veniam quisquam et in reprehenderit incidunt ea doloribus vel ducimus neque nostrum hic rem aspernatur!`;
 const textSizes = ["l", "m", "s", "xs", "2xs"] as const;
@@ -39,22 +33,22 @@ export const Size: Story = {
                 <div> as {as === undefined ? "<span> (default)" : "<" + as + ">"}</div>
               </header>
               <Row>
-                <Text className={s.text}>{sampleText}</Text>
-                <div className={s.descriptionContainer}>
+                <div className={s.description}>
                   <span>Default size M</span>
-                  <pre>{`<Text>`}</pre>
+                  <pre>{`<Text ${as !== undefined ? `as="${as}"` : ""}>`}</pre>
                 </div>
+                <Text className={s.text}>{sampleText}</Text>
               </Row>
               {textSizes.map((size) => {
                 return textWeights.map((weight) => {
                   return (
                     <Row key={size + weight + as}>
+                      <div className={s.description}>
+                        <pre>{`<Text size="${size}" ${weight === "bold" ? "bold" : ""} ${as !== undefined ? `as="${as}"` : ""}>`}</pre>
+                      </div>
                       <Text size={size} bold={weight === "bold"} className={s.text} as={as}>
                         {sampleText}
                       </Text>
-                      <div className={s.descriptionContainer}>
-                        <pre>{`<Text size="${size}" ${weight === "bold" ? "bold" : ""} ${as !== undefined ? `as="${as}"` : ""}>`}</pre>
-                      </div>
                     </Row>
                   );
                 });
@@ -67,32 +61,11 @@ export const Size: Story = {
   },
 };
 
-const SupportedColors: TextColors[] = [
-  "default",
-  "dim",
-  "inverted",
-  "on-light",
-  "on-dark",
-  "link",
-  "disabled",
-  "hover",
-  "pressed",
-  "active",
-  "primary",
-  "secondary",
-  "tetriary",
-  "quaternary",
-  "positive",
-  "negative",
-  "info",
-  "warning",
-];
-
 export const Colors: Story = {
   render: (args) => {
     return (
       <div className={s.container}>
-        <div className={s.section}>
+        <div className={s.textColorsContainer}>
           {SupportedColors.map((color) => (
             <Row key={color}>
               <Text color={color} className={s.textColor}>

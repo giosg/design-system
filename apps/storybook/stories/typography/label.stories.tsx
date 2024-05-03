@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Label, TextColors, Text } from "@giosg/design-system-typography";
-import { HTMLAttributes } from "react";
+import { Label } from "@giosg/design-system-typography";
 import s from "./typography.module.css";
+import { Row, SupportedColors } from "./utils";
 
 const meta: Meta = {
   title: "Typography/Label",
@@ -14,41 +14,35 @@ const meta: Meta = {
 
 export default meta;
 
-const Row = (props: HTMLAttributes<HTMLDivElement>) => {
-  return <div className={s.row} {...props} />;
-};
+type Story = StoryObj;
 
-type Story = StoryObj<{
-  disabled: boolean;
-}>;
-
+const labelText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`;
 const labelSizes = ["m", "s", "xs", "2xs"] as const;
 
 export const Size: Story = {
   render: (args) => {
     return (
       <div className={s.container}>
-        {/* Label */}
         <div className={s.section}>
           <header className={s.header}>
             <h1 className={s.title}>Label</h1>
           </header>
           <Row>
-            <Label className={s.label}>Label test string</Label>
-            <div className={s.descriptionContainer}>
+            <div className={s.description} style={{ width: 200 }}>
               <span>Default size (m)</span>
               <pre>{`<Label>`}</pre>
             </div>
+            <Label className={s.label}>{labelText}</Label>
           </Row>
           {labelSizes.map((size) => {
             return (
               <Row key={size}>
-                <Label size={size} className={s.label}>
-                  Label test string
-                </Label>
-                <div className={s.descriptionContainer}>
+                <div className={s.description} style={{ width: 200 }}>
                   <pre>{`<Label size="${size}">`}</pre>
                 </div>
+                <Label size={size} className={s.label}>
+                  {labelText}
+                </Label>
               </Row>
             );
           })}
@@ -58,27 +52,6 @@ export const Size: Story = {
   },
 };
 
-const SupportedColors: TextColors[] = [
-  "default",
-  "dim",
-  "inverted",
-  "on-light",
-  "on-dark",
-  "link",
-  "disabled",
-  "hover",
-  "pressed",
-  "active",
-  "primary",
-  "secondary",
-  "tetriary",
-  "quaternary",
-  "positive",
-  "negative",
-  "info",
-  "warning",
-];
-
 export const Colors: Story = {
   render: (args) => {
     return (
@@ -86,7 +59,7 @@ export const Colors: Story = {
         <div className={s.section}>
           {SupportedColors.map((color) => (
             <Row key={color}>
-              <Label color={color}>Label test string</Label>
+              <Label color={color}>{labelText}</Label>
               <span> - {color}</span>
             </Row>
           ))}

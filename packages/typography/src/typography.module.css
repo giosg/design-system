@@ -12,3 +12,8 @@
   --gds-text-font: var(--gds-sys-font-default-body-m-regular);
   font: var(--gds-text-font);
 }
+
+.heading {
+  --gds-heading-font: var(--gds-sys-font-default-title-m-bold);
+  font: var(--gds-heading-font);
+}
