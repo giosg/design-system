@@ -4,23 +4,8 @@
 }
 
 .label {
-  font: var(--gds-sys-font-default-label-m-semibold);
-
-  &[data-size="m"] {
-    font: var(--gds-sys-font-default-label-m-semibold);
-  }
-
-  &[data-size="s"] {
-    font: var(--gds-sys-font-default-label-s-semibold);
-  }
-
-  &[data-size="xs"] {
-    font: var(--gds-sys-font-default-label-xs-semibold);
-  }
-
-  &[data-size="2xs"] {
-    font: var(--gds-sys-font-default-label-2-xs-semibold);
-  }
+  --gds-label-font: var(--gds-sys-font-default-label-m-semibold);
+  font: var(--gds-label-font);
 }
 
 .text {

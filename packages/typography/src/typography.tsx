@@ -40,10 +40,19 @@ export interface LabelProps extends React.ComponentProps<"label"> {
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => {
   const { size = "m", color = "default", className, style, ...rest } = props;
+
+  const formattedSize = size.replace(SizeToVarRegex, "$1-");
+
   return (
     <label
       className={cx(styles.typography, styles.label, className)}
-      style={{ "--gds-text-color": `var(--gds-sys-color-text-${color})`, ...style } as React.CSSProperties}
+      style={
+        {
+          "--gds-text-color": `var(--gds-sys-color-text-${color})`,
+          "--gds-label-font": `var(--gds-sys-font-default-label-${formattedSize}-semibold)`,
+          ...style,
+        } as React.CSSProperties
+      }
       data-size={size}
       data-color={color}
       ref={ref}
