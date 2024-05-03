@@ -22,15 +22,15 @@ const textWeights = ["regular", "bold"] as const;
 const textElms = [undefined, "p", "div"] as const;
 
 export const Size: Story = {
-  render: (args) => {
+  render: () => {
     return (
       <div className={s.container}>
         {textElms.map((as) => {
           return (
-            <div className={s.section}>
+            <div className={s.section} key={as}>
               <header className={s.header}>
                 <h1 className={s.title}>Text</h1>
-                <div> as {as === undefined ? "<span> (default)" : "<" + as + ">"}</div>
+                <div> as {as === undefined ? "<span> (default)" : `<${as}>`}</div>
               </header>
               <Row>
                 <div className={s.description}>
@@ -46,7 +46,7 @@ export const Size: Story = {
                       <div className={s.description}>
                         <pre>{`<Text size="${size}" ${weight === "bold" ? "bold" : ""} ${as !== undefined ? `as="${as}"` : ""}>`}</pre>
                       </div>
-                      <Text size={size} bold={weight === "bold"} className={s.text} as={as}>
+                      <Text as={as} bold={weight === "bold"} className={s.text} size={size}>
                         {sampleText}
                       </Text>
                     </Row>
@@ -62,13 +62,13 @@ export const Size: Story = {
 };
 
 export const Colors: Story = {
-  render: (args) => {
+  render: () => {
     return (
       <div className={s.container}>
         <div className={s.textColorsContainer}>
           {SupportedColors.map((color) => (
             <Row key={color}>
-              <Text color={color} className={s.textColor}>
+              <Text className={s.textColor} color={color}>
                 {sampleText}
               </Text>
               <span> - {color}</span>

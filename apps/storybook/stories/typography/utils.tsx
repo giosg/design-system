@@ -1,10 +1,10 @@
-import { HTMLAttributes } from "react";
+import type { HTMLAttributes } from "react";
+import type { TextColors } from "@giosg/design-system-typography";
 import s from "./typography.module.css";
-import { TextColors } from "@giosg/design-system-typography";
 
-export const Row = (props: HTMLAttributes<HTMLDivElement>) => {
+export function Row(props: HTMLAttributes<HTMLDivElement>) {
   return <div className={s.row} {...props} />;
-};
+}
 
 export const SupportedColors: TextColors[] = [
   "default",

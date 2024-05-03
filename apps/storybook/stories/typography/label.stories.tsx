@@ -20,7 +20,7 @@ const labelText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`;
 const labelSizes = ["m", "s", "xs", "2xs"] as const;
 
 export const Size: Story = {
-  render: (args) => {
+  render: () => {
     return (
       <div className={s.container}>
         <div className={s.section}>
@@ -40,7 +40,7 @@ export const Size: Story = {
                 <div className={s.description} style={{ width: 200 }}>
                   <pre>{`<Label size="${size}">`}</pre>
                 </div>
-                <Label size={size} className={s.label}>
+                <Label className={s.label} size={size}>
                   {labelText}
                 </Label>
               </Row>
@@ -53,7 +53,7 @@ export const Size: Story = {
 };
 
 export const Colors: Story = {
-  render: (args) => {
+  render: () => {
     return (
       <div className={s.container}>
         <div className={s.section}>
