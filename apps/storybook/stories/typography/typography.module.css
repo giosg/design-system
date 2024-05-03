@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  span {
+    font: var(--gds-sys-font-default-body-m-bold);
+  }
+}

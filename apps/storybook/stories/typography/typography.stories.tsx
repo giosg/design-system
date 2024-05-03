@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Label, TextColors } from "@giosg/design-system-typography";
 import { HTMLAttributes } from "react";
+import s from "./typography.module.css";
 
 const meta: Meta = {
   title: "Typography/Label",
@@ -16,39 +17,39 @@ type Story = StoryObj<{
   disabled: boolean;
 }>;
 
-export const LabelStory: Story = {
+export const Size: Story = {
   args: {
     disabled: false,
   },
   render: (args) => {
     return (
-      <div style={{ display: "flex", flexDirection: "column", gap: 30 }}>
+      <div className={s.container}>
         <LabelContainer>
           <Label>Label test string</Label>
-          <span style={{ font: `var(--gds-sys-font-default-body-m-bold)` }}> - default size (m)</span>
+          <span> - default size (m)</span>
         </LabelContainer>
         <LabelContainer>
           <Label>Label test string</Label>
-          <span style={{ font: `var(--gds-sys-font-default-body-m-bold)` }}> - m</span>
+          <span> - m</span>
         </LabelContainer>
         <LabelContainer>
           <Label size="s">Label test string</Label>
-          <span style={{ font: `var(--gds-sys-font-default-body-m-bold)` }}> - s</span>
+          <span> - s</span>
         </LabelContainer>
         <LabelContainer>
           <Label size="xs">Label test string</Label>
-          <span style={{ font: `var(--gds-sys-font-default-body-m-bold)` }}> - xs</span>
+          <span> - xs</span>
         </LabelContainer>
         <LabelContainer>
           <Label size="2xs">Label test string</Label>
-          <span style={{ font: `var(--gds-sys-font-default-body-m-bold)` }}> - 2xs</span>
+          <span> - 2xs</span>
         </LabelContainer>
       </div>
     );
   },
 };
 
-const Colors: TextColors[] = [
+const SupportedColors: TextColors[] = [
   "default",
   "dim",
   "inverted",
@@ -69,17 +70,17 @@ const Colors: TextColors[] = [
   "warning",
 ];
 
-export const LabelColors: Story = {
+export const Colors: Story = {
   args: {
     disabled: false,
   },
   render: (args) => {
     return (
-      <div style={{ display: "flex", flexDirection: "column", gap: 30 }}>
-        {Colors.map((color) => (
+      <div className={s.container}>
+        {SupportedColors.map((color) => (
           <LabelContainer key={color}>
             <Label color={color}>Label test string</Label>
-            <span style={{ font: `var(--gds-sys-font-default-body-m-bold)` }}> - {color}</span>
+            <span> - {color}</span>
           </LabelContainer>
         ))}
       </div>

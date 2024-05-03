@@ -28,10 +28,11 @@ export interface LabelProps extends React.ComponentProps<"label"> {
 }
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => {
-  const { size = "m", color = "default", className, ...rest } = props;
+  const { size = "m", color = "default", className, style, ...rest } = props;
   return (
     <label
       className={cx(styles.text, styles.label, className)}
+      style={{ "--gds-text-color": `var(--gds-sys-color-text-${color})`, ...style } as React.CSSProperties}
       data-size={size}
       data-color={color}
       ref={ref}
