@@ -24,11 +24,12 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "peerDependencies": {
-    "react": "^18",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "react": "^18"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "classnames": "^2"
   },
   "peerDependenciesMeta": {

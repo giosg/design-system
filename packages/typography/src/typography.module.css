@@ -1,4 +1,4 @@
-.text {
+.typography {
   --gds-text-color: var(--gds-sys-color-text-default);
   color: var(--gds-text-color);
 }
@@ -21,4 +21,9 @@
   &[data-size="2xs"] {
     font: var(--gds-sys-font-default-label-2-xs-semibold);
   }
+}
+
+.text {
+  --gds-text-font: var(--gds-sys-font-default-body-m-regular);
+  font: var(--gds-text-font);
 }
