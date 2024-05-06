@@ -38,7 +38,68 @@ export interface LabelCustomProps {
   color?: TextColors;
 }
 
-export type LabelProps = LabelCustomProps & React.ComponentPropsWithoutRef<"label">;
+export type Spacing =
+  | "none"
+  | "3xs"
+  | "2xs"
+  | "xs"
+  | "s"
+  | "m"
+  | "l"
+  | "xl"
+  | "2xl"
+  | "3xl"
+  | "4xl"
+  | "5xl"
+  | "6xl"
+  | "7xl";
+
+interface Flex {
+  grow?: number;
+  shrink?: number;
+  basis?: string;
+  direction?: "row" | "column" | "row-reverse" | "column-reverse";
+  align?: "start" | "center" | "end" | "baseline" | "stretch";
+  justify?: "start" | "center" | "end" | "between" | "around" | "evenly";
+  wrap?: "nowrap" | "wrap" | "wrap-reverse";
+  gap?: Spacing;
+}
+
+const formatGap = (gap: unknown): string | undefined => {
+  if (typeof gap !== "string") {
+    return undefined;
+  }
+
+  const gapSizeFormatted = gap.replace(SizeToVarRegex, "$1-");
+
+  return gapSizeFormatted;
+};
+
+const generateFlexStyles = (props: Flex): React.CSSProperties => {
+  const justifyMap = {
+    start: "flex-start",
+    center: "center",
+    end: "flex-end",
+    between: "space-between",
+    around: "space-around",
+    evenly: "space-evenly",
+  } as const;
+
+  const gapSizeFormatted = formatGap(props.gap);
+
+  return {
+    "--gds-flex-grow": props.grow,
+    "--gds-flex-shrink": props.shrink,
+    "--gds-flex-basis": props.basis,
+    "--gds-flex-direction": props.direction,
+    "--gds-flex-align": props.align,
+    "--gds-flex-justify": props.justify ? justifyMap[props.justify] : undefined,
+    "--gds-flex-wrap": props.wrap,
+    "--gds-flex-gap": gapSizeFormatted ? `var(--gds-sys-space-${gapSizeFormatted})` : undefined,
+  } as React.CSSProperties;
+};
+
+export type LabelProps = LabelCustomProps & Flex & React.ComponentPropsWithoutRef<"label">;
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => {
   const { size = "m", color = "default", className, style, ...rest } = props;
@@ -47,11 +108,12 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => {
 
   return (
     <label
-      className={cx(styles.typography, styles.label, className)}
+      className={cx(styles.typography, styles.label, styles.flex, className)}
       style={
         {
           "--gds-text-color": `var(--gds-sys-color-text-${color})`,
           "--gds-label-font": `var(--gds-sys-font-default-label-${formattedSize}-semibold)`,
+          ...generateFlexStyles(props),
           ...style,
         } as React.CSSProperties
       }

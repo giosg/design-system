@@ -68,3 +68,32 @@ export const Colors: Story = {
     );
   },
 };
+
+export const Flex: Story = {
+  render: () => {
+    return (
+      <div className={s.container}>
+        <div className={s.section}>
+          <header className={s.header}>
+            <h1 className={s.title}>Label Flexbox</h1>
+          </header>
+          <Row>
+            <div className={s.description} style={{ width: 200 }}>
+              <span>Default settings: flex,</span>
+              <pre>{`<Label>`}</pre>
+            </div>
+            <Label align="start" direction="column-reverse">
+              <span>LLLLL</span>
+              <Label>
+                Left
+                <div className={s.colorfulBox} />
+                Right
+              </Label>
+              <span>PPPP</span>
+            </Label>
+          </Row>
+        </div>
+      </div>
+    );
+  },
+};
