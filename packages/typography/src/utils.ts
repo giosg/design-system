@@ -24,6 +24,27 @@ export type Spacing =
   | "6xl"
   | "7xl";
 
+const SpacingSet = new Set<Spacing>([
+  "none",
+  "3xs",
+  "2xs",
+  "xs",
+  "s",
+  "m",
+  "l",
+  "xl",
+  "2xl",
+  "3xl",
+  "4xl",
+  "5xl",
+  "6xl",
+  "7xl",
+]);
+
+type PixelSpacing = `${number}px`;
+type PercentSpacing = `${number}%`;
+type RemSpacing = `${number}rem`;
+
 /**
  * Flex layout props.
  * This is used to provide generic flex support for Flexible components.
@@ -36,15 +57,19 @@ export interface Flex {
   align?: "start" | "center" | "end" | "baseline" | "stretch";
   justify?: "start" | "center" | "end" | "between" | "around" | "evenly";
   wrap?: "nowrap" | "wrap" | "wrap-reverse";
-  gap?: Spacing;
+  gap?: Spacing | PixelSpacing | PercentSpacing | RemSpacing;
 }
+
+const isSpacingToken = (token: string): token is Spacing => {
+  return SpacingSet.has(token as Spacing);
+};
 
 /**
  * Function that formats the size part of a token to a css variable compatible format.
  * @example "3xl" => "3-xl"; "xl" => "xl";
  *
  */
-export const formatSizeToken = (token: string): string => {
+export const formatSizeToken = (token: Spacing): string => {
   return token.replace(SizeToVarRegex, "$1-");
 };
 
@@ -62,7 +87,15 @@ export const generateFlexCssProps = (props: Flex): CSSProperties => {
     evenly: "space-evenly",
   } as const;
 
-  const gapSizeFormatted = props.gap ? formatSizeToken(props.gap) : undefined;
+  let gapVar;
+
+  if (props.gap) {
+    if (isSpacingToken(props.gap)) {
+      gapVar = `var(--gds-sys-space-${formatSizeToken(props.gap)})`;
+    } else {
+      gapVar = props.gap;
+    }
+  }
 
   return {
     "--gds-flex-grow": props.grow,
@@ -72,7 +105,7 @@ export const generateFlexCssProps = (props: Flex): CSSProperties => {
     "--gds-flex-align": props.align,
     "--gds-flex-justify": props.justify ? justifyMap[props.justify] : undefined,
     "--gds-flex-wrap": props.wrap,
-    "--gds-flex-gap": gapSizeFormatted ? `var(--gds-sys-space-${gapSizeFormatted})` : undefined,
+    "--gds-flex-gap": gapVar,
   } as React.CSSProperties;
 };
 

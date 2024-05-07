@@ -20,7 +20,7 @@ const headingText = `Lorem ipsum dolor sit amet,
 consectetur adipiscing elit.`;
 const headingSizes = ["3xl", "2xl", "xl", "l", "m"] as const;
 const headingWeighs = ["bold", "bolder"] as const;
-const headingElms = [undefined, "h2", "h3", "h4", "h5", "h6"] as const;
+const headingElms = ["h1", "h2", "h3", "h4", "h5", "h6"] as const;
 
 export const Size: Story = {
   render: () => {
@@ -32,7 +32,7 @@ export const Size: Story = {
           </header>
           <Row>
             <div className={s.description} style={{ width: 400 }}>
-              <span>Default size M</span>
+              <span>Default size L</span>
               <pre>{`<Heading>`}</pre>
             </div>
             <Heading className={s.heading}>{headingText}</Heading>

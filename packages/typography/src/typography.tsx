@@ -42,7 +42,7 @@ export interface LabelCustomProps {
 export type LabelProps = LabelCustomProps & Flex & React.ComponentPropsWithoutRef<"label">;
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => {
-  const { size = "m", color = "default", className, style, flexProps, ...rest } = extractFlexProps(props);
+  const { size = "s", color = "default", className, style, flexProps, ...rest } = extractFlexProps(props);
 
   return (
     <label
@@ -84,7 +84,7 @@ export interface TextCustomProps {
 export type TextProps = TextCustomProps & (TextSpanProps | TextDivProps | TextPProps);
 
 export const Text = React.forwardRef<TextElement, TextProps>((props, ref) => {
-  const { children, className, size = "m", bold, as: Tag = "span", color = "default", style, ...rest } = props;
+  const { children, className, size = "s", bold, as: Tag = "span", color = "default", style, ...rest } = props;
 
   return (
     <Slot
@@ -130,7 +130,7 @@ export type HeadingProps = HeadingCustomProps &
   (HeadingH1Props | HeadingH2Props | HeadingH3Props | HeadingH4Props | HeadingH5Props | HeadingH6Props);
 
 export const Heading = React.forwardRef<HeadingElement, HeadingProps>((props, ref) => {
-  const { children, className, size = "m", as: Tag = "h1", color = "default", bolder, style, ...rest } = props;
+  const { children, className, size = "l", as: Tag = "h1", color = "default", bolder, style, ...rest } = props;
 
   return (
     <Slot
