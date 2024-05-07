@@ -44,6 +44,7 @@ const SpacingSet = new Set<Spacing>([
 type PixelSpacing = `${number}px`;
 type PercentSpacing = `${number}%`;
 type RemSpacing = `${number}rem`;
+type FlexSpacing = Spacing | PixelSpacing | PercentSpacing | RemSpacing;
 
 /**
  * Flex layout props.
@@ -57,7 +58,7 @@ export interface Flex {
   align?: "start" | "center" | "end" | "baseline" | "stretch";
   justify?: "start" | "center" | "end" | "between" | "around" | "evenly";
   wrap?: "nowrap" | "wrap" | "wrap-reverse";
-  gap?: Spacing | PixelSpacing | PercentSpacing | RemSpacing;
+  gap?: FlexSpacing;
 }
 
 const isSpacingToken = (token: string): token is Spacing => {
