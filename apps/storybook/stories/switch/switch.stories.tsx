@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Switch, _Root, _Thumb } from "@giosg/design-system-switch";
 import { Label } from "@giosg/design-system-typography";
+import s from "./switch.module.css";
 
 const meta: Meta = {
   title: "Switch/Base",
@@ -23,14 +24,32 @@ export const Base: Story = {
 };
 
 export const WithLabel: Story = {
-  render: (args) => {
-    const { disabled } = args;
+  render: () => {
     return (
-      <Label>
-        Press me to switch
-        <Switch disabled={disabled} />
-        Label
-      </Label>
+      <div className={s.container}>
+        <div className={s.section}>
+          <h3>Label left</h3>
+          <Label>
+            Press me to switch
+            <Switch />
+          </Label>
+        </div>
+        <div className={s.section}>
+          <h3>Label right</h3>
+          <Label>
+            <Switch />
+            Press me to switch
+          </Label>
+        </div>
+        <div className={s.section}>
+          <h3>Label Both Sides</h3>
+          <Label>
+            Left
+            <Switch />
+            Right
+          </Label>
+        </div>
+      </div>
     );
   },
 };
