@@ -26,37 +26,57 @@ export const Size: Story = {
   render: () => {
     return (
       <div className={s.container}>
-        {headingElms.map((as) => {
-          return (
-            <div className={s.section} key={as}>
-              <header className={s.header}>
-                <h1 className={s.title}>Heading</h1>
-                <div> as {as === undefined ? "<h1> (default)" : `<${as}>`}</div>
-              </header>
-              <Row>
-                <div className={s.description} style={{ width: 400 }}>
-                  <span>Default size M</span>
-                  <pre>{`<Heading ${as !== undefined ? `as="${as}"` : ""}>`}</pre>
-                </div>
-                <Heading className={s.heading}>{headingText}</Heading>
-              </Row>
-              {headingSizes.map((size) => {
-                return headingWeighs.map((weight) => {
-                  return (
-                    <Row key={size + weight + as}>
-                      <div className={s.description} style={{ width: 400 }}>
-                        <pre>{`<Heading size="${size}" ${weight === "bolder" ? "bolder" : ""} ${as !== undefined ? `as="${as}"` : ""}>`}</pre>
-                      </div>
-                      <Heading as={as} bolder={weight === "bolder"} className={s.heading} size={size}>
-                        {headingText}
-                      </Heading>
-                    </Row>
-                  );
-                });
-              })}
+        <div className={s.section}>
+          <header className={s.header}>
+            <h1 className={s.title}>Heading</h1>
+          </header>
+          <Row>
+            <div className={s.description} style={{ width: 400 }}>
+              <span>Default size M</span>
+              <pre>{`<Heading>`}</pre>
             </div>
-          );
-        })}
+            <Heading className={s.heading}>{headingText}</Heading>
+          </Row>
+          {headingSizes.map((size) => {
+            return headingWeighs.map((weight) => {
+              return (
+                <Row key={size + weight}>
+                  <div className={s.description} style={{ width: 400 }}>
+                    <pre>{`<Heading size="${size}" ${weight === "bolder" ? "bolder" : ""}>`}</pre>
+                  </div>
+                  <Heading bolder={weight === "bolder"} className={s.heading} size={size}>
+                    {headingText}
+                  </Heading>
+                </Row>
+              );
+            });
+          })}
+        </div>
+        <div className={s.section}>
+          <header className={s.header}>
+            <h1 className={s.title}>Heading</h1>
+            <span>(supported tags)</span>
+          </header>
+          <Row>
+            <div className={s.description}>
+              <span>Default tag H1</span>
+              <pre>{`<Heading>`}</pre>
+            </div>
+            <Heading className={s.heading}>{headingText}</Heading>
+          </Row>
+          {headingElms.map((elm) => {
+            return (
+              <Row key={elm}>
+                <div className={s.description}>
+                  <pre>{`<Heading as="${elm}">`}</pre>
+                </div>
+                <Heading as={elm} className={s.heading}>
+                  {headingText}
+                </Heading>
+              </Row>
+            );
+          })}
+        </div>
       </div>
     );
   },

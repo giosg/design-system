@@ -25,37 +25,57 @@ export const Size: Story = {
   render: () => {
     return (
       <div className={s.container}>
-        {textElms.map((as) => {
-          return (
-            <div className={s.section} key={as}>
-              <header className={s.header}>
-                <h1 className={s.title}>Text</h1>
-                <div> as {as === undefined ? "<span> (default)" : `<${as}>`}</div>
-              </header>
-              <Row>
-                <div className={s.description}>
-                  <span>Default size M</span>
-                  <pre>{`<Text ${as !== undefined ? `as="${as}"` : ""}>`}</pre>
-                </div>
-                <Text className={s.text}>{sampleText}</Text>
-              </Row>
-              {textSizes.map((size) => {
-                return textWeights.map((weight) => {
-                  return (
-                    <Row key={size + weight + as}>
-                      <div className={s.description}>
-                        <pre>{`<Text size="${size}" ${weight === "bold" ? "bold" : ""} ${as !== undefined ? `as="${as}"` : ""}>`}</pre>
-                      </div>
-                      <Text as={as} bold={weight === "bold"} className={s.text} size={size}>
-                        {sampleText}
-                      </Text>
-                    </Row>
-                  );
-                });
-              })}
+        <div className={s.section}>
+          <header className={s.header}>
+            <h1 className={s.title}>Text</h1>
+          </header>
+          <Row>
+            <div className={s.description}>
+              <span>Default size M</span>
+              <pre>{`<Text>`}</pre>
             </div>
-          );
-        })}
+            <Text className={s.text}>{sampleText}</Text>
+          </Row>
+          {textSizes.map((size) => {
+            return textWeights.map((weight) => {
+              return (
+                <Row key={size + weight}>
+                  <div className={s.description}>
+                    <pre>{`<Text size="${size}" ${weight === "bold" ? "bold" : ""}>`}</pre>
+                  </div>
+                  <Text bold={weight === "bold"} className={s.text} size={size}>
+                    {sampleText}
+                  </Text>
+                </Row>
+              );
+            });
+          })}
+        </div>
+        <div className={s.section}>
+          <header className={s.header}>
+            <h1 className={s.title}>Text</h1>
+            <span>(supported tags)</span>
+          </header>
+          <Row>
+            <div className={s.description}>
+              <span>Default tag - span </span>
+              <pre>{`<Text>`}</pre>
+            </div>
+            <Text className={s.text}>{sampleText}</Text>
+          </Row>
+          {textElms.map((elm) => {
+            return (
+              <Row key={elm || "span"}>
+                <div className={s.description}>
+                  <pre>{`<Text as="${elm || "span"}">`}</pre>
+                </div>
+                <Text as={elm} className={s.text}>
+                  {sampleText}
+                </Text>
+              </Row>
+            );
+          })}
+        </div>
       </div>
     );
   },

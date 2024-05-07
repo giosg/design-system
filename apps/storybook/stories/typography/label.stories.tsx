@@ -78,18 +78,33 @@ export const Flex: Story = {
             <h1 className={s.title}>Label Flexbox</h1>
           </header>
           <Row>
-            <div className={s.description} style={{ width: 200 }}>
-              <span>Default settings: flex,</span>
+            <div className={s.description} style={{ width: 300 }}>
               <pre>{`<Label>`}</pre>
             </div>
-            <Label align="start" direction="column-reverse">
-              <span>LLLLL</span>
-              <Label>
-                Left
-                <div className={s.colorfulBox} />
-                Right
-              </Label>
-              <span>PPPP</span>
+            <Label>
+              Left
+              <div className={s.colorfulBox} />
+              Right
+            </Label>
+          </Row>
+          <Row>
+            <div className={s.description} style={{ width: 300 }}>
+              <pre>{`<Label direction="column">`}</pre>
+            </div>
+            <Label direction="column">
+              Left
+              <div className={s.colorfulBox} />
+              Right
+            </Label>
+          </Row>
+          <Row>
+            <div className={s.description} style={{ width: 300 }}>
+              <pre>{`<Label  gap="3xl">`}</pre>
+            </div>
+            <Label gap="3xl">
+              Left
+              <div className={s.colorfulBox} />
+              Right
             </Label>
           </Row>
         </div>
