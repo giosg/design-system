@@ -22,7 +22,7 @@ const labelSizes = ["m", "s", "xs", "2xs"] as const;
 export const Size: Story = {
   render: () => {
     return (
-      <div className={s.container}>
+      <div className={s.container} data-testid="container">
         <div className={s.section}>
           <header className={s.header}>
             <h1 className={s.title}>Label</h1>
@@ -55,7 +55,7 @@ export const Size: Story = {
 export const Colors: Story = {
   render: () => {
     return (
-      <div className={s.container}>
+      <div className={s.container} data-testid="container">
         <div className={s.section}>
           {SupportedColors.map((color) => (
             <Row key={color}>
@@ -72,7 +72,7 @@ export const Colors: Story = {
 export const Flex: Story = {
   render: () => {
     return (
-      <div className={s.container}>
+      <div className={s.container} data-testid="container">
         <div className={s.section}>
           <header className={s.header}>
             <h1 className={s.title}>Label Flexbox</h1>

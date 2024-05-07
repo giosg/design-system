@@ -24,7 +24,7 @@ const textElms = [undefined, "p", "div"] as const;
 export const Size: Story = {
   render: () => {
     return (
-      <div className={s.container}>
+      <div className={s.container} data-testid="container">
         <div className={s.section}>
           <header className={s.header}>
             <h1 className={s.title}>Text</h1>
@@ -84,7 +84,7 @@ export const Size: Story = {
 export const Colors: Story = {
   render: () => {
     return (
-      <div className={s.container}>
+      <div className={s.container} data-testid="container">
         <div className={s.textColorsContainer}>
           {SupportedColors.map((color) => (
             <Row key={color}>
