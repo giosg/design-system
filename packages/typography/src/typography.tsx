@@ -21,7 +21,7 @@ export type TextColors =
   | "active"
   | "primary"
   | "secondary"
-  | "tetriary"
+  | "tertiary"
   | "quaternary"
   | "positive"
   | "negative"
