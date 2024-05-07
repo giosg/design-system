@@ -3,7 +3,11 @@ import cx from "classnames";
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import styles from "./typography.module.css";
+import { type Flex, extractFlexProps, generateFlexCssProps, formatSizeToken } from "./utils";
 
+/**
+ * List of all supported color variants.
+ */
 export type TextColors =
   | "default"
   | "dim"
@@ -24,9 +28,6 @@ export type TextColors =
   | "info"
   | "warning";
 
-// eslint-disable-next-line prefer-named-capture-group -- block eslint
-const SizeToVarRegex = /^(\d+)/;
-
 //******************************************
 //*                                        *
 //*             Label                      *
@@ -38,73 +39,10 @@ export interface LabelCustomProps {
   color?: TextColors;
 }
 
-export type Spacing =
-  | "none"
-  | "3xs"
-  | "2xs"
-  | "xs"
-  | "s"
-  | "m"
-  | "l"
-  | "xl"
-  | "2xl"
-  | "3xl"
-  | "4xl"
-  | "5xl"
-  | "6xl"
-  | "7xl";
-
-interface Flex {
-  grow?: number;
-  shrink?: number;
-  basis?: string;
-  direction?: "row" | "column" | "row-reverse" | "column-reverse";
-  align?: "start" | "center" | "end" | "baseline" | "stretch";
-  justify?: "start" | "center" | "end" | "between" | "around" | "evenly";
-  wrap?: "nowrap" | "wrap" | "wrap-reverse";
-  gap?: Spacing;
-}
-
-const formatGap = (gap: unknown): string | undefined => {
-  if (typeof gap !== "string") {
-    return undefined;
-  }
-
-  const gapSizeFormatted = gap.replace(SizeToVarRegex, "$1-");
-
-  return gapSizeFormatted;
-};
-
-const generateFlexStyles = (props: Flex): React.CSSProperties => {
-  const justifyMap = {
-    start: "flex-start",
-    center: "center",
-    end: "flex-end",
-    between: "space-between",
-    around: "space-around",
-    evenly: "space-evenly",
-  } as const;
-
-  const gapSizeFormatted = formatGap(props.gap);
-
-  return {
-    "--gds-flex-grow": props.grow,
-    "--gds-flex-shrink": props.shrink,
-    "--gds-flex-basis": props.basis,
-    "--gds-flex-direction": props.direction,
-    "--gds-flex-align": props.align,
-    "--gds-flex-justify": props.justify ? justifyMap[props.justify] : undefined,
-    "--gds-flex-wrap": props.wrap,
-    "--gds-flex-gap": gapSizeFormatted ? `var(--gds-sys-space-${gapSizeFormatted})` : undefined,
-  } as React.CSSProperties;
-};
-
 export type LabelProps = LabelCustomProps & Flex & React.ComponentPropsWithoutRef<"label">;
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => {
-  const { size = "m", color = "default", className, style, ...rest } = props;
-
-  const formattedSize = size.replace(SizeToVarRegex, "$1-");
+  const { size = "m", color = "default", className, style, flexProps, ...rest } = extractFlexProps(props);
 
   return (
     <label
@@ -112,8 +50,8 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => {
       style={
         {
           "--gds-text-color": `var(--gds-sys-color-text-${color})`,
-          "--gds-label-font": `var(--gds-sys-font-default-label-${formattedSize}-semibold)`,
-          ...generateFlexStyles(props),
+          "--gds-label-font": `var(--gds-sys-font-default-label-${formatSizeToken(size)}-semibold)`,
+          ...generateFlexCssProps(flexProps),
           ...style,
         } as React.CSSProperties
       }
@@ -148,8 +86,6 @@ export type TextProps = TextCustomProps & (TextSpanProps | TextDivProps | TextPP
 export const Text = React.forwardRef<TextElement, TextProps>((props, ref) => {
   const { children, className, size = "m", bold, as: Tag = "span", color = "default", style, ...rest } = props;
 
-  const formattedSize = size.replace(SizeToVarRegex, "$1-");
-
   return (
     <Slot
       data-size={size}
@@ -160,7 +96,7 @@ export const Text = React.forwardRef<TextElement, TextProps>((props, ref) => {
       style={
         {
           "--gds-text-color": `var(--gds-sys-color-text-${color})`,
-          "--gds-text-font": `var(--gds-sys-font-default-body-${formattedSize}-${bold ? "bold" : "regular"})`,
+          "--gds-text-font": `var(--gds-sys-font-default-body-${formatSizeToken(size)}-${bold ? "bold" : "regular"})`,
           ...style,
         } as React.CSSProperties
       }
@@ -196,8 +132,6 @@ export type HeadingProps = HeadingCustomProps &
 export const Heading = React.forwardRef<HeadingElement, HeadingProps>((props, ref) => {
   const { children, className, size = "m", as: Tag = "h1", color = "default", bolder, style, ...rest } = props;
 
-  const formattedSize = size.replace(SizeToVarRegex, "$1-");
-
   return (
     <Slot
       data-size={size}
@@ -208,7 +142,7 @@ export const Heading = React.forwardRef<HeadingElement, HeadingProps>((props, re
       style={
         {
           "--gds-text-color": `var(--gds-sys-color-text-${color})`,
-          "--gds-heading-font": `var(--gds-sys-font-default-title-${formattedSize}-${bolder ? "black" : "bold"})`,
+          "--gds-heading-font": `var(--gds-sys-font-default-title-${formatSizeToken(size)}-${bolder ? "black" : "bold"})`,
           ...style,
         } as React.CSSProperties
       }
