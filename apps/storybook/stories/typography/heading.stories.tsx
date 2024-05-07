@@ -33,7 +33,7 @@ export const Size: Story = {
           <Row>
             <div className={s.description} style={{ width: 400 }}>
               <span>Default size L</span>
-              <pre>{`<Heading>`}</pre>
+              <span>{`<Heading>`}</span>
             </div>
             <Heading className={s.heading}>{headingText}</Heading>
           </Row>
@@ -42,7 +42,7 @@ export const Size: Story = {
               return (
                 <Row key={size + weight}>
                   <div className={s.description} style={{ width: 400 }}>
-                    <pre>{`<Heading size="${size}" ${weight === "bolder" ? "bolder" : ""}>`}</pre>
+                    <span>{`<Heading size="${size}" ${weight === "bolder" ? "bolder" : ""}>`}</span>
                   </div>
                   <Heading bolder={weight === "bolder"} className={s.heading} size={size}>
                     {headingText}
@@ -60,7 +60,7 @@ export const Size: Story = {
           <Row>
             <div className={s.description}>
               <span>Default tag H1</span>
-              <pre>{`<Heading>`}</pre>
+              <span>{`<Heading>`}</span>
             </div>
             <Heading className={s.heading}>{headingText}</Heading>
           </Row>
@@ -68,7 +68,7 @@ export const Size: Story = {
             return (
               <Row key={elm}>
                 <div className={s.description}>
-                  <pre>{`<Heading as="${elm}">`}</pre>
+                  <span>{`<Heading as="${elm}">`}</span>
                 </div>
                 <Heading as={elm} className={s.heading}>
                   {headingText}

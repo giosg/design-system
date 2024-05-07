@@ -30,7 +30,7 @@ export const Size: Story = {
           <Row>
             <div className={s.description} style={{ width: 200 }}>
               <span>Default size (m)</span>
-              <pre>{`<Label>`}</pre>
+              <span>{`<Label>`}</span>
             </div>
             <Label className={s.label}>{labelText}</Label>
           </Row>
@@ -38,7 +38,7 @@ export const Size: Story = {
             return (
               <Row key={size}>
                 <div className={s.description} style={{ width: 200 }}>
-                  <pre>{`<Label size="${size}">`}</pre>
+                  <span>{`<Label size="${size}">`}</span>
                 </div>
                 <Label className={s.label} size={size}>
                   {labelText}
@@ -79,7 +79,7 @@ export const Flex: Story = {
           </header>
           <Row>
             <div className={s.description} style={{ width: 300 }}>
-              <pre>{`<Label>`}</pre>
+              <span>{`<Label>`}</span>
             </div>
             <Label>
               Left
@@ -89,7 +89,7 @@ export const Flex: Story = {
           </Row>
           <Row>
             <div className={s.description} style={{ width: 300 }}>
-              <pre>{`<Label direction="column">`}</pre>
+              <span>{`<Label direction="column">`}</span>
             </div>
             <Label direction="column">
               Left
@@ -99,7 +99,7 @@ export const Flex: Story = {
           </Row>
           <Row>
             <div className={s.description} style={{ width: 300 }}>
-              <pre>{`<Label  gap="3xl">`}</pre>
+              <span>{`<Label  gap="3xl">`}</span>
             </div>
             <Label gap="3xl">
               Left

@@ -32,7 +32,7 @@ export const Size: Story = {
           <Row>
             <div className={s.description}>
               <span>Default size M</span>
-              <pre>{`<Text>`}</pre>
+              <span>{`<Text>`}</span>
             </div>
             <Text className={s.text}>{sampleText}</Text>
           </Row>
@@ -41,7 +41,7 @@ export const Size: Story = {
               return (
                 <Row key={size + weight}>
                   <div className={s.description}>
-                    <pre>{`<Text size="${size}" ${weight === "bold" ? "bold" : ""}>`}</pre>
+                    <span>{`<Text size="${size}" ${weight === "bold" ? "bold" : ""}>`}</span>
                   </div>
                   <Text bold={weight === "bold"} className={s.text} size={size}>
                     {sampleText}
@@ -59,7 +59,7 @@ export const Size: Story = {
           <Row>
             <div className={s.description}>
               <span>Default tag - span </span>
-              <pre>{`<Text>`}</pre>
+              <span>{`<Text>`}</span>
             </div>
             <Text className={s.text}>{sampleText}</Text>
           </Row>
@@ -67,7 +67,7 @@ export const Size: Story = {
             return (
               <Row key={elm || "span"}>
                 <div className={s.description}>
-                  <pre>{`<Text as="${elm || "span"}">`}</pre>
+                  <span>{`<Text as="${elm || "span"}">`}</span>
                 </div>
                 <Text as={elm} className={s.text}>
                   {sampleText}
