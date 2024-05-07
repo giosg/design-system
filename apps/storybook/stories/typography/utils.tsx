@@ -19,7 +19,7 @@ export const SupportedColors: TextColors[] = [
   "active",
   "primary",
   "secondary",
-  "tetriary",
+  "tertiary",
   "quaternary",
   "positive",
   "negative",
