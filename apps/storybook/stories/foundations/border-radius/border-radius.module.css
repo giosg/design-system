@@ -1,17 +1,12 @@
 .container {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   height: 700px;
   background-color: var(--gds-sys-color-layer-canvas);
   border-radius: var(--gds-sys-radius-m);
   padding: 100px;
-}
-
-.row {
-  width: 100%;
-  display: flex;
   gap: 40px;
 }
 
@@ -26,7 +21,7 @@
 }
 
 .item {
-  background-color: var(--gds-sys-color-layer-default);
+  background-color: var(--gds-sys-color-layer-stronger);
   width: 150px;
   height: 150px;
 }
