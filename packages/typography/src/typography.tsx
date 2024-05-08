@@ -48,7 +48,7 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => {
 
   return (
     <label
-      className={cx(styles.typography, styles.label, styles.flex, className)}
+      className={cx(styles.typography, styles.label, "gds-flex", className)}
       style={
         {
           "--gds-text-color": `var(--gds-sys-color-text-${color})`,
