@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  gap: 100px;
+}
+
+.section {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-bottom: 2px solid var(--gds-sys-color-border-default);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  align-self: start;
+  font: var(--gds-sys-font-default-body-m-bold);
+}
+
+.label {
+  min-width: 200px;
+}
+
+.text {
+  width: 300px;
+}
+
+.textColor {
+  width: 300px;
+}
+
+.description {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-right: 1px solid var(--gds-sys-color-border-default);
+  width: 320px;
+}
+
+.textColorsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.colorfulBox {
+  width: 36px;
+  height: 36px;
+  background-color: var(--gds-sys-color-layer-soft);
+  border: 3px solid var(--gds-sys-color-border-active);
+  border-radius: var(--gds-sys-radius-xs);
+}

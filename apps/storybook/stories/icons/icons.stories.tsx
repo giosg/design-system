@@ -5,10 +5,6 @@ import styles from "./icons.module.css";
 const meta: Meta = {
   title: "Icons/List",
   argTypes: {
-    theme: {
-      control: "select",
-      options: ["light", "dark"],
-    },
     showNames: {
       control: { type: "boolean", default: true },
     },
@@ -51,7 +47,6 @@ type Story = StoryObj<{
   width: number | undefined;
   height: number | undefined;
   showNames: boolean;
-  theme: "light" | "dark" | undefined;
 }>;
 
 type Keys = keyof typeof Icons;
@@ -66,10 +61,9 @@ export const List: Story = {
     accentColor: undefined,
     width: undefined,
     height: undefined,
-    theme: undefined,
   },
   render: (args) => {
-    const { mainColor, accentColor, altColor, height, width, showNames, theme } = args;
+    const { mainColor, accentColor, altColor, height, width, showNames } = args;
 
     let props = {};
 
@@ -87,7 +81,7 @@ export const List: Story = {
     } as React.CSSProperties;
 
     return (
-      <div className={styles.container} data-testid="container" data-theme={theme} style={inline}>
+      <div className={styles.container} data-testid="container" style={inline}>
         {ComponentArray.map((Icon, index) => (
           <div className={styles.iconWrapper} key={index}>
             <Icon {...props} />

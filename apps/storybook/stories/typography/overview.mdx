@@ -1,0 +1,155 @@
+import { Meta, Source, Canvas, Subtitle } from "@storybook/blocks";
+
+
+<Meta title="Typography/Overview" parameters={{ options: { order: ["Typography/Overview", "*"] } }} />
+
+# Typography
+
+The typography system is a set of styles for text elements that are used throughout the application. It includes a predefined set of components to use for any text elements. Our set contains Heading, Text, Label components.
+
+## Installation
+
+<Source code={`npm i @giosg/design-system-typography`} language="bash" dark />
+
+
+## `<Heading/>`
+
+The Heading component is used for titles and headings. It has a set of predefined sizes and weights.  By default the tag is a h1 element. Font size - "m" (16px) and color - "default".
+
+### Usage
+
+<Source code={`
+import { Heading } from "@giosg/design-system-typography";
+
+// default
+<Heading>Your title text</Heading>
+
+// with size
+<Heading size="xl">Your title text</Heading>
+
+// with color
+<Heading color="dim">Your title text</Heading>
+
+// with bolder
+<Heading bolder>Your title text</Heading>
+
+// as any h element
+<Heading as="h2">Your title text</Heading>
+`}  dark/>
+
+
+
+### Component API
+
+
+<Source code={`
+interface HeadingProps {
+  // set of available sizes for component. Default is "l"
+  size?: "3xl" | "2xl" | "xl" | "l" | "m";
+  // set of available colors for text component. Default is "default"
+  color?: TextColors;
+  // Makes text bolder. Default is false
+  bolder?: boolean;
+  // Set element type for component. Default is "h1"
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+}
+`}  dark/>
+
+
+## `<Text/>`
+
+The Text component is used for body text. It has a set of predefined sizes and weights. Should be used when you type regular text. By default the tag is a span element. if you need block level element you can use as prop.
+
+### Usage
+
+<Source code={`
+import { Text } from "@giosg/design-system-typography";
+
+// default
+<Text>Lorem ipsum</Text>
+
+// with size
+<Text size="xl">Lorem ipsum</Text>
+
+// with color
+<Text color="dim">Lorem ipsum</Text>
+
+// with bold
+<Text bold>Lorem ipsum</Text>
+
+// as p element
+<Text as="p">Lorem ipsum</Text>
+
+// as span element
+<Text as="span">Lorem ipsum</Text>
+
+// as div element
+<Text as="div">Lorem ipsum</Text>
+`}  dark/>
+
+
+### Component API
+
+<Source code={`
+interface TextProps {
+  // set of available sizes for component. Default is "s"
+  size?: "l" | "m" | "s" | "xs" | "2xs";
+  // set of available colors for text component. Default is "default"
+  color?: TextColors;
+  // Makes text bold. Default is false
+  bold?: boolean;
+  // Set element type for component. Default is "span"
+  as?: "span" | "p" | "div"
+}
+`}  dark/>
+
+
+## `<Label/>`
+
+The Label component is used for labels. It has a set of predefined sizes and weights. Should be used when you type labels. Label element is a flex container so its better to wrap your interactive element into it. 
+
+### Usage
+
+<Source code={`
+import { Label } from "@giosg/design-system-typography";
+
+// default
+<Label>Your label text</Label>
+
+// with size
+<Label size="l">Your label text</Label>
+
+// with color
+<Label color="dim">Your label text</Label>
+
+// with interactive element inside
+<Label size="l" color="dim">
+  Your label text
+  <input type="text" />
+</Label>
+`}  dark/>
+
+### Component API
+
+<Source code={`
+interface LabelProps {
+  // set of available sizes for component. Default is "s"
+  size?: "m" | "s" | "xs" | "2xs";
+  // set of available colors for text component. Default is "default"
+  color?: TextColors;
+}
+
+// Component implements Flex interface so it supports all of the properties from it
+export interface Flex {
+  grow?: number;
+  shrink?: number;
+  basis?: string;
+  direction?: "row" | "column" | "row-reverse" | "column-reverse";
+  align?: "start" | "center" | "end" | "baseline" | "stretch";
+  justify?: "start" | "center" | "end" | "between" | "around" | "evenly";
+  wrap?: "nowrap" | "wrap" | "wrap-reverse";
+  gap?: FlexSpacing;
+}
+`}  dark/>
+
+`;

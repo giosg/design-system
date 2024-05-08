@@ -33,7 +33,7 @@ export function VariableTooltip(props: VariableTooltipProps): JSX.Element {
       <Toast description="Value copied to the clipboard" open={tooltipOpen} setOpen={setTooltipOpen} />
       <Tooltip.Root delayDuration={0}>
         <Tooltip.Trigger asChild onClick={onTooltipClick}>
-          {children}
+          <div>{children}</div>
         </Tooltip.Trigger>
         <Tooltip.Portal>
           <Tooltip.Content className={styles.tooltip} sideOffset={5}>

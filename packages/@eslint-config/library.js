@@ -29,4 +29,15 @@ module.exports = {
     },
   },
   ignorePatterns: ["node_modules/", "dist/"],
+  // add rules configurations here
+  rules: {
+    "import/no-default-export": "off",
+    "prefer-named-capture-group": "off",
+    "unicorn/filename-case": [
+      "warn",
+      {
+        case: "camelCase",
+      },
+    ],
+  },
 };

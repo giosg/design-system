@@ -1,0 +1,42 @@
+.typography {
+  --gds-text-color: var(--gds-sys-color-text-default);
+  color: var(--gds-text-color);
+}
+
+.label {
+  --gds-label-font: var(--gds-sys-font-default-label-m-semibold);
+  font: var(--gds-label-font);
+}
+
+.text {
+  --gds-text-font: var(--gds-sys-font-default-body-m-regular);
+  font: var(--gds-text-font);
+}
+
+.heading {
+  --gds-heading-font: var(--gds-sys-font-default-title-m-bold);
+  font: var(--gds-heading-font);
+}
+
+.flex {
+  display: flex;
+
+  /* variables */
+  --gds-flex-grow: 0;
+  --gds-flex-shrink: 1;
+  --gds-flex-basis: auto;
+  --gds-flex-direction: row;
+  --gds-flex-align: center;
+  --gds-flex-justify: flex-start;
+  --gds-flex-wrap: nowrap;
+  --gds-flex-gap: var(--gds-sys-space-xs);
+
+  /* values */
+  flex-grow: var(--gds-flex-grow);
+  flex-shrink: var(--gds-flex-shrink);
+  flex-basis: var(--gds-flex-basis);
+  flex-direction: var(--gds-flex-direction);
+  align-items: var(--gds-flex-align);
+  justify-content: var(--gds-flex-justify);
+  gap: var(--gds-flex-gap);
+}

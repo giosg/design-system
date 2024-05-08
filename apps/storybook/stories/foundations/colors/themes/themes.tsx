@@ -5,14 +5,14 @@ import { TOKENS } from "./tokens";
 import styles from "./themes.module.css";
 
 export const Themes: Story = {
-  render: () => {
+  render: (_, { globals }) => {
     return (
-      <div className={styles.themes}>
-        <ThemeCanvas data-testid="light-theme">
-          <h1 className={styles.themeHeader}>Light Theme</h1>
-        </ThemeCanvas>
-        <ThemeCanvas data-testid="dark-theme" data-theme="dark">
-          <h1 className={styles.themeHeader}>Dark Theme</h1>
+      <div className={styles.themes} data-theme={globals.theme}>
+        <ThemeCanvas>
+          <h1 className={styles.themeHeader}>
+            {globals.theme === "dark" && "🌙 Dark Theme"}
+            {globals.theme === "light" && "☀️ Light Theme"}
+          </h1>
         </ThemeCanvas>
       </div>
     );
@@ -24,7 +24,7 @@ function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
   return (
     <div {...restProps}>
       {children}
-      <div className={styles.container}>
+      <div data-testid={"container"} className={styles.container}>
         {TOKENS.map(({ token, groups }, index) => (
           <div className={styles.column} key={`${token}-${index}`}>
             {groups.map(({ label, modificators }) => (

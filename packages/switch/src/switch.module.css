@@ -9,18 +9,24 @@
 
   &:hover {
     background-color: var(--gds-sys-color-icon-default);
+    cursor: pointer;
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid var(--gds-sys-color-border-focused);
     outline-offset: 2px;
   }
 
   &[data-disabled] {
+    cursor: not-allowed;
     background-color: var(--gds-sys-color-icon-disabled);
   }
 
   &[data-state="checked"] {
+    background-color: var(--gds-sys-color-icon-active);
+  }
+
+  &[data-state="checked"]:hover {
     background-color: var(--gds-sys-color-icon-hover);
   }
 }
