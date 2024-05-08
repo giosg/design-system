@@ -24,7 +24,7 @@ function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
   return (
     <div {...restProps}>
       {children}
-      <div data-testid={"container"} className={styles.container}>
+      <div className={styles.container} data-testid="container">
         {TOKENS.map(({ token, groups }, index) => (
           <div className={styles.column} key={`${token}-${index}`}>
             {groups.map(({ label, modificators }) => (
