@@ -12,22 +12,22 @@ export const TOKENS: Token[] = [
   {
     token: "text",
     groups: [
-      { label: "Text", modificators: ["default", "dim", "inverted", "onLight", "onDark", "link"] },
+      { label: "Text", modificators: ["default", "dim", "inverted", "onLight", "onDark"] },
       {
-        label: "Text/state",
-        modificators: ["disabled", "focused"],
-      },
-      {
-        label: "Text/primary",
-        modificators: ["primary.default"],
-      },
-      {
-        label: "Text/primary/state",
-        modificators: ["primary.hover", "primary.pressed", "primary.active", "primary.hover-active"],
+        label: "Text/interactive",
+        modificators: [
+          "interactive.default",
+          "interactive.hover",
+          "interactive.pressed",
+          "interactive.active",
+          "interactive.active-hover",
+          "interactive.disabled",
+          "interactive.focused",
+        ],
       },
       {
         label: "Text/brand",
-        modificators: ["secondary.default", "tertiary.default", "quaternary.default"],
+        modificators: ["primary.default", "secondary.default", "tertiary.default", "quaternary.default"],
       },
       {
         label: "Text/status",
@@ -38,22 +38,22 @@ export const TOKENS: Token[] = [
   {
     token: "icon",
     groups: [
-      { label: "Icon", modificators: ["default", "dim", "inverted", "onLight", "onDark", "link"] },
+      { label: "Icon", modificators: ["default", "dim", "inverted", "onLight", "onDark"] },
       {
-        label: "Icon/state",
-        modificators: ["disabled", "focused"],
-      },
-      {
-        label: "Icon/primary",
-        modificators: ["primary.default"],
-      },
-      {
-        label: "Icon/primary/state",
-        modificators: ["primary.hover", "primary.pressed", "primary.active", "primary.hover-active"],
+        label: "Icon/interactive",
+        modificators: [
+          "interactive.default",
+          "interactive.hover",
+          "interactive.pressed",
+          "interactive.active",
+          "interactive.active-hover",
+          "interactive.disabled",
+          "interactive.focused",
+        ],
       },
       {
         label: "Icon/brand",
-        modificators: ["secondary.default", "tertiary.default", "quaternary.default"],
+        modificators: ["primary.default", "secondary.default", "tertiary.default", "quaternary.default"],
       },
       {
         label: "Icon/status",
@@ -64,19 +64,24 @@ export const TOKENS: Token[] = [
   {
     token: "border",
     groups: [
-      { label: "Border", modificators: ["default", "dim", "inverted", "onLight", "onDark", "link", "transparent"] },
-      { label: "Border/state", modificators: ["disabled", "focused"] },
+      { label: "Border", modificators: ["default", "dim", "inverted", "onLight", "onDark", "transparent"] },
       {
-        label: "Border/primary",
-        modificators: ["primary.default"],
-      },
-      {
-        label: "Border/primary/state",
-        modificators: ["primary.dim", "primary.hover", "primary.pressed", "primary.active", "primary.hover-active"],
+        label: "Border/interactive",
+        modificators: [
+          "interactive.default",
+          "interactive.hover",
+          "interactive.pressed",
+          "interactive.active",
+          "interactive.active-hover",
+          "interactive.disabled",
+          "interactive.focused",
+        ],
       },
       {
         label: "Border/brand",
         modificators: [
+          "primary.default",
+          "primary.dim",
           "secondary.default",
           "secondary.dim",
           "tertiary.default",
@@ -96,11 +101,31 @@ export const TOKENS: Token[] = [
     groups: [
       {
         label: "Layer",
-        modificators: ["default", "softest", "softer", "soft", "mildest", "stronger", "inverted", "canvas", "viewport"],
+        modificators: [
+          "default",
+          "softest",
+          "softer",
+          "soft",
+          "mildest",
+          "stronger",
+          "inverted",
+          "canvas",
+          "viewport",
+          "hover",
+          "pressed",
+        ],
       },
       {
-        label: "Layer/state",
-        modificators: ["hover", "pressed", "disabled", "focused"],
+        label: "Layer/interactive",
+        modificators: [
+          "interactive.default",
+          "interactive.hover",
+          "interactive.pressed",
+          "interactive.active",
+          "interactive.active-hover",
+          "interactive.disabled",
+          "interactive.focused",
+        ],
       },
       {
         label: "Layer/primary",
@@ -111,16 +136,6 @@ export const TOKENS: Token[] = [
           "primary.soft",
           "primary.stronger",
           "primary.extreme",
-        ],
-      },
-      {
-        label: "Layer/state",
-        modificators: [
-          "primary.hover",
-          "primary.pressed",
-          "primary.selected",
-          "primary.active",
-          "primary.hover-active",
         ],
       },
       {
@@ -203,10 +218,6 @@ export const TOKENS: Token[] = [
         label: "Chart/cherry",
         modificators: ["cherry.node", "cherry.label", "cherry.hover", "cherry.flow"],
       },
-      {
-        label: "Chart/mint",
-        modificators: ["mint.node", "mint.label", "mint.hover", "mint.flow"],
-      },
     ],
   },
   {
@@ -223,6 +234,10 @@ export const TOKENS: Token[] = [
       {
         label: "Chart/goal",
         modificators: ["goal.node", "goal.label", "goal.pill", "goal.border"],
+      },
+      {
+        label: "Chart/mint",
+        modificators: ["mint.node", "mint.label", "mint.hover", "mint.flow"],
       },
     ],
   },
