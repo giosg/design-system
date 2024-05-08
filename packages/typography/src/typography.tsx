@@ -92,7 +92,6 @@ export const Text = React.forwardRef<TextElement, TextProps>((props, ref) => {
     <Slot
       data-size={size}
       data-color={color}
-      {...rest}
       ref={ref}
       className={cx(styles.typography, styles.text, className)}
       style={
@@ -102,6 +101,7 @@ export const Text = React.forwardRef<TextElement, TextProps>((props, ref) => {
           ...style,
         } as React.CSSProperties
       }
+      {...rest}
     >
       <Tag>{children}</Tag>
     </Slot>
@@ -138,7 +138,6 @@ export const Heading = React.forwardRef<HeadingElement, HeadingProps>((props, re
     <Slot
       data-size={size}
       data-color={color}
-      {...rest}
       ref={ref}
       className={cx(styles.typography, styles.heading, className)}
       style={
@@ -148,6 +147,7 @@ export const Heading = React.forwardRef<HeadingElement, HeadingProps>((props, re
           ...style,
         } as React.CSSProperties
       }
+      {...rest}
     >
       <Tag>{children}</Tag>
     </Slot>
