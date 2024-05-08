@@ -2316,15 +2316,19 @@
                         "value": "{ref.color.solid.grey.900}",
                         "type": "color"
                     },
-                    "disabled": {
-                        "value": "{ref.color.solid.grey.600}",
-                        "type": "color"
-                    },
-                    "focused": {
-                        "value": "{ref.color.solid.purple.200}",
-                        "type": "color"
-                    },
-                    "primary": {
+                    "interactive": {
+                        "default": {
+                            "value": "{ref.color.solid.purple.400}",
+                            "type": "color"
+                        },
+                        "hover": {
+                            "value": "{ref.color.solid.purple.300}",
+                            "type": "color"
+                        },
+                        "pressed": {
+                            "value": "{ref.color.solid.purple.500}",
+                            "type": "color"
+                        },
                         "selected": {
                             "value": "{ref.color.solid.grey.700}",
                             "type": "color"
@@ -2333,8 +2337,22 @@
                             "value": "{ref.color.solid.purple.400}",
                             "type": "color"
                         },
-                        "hover-active": {
+                        "active-hover": {
                             "value": "{ref.color.solid.purple.300}",
+                            "type": "color"
+                        },
+                        "disabled": {
+                            "value": "{ref.color.solid.grey.600}",
+                            "type": "color"
+                        },
+                        "focused": {
+                            "value": "{ref.color.solid.purple.200}",
+                            "type": "color"
+                        }
+                    },
+                    "primary": {
+                        "default": {
+                            "value": "{ref.color.solid.purple.400}",
                             "type": "color"
                         },
                         "softest": {
@@ -2349,24 +2367,12 @@
                             "value": "{ref.color.solid.purple.700}",
                             "type": "color"
                         },
-                        "default": {
-                            "value": "{ref.color.solid.purple.400}",
-                            "type": "color"
-                        },
                         "stronger": {
                             "value": "{ref.color.solid.purple.200}",
                             "type": "color"
                         },
                         "extreme": {
                             "value": "{ref.color.solid.purple.100}",
-                            "type": "color"
-                        },
-                        "hover": {
-                            "value": "{ref.color.solid.purple.300}",
-                            "type": "color"
-                        },
-                        "pressed": {
-                            "value": "{ref.color.solid.purple.500}",
                             "type": "color"
                         }
                     },
@@ -2556,19 +2562,11 @@
                         "value": "{ref.color.solid.basics.white}",
                         "type": "color"
                     },
-                    "link": {
-                        "value": "{ref.color.solid.purple.300}",
-                        "type": "color"
-                    },
-                    "disabled": {
-                        "value": "{ref.color.alpha.white.20}",
-                        "type": "color"
-                    },
-                    "focused": {
-                        "value": "{ref.color.solid.purple.200}",
-                        "type": "color"
-                    },
-                    "primary": {
+                    "interactive": {
+                        "default": {
+                            "value": "{ref.color.solid.purple.500}",
+                            "type": "color"
+                        },
                         "hover": {
                             "value": "{ref.color.solid.purple.200}",
                             "type": "color"
@@ -2581,10 +2579,20 @@
                             "value": "{ref.color.solid.purple.300}",
                             "type": "color"
                         },
-                        "hover-active": {
+                        "active-hover": {
                             "value": "{ref.color.solid.purple.400}",
                             "type": "color"
                         },
+                        "disabled": {
+                            "value": "{ref.color.alpha.white.20}",
+                            "type": "color"
+                        },
+                        "focused": {
+                            "value": "{ref.color.solid.purple.200}",
+                            "type": "color"
+                        }
+                    },
+                    "primary": {
                         "default": {
                             "value": "{ref.color.solid.purple.500}",
                             "type": "color"
@@ -2654,19 +2662,11 @@
                         "value": "{ref.color.solid.basics.white}",
                         "type": "color"
                     },
-                    "link": {
-                        "value": "{ref.color.solid.purple.300}",
-                        "type": "color"
-                    },
-                    "disabled": {
-                        "value": "{ref.color.alpha.white.20}",
-                        "type": "color"
-                    },
-                    "focused": {
-                        "value": "{ref.color.solid.purple.200}",
-                        "type": "color"
-                    },
-                    "primary": {
+                    "interactive": {
+                        "default": {
+                            "value": "{ref.color.solid.purple.500}",
+                            "type": "color"
+                        },
                         "hover": {
                             "value": "{ref.color.solid.purple.200}",
                             "type": "color"
@@ -2679,10 +2679,20 @@
                             "value": "{ref.color.solid.purple.300}",
                             "type": "color"
                         },
-                        "hover-active": {
+                        "active-hover": {
                             "value": "{ref.color.solid.purple.400}",
                             "type": "color"
                         },
+                        "disabled": {
+                            "value": "{ref.color.alpha.white.20}",
+                            "type": "color"
+                        },
+                        "focused": {
+                            "value": "{ref.color.solid.purple.200}",
+                            "type": "color"
+                        }
+                    },
+                    "primary": {
                         "default": {
                             "value": "{ref.color.solid.purple.500}",
                             "type": "color"
@@ -2752,23 +2762,15 @@
                         "value": "{ref.color.solid.basics.white}",
                         "type": "color"
                     },
-                    "link": {
-                        "value": "{ref.color.solid.purple.400}",
-                        "type": "color"
-                    },
-                    "disabled": {
-                        "value": "{ref.color.alpha.white.20}",
-                        "type": "color"
-                    },
-                    "focused": {
-                        "value": "{ref.color.solid.purple.200}",
-                        "type": "color"
-                    },
                     "transparent": {
                         "value": "{ref.color.alpha.transparent}",
                         "type": "color"
                     },
-                    "primary": {
+                    "interactive": {
+                        "default": {
+                            "value": "{ref.color.solid.purple.500}",
+                            "type": "color"
+                        },
                         "hover": {
                             "value": "{ref.color.solid.purple.200}",
                             "type": "color"
@@ -2781,12 +2783,22 @@
                             "value": "{ref.color.solid.purple.300}",
                             "type": "color"
                         },
-                        "hover-active": {
+                        "active-hover": {
                             "value": "{ref.color.solid.purple.400}",
                             "type": "color"
                         },
+                        "disabled": {
+                            "value": "{ref.color.alpha.white.20}",
+                            "type": "color"
+                        },
+                        "focused": {
+                            "value": "{ref.color.solid.purple.200}",
+                            "type": "color"
+                        }
+                    },
+                    "primary": {
                         "default": {
-                            "value": "{ref.color.solid.purple.500}",
+                            "value": "{ref.color.solid.purple.400}",
                             "type": "color"
                         },
                         "dim": {
@@ -3055,11 +3067,9 @@
                 "sys.color.layer.canvas": "S:465b3bfeece60ed415a31ba11a59c2224fcc1d42,",
                 "sys.color.layer.viewport": "S:f5f9b0cd5d7c2920d3823a9f0ca6d66b7b6e5d24,",
                 "sys.color.layer.hover": "S:cb9f57af02376cd27c720260781237453d7ac8e3,",
-                "sys.color.layer.disabled": "S:15a30ce97b3133341420a7337f8cd23c2b8f9889,",
                 "sys.color.layer.primary.softest": "S:808de45947cc6d3d297817de9063bba73be51b55,",
                 "sys.color.layer.primary.softer": "S:4fe1759a19e977e40cd14c54bb9d8fdc239e9f45,",
                 "sys.color.layer.primary.soft": "S:fc6d5141af84e5c044bb5ade589046ad54dba80f,",
-                "sys.color.layer.primary.default": "S:309083c72e4f9a4ab68e49654ca1177ee615136b,",
                 "sys.color.layer.primary.stronger": "S:4cb1c8a47814baea67e0ca46aafe3e084ec53fcf,",
                 "sys.color.layer.primary.extreme": "S:34198f9e64aaa9891b7882d27deb704870bdcb64,",
                 "sys.color.layer.secondary.default": "S:0822718952e89e5bfddae80cad09831bd24725d2,",
@@ -3092,25 +3102,16 @@
                 "sys.color.text.inverted": "S:e1775bcc2ad76845250944b1858013d11c62a007,",
                 "sys.color.text.onLight": "S:3ac8f0155e90e9d104039ee2c0d3eb01fb8967d3,",
                 "sys.color.text.onDark": "S:020ce0290a5ae5a9bed028a4997e2e4c9a80ff22,",
-                "sys.color.text.link": "S:fdd3b0a8aa2e4eefdd9bf12656eed89ab194bfd5,",
-                "sys.color.text.disabled": "S:27e578104515ede6287671874362c9387ce5588b,",
                 "sys.color.icon.default": "S:e330b08b2514f4ecae3bc7fd2d05a1b6a5e10a5e,",
                 "sys.color.icon.dim": "S:cbf7e9593414be57bd225044c8646ba806649a49,",
                 "sys.color.icon.inverted": "S:60ebf6b7fb3fce974aca86f131a89edaeff62102,",
                 "sys.color.icon.onLight": "S:d4acd77e2e957d3c1bcb274d6fad7ef085d377d4,",
                 "sys.color.icon.onDark": "S:a52c811b2deb914e037ea4733509d7b01a186414,",
-                "sys.color.icon.link": "S:0b9ecdd43411934ea155149604d33e0ffcf6b9af,",
-                "sys.color.icon.disabled": "S:74cda0cfb162cc084799ef6cb563711790def77e,",
                 "sys.color.border.default": "S:5ab9cb07b0b5e738524fca15ba4205d7e0989cfa,",
                 "sys.color.border.dim": "S:01cf73854fdbb4f35518f13fa93f6bc7dd46cb9a,",
                 "sys.color.border.inverted": "S:c578443e4db0e92da10ace2486df653c22b7857f,",
                 "sys.color.border.onLight": "S:348054b2d327ab4c9e90619de56d962808f92b30,",
                 "sys.color.border.onDark": "S:a9f51ddfa2463f2d598133ab664a1bf49b11d916,",
-                "sys.color.border.link": "S:5ccff703577e4099a5d49126035046dd48a39a30,",
-                "sys.color.border.disabled": "S:2f3b4ae90ac7f55ed12d132e88b91843ac492e1a,",
-                "sys.color.border.focused": "S:257745f23a3b54f8e989a36c57572d3168f12bf6,",
-                "sys.color.border.primary.default": "S:dbe7dca510451cf1b7b88885965e9fcb36f796df,",
-                "sys.color.border.primary.dim": "S:f693990e23e2fca6784e3e7e89c9226cc816f91b,",
                 "sys.color.border.secondary.default": "S:4504bfdf8c6369c9c8af0b58d696d20d33806c51,",
                 "sys.color.border.secondary.dim": "S:ee7e014838f553899875aaac5fd99bf03f244891,",
                 "sys.color.border.tertiary.default": "S:7e3b926ea39a6151f6b59e119cb9dd3ea64f783e,",
@@ -3139,19 +3140,6 @@
                 "sys.color.chart.plum.hover": "S:f8b5fcc6be257c750c01564763a78a7944a9993c,",
                 "sys.color.chart.plum.selected": "S:c7a0d41cd1a66832403d162f5c0d2c82d8e88be5,",
                 "sys.color.layer.alpha.overlay": "S:1e06daf4fd9311a4be0f4d30d6db2ccf1ee72617,",
-                "sys.color.text.primary.default": "S:fee2d2562c159cf330bfc1d377077a15c8e0b68e,",
-                "sys.color.text.primary.hover": "S:65573ca964b6f372b60b904d546a9c4d41380e82,",
-                "sys.color.text.primary.pressed": "S:440a5fcca6161afa63fa37de78778db6aa1b2486,",
-                "sys.color.text.primary.active": "S:1365c4a18d2a2b752544739816336e3bb321c988,",
-                "sys.color.icon.primary.default": "S:f5663b09c68d12a61dfa333c4b15c257b2623a78,",
-                "sys.color.icon.primary.hover": "S:6cab4da5b6c5ba8c918a61bdf07fdbb496d374b2,",
-                "sys.color.icon.primary.pressed": "S:3ebbbe293d5261d21bc4ecd2596c99d7e3cdb537,",
-                "sys.color.icon.primary.active": "S:ec587195512d243822bf5f35d0fbd58a52a62c2c,",
-                "sys.color.border.primary.hover": "S:6506ce1eb0fcf6501e16854cad6b0c83e73e4262,",
-                "sys.color.border.primary.pressed": "S:ee422e0072d196926800c83e79db75d3ccf5851e,",
-                "sys.color.border.primary.active": "S:9f77d43611ec70e1b1f18061efa045efa68b67ad,",
-                "sys.color.layer.primary.hover": "S:ee876252bf2a0136d86493459d76cdc5923da02c,",
-                "sys.color.layer.primary.pressed": "S:7d2dc3b21cc98d60cd624d7288962d1d5ea0bb5c,",
                 "sys.color.text.secondary.default": "S:476d34a52448e6fd2e8faf45de30d98f90ae9e52,",
                 "sys.color.text.tertiary.default": "S:d1e9efa8ebbe696c013bbe67803a165dc9e0f9a5,",
                 "sys.color.text.quaternary.default": "S:fcc77c8101d379fba089e7f63967ab56660918f2,",
@@ -3170,9 +3158,30 @@
                 "sys.color.border.positiv.default": "S:a75211d5e26956f0ed62ef235f1cb26b728584f6,",
                 "sys.color.border.inf.default": "S:76bf3b8b9b851a4f2d57b8e0ac067d173987b0a6,",
                 "sys.color.border.warnin.default": "S:0224a89769e9570f958067fefa10d563df54d459,",
-                "sys.color.layer.primary.active": "S:d5140ca76823f128fdb9c53df1c15589a8f792ba,",
-                "sys.color.layer.primary.selected": "S:8b9f192abb7fdfb5c1d998b3c4440eb313e140e8,",
-                "sys.color.layer.primary.hover-active": "S:acc269f80007b1b114c2c5fc77d8f04cfab59ce5,"
+                "sys.color.layer.interactive.default": "S:309083c72e4f9a4ab68e49654ca1177ee615136b,",
+                "sys.color.layer.interactive.selected": "S:8b9f192abb7fdfb5c1d998b3c4440eb313e140e8,",
+                "sys.color.layer.interactive.active": "S:d5140ca76823f128fdb9c53df1c15589a8f792ba,",
+                "sys.color.layer.interactive.hover": "S:ee876252bf2a0136d86493459d76cdc5923da02c,",
+                "sys.color.layer.interactive.pressed": "S:7d2dc3b21cc98d60cd624d7288962d1d5ea0bb5c,",
+                "sys.color.layer.interactive.disabled": "S:15a30ce97b3133341420a7337f8cd23c2b8f9889,",
+                "sys.color.border.interactive.default": "S:dbe7dca510451cf1b7b88885965e9fcb36f796df,",
+                "sys.color.border.interactive.hover": "S:6506ce1eb0fcf6501e16854cad6b0c83e73e4262,",
+                "sys.color.border.interactive.pressed": "S:ee422e0072d196926800c83e79db75d3ccf5851e,",
+                "sys.color.border.interactive.active": "S:9f77d43611ec70e1b1f18061efa045efa68b67ad,",
+                "sys.color.text.interactive.default": "S:fee2d2562c159cf330bfc1d377077a15c8e0b68e,",
+                "sys.color.text.interactive.hover": "S:65573ca964b6f372b60b904d546a9c4d41380e82,",
+                "sys.color.text.interactive.pressed": "S:440a5fcca6161afa63fa37de78778db6aa1b2486,",
+                "sys.color.text.interactive.active": "S:1365c4a18d2a2b752544739816336e3bb321c988,",
+                "sys.color.icon.interactive.default": "S:f5663b09c68d12a61dfa333c4b15c257b2623a78,",
+                "sys.color.icon.interactive.hover": "S:6cab4da5b6c5ba8c918a61bdf07fdbb496d374b2,",
+                "sys.color.icon.interactive.pressed": "S:3ebbbe293d5261d21bc4ecd2596c99d7e3cdb537,",
+                "sys.color.icon.interactive.active": "S:ec587195512d243822bf5f35d0fbd58a52a62c2c,",
+                "sys.color.text.interactive.disabled": "S:27e578104515ede6287671874362c9387ce5588b,",
+                "sys.color.icon.interactive.disabled": "S:74cda0cfb162cc084799ef6cb563711790def77e,",
+                "sys.color.border.interactive.focused": "S:257745f23a3b54f8e989a36c57572d3168f12bf6,",
+                "sys.color.border.interactive.disabled": "S:2f3b4ae90ac7f55ed12d132e88b91843ac492e1a,",
+                "sys.color.layer.interactive.active-hover": "S:acc269f80007b1b114c2c5fc77d8f04cfab59ce5,",
+                "sys.color.border.primary.dim": "S:f693990e23e2fca6784e3e7e89c9226cc816f91b,"
             },
             "selectedTokenSets": {
                 "Theme/Light": "enabled",
@@ -3193,19 +3202,11 @@
                 "sys.color.layer.viewport": "7a008028dfacf7f2a1c730d8aa701ccbfad5080d",
                 "sys.color.layer.hover": "d00bfd2caeb7a450760fa49a35f262fc73fe7ddc",
                 "sys.color.layer.pressed": "28c918be13ad4b8cdc93258d7f5bb3e89628ce5d",
-                "sys.color.layer.disabled": "131e85806c2222957e825d0a42470a08ebce91c0",
-                "sys.color.layer.focused": "3b4b1d2ebfdebb3ef7f4f176e933f50cd00dbf16",
-                "sys.color.layer.primary.default": "f0b5920018bd14d6f2b7abd424d6dfab02de37e1",
-                "sys.color.layer.primary.selected": "ae6823f513c5d49834735d4f692302264dcee252",
-                "sys.color.layer.primary.active": "5d1e33e480c032acc853a4e73120cc3159d35871",
-                "sys.color.layer.primary.hover-active": "41fc2f44987cb3da086d8d4e920ea5968734f98e",
                 "sys.color.layer.primary.softest": "dacbee41ea159ec5bcdeb0cdf14159c34b253936",
                 "sys.color.layer.primary.softer": "56b5f8d1778e256ea382bb9d98f731d8770c13e4",
                 "sys.color.layer.primary.soft": "8a4ac4a0fed3a1257e65a60eb37c299094a8b53c",
                 "sys.color.layer.primary.stronger": "a447cbd6ad8f537d9d32494df039b624d52aba73",
                 "sys.color.layer.primary.extreme": "01fdec2252b444361c22608b4b818b3c54d4c0a0",
-                "sys.color.layer.primary.hover": "a98e7e8c7636d3618525f06953ef19490e44b627",
-                "sys.color.layer.primary.pressed": "5274370a09cbc732a92e68555b982a20945e57e5",
                 "sys.color.layer.secondary.default": "5d751f74bc9862f1c52066328dc7f681b1ecb55b",
                 "sys.color.layer.secondary.dim": "f5d448920250905331d2c098bee85aada05f4479",
                 "sys.color.layer.tertiary.default": "e4fed57350e8a02f28c4f409ed41ee4bf2c3f08e",
@@ -3241,14 +3242,6 @@
                 "sys.color.text.inverted": "a9cd200d99a053e30ac3f15940b1c2743bf4dda8",
                 "sys.color.text.onLight": "61a4d501ac5b2aff42071ef37696d2420c31199b",
                 "sys.color.text.onDark": "47833c66f4aaaada6c9b65442457e3244fa25621",
-                "sys.color.text.link": "9962fd68c45515e422380b63611d67517d5f25dc",
-                "sys.color.text.disabled": "0dbc7e8e5e71a5b5c0c6a5b450c5a69f58bbbdf8",
-                "sys.color.text.focused": "b98581382d03885f2b2837d72c48ba2756f88385",
-                "sys.color.text.primary.default": "cd587445ae1f2e49dbf71c4f55077399e0c257d6",
-                "sys.color.text.primary.hover": "2bf2a120679adda20fc8ddf923c3688f78ae6fae",
-                "sys.color.text.primary.pressed": "0f11783d1e2fcb8d37ead16f3384c459ab931cc3",
-                "sys.color.text.primary.active": "302eb1d9ebb303bca6b10b0b6b7f8a64fcb8414b",
-                "sys.color.text.primary.hover-active": "994c69a295997f3204be2d1a0042d933f4ce913d",
                 "sys.color.text.secondary.default": "266966243b844a095219a29fbd41acc7af8319d3",
                 "sys.color.text.tertiary.default": "7ea346652a770a84d8aad3004c2d2247f3a96b25",
                 "sys.color.text.quaternary.default": "780218c8e9aa226409a13cd0833e0d6bc70fc28f",
@@ -3261,14 +3254,6 @@
                 "sys.color.icon.inverted": "0d0699bf431cc5bf6bab4a933d5054c8e81b60fc",
                 "sys.color.icon.onLight": "7fc91e0869ac027857a443d56950633770b0ca0e",
                 "sys.color.icon.onDark": "997de2a8701277fc4dbe59d194f16d69205f9af0",
-                "sys.color.icon.link": "804ab323360abf1866bd85c695ae55cf4f9b14d8",
-                "sys.color.icon.disabled": "86f760cfeeb976daf0264dff07a939561b463ae1",
-                "sys.color.icon.focused": "e783d845ba2f2bf2cf8b15aa6ad7c080e93c3378",
-                "sys.color.icon.primary.default": "ce3277aefe8fb611235627005b630fb8f0658baf",
-                "sys.color.icon.primary.hover": "ac48a34fca8fc3a6ad3b83cd2a1137bf5c9e1381",
-                "sys.color.icon.primary.pressed": "42222829b32a8f41ff66f107011f66d3c603f9ae",
-                "sys.color.icon.primary.active": "3ab114da91593694095d11c273436d2c87e9f68e",
-                "sys.color.icon.primary.hover-active": "01926403ce774dfa1c90732e980c390ae21265e6",
                 "sys.color.icon.secondary.default": "51c647c8f134b6209f78aec4dab17835a96fa483",
                 "sys.color.icon.tertiary.default": "382a336d2a25ecdc525dc88733bfcafb6d3f486c",
                 "sys.color.icon.quaternary.default": "ed803080e59eab373fe2d7ef59b68c9ad34bd13e",
@@ -3281,16 +3266,6 @@
                 "sys.color.border.inverted": "16167a59ac61cfcfb7865f44e3d8e2020515e6db",
                 "sys.color.border.onLight": "120288881975adac5abc126943e8522f7cf4ad17",
                 "sys.color.border.onDark": "253ccc27d861534e5faef6c2ba38d53c82197752",
-                "sys.color.border.link": "2430c4d79ecec7edcec278cef67d3c18f789bb2e",
-                "sys.color.border.disabled": "0cfff0b481ed4ec3636ca7219efca5c65c953400",
-                "sys.color.border.focused": "0b5bce01f775604eaaf5ac47711533b2d2964e6b",
-                "sys.color.border.transparent": "8825ab216200ce323f9f28a5c1c5f3a40ceee9ba",
-                "sys.color.border.primary.default": "d9055fd9bbd63b76ea7823060b69a6e867fbcd68",
-                "sys.color.border.primary.dim": "cd8942f9d13debef5a155b64842f2098c18f2a4d",
-                "sys.color.border.primary.hover": "cf919c5765280b1131a6e9a7d191ac77c2d92b19",
-                "sys.color.border.primary.pressed": "f268c14bd65524b6af3fed4fa8147927dd42e0ef",
-                "sys.color.border.primary.active": "17064132c814014498635252e3766eabb630843c",
-                "sys.color.border.primary.hover-active": "5f854c4e2615c26558b0bd4b68c5f9e0b911efe0",
                 "sys.color.border.secondary.default": "68cd5bfe3e0f7bc307e62711019f72ad178e2660",
                 "sys.color.border.secondary.dim": "c84477c31c6061a1d905a9da622ad42d02bff1a4",
                 "sys.color.border.tertiary.default": "ef5568ec53affeedb841081ca736840dadbe889e",
@@ -3331,7 +3306,38 @@
                 "sys.color.chart.plum.flow": "3f0c4e493e5a987a7b29bb72261a106a8bc6d2b3",
                 "sys.color.chart.goal.label": "6c7cfbbc302956da95342708202b43488246d710",
                 "sys.color.chart.goal.pill": "69ea50a3dfd6ce4696694c781ec9fa56fcac1389",
-                "sys.color.chart.goal.border": "c96b96c3fac04f7cabd6c5ea689e2360fd249c35"
+                "sys.color.chart.goal.border": "c96b96c3fac04f7cabd6c5ea689e2360fd249c35",
+                "sys.color.layer.interactive.default": "f0b5920018bd14d6f2b7abd424d6dfab02de37e1",
+                "sys.color.layer.interactive.selected": "ae6823f513c5d49834735d4f692302264dcee252",
+                "sys.color.layer.interactive.active": "5d1e33e480c032acc853a4e73120cc3159d35871",
+                "sys.color.layer.interactive.hover": "a98e7e8c7636d3618525f06953ef19490e44b627",
+                "sys.color.layer.interactive.pressed": "5274370a09cbc732a92e68555b982a20945e57e5",
+                "sys.color.layer.interactive.focused": "3b4b1d2ebfdebb3ef7f4f176e933f50cd00dbf16",
+                "sys.color.layer.interactive.disabled": "131e85806c2222957e825d0a42470a08ebce91c0",
+                "sys.color.border.interactive.default": "d9055fd9bbd63b76ea7823060b69a6e867fbcd68",
+                "sys.color.border.interactive.hover": "cf919c5765280b1131a6e9a7d191ac77c2d92b19",
+                "sys.color.border.interactive.pressed": "f268c14bd65524b6af3fed4fa8147927dd42e0ef",
+                "sys.color.border.interactive.active": "17064132c814014498635252e3766eabb630843c",
+                "sys.color.text.interactive.default": "cd587445ae1f2e49dbf71c4f55077399e0c257d6",
+                "sys.color.text.interactive.hover": "2bf2a120679adda20fc8ddf923c3688f78ae6fae",
+                "sys.color.text.interactive.pressed": "0f11783d1e2fcb8d37ead16f3384c459ab931cc3",
+                "sys.color.text.interactive.active": "302eb1d9ebb303bca6b10b0b6b7f8a64fcb8414b",
+                "sys.color.icon.interactive.default": "ce3277aefe8fb611235627005b630fb8f0658baf",
+                "sys.color.icon.interactive.hover": "ac48a34fca8fc3a6ad3b83cd2a1137bf5c9e1381",
+                "sys.color.icon.interactive.pressed": "42222829b32a8f41ff66f107011f66d3c603f9ae",
+                "sys.color.icon.interactive.active": "3ab114da91593694095d11c273436d2c87e9f68e",
+                "sys.color.text.interactive.disabled": "0dbc7e8e5e71a5b5c0c6a5b450c5a69f58bbbdf8",
+                "sys.color.text.interactive.focused": "b98581382d03885f2b2837d72c48ba2756f88385",
+                "sys.color.icon.interactive.disabled": "86f760cfeeb976daf0264dff07a939561b463ae1",
+                "sys.color.icon.interactive.focused": "e783d845ba2f2bf2cf8b15aa6ad7c080e93c3378",
+                "sys.color.border.interactive.focused": "0b5bce01f775604eaaf5ac47711533b2d2964e6b",
+                "sys.color.border.transparent": "8825ab216200ce323f9f28a5c1c5f3a40ceee9ba",
+                "sys.color.border.interactive.disabled": "0cfff0b481ed4ec3636ca7219efca5c65c953400",
+                "sys.color.text.interactive.active-hover": "994c69a295997f3204be2d1a0042d933f4ce913d",
+                "sys.color.icon.interactive.active-hover": "01926403ce774dfa1c90732e980c390ae21265e6",
+                "sys.color.border.interactive.active-hover": "5f854c4e2615c26558b0bd4b68c5f9e0b911efe0",
+                "sys.color.layer.interactive.active-hover": "41fc2f44987cb3da086d8d4e920ea5968734f98e",
+                "sys.color.border.primary.dim": "cd8942f9d13debef5a155b64842f2098c18f2a4d"
             },
             "group": "Theme"
         },
@@ -3350,11 +3356,9 @@
                 "sys.color.layer.viewport": "S:a32d5b7202833b9e6771dcfb4e498b3efa42cabb,",
                 "sys.color.layer.hover": "S:babcda4d2e3a1999d99287ad6490db6dbf1ca76c,",
                 "sys.color.layer.pressed": "S:4c2b5fc1c0a7d4e6f3f1178b933e0dfe0a23f68a,",
-                "sys.color.layer.disabled": "S:79c3480ee2a56476b2f15ea1e6b387c7941c3d92,",
                 "sys.color.layer.primary.softest": "S:edf6ec0bbd8a4b64511285227dedc7549fe49867,",
                 "sys.color.layer.primary.softer": "S:e5b17fbb5e372079a038d1d76a19d3e3d7bd1885,",
                 "sys.color.layer.primary.soft": "S:4e29ffd810ac8808ca6f00f9649246ccb0e4f661,",
-                "sys.color.layer.primary.default": "S:f6daeb35413b62073e81f73953441ca0f379d18b,",
                 "sys.color.layer.primary.stronger": "S:05c7742d535cf68e2d1dd8868c07ef9d8052cc9b,",
                 "sys.color.layer.primary.extreme": "S:91325599586406ace3f3ebf823e54a3974dfa9f0,",
                 "sys.color.layer.secondary.default": "S:d5b26c6f43c04a947e93bee9b8581f8105c82192,",
@@ -3387,25 +3391,16 @@
                 "sys.color.text.inverted": "S:144f5712206e83c5701cf6101711b67f7b82f772,",
                 "sys.color.text.onLight": "S:e89ab8e28665930c69ec7c5b69474818e263cfd5,",
                 "sys.color.text.onDark": "S:622c75e181b2978aaf9088200abcd5e74a5d64a8,",
-                "sys.color.text.link": "S:cd1b49f8cfe1ac2e6c75e386d78e55b75b437b7d,",
-                "sys.color.text.disabled": "S:021a9d91f0526b475e20db359deb569871bd2f1d,",
                 "sys.color.icon.default": "S:624fbfef7a57cb2fe8ab6270d6304c8fd384777f,",
                 "sys.color.icon.dim": "S:ed8672c515306c4b618e4717f2ea5c561361e543,",
                 "sys.color.icon.inverted": "S:0bf2b3d9d4e5275d8296255e4981d71e16a83620,",
                 "sys.color.icon.onLight": "S:1d40da6d7c96175d5caa075d6a477fdd08ef55b0,",
                 "sys.color.icon.onDark": "S:ac558ae80794a3193f65a5350deecfd2359f42fa,",
-                "sys.color.icon.link": "S:c62bda7264a1fa53f438ffb14fc905bbde2b346a,",
-                "sys.color.icon.disabled": "S:297585b68a02686356a7d8bfe57f3225d10dee51,",
                 "sys.color.border.default": "S:8cb1598982559baf96d7eafcc94cf3b1077bbbb3,",
                 "sys.color.border.dim": "S:10dc5641f9037a3c1f57d32231d87d28d6582233,",
                 "sys.color.border.inverted": "S:f01d328194a4ddc743d801dfe440a2eaacea696c,",
                 "sys.color.border.onLight": "S:d508c316db88a7d5844cbf45571b147d41f6d4c9,",
                 "sys.color.border.onDark": "S:748d511b1d1f98ccadf52fcf2277fd733baf6fc1,",
-                "sys.color.border.link": "S:5f7321df5ed3b29c12713bee75adadca2492713b,",
-                "sys.color.border.disabled": "S:fb6ae75c75ac5bf7de362204d050477c249d7e68,",
-                "sys.color.border.focused": "S:5715d6d329ef0ec9e709e29e94b5cda0495ac764,",
-                "sys.color.border.primary.default": "S:fdb733cbae65ca3ee46628c532ba08aa775f0b9d,",
-                "sys.color.border.primary.dim": "S:76a970bc955bae8025410a9b1229f2939e83c12c,",
                 "sys.color.border.secondary.default": "S:ca4b7fbbfb3cdeffd427e8608cb4dc83c38a9de7,",
                 "sys.color.border.secondary.dim": "S:dfbee75d6667e4a135fc3177e5087e25a6ff56e8,",
                 "sys.color.border.tertiary.default": "S:b36c98f8c011c11c59f928cdc0212122efd9217f,",
@@ -3434,19 +3429,6 @@
                 "sys.color.chart.plum.hover": "S:84fe37270dfa220b903b28a306728ae717827119,",
                 "sys.color.chart.plum.selected": "S:c622978b90cae900ada6aea50c12b5cb70c8d053,",
                 "sys.color.layer.alpha.overlay": "S:ffa86ccedc1ff29400dcd9bcb454d48f59acfbf2,",
-                "sys.color.text.primary.default": "S:0410c71687aba34b021db0f4172554d0f93f7f26,",
-                "sys.color.text.primary.hover": "S:a32c8198c4ebf575b1ca44efdf475617a8edb5d4,",
-                "sys.color.text.primary.pressed": "S:a14f7d01a36666e5102210e3a21deae54b9ecc24,",
-                "sys.color.text.primary.active": "S:6d3918671fc1f0fd817a7194b5b6062bf919dc54,",
-                "sys.color.icon.primary.default": "S:2185a24288e2bff34ea82293ab8e913ece829aab,",
-                "sys.color.icon.primary.hover": "S:c7f5ec9fcac23b4fca2dc00bab10f0f0e4c35442,",
-                "sys.color.icon.primary.pressed": "S:e6404d5bd1642b03128407129c780e32dee126e9,",
-                "sys.color.icon.primary.active": "S:e5824a03677f4d98eddb598df7a451303208af5c,",
-                "sys.color.border.primary.hover": "S:b662f1f0d332658e1beaf5c8b0bacc7571928324,",
-                "sys.color.border.primary.pressed": "S:d5a526c692c8b0d79aa17ee138d14d3ce8fa27f3,",
-                "sys.color.border.primary.active": "S:0d7cfac908ee89294b1c72c4d16e3631966c885f,",
-                "sys.color.layer.primary.hover": "S:7f9c94357e4693413d2469bfc4c320ef59d82be1,",
-                "sys.color.layer.primary.pressed": "S:ddcf15565d4c5136e0bd2ed296d2531b07f92331,",
                 "sys.color.text.secondary.default": "S:8beb03f9fbddb85d0a8df69ace0bbf66106f1a6f,",
                 "sys.color.text.tertiary.default": "S:2f4f4bbab91ce0c24b7cd2ebc1f0fb403c805a56,",
                 "sys.color.text.quaternary.default": "S:444c371ebfff87cc856c0e0b11f4f3525a3f945b,",
@@ -3465,9 +3447,30 @@
                 "sys.color.border.positiv.default": "S:3b9e818d78dd26acea8f86c037abe6b85ff2a4ec,",
                 "sys.color.border.inf.default": "S:bcae303ab92d8eedee043d86603bac349d365583,",
                 "sys.color.border.warnin.default": "S:be8cb62dde353a9ea543578005dbff078af13605,",
-                "sys.color.layer.primary.active": "S:78816b608a5548cda1993b9d641c94290b79d878,",
-                "sys.color.layer.primary.selected": "S:99e64ef63044eb0b837b0e9bc09a2bc575365e12,",
-                "sys.color.layer.primary.hover-active": "S:bc2b477edbe46fc46d56d78b469afd3adc8d27d6,"
+                "sys.color.layer.interactive.default": "S:f6daeb35413b62073e81f73953441ca0f379d18b,",
+                "sys.color.layer.interactive.selected": "S:99e64ef63044eb0b837b0e9bc09a2bc575365e12,",
+                "sys.color.layer.interactive.active": "S:78816b608a5548cda1993b9d641c94290b79d878,",
+                "sys.color.layer.interactive.hover": "S:7f9c94357e4693413d2469bfc4c320ef59d82be1,",
+                "sys.color.layer.interactive.pressed": "S:ddcf15565d4c5136e0bd2ed296d2531b07f92331,",
+                "sys.color.layer.interactive.disabled": "S:79c3480ee2a56476b2f15ea1e6b387c7941c3d92,",
+                "sys.color.border.interactive.default": "S:fdb733cbae65ca3ee46628c532ba08aa775f0b9d,",
+                "sys.color.border.interactive.hover": "S:b662f1f0d332658e1beaf5c8b0bacc7571928324,",
+                "sys.color.border.interactive.pressed": "S:d5a526c692c8b0d79aa17ee138d14d3ce8fa27f3,",
+                "sys.color.border.interactive.active": "S:0d7cfac908ee89294b1c72c4d16e3631966c885f,",
+                "sys.color.text.interactive.default": "S:0410c71687aba34b021db0f4172554d0f93f7f26,",
+                "sys.color.text.interactive.hover": "S:a32c8198c4ebf575b1ca44efdf475617a8edb5d4,",
+                "sys.color.text.interactive.pressed": "S:a14f7d01a36666e5102210e3a21deae54b9ecc24,",
+                "sys.color.text.interactive.active": "S:6d3918671fc1f0fd817a7194b5b6062bf919dc54,",
+                "sys.color.icon.interactive.default": "S:2185a24288e2bff34ea82293ab8e913ece829aab,",
+                "sys.color.icon.interactive.hover": "S:c7f5ec9fcac23b4fca2dc00bab10f0f0e4c35442,",
+                "sys.color.icon.interactive.pressed": "S:e6404d5bd1642b03128407129c780e32dee126e9,",
+                "sys.color.icon.interactive.active": "S:e5824a03677f4d98eddb598df7a451303208af5c,",
+                "sys.color.text.interactive.disabled": "S:021a9d91f0526b475e20db359deb569871bd2f1d,",
+                "sys.color.icon.interactive.disabled": "S:297585b68a02686356a7d8bfe57f3225d10dee51,",
+                "sys.color.border.interactive.focused": "S:5715d6d329ef0ec9e709e29e94b5cda0495ac764,",
+                "sys.color.border.interactive.disabled": "S:fb6ae75c75ac5bf7de362204d050477c249d7e68,",
+                "sys.color.layer.interactive.active-hover": "S:bc2b477edbe46fc46d56d78b469afd3adc8d27d6,",
+                "sys.color.border.primary.dim": "S:76a970bc955bae8025410a9b1229f2939e83c12c,"
             },
             "selectedTokenSets": {
                 "Theme/Dark": "enabled",
@@ -3488,19 +3491,11 @@
                 "sys.color.layer.viewport": "7a008028dfacf7f2a1c730d8aa701ccbfad5080d",
                 "sys.color.layer.hover": "d00bfd2caeb7a450760fa49a35f262fc73fe7ddc",
                 "sys.color.layer.pressed": "28c918be13ad4b8cdc93258d7f5bb3e89628ce5d",
-                "sys.color.layer.disabled": "131e85806c2222957e825d0a42470a08ebce91c0",
-                "sys.color.layer.focused": "3b4b1d2ebfdebb3ef7f4f176e933f50cd00dbf16",
-                "sys.color.layer.primary.selected": "ae6823f513c5d49834735d4f692302264dcee252",
-                "sys.color.layer.primary.active": "5d1e33e480c032acc853a4e73120cc3159d35871",
-                "sys.color.layer.primary.hover-active": "41fc2f44987cb3da086d8d4e920ea5968734f98e",
                 "sys.color.layer.primary.softest": "dacbee41ea159ec5bcdeb0cdf14159c34b253936",
                 "sys.color.layer.primary.softer": "56b5f8d1778e256ea382bb9d98f731d8770c13e4",
                 "sys.color.layer.primary.soft": "8a4ac4a0fed3a1257e65a60eb37c299094a8b53c",
-                "sys.color.layer.primary.default": "f0b5920018bd14d6f2b7abd424d6dfab02de37e1",
                 "sys.color.layer.primary.stronger": "a447cbd6ad8f537d9d32494df039b624d52aba73",
                 "sys.color.layer.primary.extreme": "01fdec2252b444361c22608b4b818b3c54d4c0a0",
-                "sys.color.layer.primary.hover": "a98e7e8c7636d3618525f06953ef19490e44b627",
-                "sys.color.layer.primary.pressed": "5274370a09cbc732a92e68555b982a20945e57e5",
                 "sys.color.layer.secondary.default": "5d751f74bc9862f1c52066328dc7f681b1ecb55b",
                 "sys.color.layer.secondary.dim": "f5d448920250905331d2c098bee85aada05f4479",
                 "sys.color.layer.tertiary.default": "e4fed57350e8a02f28c4f409ed41ee4bf2c3f08e",
@@ -3536,14 +3531,6 @@
                 "sys.color.text.inverted": "a9cd200d99a053e30ac3f15940b1c2743bf4dda8",
                 "sys.color.text.onLight": "61a4d501ac5b2aff42071ef37696d2420c31199b",
                 "sys.color.text.onDark": "47833c66f4aaaada6c9b65442457e3244fa25621",
-                "sys.color.text.link": "9962fd68c45515e422380b63611d67517d5f25dc",
-                "sys.color.text.disabled": "0dbc7e8e5e71a5b5c0c6a5b450c5a69f58bbbdf8",
-                "sys.color.text.focused": "b98581382d03885f2b2837d72c48ba2756f88385",
-                "sys.color.text.primary.hover": "2bf2a120679adda20fc8ddf923c3688f78ae6fae",
-                "sys.color.text.primary.pressed": "0f11783d1e2fcb8d37ead16f3384c459ab931cc3",
-                "sys.color.text.primary.active": "302eb1d9ebb303bca6b10b0b6b7f8a64fcb8414b",
-                "sys.color.text.primary.hover-active": "994c69a295997f3204be2d1a0042d933f4ce913d",
-                "sys.color.text.primary.default": "cd587445ae1f2e49dbf71c4f55077399e0c257d6",
                 "sys.color.text.secondary.default": "266966243b844a095219a29fbd41acc7af8319d3",
                 "sys.color.text.tertiary.default": "7ea346652a770a84d8aad3004c2d2247f3a96b25",
                 "sys.color.text.quaternary.default": "780218c8e9aa226409a13cd0833e0d6bc70fc28f",
@@ -3556,14 +3543,6 @@
                 "sys.color.icon.inverted": "0d0699bf431cc5bf6bab4a933d5054c8e81b60fc",
                 "sys.color.icon.onLight": "7fc91e0869ac027857a443d56950633770b0ca0e",
                 "sys.color.icon.onDark": "997de2a8701277fc4dbe59d194f16d69205f9af0",
-                "sys.color.icon.link": "804ab323360abf1866bd85c695ae55cf4f9b14d8",
-                "sys.color.icon.disabled": "86f760cfeeb976daf0264dff07a939561b463ae1",
-                "sys.color.icon.focused": "e783d845ba2f2bf2cf8b15aa6ad7c080e93c3378",
-                "sys.color.icon.primary.hover": "ac48a34fca8fc3a6ad3b83cd2a1137bf5c9e1381",
-                "sys.color.icon.primary.pressed": "42222829b32a8f41ff66f107011f66d3c603f9ae",
-                "sys.color.icon.primary.active": "3ab114da91593694095d11c273436d2c87e9f68e",
-                "sys.color.icon.primary.hover-active": "01926403ce774dfa1c90732e980c390ae21265e6",
-                "sys.color.icon.primary.default": "ce3277aefe8fb611235627005b630fb8f0658baf",
                 "sys.color.icon.secondary.default": "51c647c8f134b6209f78aec4dab17835a96fa483",
                 "sys.color.icon.tertiary.default": "382a336d2a25ecdc525dc88733bfcafb6d3f486c",
                 "sys.color.icon.quaternary.default": "ed803080e59eab373fe2d7ef59b68c9ad34bd13e",
@@ -3576,16 +3555,6 @@
                 "sys.color.border.inverted": "16167a59ac61cfcfb7865f44e3d8e2020515e6db",
                 "sys.color.border.onLight": "120288881975adac5abc126943e8522f7cf4ad17",
                 "sys.color.border.onDark": "253ccc27d861534e5faef6c2ba38d53c82197752",
-                "sys.color.border.link": "2430c4d79ecec7edcec278cef67d3c18f789bb2e",
-                "sys.color.border.disabled": "0cfff0b481ed4ec3636ca7219efca5c65c953400",
-                "sys.color.border.focused": "0b5bce01f775604eaaf5ac47711533b2d2964e6b",
-                "sys.color.border.transparent": "8825ab216200ce323f9f28a5c1c5f3a40ceee9ba",
-                "sys.color.border.primary.hover": "cf919c5765280b1131a6e9a7d191ac77c2d92b19",
-                "sys.color.border.primary.pressed": "f268c14bd65524b6af3fed4fa8147927dd42e0ef",
-                "sys.color.border.primary.active": "17064132c814014498635252e3766eabb630843c",
-                "sys.color.border.primary.hover-active": "5f854c4e2615c26558b0bd4b68c5f9e0b911efe0",
-                "sys.color.border.primary.default": "d9055fd9bbd63b76ea7823060b69a6e867fbcd68",
-                "sys.color.border.primary.dim": "cd8942f9d13debef5a155b64842f2098c18f2a4d",
                 "sys.color.border.secondary.default": "68cd5bfe3e0f7bc307e62711019f72ad178e2660",
                 "sys.color.border.secondary.dim": "c84477c31c6061a1d905a9da622ad42d02bff1a4",
                 "sys.color.border.tertiary.default": "ef5568ec53affeedb841081ca736840dadbe889e",
@@ -3626,7 +3595,38 @@
                 "sys.color.chart.plum.hover": "b25be40f05a0e13fbe5bec766a44370df5b3797a",
                 "sys.color.chart.goal.label": "6c7cfbbc302956da95342708202b43488246d710",
                 "sys.color.chart.goal.pill": "69ea50a3dfd6ce4696694c781ec9fa56fcac1389",
-                "sys.color.chart.goal.border": "c96b96c3fac04f7cabd6c5ea689e2360fd249c35"
+                "sys.color.chart.goal.border": "c96b96c3fac04f7cabd6c5ea689e2360fd249c35",
+                "sys.color.layer.interactive.default": "f0b5920018bd14d6f2b7abd424d6dfab02de37e1",
+                "sys.color.layer.interactive.selected": "ae6823f513c5d49834735d4f692302264dcee252",
+                "sys.color.layer.interactive.active": "5d1e33e480c032acc853a4e73120cc3159d35871",
+                "sys.color.layer.interactive.hover": "a98e7e8c7636d3618525f06953ef19490e44b627",
+                "sys.color.layer.interactive.pressed": "5274370a09cbc732a92e68555b982a20945e57e5",
+                "sys.color.layer.interactive.focused": "3b4b1d2ebfdebb3ef7f4f176e933f50cd00dbf16",
+                "sys.color.layer.interactive.disabled": "131e85806c2222957e825d0a42470a08ebce91c0",
+                "sys.color.border.interactive.default": "d9055fd9bbd63b76ea7823060b69a6e867fbcd68",
+                "sys.color.border.interactive.hover": "cf919c5765280b1131a6e9a7d191ac77c2d92b19",
+                "sys.color.border.interactive.pressed": "f268c14bd65524b6af3fed4fa8147927dd42e0ef",
+                "sys.color.border.interactive.active": "17064132c814014498635252e3766eabb630843c",
+                "sys.color.text.interactive.default": "cd587445ae1f2e49dbf71c4f55077399e0c257d6",
+                "sys.color.text.interactive.hover": "2bf2a120679adda20fc8ddf923c3688f78ae6fae",
+                "sys.color.text.interactive.pressed": "0f11783d1e2fcb8d37ead16f3384c459ab931cc3",
+                "sys.color.text.interactive.active": "302eb1d9ebb303bca6b10b0b6b7f8a64fcb8414b",
+                "sys.color.icon.interactive.default": "ce3277aefe8fb611235627005b630fb8f0658baf",
+                "sys.color.icon.interactive.hover": "ac48a34fca8fc3a6ad3b83cd2a1137bf5c9e1381",
+                "sys.color.icon.interactive.pressed": "42222829b32a8f41ff66f107011f66d3c603f9ae",
+                "sys.color.icon.interactive.active": "3ab114da91593694095d11c273436d2c87e9f68e",
+                "sys.color.text.interactive.disabled": "0dbc7e8e5e71a5b5c0c6a5b450c5a69f58bbbdf8",
+                "sys.color.text.interactive.focused": "b98581382d03885f2b2837d72c48ba2756f88385",
+                "sys.color.icon.interactive.disabled": "86f760cfeeb976daf0264dff07a939561b463ae1",
+                "sys.color.icon.interactive.focused": "e783d845ba2f2bf2cf8b15aa6ad7c080e93c3378",
+                "sys.color.border.interactive.focused": "0b5bce01f775604eaaf5ac47711533b2d2964e6b",
+                "sys.color.border.transparent": "8825ab216200ce323f9f28a5c1c5f3a40ceee9ba",
+                "sys.color.border.interactive.disabled": "0cfff0b481ed4ec3636ca7219efca5c65c953400",
+                "sys.color.text.interactive.active-hover": "994c69a295997f3204be2d1a0042d933f4ce913d",
+                "sys.color.icon.interactive.active-hover": "01926403ce774dfa1c90732e980c390ae21265e6",
+                "sys.color.border.interactive.active-hover": "5f854c4e2615c26558b0bd4b68c5f9e0b911efe0",
+                "sys.color.layer.interactive.active-hover": "41fc2f44987cb3da086d8d4e920ea5968734f98e",
+                "sys.color.border.primary.dim": "cd8942f9d13debef5a155b64842f2098c18f2a4d"
             },
             "group": "Theme"
         },
