@@ -111,9 +111,9 @@ export const generateFlexCssProps = (props: Flex): CSSProperties => {
 };
 
 /**
- * Function that extracts flex props from a component props.
+ * Function that separate flex props from a component props and group them into a separate flexProps object.
  */
-export const extractFlexProps = <T extends Record<string, any> & Flex>(
+export const separateFlexProps = <T extends Record<string, any> & Flex>(
   props: T,
 ): { flexProps: Flex } & Omit<T, keyof Flex> => {
   const { grow, shrink, basis, direction, align, justify, wrap, gap, ...resProps } = props;

@@ -3,7 +3,7 @@ import cx from "classnames";
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import styles from "./typography.module.css";
-import { type Flex, extractFlexProps, generateFlexCssProps, formatSizeToken } from "./utils";
+import { type Flex, separateFlexProps, generateFlexCssProps, formatSizeToken } from "./utils";
 
 /**
  * List of all supported color variants.
@@ -42,7 +42,7 @@ export interface LabelCustomProps {
 export type LabelProps = LabelCustomProps & Flex & React.ComponentPropsWithoutRef<"label">;
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => {
-  const { size = "s", color = "default", className, style, flexProps, ...rest } = extractFlexProps(props);
+  const { size = "s", color = "default", className, style, flexProps, ...rest } = separateFlexProps(props);
 
   return (
     <label
