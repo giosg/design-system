@@ -7,7 +7,7 @@ import styles from "./themes.module.css";
 export const Themes: Story = {
   render: (_, { globals }) => {
     return (
-      <div className={styles.themes} data-theme={globals.theme}>
+      <div className={styles.themes}>
         <ThemeCanvas>
           <h1 className={styles.themeHeader}>
             {globals.theme === "dark" && "🌙 Dark Theme"}
@@ -26,7 +26,7 @@ function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
       {children}
       <div className={styles.container} data-testid="container">
         {TOKENS.map(({ token, groups }, index) => (
-          <div className={styles.column} key={`${token}-${index}`}>
+          <div className={styles.row} key={`${token}-${index}`}>
             {groups.map(({ label, modificators }) => (
               <div className={styles.group} key={label}>
                 <h3>{label}</h3>

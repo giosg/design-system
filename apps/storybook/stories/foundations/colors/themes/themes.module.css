@@ -11,21 +11,23 @@
 
 .container {
   display: flex;
-  padding: 64px;
-  background-color: var(--gds-sys-color-layer-canvas);
+  flex-wrap: wrap;
   color: var(--gds-sys-color-text-default);
-  border-radius: var(--gds-sys-radius-m);
   gap: 64px;
+}
 
-  .column {
+.row {
+  border-radius: var(--gds-sys-radius-m);
+  background-color: var(--gds-sys-color-layer-canvas);
+  padding: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 48px;
+
+  .group {
     display: flex;
     flex-direction: column;
-    gap: 64px;
-
-    .group {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+    gap: 16px;
   }
 }

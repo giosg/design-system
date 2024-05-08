@@ -15,15 +15,23 @@ export const TOKENS: Token[] = [
       { label: "Text", modificators: ["default", "dim", "inverted", "onLight", "onDark", "link"] },
       {
         label: "Text/state",
-        modificators: ["disabled", "hover", "pressed", "active"],
+        modificators: ["disabled", "focused"],
+      },
+      {
+        label: "Text/primary",
+        modificators: ["primary.default"],
+      },
+      {
+        label: "Text/primary/state",
+        modificators: ["primary.hover", "primary.pressed", "primary.active", "primary.hover-active"],
       },
       {
         label: "Text/brand",
-        modificators: ["primary", "secondary", "tertiary", "quaternary"],
+        modificators: ["secondary.default", "tertiary.default", "quaternary.default"],
       },
       {
         label: "Text/status",
-        modificators: ["positive", "negative", "info", "warning"],
+        modificators: ["positive.default", "negative.default", "info.default", "warning.default"],
       },
     ],
   },
@@ -33,15 +41,23 @@ export const TOKENS: Token[] = [
       { label: "Icon", modificators: ["default", "dim", "inverted", "onLight", "onDark", "link"] },
       {
         label: "Icon/state",
-        modificators: ["disabled", "hover", "pressed", "active"],
+        modificators: ["disabled", "focused"],
+      },
+      {
+        label: "Icon/primary",
+        modificators: ["primary.default"],
+      },
+      {
+        label: "Icon/primary/state",
+        modificators: ["primary.hover", "primary.pressed", "primary.active", "primary.hover-active"],
       },
       {
         label: "Icon/brand",
-        modificators: ["primary", "secondary", "tertiary", "quaternary"],
+        modificators: ["secondary.default", "tertiary.default", "quaternary.default"],
       },
       {
         label: "Icon/status",
-        modificators: ["positive", "negative", "info", "warning"],
+        modificators: ["positive.default", "negative.default", "info.default", "warning.default"],
       },
     ],
   },
@@ -49,12 +65,18 @@ export const TOKENS: Token[] = [
     token: "border",
     groups: [
       { label: "Border", modificators: ["default", "dim", "inverted", "onLight", "onDark", "link", "transparent"] },
-      { label: "Border/state", modificators: ["disabled", "hover", "pressed", "active", "focused"] },
+      { label: "Border/state", modificators: ["disabled", "focused"] },
+      {
+        label: "Border/primary",
+        modificators: ["primary.default"],
+      },
+      {
+        label: "Border/primary/state",
+        modificators: ["primary.dim", "primary.hover", "primary.pressed", "primary.active", "primary.hover-active"],
+      },
       {
         label: "Border/brand",
         modificators: [
-          "primary.default",
-          "primary.dim",
           "secondary.default",
           "secondary.dim",
           "tertiary.default",
@@ -63,7 +85,10 @@ export const TOKENS: Token[] = [
           "quaternary.dim",
         ],
       },
-      { label: "Border/status", modificators: ["positive", "negative", "info", "warning"] },
+      {
+        label: "Border/status",
+        modificators: ["positive.default", "negative.default", "info.default", "warning.default"],
+      },
     ],
   },
   {
@@ -75,19 +100,51 @@ export const TOKENS: Token[] = [
       },
       {
         label: "Layer/state",
-        modificators: ["hover", "pressed", "selected", "active", "hover-active", "disabled"],
+        modificators: ["hover", "pressed", "disabled", "focused"],
+      },
+      {
+        label: "Layer/primary",
+        modificators: [
+          "primary.default",
+          "primary.softest",
+          "primary.softer",
+          "primary.soft",
+          "primary.stronger",
+          "primary.extreme",
+        ],
+      },
+      {
+        label: "Layer/state",
+        modificators: [
+          "primary.hover",
+          "primary.pressed",
+          "primary.selected",
+          "primary.active",
+          "primary.hover-active",
+        ],
+      },
+      {
+        label: "Layer/brand",
+        modificators: [
+          "secondary.default",
+          "secondary.dim",
+          "tertiary.default",
+          "tertiary.dim",
+          "quaternary.default",
+          "quaternary.dim",
+        ],
       },
       {
         label: "Layer/status",
         modificators: [
           "positive.default",
           "positive.dim",
-          "positive.state.hover",
-          "positive.state.pressed",
+          "positive.hover",
+          "positive.pressed",
           "negative.default",
           "negative.dim",
-          "negative.state.hover",
-          "negative.state.pressed",
+          "negative.hover",
+          "negative.pressed",
           "info.default",
           "info.dim",
           "warning.default",
@@ -100,41 +157,9 @@ export const TOKENS: Token[] = [
     token: "layer",
     groups: [
       {
-        label: "Layer/primary",
-        modificators: [
-          "primary.softest",
-          "primary.softer",
-          "primary.soft",
-          "primary.default",
-          "primary.stronger",
-          "primary.extreme",
-        ],
-      },
-      {
-        label: "Layer/primary/state",
-        modificators: ["primary.state.hover", "primary.state.pressed"],
-      },
-      {
-        label: "Layer/secondary",
-        modificators: ["secondary.default", "secondary.dim"],
-      },
-      {
-        label: "Layer/tertiary",
-        modificators: ["tertiary.default", "tertiary.dim"],
-      },
-      {
-        label: "Layer/quaternary",
-        modificators: ["tertiary.default", "tertiary.dim"],
-      },
-    ],
-  },
-  {
-    token: "layer",
-    groups: [
-      {
         label: "Layer/alpha",
         modificators: [
-          "alpha.default",
+          "alpha.overlay",
           "alpha.inverted",
           "alpha.primary",
           "alpha.secondary",
@@ -177,6 +202,10 @@ export const TOKENS: Token[] = [
       {
         label: "Chart/cherry",
         modificators: ["cherry.node", "cherry.label", "cherry.hover", "cherry.flow"],
+      },
+      {
+        label: "Chart/mint",
+        modificators: ["mint.node", "mint.label", "mint.hover", "mint.flow"],
       },
     ],
   },
