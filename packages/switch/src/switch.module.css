@@ -13,21 +13,26 @@
   }
 
   &:focus-visible {
-    outline: 2px solid var(--gds-sys-color-border-focused);
+    outline: 2px solid var(--gds-sys-color-icon-interactive-focused);
     outline-offset: 2px;
   }
 
   &[data-disabled] {
     cursor: not-allowed;
-    background-color: var(--gds-sys-color-icon-disabled);
+    background-color: var(--gds-sys-color-icon-interactive-disabled);
   }
 
   &[data-state="checked"] {
-    background-color: var(--gds-sys-color-icon-active);
+    background-color: var(--gds-sys-color-icon-interactive-active);
+  }
+
+  &[data-state="checked"][data-disabled] {
+    cursor: not-allowed;
+    background-color: var(--gds-sys-color-icon-interactive-disabled);
   }
 
   &[data-state="checked"]:hover {
-    background-color: var(--gds-sys-color-icon-hover);
+    background-color: var(--gds-sys-color-icon-interactive-active-hover);
   }
 }
 
