@@ -126,4 +126,23 @@ In foundation packages the data attributes are automatically assigned to the cor
 }
 `} language="css" dark/>
 
-If you need to adjust or change the value you are absolutely free to do that at any level of your app. Just chagne the `--gds-svg-main`, `--gds-svg-alt`, `--gds-svg-accent` to shadow outer-scoped variable. Just the way its done in the main story for the icons. For inspiration go there and try to play with the controls of the story.
+### Component API
+
+Component supports all of the SVG attributes and additionally the following:
+
+<Source code={`
+export interface IconColorSet {
+  /**
+   * Main color of the icon
+   */
+  color?: IconColors;
+  /**
+   * Alternative color of the icon
+   */
+  colorAlt?: IconColors;
+  /**
+   * Accent color of the icon
+   */
+  colorAcc?: IconColors;
+}
+`}  dark/>
