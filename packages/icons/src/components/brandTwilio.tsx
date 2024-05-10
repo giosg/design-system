@@ -1,10 +1,29 @@
 import type { Ref} from "react";
 import { forwardRef } from "react";
-import type { SvgComponentProps } from "../types";
+import { type SvgComponentProps, generateIconCssVars } from "../types";
 
-function SvgBrandTwilio({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.Element {
+function SvgBrandTwilio(
+  { color, colorAcc, colorAlt, style, ...props }: SvgComponentProps,
+  ref: Ref<SVGSVGElement>,
+): JSX.Element {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      viewBox="0 0 24 24"
+      style={{
+        ...generateIconCssVars({
+          color,
+          colorAcc,
+          colorAlt,
+        }),
+        ...style,
+      }}
+      ref={ref}
+      {...props}
+    >
       <g fill="currentColor" data-color="main">
         <path d="M14.227 11.63a1.873 1.873 0 0 0 1.871-1.873 1.873 1.873 0 0 0-1.871-1.874 1.87 1.87 0 0 0-1.871 1.874c0 1.034.838 1.873 1.87 1.873m1.872 2.613a1.873 1.873 0 0 1-1.871 1.874 1.873 1.873 0 0 1-1.871-1.874c0-1.035.838-1.874 1.87-1.874 1.034 0 1.872.84 1.872 1.874m-6.351 1.874a1.873 1.873 0 0 0 1.87-1.874 1.873 1.873 0 0 0-1.87-1.874 1.873 1.873 0 0 0-1.871 1.874c0 1.035.837 1.874 1.87 1.874m1.872-6.36a1.873 1.873 0 0 1-1.871 1.873 1.87 1.87 0 0 1-1.871-1.873 1.872 1.872 0 1 1 3.742 0" />
         <path

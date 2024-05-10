@@ -1,10 +1,29 @@
 import type { Ref} from "react";
 import { forwardRef } from "react";
-import type { SvgComponentProps } from "../types";
+import { type SvgComponentProps, generateIconCssVars } from "../types";
 
-function SvgAnswerWrong({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.Element {
+function SvgAnswerWrong(
+  { color, colorAcc, colorAlt, style, ...props }: SvgComponentProps,
+  ref: Ref<SVGSVGElement>,
+): JSX.Element {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      viewBox="0 0 24 24"
+      style={{
+        ...generateIconCssVars({
+          color,
+          colorAcc,
+          colorAlt,
+        }),
+        ...style,
+      }}
+      ref={ref}
+      {...props}
+    >
       <g fill="currentColor" data-color="main">
         <path d="M10.284 10 8 12.284 9.716 14 12 11.716 14.284 14 16 12.284 13.716 10 16 7.716 14.284 6 12 8.284 9.716 6 8 7.716z" />
         <path
