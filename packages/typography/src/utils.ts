@@ -22,7 +22,8 @@ export type Spacing =
   | "4xl"
   | "5xl"
   | "6xl"
-  | "7xl";
+  | "7xl"
+  | "8xl";
 
 const SpacingSet = new Set<Spacing>([
   "none",
@@ -39,6 +40,7 @@ const SpacingSet = new Set<Spacing>([
   "5xl",
   "6xl",
   "7xl",
+  "8xl",
 ]);
 
 type PixelSpacing = `${number}px`;

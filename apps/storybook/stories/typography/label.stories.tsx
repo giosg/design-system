@@ -101,7 +101,7 @@ export const Flex: Story = {
             <div className={s.description} style={{ width: 300 }}>
               <span>{`<Label  gap="3xl">`}</span>
             </div>
-            <Label gap="3xl">
+            <Label gap="8xl">
               Left
               <div className={s.colorfulBox} />
               Right
