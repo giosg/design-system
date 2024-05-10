@@ -19,3 +19,9 @@ test("icons-dark-theme", async ({ page }) => {
   const container = page.getByTestId("container");
   await expect(container).toHaveScreenshot("picture.png");
 });
+
+test("icons-theme-colors", async ({ page }) => {
+  await page.goto("iframe.html?args=&id=icons-color--color&viewMode=story");
+  const container = page.getByTestId("container");
+  await expect(container).toHaveScreenshot("picture.png");
+});
