@@ -1,5 +1,5 @@
 import { Meta, Source, Canvas, Subtitle } from "@storybook/blocks";
-import * as CompStories from "./icons.stories";
+import * as CompStories from "./icons-list.stories";
 
 <Meta title="Icons/Overview" parameters={{ options: { order: ["Icons/Overview", "*"] } }} />
 
@@ -20,14 +20,34 @@ In the component it's just data-attribute associated with the corresponding part
 <Subtitle>Example of color data attributes</Subtitle>
 <Source
   code={`
-function SvgFilterActive({ ...props }) {
+function SvgFilterActive(
+  { color, colorAcc, colorAlt, style, ...props }: SvgComponentProps,
+  ref: Ref<SVGSVGElement>,
+): JSX.Element {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      viewBox="0 0 24 24"
+      style={{
+        ...generateIconCssVars({
+          color,
+          colorAcc,
+          colorAlt,
+        }),
+        ...style,
+      }}
+      ref={ref}
+      {...props}
+    >
       <path
         fill="currentColor"
+        d="M14.027 11A4.96 4.96 0 0 0 17 12v1H7v-2zM12 7H4v2h8.422A5 5 0 0 1 12 7m-2 10h4v-2h-4z"
         data-color="main"
       />
-      <path fill="currentColor" data-color="accent" />
+      <path fill="currentColor" d="M15.333 4.506a3 3 0 1 1 3.334 4.988 3 3 0 0 1-3.334-4.988" data-color="accent" />
     </svg>
   );
 }
@@ -67,28 +87,6 @@ export const App = () => {
 };
 `}  dark/>
 
-<Subtitle>Usage without foundation package</Subtitle>
-Icons are completely consumable without the foundation package. I want to highlight some of the key points and simplifications
-that are made for that.
-
-By default main and accent parts of the svgs are `fill=currentColor` so in most cases you don't need to do anything.
-In case when you need to change a color use any css solution that you are currently using and target those parts of svg just like that.
-
-<Source code={`
-.icon-css {
-  [data-color="accent"] {
-    fill: beige;
-  }
-
-[data-color="main"] {
-fill: black;
-}
-
-[data-color="alt"] {
-fill: white;
-}
-}
-`} language="css" dark/>
 
 <Subtitle>Usage with foundation package</Subtitle>
 
@@ -100,19 +98,31 @@ In foundation packages the data attributes are automatically assigned to the cor
 [data-theme="dark"] {
   --gds-svg-main: var(--gds-sys-color-icon-default);
   --gds-svg-alt: var(--gds-sys-color-icon-inverted);
-  --gds-svg-accent: var(--gds-sys-color-icon-primary);
+  --gds-svg-accent: var(--gds-sys-color-icon-interactive-default);
 }
 
 [data-color="main"][fill] {
-fill: var(--gds-svg-main);
+  fill: var(--gds-svg-main);
 }
 
 [data-color="alt"][fill] {
-fill: var(--gds-svg-alt);
+  fill: var(--gds-svg-alt);
 }
 
 [data-color="accent"][fill] {
-fill: var(--gds-svg-accent);
+  fill: var(--gds-svg-accent);
+}
+
+[data-color="main"][stroke] {
+  stroke: var(--gds-svg-main);
+}
+
+[data-color="alt"][stroke] {
+  stroke: var(--gds-svg-alt);
+}
+
+[data-color="accent"][stroke] {
+  stroke: var(--gds-svg-accent);
 }
 `} language="css" dark/>
 

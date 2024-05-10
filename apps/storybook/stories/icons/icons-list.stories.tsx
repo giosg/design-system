@@ -84,7 +84,7 @@ export const List: Story = {
       <div className={styles.container} data-testid="container">
         {ComponentArray.map((Icon, index) => (
           <div className={styles.iconWrapper} key={index}>
-            <Icon {...props} color="dim" style={inline} />
+            <Icon {...props} style={inline} />
             {showNames ? <span>{IconKeys[index]}</span> : null}
           </div>
         ))}

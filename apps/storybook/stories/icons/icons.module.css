@@ -15,3 +15,10 @@
     font-size: 0.7rem;
   }
 }
+
+.colorContainer {
+  display: grid;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--gds-sys-color-layer-default);
+}
