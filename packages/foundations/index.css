@@ -265,7 +265,7 @@ textarea:not([rows]) {
 [data-theme="dark"] {
   --gds-svg-main: var(--gds-sys-color-icon-default);
   --gds-svg-alt: var(--gds-sys-color-icon-inverted);
-  --gds-svg-accent: var(--gds-sys-color-icon-primary);
+  --gds-svg-accent: var(--gds-sys-color-icon-interactive-default);
 }
 
 [data-color="main"][fill] {

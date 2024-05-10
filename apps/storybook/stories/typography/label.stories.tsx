@@ -29,7 +29,7 @@ export const Size: Story = {
           </header>
           <Row>
             <div className={s.description} style={{ width: 200 }}>
-              <span>Default size (m)</span>
+              <span>Default size S</span>
               <span>{`<Label>`}</span>
             </div>
             <Label className={s.label}>{labelText}</Label>
@@ -101,7 +101,7 @@ export const Flex: Story = {
             <div className={s.description} style={{ width: 300 }}>
               <span>{`<Label  gap="3xl">`}</span>
             </div>
-            <Label gap="8xl">
+            <Label gap="3xl">
               Left
               <div className={s.colorfulBox} />
               Right
