@@ -17,7 +17,8 @@
     "build": "pnpm run svg && tsc --noEmit && parcel build --no-cache",
     "dev": "parcel watch --port $(../../scripts/getPort.sh)",
     "lint": "eslint . --max-warnings 0",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "package": "rm -rf *.tgz && pnpm pack"
   },
   "peerDependencies": {
     "@types/react": "^18",
