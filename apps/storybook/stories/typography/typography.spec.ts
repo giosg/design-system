@@ -41,3 +41,9 @@ test("Text-sizes", async ({ page }) => {
   const container = page.getByTestId("container");
   await expect(container).toHaveScreenshot("picture.png");
 });
+
+test("label-auto-disable", async ({ page }) => {
+  await page.goto("iframe.html?args=&id=typography-label--auto-disabled&viewMode=story");
+  const container = page.getByTestId("container");
+  await expect(container).toHaveScreenshot("picture.png");
+});

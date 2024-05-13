@@ -49,6 +49,14 @@ export const WithLabel: Story = {
             Right
           </Label>
         </div>
+        <div className={s.section}>
+          <h3>Label Disabled</h3>
+          <Label>
+            Left
+            <Switch disabled />
+            Right
+          </Label>
+        </div>
       </div>
     );
   },

@@ -5,7 +5,14 @@
 
 .label {
   --gds-label-font: var(--gds-sys-font-default-label-m-semibold);
+  --gds-text-gap: var(--gds-sys-space-xs);
   font: var(--gds-label-font);
+
+  /* if disabled inside */
+  &:has([disabled]),
+  &:has([data-disabled]) {
+    color: var(--gds-sys-color-text-interactive-disabled);
+  }
 }
 
 .text {
