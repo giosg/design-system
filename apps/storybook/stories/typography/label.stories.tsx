@@ -137,7 +137,7 @@ export const AutoDisabled: Story = {
             </div>
             <Label>
               Left
-              <button className={s.colorfulBox} disabled />
+              <button className={s.colorfulBox} disabled type="button" />
               Right
             </Label>
           </Row>
