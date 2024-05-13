@@ -144,14 +144,14 @@ body {
   display: flex;
 
   /* variables */
-  --gds-flex-grow: 0;
-  --gds-flex-shrink: 1;
+  --gds-flex-grow: auto;
+  --gds-flex-shrink: auto;
   --gds-flex-basis: auto;
   --gds-flex-direction: row;
   --gds-flex-align: center;
   --gds-flex-justify: flex-start;
   --gds-flex-wrap: nowrap;
-  --gds-flex-gap: var(--gds-sys-space-xs);
+  --gds-flex-gap: var(--gds-sys-space-3-xs);
 
   /* values */
   flex-grow: var(--gds-flex-grow);
