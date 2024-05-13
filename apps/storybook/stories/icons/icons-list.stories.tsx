@@ -14,19 +14,19 @@ const meta: Meta = {
     height: {
       control: { type: "number", min: 2, max: 50, step: 2 },
     },
-    mainColor: {
+    color: {
       control: {
         type: "color",
         presetColors: ["red", "black", "#084461"],
       },
     },
-    altColor: {
+    colorAlt: {
       control: {
         type: "color",
         presetColors: ["red", "black", "yellow"],
       },
     },
-    accentColor: {
+    colorAcc: {
       control: {
         type: "color",
         presetColors: ["purple", "pink", "yellow"],
@@ -41,9 +41,9 @@ const meta: Meta = {
 export default meta;
 
 type Story = StoryObj<{
-  mainColor: string;
-  altColor: string;
-  accentColor: string;
+  color: string;
+  colorAlt: string;
+  colorAcc: string;
   width: number | undefined;
   height: number | undefined;
   showNames: boolean;
@@ -56,14 +56,14 @@ const ComponentArray = IconKeys.map((key) => Icons[key]);
 export const List: Story = {
   args: {
     showNames: true,
-    mainColor: undefined,
-    altColor: undefined,
-    accentColor: undefined,
+    color: undefined,
+    colorAlt: undefined,
+    colorAcc: undefined,
     width: undefined,
     height: undefined,
   },
   render: (args) => {
-    const { mainColor, accentColor, altColor, height, width, showNames } = args;
+    const { color, colorAcc, colorAlt, height, width, showNames } = args;
 
     let props = {};
 
@@ -75,9 +75,9 @@ export const List: Story = {
     }
 
     const inline = {
-      "--gds-svg-main": mainColor,
-      "--gds-svg-alt": altColor,
-      "--gds-svg-accent": accentColor,
+      "--gds-svg-main": color,
+      "--gds-svg-alt": colorAlt,
+      "--gds-svg-accent": colorAcc,
     } as React.CSSProperties;
 
     return (
