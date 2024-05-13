@@ -1,6 +1,7 @@
-import type { SVGProps } from "react";
+import type { ForwardRefExoticComponent, RefAttributes, SVGProps } from "react";
 
 export type SvgComponentProps = SVGProps<SVGSVGElement> & IconColorSet;
+export type IconComponent = ForwardRefExoticComponent<Omit<SvgComponentProps, "ref"> & RefAttributes<SVGSVGElement>>;
 
 export interface IconColorSet {
   /**

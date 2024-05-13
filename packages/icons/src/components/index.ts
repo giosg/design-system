@@ -1,5 +1,5 @@
 /// <reference types="../../../../types/sources.d.ts" />
-export type { SvgComponentProps } from "../types";
+export type { SvgComponentProps, IconComponent, IconColorSet, IconColors } from "../types";
 export { default as Workflow } from "./workflow";
 export { default as ABTestCompleted } from "./aBTestCompleted";
 export { default as ABTestDraft } from "./aBTestDraft";
