@@ -4,7 +4,7 @@
 }
 
 .label {
-  --gds-label-font: var(--gds-sys-font-default-label-m-semibold);
+  --gds-label-font: var(--gds-sys-font-default-label-s-semibold);
   --gds-text-gap: var(--gds-sys-space-xs);
   font: var(--gds-label-font);
 
@@ -16,11 +16,11 @@
 }
 
 .text {
-  --gds-text-font: var(--gds-sys-font-default-body-m-regular);
+  --gds-text-font: var(--gds-sys-font-default-body-s-regular);
   font: var(--gds-text-font);
 }
 
 .heading {
-  --gds-heading-font: var(--gds-sys-font-default-title-m-bold);
+  --gds-heading-font: var(--gds-sys-font-default-title-l-bold);
   font: var(--gds-heading-font);
 }

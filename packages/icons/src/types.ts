@@ -41,11 +41,11 @@ export type IconColors =
   | "info-default";
 
 export const generateIconCssVars = (set: IconColorSet): React.CSSProperties => {
-  const { color = "default", colorAcc = "interactive-default", colorAlt = "inverted" } = set;
+  const { color, colorAcc, colorAlt } = set;
 
   return {
-    "--gds-svg-main": `var(--gds-sys-color-icon-${color})`,
-    "--gds-svg-alt": `var(--gds-sys-color-icon-${colorAlt})`,
-    "--gds-svg-accent": `var(--gds-sys-color-icon-${colorAcc})`,
+    "--gds-svg-main": color && `var(--gds-sys-color-icon-${color})`,
+    "--gds-svg-alt": colorAlt && `var(--gds-sys-color-icon-${colorAlt})`,
+    "--gds-svg-accent": colorAcc && `var(--gds-sys-color-icon-${colorAcc})`,
   } as React.CSSProperties;
 };
