@@ -34,6 +34,7 @@
   --gds-sys-radius-7-xl: 3.5rem;
   --gds-sys-radius-8-xl: 4rem;
   --gds-sys-radius-circle: 1000rem;
+  --gds-sys-radius-focus: 0.375rem;
   --gds-sys-font-default-title-4-xl-bold: 700 2rem/2.5rem var(--gds-font-ui-stack);
   --gds-sys-font-default-title-4-xl-black: 900 2rem/2.5rem var(--gds-font-ui-stack);
   --gds-sys-font-default-title-3-xl-bold: 700 1.75rem/2rem var(--gds-font-ui-stack);
@@ -79,7 +80,9 @@
   --gds-sys-color-layer-softer: #737281;
   --gds-sys-color-layer-soft: #8d8c9b;
   --gds-sys-color-layer-mildest: #a5a5b1;
-  --gds-sys-color-layer-stronger: #c2c1c9;
+  --gds-sys-color-layer-mild: #c2c1c9;
+  --gds-sys-color-layer-strong: #e4e4e7;
+  --gds-sys-color-layer-stronger: #f0f0f2;
   --gds-sys-color-layer-inverted: #f0f0f2;
   --gds-sys-color-layer-canvas: #2a293a;
   --gds-sys-color-layer-viewport: #2a293a;
@@ -180,6 +183,7 @@
   --gds-sys-color-border-inverted: #ffffff;
   --gds-sys-color-border-on-light: #2a293a;
   --gds-sys-color-border-on-dark: #ffffff;
+  --gds-sys-color-border-strong: #e4e4e7;
   --gds-sys-color-border-transparent: #ffffff00;
   --gds-sys-color-border-interactive-default: #7357ff;
   --gds-sys-color-border-interactive-hover: #d3caff;

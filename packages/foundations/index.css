@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,900&display=swap");
 
 :root {
-  --gds-font-ui-stack: nunito sans, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue,
-    helvetica, cantarell, ubuntu, roboto, noto, arial, sans-serif;
+  --gds-font-ui-stack: nunito sans, helvetica, helvetica neue, arial, avenir next, avenir, noto sans, system-ui,
+    segoe ui, cantarell, ubuntu, liberation sans, roboto, sans-serif;
   --gds-sys-border-width-default: 0.0625rem;
   --gds-sys-border-width-double: 0.125rem;
   --gds-sys-border-width-none: 0rem;
@@ -64,6 +64,7 @@
   --gds-sys-radius-7-xl: 3.5rem;
   --gds-sys-radius-8-xl: 4rem;
   --gds-sys-radius-circle: 1000rem;
+  --gds-sys-radius-focus: 0.375rem;
   --gds-sys-radius-l: 1.125rem;
   --gds-sys-radius-m: 1rem;
   --gds-sys-radius-none: 0rem;
@@ -137,9 +138,11 @@
 
 body {
   font-family: var(--gds-font-ui-stack);
+  letter-spacing: 0;
   line-height: 1.5;
 }
 
+/* Generic flex class */
 .gds-flex {
   display: flex;
 
@@ -309,6 +312,7 @@ textarea:not([rows]) {
   --gds-sys-color-border-primary-dim: #d3caff;
   --gds-sys-color-border-quaternary-dim: #ffcea8;
   --gds-sys-color-border-secondary-dim: #a5ead2;
+  --gds-sys-color-border-strong: #737281;
   --gds-sys-color-border-tertiary-dim: #ffb9e8;
   --gds-sys-color-chart-berry-flow: #244edb33;
   --gds-sys-color-chart-berry-hover: #244edb66;
@@ -363,6 +367,7 @@ textarea:not([rows]) {
   --gds-sys-color-layer-interactive-pressed: #4b39a6;
   --gds-sys-color-layer-interactive-selected: #e7e3ff;
   --gds-sys-color-layer-inverted: #2a293a;
+  --gds-sys-color-layer-mild: #a5a5b1;
   --gds-sys-color-layer-mildest: #e4e4e7;
   --gds-sys-color-layer-negative-default: #db261a;
   --gds-sys-color-layer-negative-dim: #fef5f4;
@@ -372,7 +377,7 @@ textarea:not([rows]) {
   --gds-sys-color-layer-positive-dim: #e8faed;
   --gds-sys-color-layer-positive-hover: #cff6d9;
   --gds-sys-color-layer-positive-pressed: #a6efb8;
-  --gds-sys-color-layer-pressed: #f0f0f2;
+  --gds-sys-color-layer-pressed: #e4e4e7;
   --gds-sys-color-layer-primary-default: #7357ff;
   --gds-sys-color-layer-primary-extreme: #231a4d;
   --gds-sys-color-layer-primary-soft: #e7e3ff;
@@ -390,6 +395,7 @@ textarea:not([rows]) {
   --gds-sys-color-layer-soft: #f0f0f2;
   --gds-sys-color-layer-softer: #f5f5f7;
   --gds-sys-color-layer-softest: #fbfbfb;
+  --gds-sys-color-layer-strong: #737281;
   --gds-sys-color-layer-stronger: #595868;
   --gds-sys-color-layer-tertiary-dim: #ffb9e8;
   --gds-sys-color-layer-viewport: #f5f5f7;
@@ -428,6 +434,7 @@ textarea:not([rows]) {
   --gds-sys-color-border-primary-dim: #342773;
   --gds-sys-color-border-quaternary-dim: #c16015;
   --gds-sys-color-border-secondary-dim: #0e694a;
+  --gds-sys-color-border-strong: #e4e4e7;
   --gds-sys-color-border-tertiary-dim: #ca4ca0;
   --gds-sys-color-chart-berry-flow: #244edb66;
   --gds-sys-color-chart-berry-hover: #244edb33;
@@ -482,6 +489,7 @@ textarea:not([rows]) {
   --gds-sys-color-layer-interactive-pressed: #7357ff;
   --gds-sys-color-layer-interactive-selected: #595868;
   --gds-sys-color-layer-inverted: #f0f0f2;
+  --gds-sys-color-layer-mild: #c2c1c9;
   --gds-sys-color-layer-mildest: #a5a5b1;
   --gds-sys-color-layer-negative-default: #fbc6c2;
   --gds-sys-color-layer-negative-dim: #61110c;
@@ -509,7 +517,8 @@ textarea:not([rows]) {
   --gds-sys-color-layer-soft: #8d8c9b;
   --gds-sys-color-layer-softer: #737281;
   --gds-sys-color-layer-softest: #595868;
-  --gds-sys-color-layer-stronger: #c2c1c9;
+  --gds-sys-color-layer-strong: #e4e4e7;
+  --gds-sys-color-layer-stronger: #f0f0f2;
   --gds-sys-color-layer-tertiary-dim: #ca4ca0;
   --gds-sys-color-layer-viewport: #2a293a;
   --gds-sys-color-layer-warning-default: #fcf2be;

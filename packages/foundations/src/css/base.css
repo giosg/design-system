@@ -2,14 +2,16 @@
 
 :root {
   /* Fonts */
-  --gds-font-ui-stack: nunito sans, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue,
-    helvetica, cantarell, ubuntu, roboto, noto, arial, sans-serif;
+  --gds-font-ui-stack: nunito sans, helvetica, helvetica neue, arial, avenir next, avenir, noto sans, system-ui,
+    segoe ui, cantarell, ubuntu, liberation sans, roboto, sans-serif;
 }
 
 body {
   font-family: var(--gds-font-ui-stack);
+  letter-spacing: 0;
 }
 
+/* Generic flex class */
 .gds-flex {
   display: flex;
 

@@ -64,7 +64,7 @@ export const TOKENS: Token[] = [
   {
     token: "border",
     groups: [
-      { label: "Border", modificators: ["default", "dim", "inverted", "onLight", "onDark", "transparent"] },
+      { label: "Border", modificators: ["default", "dim", "inverted", "onLight", "onDark", "strong", "transparent"] },
       {
         label: "Border/interactive",
         modificators: [
@@ -107,6 +107,7 @@ export const TOKENS: Token[] = [
           "softer",
           "soft",
           "mildest",
+          "mild",
           "stronger",
           "inverted",
           "canvas",
