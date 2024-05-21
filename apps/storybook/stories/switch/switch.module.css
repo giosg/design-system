@@ -1,11 +1,17 @@
 .container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  width: fit-content;
   gap: 40px;
 }
 
 .section {
   display: flex;
   flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
   gap: 16px;
 }
