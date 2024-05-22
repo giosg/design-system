@@ -26,7 +26,7 @@ function SvgBrandMicrosoftDynamics(
     >
       <path
         fill="currentColor"
-        d="m7 21 3.478-10.064L7 8.636zm11-6.225V9.062L7 21zM7 3v4.823l7.178 3.55 3.337-2.737z"
+        d="m8 20 2.846-8.946L8 9.01zm9-5.533V9.388L8 20zM8 4v4.287l5.873 3.155 2.73-2.432z"
         data-color="main"
       />
     </svg>

@@ -24,7 +24,11 @@ function SvgShareAlt(
       ref={ref}
       {...props}
     >
-      <path fill="currentColor" d="m20 11-6-6v4H9a4 4 0 0 0-4 4v4h1a4 4 0 0 1 4-4h4v4z" data-color="main" />
+      <path
+        fill="currentColor"
+        d="m20 12-6.4-5v3.333H8.267c-1.132 0-2.217.351-3.017.977-.8.625-1.25 1.473-1.25 2.357V17h1.067c0-.884.45-1.732 1.25-2.357s1.885-.976 3.016-.976H13.6V17z"
+        data-color="main"
+      />
     </svg>
   );
 }

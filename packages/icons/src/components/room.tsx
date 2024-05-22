@@ -26,7 +26,7 @@ function SvgRoom(
     >
       <path
         fill="currentColor"
-        d="m21 8-9-6-9 6v8l9 6 9-6zm-9 4.4 5.394 3.6L12 19.6 6.606 16zm1-1.737V5.07l6 4v5.6z"
+        d="M20 8.4 12 3 4 8.4v7.2l8 5.4 8-5.4zm-8 3.96 4.795 3.24L12 18.84 7.205 15.6zm.889-1.563V5.763l5.333 3.6v5.04z"
         data-color="main"
       />
     </svg>

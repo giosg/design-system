@@ -26,7 +26,7 @@ function SvgWorkflowPaused(
     >
       <path
         fill="currentColor"
-        d="M11 15H9V9h2zm4 0h-2V9h2zM12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18m0 16a7 7 0 1 1 0-14 7 7 0 0 1 0 14"
+        d="M11.111 14.667H9.333V9.333h1.778zm3.556 0h-1.778V9.333h1.778zM12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16m0 14.222a6.222 6.222 0 1 1 0-12.444 6.222 6.222 0 0 1 0 12.444"
         data-color="main"
       />
     </svg>
