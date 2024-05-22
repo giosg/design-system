@@ -83,7 +83,7 @@ export const Headings: Story = {
       <div className={styles.container} data-testid="container">
         {titleLines.map(({ variable, name, elm }, idx) => (
           <div className={styles.row} key={idx}>
-            {name}
+            <div className={styles.name}>{name}</div>
             <VariableTooltip variableName={variable}>
               {createElement(elm, { style: { font: `var(${variable})` } }, text)}
             </VariableTooltip>
@@ -144,7 +144,7 @@ export const Body: Story = {
       <div className={styles.container} data-testid="container">
         {bodyLines.map(({ variable, name }, idx) => (
           <div className={styles.row} key={idx}>
-            {name}
+            <div className={styles.name}>{name}</div>
             <VariableTooltip variableName={variable}>
               {createElement("p", { style: { font: `var(${variable})` } }, text)}
             </VariableTooltip>
@@ -181,7 +181,7 @@ export const Label: Story = {
       <div className={styles.container} data-testid="container">
         {labelLines.map(({ variable, name }, idx) => (
           <div className={styles.row} key={idx}>
-            {name}
+            <div className={styles.name}>{name}</div>
             <VariableTooltip variableName={variable}>
               {createElement("label", { style: { font: `var(${variable})` } }, text)}
             </VariableTooltip>
