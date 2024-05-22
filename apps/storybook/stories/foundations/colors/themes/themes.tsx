@@ -1,5 +1,5 @@
 import type { StoryObj as Story } from "@storybook/react";
-import type { HTMLAttributes } from "react";
+import { useEffect, type HTMLAttributes } from "react";
 import { ColorCell } from "../colorCell/colorCell";
 import { TOKENS } from "./tokens";
 import styles from "./themes.module.css";
@@ -21,6 +21,15 @@ export const Themes: Story = {
 
 function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
   const { children, ...restProps } = props;
+
+  useEffect(() => {
+    // change global css var for better looking section
+    document.documentElement.style.setProperty("--main-background-color", "var(--gds-sys-color-layer-default)");
+    return () => {
+      document.documentElement.style.setProperty("--main-background-color", "var(--gds-sys-color-layer-canvas)");
+    };
+  }, []);
+
   return (
     <div {...restProps}>
       {children}

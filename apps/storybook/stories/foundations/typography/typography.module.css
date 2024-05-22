@@ -3,8 +3,6 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 60px;
-  background-color: var(--gds-sys-color-layer-canvas);
-  border-radius: var(--gds-sys-radius-m);
   color: var(--gds-sys-color-text-default);
   gap: 35px;
 }
