@@ -7,7 +7,7 @@ function defaultIndexTemplate(filePaths) {
     const capitalized = exportName.charAt(0).toUpperCase() + exportName.slice(1);
     return `export { default as ${capitalized} } from './${basename}'`;
   });
-  exportEntries.unshift(`export type { SvgComponentProps } from "../types"`);
+  exportEntries.unshift(`export type { SvgComponentProps, IconComponent, IconColorSet, IconColors, } from "../types"`);
   exportEntries.unshift(`/// <reference types="../../../../types/sources.d.ts" />`);
 
   return exportEntries.join("\n");

@@ -3,7 +3,14 @@ import cx from "classnames";
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import styles from "./typography.module.css";
-import { type Flex, separateFlexProps, generateFlexCssProps, formatSizeToken } from "./utils";
+import {
+  type Flex,
+  separateFlexProps,
+  generateFlexCssProps,
+  generateLabelCssVars,
+  generateTextCssVars,
+  generateHeadingCssVars,
+} from "./utils";
 
 /**
  * List of all supported color variants.
@@ -14,19 +21,21 @@ export type TextColors =
   | "inverted"
   | "on-light"
   | "on-dark"
-  | "link"
-  | "disabled"
-  | "hover"
-  | "pressed"
-  | "active"
-  | "primary"
-  | "secondary"
-  | "tertiary"
-  | "quaternary"
-  | "positive"
-  | "negative"
-  | "info"
-  | "warning";
+  | "interactive-default"
+  | "interactive-hover"
+  | "interactive-active"
+  | "interactive-active-hover"
+  | "interactive-disabled"
+  | "interactive-focused"
+  | "interactive-pressed"
+  | "primary-default"
+  | "secondary-default"
+  | "tertiary-default"
+  | "quaternary-default"
+  | "positive-default"
+  | "negative-default"
+  | "warning-default"
+  | "info-default";
 
 //******************************************
 //*                                        *
@@ -42,19 +51,16 @@ export interface LabelCustomProps {
 export type LabelProps = LabelCustomProps & Flex & React.ComponentPropsWithoutRef<"label">;
 
 export const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => {
-  const { size = "s", color = "default", className, style, flexProps, ...rest } = separateFlexProps(props);
+  const { size, color, className, style, flexProps, ...rest } = separateFlexProps(props);
 
   return (
     <label
-      className={cx(styles.typography, styles.label, styles.flex, className)}
-      style={
-        {
-          "--gds-text-color": `var(--gds-sys-color-text-${color})`,
-          "--gds-label-font": `var(--gds-sys-font-default-label-${formatSizeToken(size)}-semibold)`,
-          ...generateFlexCssProps(flexProps),
-          ...style,
-        } as React.CSSProperties
-      }
+      className={cx(styles.typography, styles.label, "gds-flex", className)}
+      style={{
+        ...generateLabelCssVars({ size, color }),
+        ...generateFlexCssProps(flexProps),
+        ...style,
+      }}
       data-size={size}
       data-color={color}
       ref={ref}
@@ -84,22 +90,16 @@ export interface TextCustomProps {
 export type TextProps = TextCustomProps & (TextSpanProps | TextDivProps | TextPProps);
 
 export const Text = React.forwardRef<TextElement, TextProps>((props, ref) => {
-  const { children, className, size = "s", bold, as: Tag = "span", color = "default", style, ...rest } = props;
+  const { children, className, size, bold, as: Tag = "span", color, style, ...rest } = props;
 
   return (
     <Slot
       data-size={size}
       data-color={color}
-      {...rest}
       ref={ref}
       className={cx(styles.typography, styles.text, className)}
-      style={
-        {
-          "--gds-text-color": `var(--gds-sys-color-text-${color})`,
-          "--gds-text-font": `var(--gds-sys-font-default-body-${formatSizeToken(size)}-${bold ? "bold" : "regular"})`,
-          ...style,
-        } as React.CSSProperties
-      }
+      style={{ ...generateTextCssVars({ size, color, bold }), ...style }}
+      {...rest}
     >
       <Tag>{children}</Tag>
     </Slot>
@@ -130,22 +130,21 @@ export type HeadingProps = HeadingCustomProps &
   (HeadingH1Props | HeadingH2Props | HeadingH3Props | HeadingH4Props | HeadingH5Props | HeadingH6Props);
 
 export const Heading = React.forwardRef<HeadingElement, HeadingProps>((props, ref) => {
-  const { children, className, size = "l", as: Tag = "h1", color = "default", bolder, style, ...rest } = props;
+  const { children, className, size, as: Tag = "h1", color, bolder, style, ...rest } = props;
 
   return (
     <Slot
       data-size={size}
       data-color={color}
-      {...rest}
       ref={ref}
       className={cx(styles.typography, styles.heading, className)}
       style={
         {
-          "--gds-text-color": `var(--gds-sys-color-text-${color})`,
-          "--gds-heading-font": `var(--gds-sys-font-default-title-${formatSizeToken(size)}-${bolder ? "black" : "bold"})`,
+          ...generateHeadingCssVars({ bolder, color, size }),
           ...style,
         } as React.CSSProperties
       }
+      {...rest}
     >
       <Tag>{children}</Tag>
     </Slot>

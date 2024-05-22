@@ -1,13 +1,32 @@
 import type { Ref} from "react";
 import { forwardRef } from "react";
-import type { SvgComponentProps } from "../types";
+import { type SvgComponentProps, generateIconCssVars } from "../types";
 
-function SvgPin({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.Element {
+function SvgPin(
+  { color, colorAcc, colorAlt, style, ...props }: SvgComponentProps,
+  ref: Ref<SVGSVGElement>,
+): JSX.Element {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      viewBox="0 0 24 24"
+      style={{
+        ...generateIconCssVars({
+          color,
+          colorAcc,
+          colorAlt,
+        }),
+        ...style,
+      }}
+      ref={ref}
+      {...props}
+    >
       <path
         fill="currentColor"
-        d="m19.293 7.293-3.586-3.586a1 1 0 0 0-1.414 0L14 4v1l-2.563 2.563a1 1 0 0 1-1.023.242L8 7 6.707 8.293a1 1 0 0 0 0 1.414L9 12l-1.764 1.764A13.4 13.4 0 0 0 4 19a13.4 13.4 0 0 0 5.235-3.236L11 14l2.293 2.293a1 1 0 0 0 1.414 0L16 15l-.8-2.414a1 1 0 0 1 .241-1.023L18 9h1l.293-.293a1 1 0 0 0 0-1.414m-2.707.293-2.563 2.563a2.98 2.98 0 0 0-.725 3.07l.126.376L9.4 9.576l.376.126a3 3 0 0 0 3.07-.725l2.563-2.563.086-.086L16.672 7.5z"
+        d="M19.7 7.982 16.017 4.3a1.026 1.026 0 0 0-1.451 0l-.301.3v1.027l-2.631 2.631a1.03 1.03 0 0 1-1.05.248L8.105 7.68 6.78 9.008a1.027 1.027 0 0 0 0 1.452l2.354 2.354-1.811 1.81A13.76 13.76 0 0 0 4 20a13.8 13.8 0 0 0 5.374-3.322l1.812-1.81 2.354 2.353a1.027 1.027 0 0 0 1.452 0l1.327-1.327-.821-2.479a1.03 1.03 0 0 1 .247-1.05l2.627-2.63H19.4l.3-.302a1.026 1.026 0 0 0 0-1.451m-2.78.3-2.63 2.632a3.06 3.06 0 0 0-.745 3.151l.13.386-4.131-4.126.386.13a3.08 3.08 0 0 0 3.151-.744l2.631-2.631.088-.089 1.209 1.203z"
         data-color="main"
       />
     </svg>

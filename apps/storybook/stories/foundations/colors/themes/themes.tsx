@@ -1,5 +1,5 @@
 import type { StoryObj as Story } from "@storybook/react";
-import type { HTMLAttributes } from "react";
+import { useEffect, type HTMLAttributes } from "react";
 import { ColorCell } from "../colorCell/colorCell";
 import { TOKENS } from "./tokens";
 import styles from "./themes.module.css";
@@ -7,7 +7,7 @@ import styles from "./themes.module.css";
 export const Themes: Story = {
   render: (_, { globals }) => {
     return (
-      <div className={styles.themes} data-theme={globals.theme}>
+      <div className={styles.themes}>
         <ThemeCanvas>
           <h1 className={styles.themeHeader}>
             {globals.theme === "dark" && "🌙 Dark Theme"}
@@ -21,12 +21,21 @@ export const Themes: Story = {
 
 function ThemeCanvas(props: HTMLAttributes<HTMLDivElement>) {
   const { children, ...restProps } = props;
+
+  useEffect(() => {
+    // change global css var for better looking section
+    document.documentElement.style.setProperty("--main-background-color", "var(--gds-sys-color-layer-default)");
+    return () => {
+      document.documentElement.style.setProperty("--main-background-color", "var(--gds-sys-color-layer-canvas)");
+    };
+  }, []);
+
   return (
     <div {...restProps}>
       {children}
-      <div data-testid={"container"} className={styles.container}>
+      <div className={styles.container} data-testid="container">
         {TOKENS.map(({ token, groups }, index) => (
-          <div className={styles.column} key={`${token}-${index}`}>
+          <div className={styles.row} key={`${token}-${index}`}>
             {groups.map(({ label, modificators }) => (
               <div className={styles.group} key={label}>
                 <h3>{label}</h3>

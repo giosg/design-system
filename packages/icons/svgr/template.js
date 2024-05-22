@@ -6,6 +6,50 @@ const propTypesTemplate = (ast, context) => {
     type: "ObjectPattern",
     properties: [
       {
+        type: "ObjectProperty",
+        key: {
+          type: "Identifier",
+          name: "color",
+        },
+        value: {
+          type: "Identifier",
+          name: "color",
+        },
+      },
+      {
+        type: "ObjectProperty",
+        key: {
+          type: "Identifier",
+          name: "colorAcc",
+        },
+        value: {
+          type: "Identifier",
+          name: "colorAcc",
+        },
+      },
+      {
+        type: "ObjectProperty",
+        key: {
+          type: "Identifier",
+          name: "colorAlt",
+        },
+        value: {
+          type: "Identifier",
+          name: "colorAlt",
+        },
+      },
+      {
+        type: "ObjectProperty",
+        key: {
+          type: "Identifier",
+          name: "style",
+        },
+        value: {
+          type: "Identifier",
+          name: "style",
+        },
+      },
+      {
         type: "RestElement",
         argument: {
           type: "Identifier",
@@ -27,9 +71,80 @@ const propTypesTemplate = (ast, context) => {
 
   const updImports = [imports[1]];
 
+  jsx.openingElement.attributes.push({
+    type: "JSXAttribute",
+    name: { type: "JSXIdentifier", name: "style" },
+    value: {
+      type: "JSXExpressionContainer",
+      expression: {
+        type: "ObjectExpression",
+        properties: [
+          {
+            type: "SpreadElement",
+            argument: {
+              type: "CallExpression",
+              callee: {
+                type: "Identifier",
+                name: "generateIconCssVars",
+              },
+              arguments: [
+                {
+                  type: "ObjectExpression",
+                  properties: [
+                    {
+                      type: "ObjectProperty",
+                      key: {
+                        type: "Identifier",
+                        name: "color",
+                      },
+                      value: {
+                        type: "Identifier",
+                        name: "color",
+                      },
+                    },
+                    {
+                      type: "ObjectProperty",
+                      key: {
+                        type: "Identifier",
+                        name: "colorAcc",
+                      },
+                      value: {
+                        type: "Identifier",
+                        name: "colorAcc",
+                      },
+                    },
+                    {
+                      type: "ObjectProperty",
+
+                      key: {
+                        type: "Identifier",
+                        name: "colorAlt",
+                      },
+                      value: {
+                        type: "Identifier",
+                        name: "colorAlt",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          },
+          {
+            type: "SpreadElement",
+            argument: {
+              type: "Identifier",
+              name: "style",
+            },
+          },
+        ],
+      },
+    },
+  });
+
   return tpl`
 ${updImports}
-import type { SvgComponentProps } from "../types";
+import { type SvgComponentProps,  generateIconCssVars } from "../types";
 
 ${interfaces}
 

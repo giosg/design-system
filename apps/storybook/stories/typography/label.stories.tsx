@@ -29,7 +29,7 @@ export const Size: Story = {
           </header>
           <Row>
             <div className={s.description} style={{ width: 200 }}>
-              <span>Default size (m)</span>
+              <span>Default size S</span>
               <span>{`<Label>`}</span>
             </div>
             <Label className={s.label}>{labelText}</Label>
@@ -104,6 +104,40 @@ export const Flex: Story = {
             <Label gap="3xl">
               Left
               <div className={s.colorfulBox} />
+              Right
+            </Label>
+          </Row>
+        </div>
+      </div>
+    );
+  },
+};
+
+export const AutoDisabled: Story = {
+  render: () => {
+    return (
+      <div className={s.container} data-testid="container">
+        <div className={s.section}>
+          <header className={s.header}>
+            <h1 className={s.title}>Label Disabled</h1>
+          </header>
+          <Row>
+            <div className={s.description} style={{ width: 300 }}>
+              <span>{`<Label> wrapping data-disabled`}</span>
+            </div>
+            <Label>
+              Left
+              <div className={s.colorfulBox} data-disabled />
+              Right
+            </Label>
+          </Row>
+          <Row>
+            <div className={s.description} style={{ width: 300 }}>
+              <span>{`<Label>  wrapping disabled`}</span>
+            </div>
+            <Label>
+              Left
+              <button className={s.colorfulBox} disabled type="button" />
               Right
             </Label>
           </Row>

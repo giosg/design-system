@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- Allow any types in this file */
 import type { CSSProperties } from "react";
 import type React from "react";
+import type { HeadingCustomProps, LabelCustomProps, TextCustomProps } from "./typography";
 
 const SizeToVarRegex = /^(\d+)/;
 
@@ -22,7 +23,8 @@ export type Spacing =
   | "4xl"
   | "5xl"
   | "6xl"
-  | "7xl";
+  | "7xl"
+  | "8xl";
 
 const SpacingSet = new Set<Spacing>([
   "none",
@@ -39,6 +41,7 @@ const SpacingSet = new Set<Spacing>([
   "5xl",
   "6xl",
   "7xl",
+  "8xl",
 ]);
 
 type PixelSpacing = `${number}px`;
@@ -131,4 +134,35 @@ export const separateFlexProps = <T extends Record<string, any> & Flex>(
     },
     ...resProps,
   };
+};
+
+export const generateLabelCssVars = (props: LabelCustomProps): CSSProperties => {
+  const { size, color } = props;
+
+  return {
+    "--gds-text-color": color && `var(--gds-sys-color-text-${color})`,
+    "--gds-label-font": size && `var(--gds-sys-font-default-label-${formatSizeToken(size)}-semibold)`,
+  } as CSSProperties;
+};
+
+export const generateTextCssVars = (props: TextCustomProps): CSSProperties => {
+  const { size, color, bold } = props;
+
+  return {
+    "--gds-text-color": color && `var(--gds-sys-color-text-${color})`,
+    "--gds-text-font":
+      (size || bold) &&
+      `var(--gds-sys-font-default-body-${size ? formatSizeToken(size) : "m"}-${bold ? "bold" : "regular"})`,
+  } as CSSProperties;
+};
+
+export const generateHeadingCssVars = (props: HeadingCustomProps): CSSProperties => {
+  const { size, color, bolder } = props;
+
+  return {
+    "--gds-text-color": color && `var(--gds-sys-color-text-${color})`,
+    "--gds-heading-font":
+      (size || bolder) &&
+      `var(--gds-sys-font-default-title-${size ? formatSizeToken(size) : "l"}-${bolder ? "black" : "bold"})`,
+  } as CSSProperties;
 };

@@ -1,13 +1,32 @@
 import type { Ref} from "react";
 import { forwardRef } from "react";
-import type { SvgComponentProps } from "../types";
+import { type SvgComponentProps, generateIconCssVars } from "../types";
 
-function SvgGoalSet({ ...props }: SvgComponentProps, ref: Ref<SVGSVGElement>): JSX.Element {
+function SvgGoalSet(
+  { color, colorAcc, colorAlt, style, ...props }: SvgComponentProps,
+  ref: Ref<SVGSVGElement>,
+): JSX.Element {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" ref={ref} {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      viewBox="0 0 24 24"
+      style={{
+        ...generateIconCssVars({
+          color,
+          colorAcc,
+          colorAlt,
+        }),
+        ...style,
+      }}
+      ref={ref}
+      {...props}
+    >
       <path
         fill="currentColor"
-        d="M20.941 11A9.03 9.03 0 1 1 13 3.059V5.08A7.062 7.062 0 1 0 18.92 11zM12 9V7a5 5 0 1 0 5 5h-2a3 3 0 1 1-3-3m-.707 3.707a1 1 0 0 0 1.414 0L15.914 9.5H18.5l4-4h-4v-4l-4 4v2.586l-3.207 3.207a1 1 0 0 0 0 1.414"
+        d="M20.566 10.742a8.31 8.31 0 1 1-7.307-7.307v1.86a6.498 6.498 0 1 0 5.447 5.447zm-8.228-1.84V7.06a4.6 4.6 0 1 0 4.601 4.6H15.1a2.76 2.76 0 1 1-2.76-2.76m-.65 3.41a.92.92 0 0 0 1.3 0l2.952-2.95h2.38L22 5.68h-3.68V2l-3.681 3.68v2.38l-2.951 2.951a.92.92 0 0 0 0 1.301"
         data-color="main"
       />
     </svg>

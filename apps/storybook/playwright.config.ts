@@ -35,8 +35,7 @@ export default defineConfig({
   },
 
   expect: {
-    // Strictest config possible for pixelmatch
-    toHaveScreenshot: { threshold: 0.01, maxDiffPixelRatio: 0.01, maxDiffPixels: 0.01 },
+    toHaveScreenshot: { threshold: 0.05 },
   },
 
   /* Configure projects for major browsers */

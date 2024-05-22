@@ -59,6 +59,6 @@
   width: 36px;
   height: 36px;
   background-color: var(--gds-sys-color-layer-soft);
-  border: 3px solid var(--gds-sys-color-border-active);
+  border: 3px solid var(--gds-sys-color-border-interactive-active);
   border-radius: var(--gds-sys-radius-xs);
 }

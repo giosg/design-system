@@ -1,5 +1,9 @@
+:root {
+  --main-background-color: var(--gds-sys-color-layer-canvas);
+}
+
 .sb-show-main {
   font-family: var(--gds-font-ui-stack);
   color: var(--gds-sys-color-text-default);
-  background-color: var(--gds-sys-color-layer-default);
+  background-color: var(--main-background-color);
 }

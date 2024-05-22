@@ -4,24 +4,15 @@ import { Label } from "@giosg/design-system-typography";
 import s from "./switch.module.css";
 
 const meta: Meta = {
-  title: "Switch/Base",
+  title: "Switch/With Label",
+  parameters: {
+    layout: "centered",
+  },
 };
 
 export default meta;
 
-type Story = StoryObj<{
-  disabled: boolean;
-}>;
-
-export const Base: Story = {
-  args: {
-    disabled: false,
-  },
-  render: (args) => {
-    const { disabled } = args;
-    return <Switch disabled={disabled} />;
-  },
-};
+type Story = StoryObj;
 
 export const WithLabel: Story = {
   render: () => {
@@ -46,6 +37,14 @@ export const WithLabel: Story = {
           <Label>
             Left
             <Switch />
+            Right
+          </Label>
+        </div>
+        <div className={s.section}>
+          <h3>Label Disabled</h3>
+          <Label>
+            Left
+            <Switch disabled />
             Right
           </Label>
         </div>

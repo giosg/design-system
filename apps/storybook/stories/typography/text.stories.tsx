@@ -31,7 +31,7 @@ export const Size: Story = {
           </header>
           <Row>
             <div className={s.description}>
-              <span>Default size M</span>
+              <span>Default size S</span>
               <span>{`<Text>`}</span>
             </div>
             <Text className={s.text}>{sampleText}</Text>

@@ -2,10 +2,35 @@
 
 :root {
   /* Fonts */
-  --gds-font-ui-stack: nunito sans, -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue,
-    helvetica, cantarell, ubuntu, roboto, noto, arial, sans-serif;
+  --gds-font-ui-stack: nunito sans, helvetica, helvetica neue, arial, avenir next, avenir, noto sans, system-ui,
+    segoe ui, cantarell, ubuntu, liberation sans, roboto, sans-serif;
 }
 
 body {
   font-family: var(--gds-font-ui-stack);
+  letter-spacing: 0;
+}
+
+/* Generic flex class */
+.gds-flex {
+  display: flex;
+
+  /* variables */
+  --gds-flex-grow: auto;
+  --gds-flex-shrink: auto;
+  --gds-flex-basis: auto;
+  --gds-flex-direction: row;
+  --gds-flex-align: center;
+  --gds-flex-justify: flex-start;
+  --gds-flex-wrap: nowrap;
+  --gds-flex-gap: var(--gds-sys-space-3-xs);
+
+  /* values */
+  flex-grow: var(--gds-flex-grow);
+  flex-shrink: var(--gds-flex-shrink);
+  flex-basis: var(--gds-flex-basis);
+  flex-direction: var(--gds-flex-direction);
+  align-items: var(--gds-flex-align);
+  justify-content: var(--gds-flex-justify);
+  gap: var(--gds-flex-gap);
 }
