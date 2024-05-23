@@ -1,6 +1,6 @@
 {
   "name": "@giosg-design-system/switch",
-  "private": true,
+  "private": false,
   "description": "accessible switch react component",
   "version": "0.0.0",
   "source": "./src/index.tsx",
@@ -27,7 +27,8 @@
   "peerDependencies": {
     "react": "^18",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "@giosg-design-system/foundations": "workspace:^0"
   },
   "dependencies": {
     "@radix-ui/react-switch": "^1.0.3",
