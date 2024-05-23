@@ -24,7 +24,7 @@
     "react": "^18",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@giosg-design-system/foundations": "workspace:^0"
+    "@giosg-design-system/foundations": "workspace:^"
   },
   "peerDependenciesMeta": {
     "@types/react": {
