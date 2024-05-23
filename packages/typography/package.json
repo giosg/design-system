@@ -1,8 +1,8 @@
 {
-  "name": "@giosg/design-system-typography",
-  "private": true,
+  "name": "@giosg-design-system/typography",
+  "private": false,
   "description": "set of typography components for Giosg Design System",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "source": "./src/index.tsx",
   "main": "./dist/index.js",
   "module": "./dist/module.mjs",
@@ -25,9 +25,10 @@
     "package": "rm -rf *.tgz && pnpm pack"
   },
   "peerDependencies": {
+    "react": "^18",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "react": "^18"
+    "@giosg-design-system/foundations": "workspace:^"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",

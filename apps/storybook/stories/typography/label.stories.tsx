@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Label } from "@giosg/design-system-typography";
+import { Label } from "@giosg-design-system/typography";
 import s from "./typography.module.css";
 import { Row, SupportedColors } from "./utils";
 

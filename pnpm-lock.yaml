@@ -35,16 +35,16 @@ importers:
 
   apps/storybook:
     dependencies:
-      '@giosg/design-system-foundations':
+      '@giosg-design-system/foundations':
         specifier: workspace:*
         version: link:../../packages/foundations
-      '@giosg/design-system-icons':
+      '@giosg-design-system/icons':
         specifier: workspace:*
         version: link:../../packages/icons
-      '@giosg/design-system-switch':
+      '@giosg-design-system/switch':
         specifier: workspace:*
         version: link:../../packages/switch
-      '@giosg/design-system-typography':
+      '@giosg-design-system/typography':
         specifier: workspace:*
         version: link:../../packages/typography
       '@radix-ui/react-toast':
@@ -135,7 +135,7 @@ importers:
 
   apps/tree-shaking-tester:
     dependencies:
-      '@giosg/design-system-icons':
+      '@giosg-design-system/icons':
         specifier: workspace:*
         version: link:../../packages/icons
       react:
@@ -223,6 +223,9 @@ importers:
 
   packages/icons:
     dependencies:
+      '@giosg-design-system/foundations':
+        specifier: workspace:^
+        version: link:../foundations
       '@types/react':
         specifier: ^18
         version: 18.2.51
@@ -254,6 +257,9 @@ importers:
 
   packages/switch:
     dependencies:
+      '@giosg-design-system/foundations':
+        specifier: workspace:^
+        version: link:../foundations
       '@radix-ui/react-switch':
         specifier: ^1.0.3
         version: 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.51)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -294,6 +300,9 @@ importers:
 
   packages/typography:
     dependencies:
+      '@giosg-design-system/foundations':
+        specifier: workspace:^
+        version: link:../foundations
       '@radix-ui/react-slot':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.2.51)(react@18.2.0)

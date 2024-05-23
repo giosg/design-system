@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from "react";
-import type { TextColors } from "@giosg/design-system-typography";
+import type { TextColors } from "@giosg-design-system/typography";
 import s from "./typography.module.css";
 
 export function Row(props: HTMLAttributes<HTMLDivElement>) {

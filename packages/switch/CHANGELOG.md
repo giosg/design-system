@@ -1,4 +1,4 @@
-# @giosg-design-system/icons
+# @giosg-design-system/switch
 
 ## 1.0.0
 

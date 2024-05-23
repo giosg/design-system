@@ -1,4 +1,4 @@
-# @giosg-design-system/icons
+# @giosg-design-system/typography
 
 ## 1.0.0
 

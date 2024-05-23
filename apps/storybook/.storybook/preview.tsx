@@ -1,13 +1,13 @@
 import React from "react";
 import { Preview, Decorator } from "@storybook/react";
-import "@giosg/design-system-foundations/index.css";
+import "@giosg-design-system/foundations/index.css";
 import "./global.css";
 
 const ThemeDecorator: Decorator = (Story, context) => {
   document?.querySelector("html")?.setAttribute("data-theme", context.globals.theme);
 
   return <Story {...context} />;
-};
+};  
 
 const preview: Preview = {
   decorators: [ThemeDecorator],
