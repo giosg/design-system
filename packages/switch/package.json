@@ -2,7 +2,7 @@
   "name": "@giosg-design-system/switch",
   "private": false,
   "description": "accessible switch react component",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "source": "./src/index.tsx",
   "main": "./dist/index.js",
   "module": "./dist/module.mjs",
