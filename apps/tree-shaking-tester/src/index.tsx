@@ -1,4 +1,4 @@
-import * as Icons from "@giosg/design-system-icons";
+import * as Icons from "@giosg-design-system/icons";
 
 export function App(): JSX.Element {
   return (

@@ -9,7 +9,7 @@ To use the Tree Shaking Tester App, follow these steps:
 1. Go to `package.json` and add the desired package to dependencies
    ```json
    "dependencies": {
-      "@giosg/design-system-icons": "workspace:*"
+      "@giosg-design-system/icons": "workspace:*"
     }
 2. Also in `package.json` we need to treat the package as a bundled product not a library. For that we have to add following lines for both module and common-js targets
    ```json
@@ -17,13 +17,13 @@ To use the Tree Shaking Tester App, follow these steps:
       "module": {
         "optimize": true,
         "includeNodeModules": [
-          "@giosg/design-system-icons"
+          "@giosg-design-system/icons"
         ]
       },
       "main": {
         "optimize": true,
         "includeNodeModules": [
-          "@giosg/design-system-icons"
+          "@giosg-design-system/icons"
         ]
       }
   },

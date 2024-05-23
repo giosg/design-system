@@ -1,5 +1,5 @@
 {
-  "name": "@giosg/design-system-typography",
+  "name": "@giosg-design-system/typography",
   "private": true,
   "description": "set of typography components for Giosg Design System",
   "version": "0.0.0",

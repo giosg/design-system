@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import * as Icons from "@giosg/design-system-icons";
+import * as Icons from "@giosg-design-system/icons";
 import styles from "./icons.module.css";
 
 const meta: Meta = {

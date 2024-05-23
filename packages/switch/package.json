@@ -1,5 +1,5 @@
 {
-  "name": "@giosg/design-system-switch",
+  "name": "@giosg-design-system/switch",
   "private": true,
   "description": "accessible switch react component",
   "version": "0.0.0",

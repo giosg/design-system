@@ -1,8 +1,8 @@
 {
-  "name": "@giosg/design-system-icons",
+  "name": "@giosg-design-system/icons",
   "private": false,
   "description": "svg based react icon components",
-  "version": "0.2.0",
+  "version": "0.0.0",
   "source": "./src/components/index.ts",
   "main": "./dist/index.js",
   "module": "./dist/module.mjs",

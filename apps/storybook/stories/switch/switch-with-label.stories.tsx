@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Switch, _Root, _Thumb } from "@giosg/design-system-switch";
-import { Label } from "@giosg/design-system-typography";
+import { Switch, _Root, _Thumb } from "@giosg-design-system/switch";
+import { Label } from "@giosg-design-system/typography";
 import s from "./switch.module.css";
 
 const meta: Meta = {

@@ -5,11 +5,11 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @giosg/design-system-icons@0.2.0
+  - @giosg-design-system/icons@0.2.0
 
 ## 0.0.1
 
 ### Patch Changes
 
 - Updated dependencies
-  - @giosg/design-system-icons@0.1.0
+  - @giosg-design-system/icons@0.1.0

@@ -35,16 +35,16 @@ importers:
 
   apps/storybook:
     dependencies:
-      '@giosg/design-system-foundations':
+      '@giosg-design-system/foundations':
         specifier: workspace:*
         version: link:../../packages/foundations
-      '@giosg/design-system-icons':
+      '@giosg-design-system/icons':
         specifier: workspace:*
         version: link:../../packages/icons
-      '@giosg/design-system-switch':
+      '@giosg-design-system/switch':
         specifier: workspace:*
         version: link:../../packages/switch
-      '@giosg/design-system-typography':
+      '@giosg-design-system/typography':
         specifier: workspace:*
         version: link:../../packages/typography
       '@radix-ui/react-toast':
@@ -135,7 +135,7 @@ importers:
 
   apps/tree-shaking-tester:
     dependencies:
-      '@giosg/design-system-icons':
+      '@giosg-design-system/icons':
         specifier: workspace:*
         version: link:../../packages/icons
       react:

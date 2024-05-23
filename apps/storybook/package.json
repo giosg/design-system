@@ -14,10 +14,10 @@
     "test-docker": "docker-compose -f ../../docker-compose.e2e.yml up"
   },
   "dependencies": {
-    "@giosg/design-system-foundations": "workspace:*",
-    "@giosg/design-system-icons": "workspace:*",
-    "@giosg/design-system-switch": "workspace:*",
-    "@giosg/design-system-typography": "workspace:*",
+    "@giosg-design-system/foundations": "workspace:*",
+    "@giosg-design-system/icons": "workspace:*",
+    "@giosg-design-system/switch": "workspace:*",
+    "@giosg-design-system/typography": "workspace:*",
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "react": "^18.2.0",

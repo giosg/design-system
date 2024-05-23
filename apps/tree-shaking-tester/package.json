@@ -9,13 +9,13 @@
     "module": {
       "optimize": true,
       "includeNodeModules": [
-        "@giosg/design-system-icons"
+        "@giosg-design-system/icons"
       ]
     },
     "main": {
       "optimize": true,
       "includeNodeModules": [
-        "@giosg/design-system-icons"
+        "@giosg-design-system/icons"
       ]
     }
   },
@@ -23,7 +23,7 @@
     "shake": "parcel build --no-source-maps"
   },
   "dependencies": {
-    "@giosg/design-system-icons": "workspace:*",
+    "@giosg-design-system/icons": "workspace:*",
     "react": ">=18"
   },
   "devDependencies": {
