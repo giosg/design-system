@@ -8,9 +8,9 @@
   --gds-text-gap: var(--gds-sys-space-xs);
   font: var(--gds-label-font);
 
-  /* if disabled inside */
-  &:has([disabled]),
-  &:has([data-disabled]) {
+  /* if has immediate child with disabled or data-disabled attributes */
+  &:has(> *[disabled]),
+  &:has(> *[data-disabled="true"]) {
     color: var(--gds-sys-color-text-interactive-disabled);
   }
 }
