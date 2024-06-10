@@ -141,6 +141,18 @@ export const AutoDisabled: Story = {
               Right
             </Label>
           </Row>
+          <Row>
+            <div className={s.description} style={{ width: 300 }}>
+              <span>{`<Label> disabled attr is not on the immediate child`}</span>
+            </div>
+            <Label>
+              Left
+              <div>
+                <button className={s.colorfulBox} disabled type="button" />
+              </div>
+              Right
+            </Label>
+          </Row>
         </div>
       </div>
     );
