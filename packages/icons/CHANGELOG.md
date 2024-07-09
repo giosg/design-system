@@ -1,5 +1,11 @@
 # @giosg-design-system/icons
 
+## 1.1.0
+
+### Minor Changes
+
+- add brandMeta and bubbleAnswer icons
+
 ## 1.0.0
 
 ### Major Changes
