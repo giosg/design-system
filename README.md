@@ -80,32 +80,45 @@ By default, Playwright does not update failed screenshots. To get a new referenc
 Once you've ensured there are no unintended changes, commit the new screenshot, push the changes to Github, and CI should not detect any differences.
 
 ## 🔨 Local development
-Recommended way to start local development is by using [Volta.js](https://volta.sh/) for managing your nodejs and package manager versions. 
-- after `volta.js` installation we have to install `pnpm` package manager by  
+
+Recommended way to start local development is by using [Volta.js](https://volta.sh/) for managing your nodejs and package manager versions.
+
+- after `volta.js` installation we have to install `pnpm` package manager by
+
 ```
 volta install pnpm
 ```
+
 - install node version pinned in package.json
+
 ```
 volta install node <version>
 ```
+
 - install all the dependencies
+
 ```
 pnpm i
 ```
+
 - since some of our packages dependant on the pre-built versions of another packages we need to make a full-package list by running
+
 ```
 pnpm build-packages
 ```
+
 Now when the installation is ready its time to quickly get familiar with the basics of [TurboRepo](https://turbo.build/repo/docs) and how the tasks run in `turbo.json`.
 
 You have a traditional set of command for the repo like `dev`, `build`, `test`, `lint`. They will run corresponding command in the packages and apps.
 
 ## 📦 Packages
+
 The main unit of the design system is consumable packages which are stored in `packages` directory.
 
 ### Add a new package
+
 I think the best way to start a new package is to copy an existing package which is in your opinion is a closer fit to the package you want to add. At the current stage the best simple standard package is `packages/switch` .
+
 - Copying the existing package.
 - Remove all git-ignored folders, as well as `CHANGELOG.md` so in the end you will end up with something like that:
   ![](/assets/copied-packages.png)
@@ -119,20 +132,24 @@ I think the best way to start a new package is to copy an existing package which
 - When you are finished with the development choose a major version for this package when you will do `changeset` for the packages. Read more about that in Publishing instructions.
 
 ### Updating an existing package
+
 The flow for updating a package is pretty simple.
+
 - Make changes to source files
 - Run `changeset` and following the semantic versioning pick a proper version.
 
-## 🎁 Versioning / Publishing 
+## 🎁 Versioning / Publishing
+
 Packages follow [semantic versioning](https://www.geeksforgeeks.org/introduction-semantic-versioning/).
 
 Publishing is done through the package named [changesets](https://github.com/changesets/changesets). Browse documentation to know the details.
 
-But in short if you want to publish a new version of the package you have to use ```pnpm changeset``` command to add your changeset in which you describe all of the changes you made. You can accommodate multiple changesets of multiple packages. When you are done with your changes run ```pnpm version-packages``` under which `changesets` automatically bumps all of the packages and dependencies to the proper versions.
+But in short if you want to publish a new version of the package you have to use `pnpm changeset` command to add your changeset in which you describe all of the changes you made. You can accommodate multiple changesets of multiple packages. When you are done with your changes run `pnpm version-packages` under which `changesets` automatically bumps all of the packages and dependencies to the proper versions.
 
 Next step - create a pull request with your changes. Check that pull-request reviewer is assigned. This should be done automatically because project has code-owners. When pull request is merged and everything is fine (linting, tests and so on) new versions of packages are deployed ⚠️ **automatically** ⚠️ be aware and cautious of that.
 
 ### ⚠️ Info about versioning Foundation package.
-Here are some "underwater stones" when you version changes the foundation package. Since the foundation package is a `peerDependency` in most of the packages all non major changes to that package should not bump dependant packages to **major** versions. This is the quirk of `changeset` library. 
-Here is the issue on github https://github.com/changesets/changesets/issues/380 where you can find more info. 
-So if you update foundation package and run changeset over it you will have to manually decline changes to the dependant packages if they reference foundation package by `"@giosg-design-system/{package-name}": "workspace:^"` (and they should), or make appropriate manual changes to them if it they are not ` "workspace:^"`.  
+
+Here are some "underwater stones" when you version changes the foundation package. Since the foundation package is a `peerDependency` in most of the packages all non major changes to that package should not bump dependant packages to **major** versions. This is the quirk of `changeset` library.
+Here is the issue on github https://github.com/changesets/changesets/issues/380 where you can find more info.
+So if you update foundation package and run changeset over it you will have to manually decline changes to the dependant packages if they reference foundation package by `"@giosg-design-system/{package-name}": "workspace:^"` (and they should), or make appropriate manual changes to them if it they are not ` "workspace:^"`.

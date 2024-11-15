@@ -7,7 +7,7 @@ const ThemeDecorator: Decorator = (Story, context) => {
   document?.querySelector("html")?.setAttribute("data-theme", context.globals.theme);
 
   return <Story {...context} />;
-};  
+};
 
 const preview: Preview = {
   decorators: [ThemeDecorator],
