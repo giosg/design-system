@@ -20,6 +20,7 @@ export { default as Attachment } from "./attachment";
 export { default as BarChart } from "./barChart";
 export { default as BellDisabled } from "./bellDisabled";
 export { default as BellEnabled } from "./bellEnabled";
+export { default as BidirectionalMessage } from "./bidirectionalMessage";
 export { default as Bot } from "./bot";
 export { default as BrandGiosg } from "./brandGiosg";
 export { default as BrandInstagram } from "./brandInstagram";

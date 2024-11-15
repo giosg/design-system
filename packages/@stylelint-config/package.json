@@ -1,6 +1,6 @@
 {
   "name": "@repo/stylelint-config",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "shared stylelint config for the repo",
   "main": "index.js",
   "private": true,
