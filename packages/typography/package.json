@@ -2,7 +2,7 @@
   "name": "@giosg-design-system/typography",
   "private": false,
   "description": "set of typography components for Giosg Design System",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "source": "./src/index.tsx",
   "main": "./dist/index.js",
   "module": "./dist/module.mjs",

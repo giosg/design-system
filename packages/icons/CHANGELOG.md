@@ -1,5 +1,11 @@
 # @giosg-design-system/icons
 
+## 1.2.0
+
+### Minor Changes
+
+- add bidirectional message icon
+
 ## 1.1.0
 
 ### Minor Changes
