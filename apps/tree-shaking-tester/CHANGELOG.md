@@ -1,16 +1,5 @@
 # @repo/tree-shaking-tester
 
-## 0.1.0
-
-### Minor Changes
-
-- 9d47b7d: new icon
-
-### Patch Changes
-
-- Updated dependencies [9d47b7d]
-  - @giosg-design-system/icons@2.0.0
-
 ## 0.0.4
 
 ### Patch Changes

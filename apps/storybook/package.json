@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "storybook dev -p 6006 --no-open",
     "build": "storybook build",
-    "test": "playwright test --update-snapshots",
+    "test": "playwright test",
     "lint": "eslint stories/**/*.tsx components/**/*.tsx --max-warnings=0 && stylelint **/*.css --max-warnings=0 --allow-empty-input",
     "clean": "rm -rf .turbo && rm -rf node_modules",
     "serve-storybook": "http-server storybook-static -p 6006",
     "update-screenshots": "playwright test --update-snapshots",
-    "test-docker": "docker-compose -f ../../docker-compose.e2e.yml up --build"
+    "test-docker": "docker-compose -f ../../docker-compose.e2e.yml up"
   },
   "dependencies": {
     "@giosg-design-system/foundations": "workspace:*",
