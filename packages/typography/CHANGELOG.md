@@ -2,10 +2,6 @@
 
 ## 2.0.0
 
-### Minor Changes
-
-- 9d47b7d: new icon
-
 ### Patch Changes
 
 - Updated dependencies [9d47b7d]

@@ -4,4 +4,4 @@
 
 ### Minor Changes
 
-- 9d47b7d: new icon
+- update dependency version
