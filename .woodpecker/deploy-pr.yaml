@@ -1,0 +1,41 @@
+when:
+  - event: pull_request
+    branch: master
+
+depends_on:
+  - test
+
+steps:
+  - name: build
+    image: plugins/kaniko
+    settings:
+      dockerfile: Dockerfile
+      repo: giosg/design-system
+      tags:
+        - ${CI_COMMIT_SHA}-${CI_PIPELINE_NUMBER}-pull-request
+        - pull-request
+      username:
+        from_secret: docker-username
+      password:
+        from_secret: docker-password
+
+  - name: deploy-pull-request
+    image: giosg/drone-helm:3
+    settings:
+      chart: charts/design-system
+      namespace: integrations
+      release_name: design-system-pr-${CI_COMMIT_PULL_REQUEST}
+      values_file: charts/values.sandbox.yaml
+      set_value_template:
+        - image.tag={{ CI_COMMIT_SHA }}-{{ CI_PIPELINE_NUMBER }}-pull-request
+        - ingress.hosts={design-system-pr-${CI_COMMIT_PULL_REQUEST}.staging.giosg.com}
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-repo=giosg/design-system
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-state=closed
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-number={{ CI_COMMIT_PULL_REQUEST }}
+        - deploymentAnnotations.giosg\\.com/delete-on-pull-request-helm-release=design-system-pr-${CI_COMMIT_PULL_REQUEST}
+      api_server:
+        from_secret: k8s-sb-server
+      kubernetes_token:
+        from_secret: k8s-sb-token
+      depends_on:
+        - build

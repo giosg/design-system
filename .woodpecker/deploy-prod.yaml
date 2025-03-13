@@ -1,0 +1,78 @@
+when:
+  - event: push
+    branch: master
+
+steps:
+  - name: install-packages
+    image: node:20.10.0-slim
+    commands:
+      - export PATH=/pnpm:$PATH
+      - corepack enable
+      - pnpm i
+      - pnpm build-packages
+      - pnpm i
+    environment:
+      NPM_CONFIG_REGISTRY: http://npm-local-cache-verdaccio.infra.svc.cluster.local:4873
+
+  - name: lint
+    image: node:20.10.0-slim
+    commands:
+      - export PATH=/pnpm:$PATH
+      - corepack enable
+      - pnpm run lint
+    depends_on:
+      - install-packages
+
+  - name: e2e
+    image: mcr.microsoft.com/playwright:v1.41.1-jammy
+    commands:
+      - export PATH=/pnpm:$PATH
+      - corepack enable
+      - pnpm build
+      - pnpm run serve-storybook & pnpm run test
+    depends_on:
+      - install-packages
+
+  - name: build-image
+    image: plugins/kaniko
+    settings:
+      dockerfile: Dockerfile
+      repo: giosg/design-system
+      tags:
+        - ${CI_COMMIT_SHA}-${CI_PIPELINE_NUMBER}
+        - master
+      username:
+        from_secret: docker-username
+      password:
+        from_secret: docker-password
+
+  - name: deploy
+    image: giosg/drone-helm:3
+    settings:
+      chart: charts/design-system
+      namespace: integrations
+      release_name: design-system
+      values_file: charts/values.prod.yaml
+      api_server:
+        from_secret: k8s-prod-server
+      kubernetes_token:
+        from_secret: k8s-prod-token
+      set_value_template:
+        - image.tag={{ CI_COMMIT_SHA }}-{{ CI_PIPELINE_NUMBER }}
+    depends_on:
+      - build-image
+
+  - name: release-packages
+    image: node:20.10.0-slim
+    environment:
+      NPM_PUBLISH_TOKEN:
+        from_secret: NPM_PUBLISH_TOKEN
+    commands:
+      - export PATH=/pnpm:$PATH
+      - corepack enable
+      - apt-get update && apt-get install -y git
+      - pnpm run release
+    depends_on:
+      - deploy
+      - lint
+      - e2e

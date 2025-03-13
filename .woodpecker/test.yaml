@@ -1,0 +1,75 @@
+when:
+  - event: pull_request
+    branch: master
+
+steps:
+  - name: install-packages
+    image: node:20.10.0-slim
+    commands:
+      - export PATH=/pnpm:$PATH
+      - corepack enable
+      - pnpm i
+      - pnpm build-packages
+      - pnpm i
+    environment:
+      NPM_CONFIG_REGISTRY: http://npm-local-cache-verdaccio.infra.svc.cluster.local:4873
+
+  - name: lint
+    image: node:20.10.0-slim
+    commands:
+      - export PATH=/pnpm:$PATH
+      - corepack enable
+      - pnpm run lint
+    depends_on:
+      - install-packages
+
+  - name: e2e
+    image: mcr.microsoft.com/playwright:v1.41.1-jammy
+    commands:
+      - export PATH=/pnpm:$PATH
+      - corepack enable
+      - pnpm build
+      - pnpm run serve-storybook & pnpm run test
+    depends_on:
+      - install-packages
+
+  - name: create_screenshots_archive
+    image: ubuntu:latest
+    commands:
+      - ./scripts/createTestScreenshotsArchive.sh
+    depends_on:
+      - e2e
+    when:
+      - status: [success, failure]
+
+  - name: upload_screenshots_to_aws
+    image: plugins/s3
+    settings:
+      bucket: design-system-dev-screenshots
+      access_key:
+        from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
+      source: playwright_screenshots.tar.gz
+      target: /drone/${CI_COMMIT_SHA}
+      acl: public-read
+      region: eu-central-1
+    depends_on:
+      - create_screenshots_archive
+    when:
+      - status: [success, failure]
+
+  - name: send_screenshots_to_github
+    image: giosg/drone-github-pr:stable
+    settings:
+      github_token:
+        from_secret: github_token_for_message
+      action: comment
+      repo_owner: giosg
+      repo_name: design-system
+      number: "${CI_COMMIT_PULL_REQUEST}"
+      message: 'You can download playwright screenshots [here](https://design-system-dev-screenshots.s3.amazonaws.com/drone/${CI_COMMIT_SHA}/playwright_screenshots.tar.gz). If the "test-results" folder is empty, Playwright did not find any differences.'
+    depends_on:
+      - upload_screenshots_to_aws
+    when:
+      - status: [success, failure]
