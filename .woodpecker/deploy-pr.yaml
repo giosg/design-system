@@ -37,5 +37,18 @@ steps:
         from_secret: k8s-sb-server
       kubernetes_token:
         from_secret: k8s-sb-token
-      depends_on:
-        - build
+    depends_on:
+      - build
+
+  - name: notify-github-on-deploy
+    image: giosg/drone-github-pr:stable
+    settings:
+      github_token:
+        from_secret: github_token_for_message
+      action: comment
+      repo_owner: giosg
+      repo_name: design-system
+      number: "${CI_COMMIT_PULL_REQUEST}"
+      message: "Frontend for this PR will be available for testing here: https://design-system-pr-${CI_COMMIT_PULL_REQUEST}.staging.giosg.com"
+    depends_on:
+      - deploy-pull-request
