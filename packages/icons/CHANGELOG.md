@@ -1,5 +1,11 @@
 # @giosg-design-system/icons
 
+## 1.3.0
+
+### Minor Changes
+
+- add no issue icon
+
 ## 1.2.0
 
 ### Minor Changes
