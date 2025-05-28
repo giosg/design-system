@@ -71,7 +71,13 @@ steps:
       - export PATH=/pnpm:$PATH
       - corepack enable
       - apt-get update && apt-get install -y git
-      - pnpm run release
+      - |
+        if [ "$(ls -A .changeset/*.md 2>/dev/null)" ]; then
+          echo "Found changeset, releasing..."
+          pnpm run release
+        else
+          echo "No changeset found, skipping release."
+        fi    
     depends_on:
       - deploy
       - lint
