@@ -19,7 +19,7 @@ steps:
     commands:
       - export PATH=/pnpm:$PATH
       - corepack enable
-      - pnpm run lint
+      - pnpm run lint -- --no-cache
     depends_on:
       - install-packages
 

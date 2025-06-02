@@ -1,5 +1,11 @@
 # @giosg-design-system/icons
 
+## 1.3.1
+
+### Patch Changes
+
+- bump packages
+
 ## 1.3.0
 
 ### Minor Changes
