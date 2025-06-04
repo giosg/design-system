@@ -1,5 +1,11 @@
 # @giosg-design-system/icons
 
+## 1.3.2
+
+### Patch Changes
+
+- updated frown and smile icons and added new neutral icon
+
 ## 1.3.1
 
 ### Patch Changes
