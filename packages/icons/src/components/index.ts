@@ -119,6 +119,7 @@ export { default as MinimizeToRight } from "./minimizeToRight";
 export { default as More } from "./more";
 export { default as Move } from "./move";
 export { default as Mute } from "./mute";
+export { default as Neutral } from "./neutral";
 export { default as NewChat } from "./newChat";
 export { default as NoIssue } from "./noIssue";
 export { default as NumberOfChats } from "./numberOfChats";
