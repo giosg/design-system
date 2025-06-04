@@ -71,5 +71,4 @@ steps:
         fi    
     depends_on:
       - deploy
-      - lint
       - e2e
