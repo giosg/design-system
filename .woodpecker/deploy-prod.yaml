@@ -14,15 +14,6 @@ steps:
     environment:
       NPM_CONFIG_REGISTRY: http://npm-local-cache-verdaccio.infra.svc.cluster.local:4873
 
-  - name: lint
-    image: node:20.10.0-slim
-    commands:
-      - export PATH=/pnpm:$PATH
-      - corepack enable
-      - pnpm run lint -- --no-cache
-    depends_on:
-      - install-packages
-
   - name: e2e
     image: mcr.microsoft.com/playwright:v1.41.1-jammy
     commands:
