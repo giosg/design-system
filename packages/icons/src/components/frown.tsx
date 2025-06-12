@@ -25,9 +25,9 @@ function SvgFrown(
       {...props}
     >
       <path
-        data-color="main"
         fill="currentColor"
         d="M15.7 14.469A4 4 0 0 1 16 16h-1.918a2.082 2.082 0 1 0-4.164 0H8a4 4 0 0 1 1.172-2.828 4 4 0 0 1 6.524 1.3ZM10 11a1 1 0 0 0 1-1V9a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1m4 0a1 1 0 0 0 1-1V9a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1m7 1a9 9 0 1 1-9-9 9 9 0 0 1 9 9m-2 0a7 7 0 1 0-7 7 7 7 0 0 0 7-7"
+        data-color="main"
       />
     </svg>
   );
