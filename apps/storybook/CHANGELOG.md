@@ -1,5 +1,13 @@
 # @repo/storybook
 
+## 0.0.14
+
+### Patch Changes
+
+- new icon
+- Updated dependencies
+  - @giosg-design-system/icons@1.3.4
+
 ## 0.0.13
 
 ### Patch Changes
