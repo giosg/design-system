@@ -161,6 +161,7 @@ export { default as SwitchCamera } from "./switchCamera";
 export { default as Tag } from "./tag";
 export { default as Team } from "./team";
 export { default as Tool } from "./tool";
+export { default as Translation } from "./translation";
 export { default as Trophy } from "./trophy";
 export { default as Unlink } from "./unlink";
 export { default as Unmute } from "./unmute";
