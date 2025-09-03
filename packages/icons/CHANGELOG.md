@@ -1,5 +1,11 @@
 # @giosg-design-system/icons
 
+## 1.3.5
+
+### Patch Changes
+
+- new loyal and sales icons
+
 ## 1.3.4
 
 ### Patch Changes

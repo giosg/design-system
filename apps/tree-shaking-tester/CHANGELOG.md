@@ -1,5 +1,12 @@
 # @repo/tree-shaking-tester
 
+## 0.0.11
+
+### Patch Changes
+
+- Updated dependencies
+  - @giosg-design-system/icons@1.3.5
+
 ## 0.0.10
 
 ### Patch Changes
