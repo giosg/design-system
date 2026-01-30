@@ -1,5 +1,11 @@
 /// <reference types="../../../../types/sources.d.ts" />
 export type { SvgComponentProps, IconComponent, IconColorSet, IconColors } from "../types";
+export { default as Svg16PxEdit } from "./16PxEdit";
+export { default as Svg16PxFilter } from "./16PxFilter";
+export { default as Svg16PxSortAscending } from "./16PxSortAscending";
+export { default as Svg16PxSortDescending } from "./16PxSortDescending";
+export { default as Svg16PxSortEmpty } from "./16PxSortEmpty";
+export { default as Svg16PxSortUnset } from "./16PxSortUnset";
 export { default as Workflow } from "./workflow";
 export { default as ABTestCompleted } from "./aBTestCompleted";
 export { default as ABTestDraft } from "./aBTestDraft";
