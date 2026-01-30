@@ -2,7 +2,7 @@ import type { Ref} from "react";
 import { forwardRef } from "react";
 import { type SvgComponentProps, generateIconCssVars } from "../types";
 
-function Svg16PxEdit(
+function SvgFilter16(
   { color, colorAcc, colorAlt, style, ...props }: SvgComponentProps,
   ref: Ref<SVGSVGElement>,
 ): JSX.Element {
@@ -24,12 +24,9 @@ function Svg16PxEdit(
       ref={ref}
       {...props}
     >
-      <path
-        d="M4 9.966 6 12l-1 1H3v-2Zm8.293-5.673-.586-.586a1 1 0 0 0-1.414 0L5 9l2 2 5.293-5.293a1 1 0 0 0 0-1.414"
-        data-color="main"
-      />
+      <path fill="currentColor" d="M2 4h12v2H2zm2 3h8v2H4zm2 3h4v2H6z" data-color="main" />
     </svg>
   );
 }
-const ForwardRef = forwardRef(Svg16PxEdit);
+const ForwardRef = forwardRef(SvgFilter16);
 export default ForwardRef;

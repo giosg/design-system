@@ -2,7 +2,7 @@ import type { Ref} from "react";
 import { forwardRef } from "react";
 import { type SvgComponentProps, generateIconCssVars } from "../types";
 
-function Svg16PxSortEmpty(
+function SvgEdit16(
   { color, colorAcc, colorAlt, style, ...props }: SvgComponentProps,
   ref: Ref<SVGSVGElement>,
 ): JSX.Element {
@@ -24,10 +24,13 @@ function Svg16PxSortEmpty(
       ref={ref}
       {...props}
     >
-      <path d="M6.081 6 8 3.6 9.919 6zM4 7h8L8 2z" />
-      <path d="M9.919 10 8 12.4 6.081 10zM12 9H4l4 5z" data-color="main" />
+      <path
+        fill="currentColor"
+        d="M4 9.966 6 12l-1 1H3v-2Zm8.293-5.673-.586-.586a1 1 0 0 0-1.414 0L5 9l2 2 5.293-5.293a1 1 0 0 0 0-1.414"
+        data-color="main"
+      />
     </svg>
   );
 }
-const ForwardRef = forwardRef(Svg16PxSortEmpty);
+const ForwardRef = forwardRef(SvgEdit16);
 export default ForwardRef;
