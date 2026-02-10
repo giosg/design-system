@@ -2,7 +2,7 @@ import type { Ref} from "react";
 import { forwardRef } from "react";
 import { type SvgComponentProps, generateIconCssVars } from "../types";
 
-function SvgTranslation(
+function SvgPreviewEmail(
   { color, colorAcc, colorAlt, style, ...props }: SvgComponentProps,
   ref: Ref<SVGSVGElement>,
 ): JSX.Element {
@@ -12,7 +12,8 @@ function SvgTranslation(
       width={24}
       height={24}
       fill="none"
-      viewBox="0 -960 960 960"
+      data-name="Layer 1"
+      viewBox="0 0 24 24"
       style={{
         ...generateIconCssVars({
           color,
@@ -26,11 +27,11 @@ function SvgTranslation(
     >
       <path
         fill="currentColor"
-        d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80zM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125zm468-72h144l-72-204z"
+        d="M5 5h14v6h2V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h5v-2H5Zm17 12c0 2.761-2.686 5-6 5s-6-2.239-6-5 2.686-5 6-5 6 2.239 6 5m-2 0a3.15 3.15 0 0 0-2-2.756V16a2 2 0 0 1-4 0v-1.756A3.15 3.15 0 0 0 12 17c0 1.767 1.791 3.2 4 3.2s4-1.433 4-3.2m-3-7H7V8h10Zm-7 4H7v-2h3Z"
         data-color="main"
       />
     </svg>
   );
 }
-const ForwardRef = forwardRef(SvgTranslation);
+const ForwardRef = forwardRef(SvgPreviewEmail);
 export default ForwardRef;
