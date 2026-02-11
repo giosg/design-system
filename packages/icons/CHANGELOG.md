@@ -1,5 +1,11 @@
 # @giosg-design-system/icons
 
+## 1.3.7
+
+### Patch Changes
+
+- new icons
+
 ## 1.3.6
 
 ### Patch Changes

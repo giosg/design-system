@@ -2,7 +2,7 @@ import type { Ref} from "react";
 import { forwardRef } from "react";
 import { type SvgComponentProps, generateIconCssVars } from "../types";
 
-function SvgTranslation(
+function SvgHeader3(
   { color, colorAcc, colorAlt, style, ...props }: SvgComponentProps,
   ref: Ref<SVGSVGElement>,
 ): JSX.Element {
@@ -12,7 +12,8 @@ function SvgTranslation(
       width={24}
       height={24}
       fill="none"
-      viewBox="0 -960 960 960"
+      data-name="Layer 1"
+      viewBox="0 0 24 24"
       style={{
         ...generateIconCssVars({
           color,
@@ -26,11 +27,11 @@ function SvgTranslation(
     >
       <path
         fill="currentColor"
-        d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80zM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125zm468-72h144l-72-204z"
+        d="M12 7v10h-2v-4H6v4H4V7h2v4h4V7Zm7 2h-5v2h4v1h-4v2h4v1h-4v2h5a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1"
         data-color="main"
       />
     </svg>
   );
 }
-const ForwardRef = forwardRef(SvgTranslation);
+const ForwardRef = forwardRef(SvgHeader3);
 export default ForwardRef;
