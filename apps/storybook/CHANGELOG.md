@@ -6,7 +6,7 @@
 
 - new icons
 - Updated dependencies
-  - @giosg-design-system/icons@2.0.0
+  - @giosg-design-system/icons@1.3.7
 
 ## 0.0.16
 
