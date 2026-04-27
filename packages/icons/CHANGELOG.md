@@ -1,11 +1,5 @@
 # @giosg-design-system/icons
 
-## 1.3.8
-
-### Patch Changes
-
-- new ask, forward and reply icons
-
 ## 1.3.7
 
 ### Patch Changes
